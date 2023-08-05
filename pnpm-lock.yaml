@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -56,9 +52,14 @@ importers:
 
   docs:
     dependencies:
+      '@svelement-ui/button':
+        specifier: workspace:^
+        version: link:../packages/button
       '@sveltejs/adapter-static':
         specifier: ^2.0.3
         version: registry.npmmirror.com/@sveltejs/adapter-static@2.0.3(@sveltejs/kit@1.20.4)
+
+  packages/button: {}
 
 packages:
 
@@ -7193,3 +7194,7 @@ packages:
     version: 0.1.0
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
