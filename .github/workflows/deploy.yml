@@ -30,7 +30,7 @@ jobs:
         env:
           BASE_PATH: '/svelement-ui'
         run: |
-          pnpm run lerna build
+          pnpm lerna run build
           touch docs/build/.nojekyll
 
       - name: Upload Artifacts
