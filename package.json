@@ -1,6 +1,9 @@
 {
   "name": "svelement-ui",
   "private": true,
+  "scripts": {
+    "lerna_version": "lerna version --conventional-commits"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
