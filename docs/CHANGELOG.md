@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/koory1st/svelement-ui/compare/v0.1.3...v0.1.4) (2023-08-05)
+
+
+### Bug Fixes
+
+* **redirect:** change to use public env ([744d502](https://github.com/koory1st/svelement-ui/commit/744d5021bb6c9ede6bf9e4631efa97f87ed2c8ea))
+
+
+
+
+
 ## [0.1.3](https://github.com/koory1st/svelement-ui/compare/v0.1.2...v0.1.3) (2023-08-05)
 
 
