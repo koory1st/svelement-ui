@@ -56,9 +56,14 @@ importers:
 
   docs:
     dependencies:
+      '@svelement-ui/button':
+        specifier: workspace:^
+        version: link:../packages/button
       '@sveltejs/adapter-static':
         specifier: ^2.0.3
         version: registry.npmmirror.com/@sveltejs/adapter-static@2.0.3(@sveltejs/kit@1.20.4)
+
+  packages/button: {}
 
 packages:
 

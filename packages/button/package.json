@@ -1,6 +1,7 @@
 {
-	"name": "@svelement-ui/docs",
+	"name": "@svelement-ui/button",
 	"version": "0.2.1",
+	"main": "src/svel-button.svelte",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -8,9 +9,5 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
-	"type": "module",
-	"dependencies": {
-		"@svelement-ui/button": "workspace:^",
-		"@sveltejs/adapter-static": "^2.0.3"
-	}
+	"type": "module"
 }
