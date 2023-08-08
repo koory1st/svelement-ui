@@ -4,5 +4,5 @@ import { redirect } from '@sveltejs/kit';
 	} from '$env/static/public';
 
 export function load() {
-	throw redirect(307, `${PUBLIC_BASE_PATH}/component`);
+	throw redirect(307, `${PUBLIC_BASE_PATH}component`);
 }

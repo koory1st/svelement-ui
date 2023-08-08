@@ -1,0 +1,16 @@
+{
+  "name": "@svelement-ui/util-array-2-class-string",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "src/in.ts",
+  "scripts": {
+    "build": "vite build && tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@svelement-ui/util-errors": "workspace:^"
+  }
+}
