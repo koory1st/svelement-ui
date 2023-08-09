@@ -1,7 +1,8 @@
-<SvelButton>button</SvelButton>
-<SvelButton plain>button2</SvelButton>
+<!-- <SvelButton>button</SvelButton>
+<SvelButton plain>button2</SvelButton> -->
 
 <script lang="ts">
-import SvelButton from "@svelement-ui/button";
+import "@svelement-ui/button/dist/style/style.css"
+// import SvelButton from "@svelement-ui/button";
 
 </script>

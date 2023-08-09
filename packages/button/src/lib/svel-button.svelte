@@ -1,5 +1,5 @@
 <script lang="ts">
-	import a2s from '../../util/array2string/Array2String';
+	import a2s from '@svelement-ui/util-array-2-class-string';
 	export let type = 'default';
 	export let size = '';
 	export let icon = '';
