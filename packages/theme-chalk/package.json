@@ -4,5 +4,8 @@
   "type": "module",
   "files": [
     "src"
-  ]
+  ],
+  "scripts": {
+		"build": "vite build"
+  }
 }
