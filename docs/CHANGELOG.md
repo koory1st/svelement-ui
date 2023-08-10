@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/koory1st/svelement-ui/compare/v0.4.0...v0.4.1) (2023-08-10)
+
+
+### Bug Fixes
+
+* **docs:** add util dependency ([411559e](https://github.com/koory1st/svelement-ui/commit/411559ee1758eae12ccfe288d18ca90aabd04856))
+* **exports:** add style.css ([1b03279](https://github.com/koory1st/svelement-ui/commit/1b0327971bcdf47f3f3c151ababd52143c8ad26b))
+
+
+
+
+
+# [0.4.0](https://github.com/koory1st/svelement-ui/compare/v0.3.0...v0.4.0) (2023-08-09)
+
+
+### Bug Fixes
+
+* **button:** use theme-chalk ([a17a267](https://github.com/koory1st/svelement-ui/commit/a17a2670979c65a81bfefb0826f5b010710fe9f1))
+
+
+
+
+
 # [0.3.0](https://github.com/koory1st/svelement-ui/compare/v0.2.1...v0.3.0) (2023-08-08)
 
 

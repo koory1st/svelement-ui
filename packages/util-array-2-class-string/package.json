@@ -1,8 +1,9 @@
 {
   "name": "@svelement-ui/util-array-2-class-string",
-  "version": "0.3.0",
+  "version": "0.4.1",
   "type": "module",
-  "main": "src/in.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "vite build && tsc"
   },
