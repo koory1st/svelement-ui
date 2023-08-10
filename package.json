@@ -5,7 +5,8 @@
     "dev-docs": "lerna run dev --scope @svelement-ui/docs",
     "fix": "eslint . --fix",
     "build-all": "lerna run build",
-    "lerna-version": "lerna version --conventional-commits"
+    "lerna-version": "lerna version --conventional-commits",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
