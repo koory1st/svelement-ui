@@ -33,5 +33,6 @@
 	},
 	"dependencies": {
 		"svelte": "^4.0.5"
-	}
+	},
+	"bundledDependencies": ["@svelement-ui/util-array-2-class-string"]
 }

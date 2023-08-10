@@ -10,7 +10,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+	},
+	"devDependencies": {
 		"@svelement-ui/button": "workspace:^",
+		"@svelement-ui/util-array-2-class-string": "workspace:^",
 		"@sveltejs/adapter-static": "^2.0.3"
 	}
 }
