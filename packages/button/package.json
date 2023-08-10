@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/button",
-	"version": "0.4.0",
+	"version": "0.4.1",
 	"files": [
 		"dist/index.d.ts",
 		"dist/index.ts",
@@ -27,12 +27,14 @@
 	"type": "module",
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^",
+		"@svelement-ui/util-array-2-class-string": "workspace:^",
 		"@sveltejs/package": "^2.2.0",
-		"sass": "^1.64.2",
-		"@svelement-ui/util-array-2-class-string": "workspace:^"
+		"sass": "^1.64.2"
 	},
 	"dependencies": {
 		"svelte": "^4.0.5"
 	},
-	"bundledDependencies": ["@svelement-ui/util-array-2-class-string"]
+	"bundledDependencies": [
+		"@svelement-ui/util-array-2-class-string"
+	]
 }
