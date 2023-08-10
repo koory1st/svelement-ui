@@ -12,14 +12,15 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
+		},
+		"./dist/style.css": {
+			"import": "./dist/style.css",
+			"require": "./dist/style.css"
 		}
 	},
 	"svelte": "./dist/index.js",
 	"scripts": {
-		"dev": "vite dev",
-		"build": "svelte-package && vite build -c vite-style.config.ts",
-		"build1": "vite build -c vite-style.config.ts",
-		"preview": "vite preview",
+		"build": "svelte-package && vite build -c vite-style.config.ts && cp dist/style/style.css dist/style.css",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
@@ -27,10 +28,10 @@
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^",
 		"@sveltejs/package": "^2.2.0",
-		"sass": "^1.64.2"
+		"sass": "^1.64.2",
+		"@svelement-ui/util-array-2-class-string": "workspace:^"
 	},
 	"dependencies": {
-		"@svelement-ui/util-array-2-class-string": "workspace:^",
 		"svelte": "^4.0.5"
 	}
 }

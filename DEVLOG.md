@@ -1,3 +1,8 @@
+# 20230810
+在button里添加了编译css的功能，但是在docs里import这个css的时候提示错误：`Missing "./dist/style/style.css" specifier in "@svelement-ui/button" package`
+通过package里添加了exports解决了。
+
+
 # 20230808
 决定把util设定成package，先用errors创建package，
 ```bash
