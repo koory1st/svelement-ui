@@ -8,7 +8,7 @@ export default defineConfig({
       name: 'index',
       fileName: 'index',
 		},
-		outDir: 'dist/style'
+		outDir: 'build'
 	},
 
 });

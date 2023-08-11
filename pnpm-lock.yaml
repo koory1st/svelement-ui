@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -38,6 +34,12 @@ importers:
       lerna:
         specifier: ^7.1.4
         version: registry.npmmirror.com/lerna@7.1.4
+      nx:
+        specifier: ^16.6.0
+        version: registry.npmmirror.com/nx@16.6.0
+      rimraf:
+        specifier: ^5.0.1
+        version: registry.npmmirror.com/rimraf@5.0.1
       svelte:
         specifier: ^4.0.5
         version: registry.npmmirror.com/svelte@4.0.5
@@ -6168,6 +6170,16 @@ packages:
       glob: registry.npmmirror.com/glob@9.3.5
     dev: true
 
+  registry.npmmirror.com/rimraf@5.0.1:
+    resolution: {integrity: sha512-OfFZdwtd3lZ+XZzYP/6gTACubwFcHdLRqS9UX3UwpU2dnGQYkPFISRwvM3w9IiB2w7bW5qGo/uAwE4SmXXSKvg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rimraf/-/rimraf-5.0.1.tgz}
+    name: rimraf
+    version: 5.0.1
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      glob: registry.npmmirror.com/glob@10.3.3
+    dev: true
+
   registry.npmmirror.com/rollup@3.27.1:
     resolution: {integrity: sha512-tXNDFwOkN6C2w5Blj1g6ForKeFw6c1mDu5jxoeDO3/pmYjgt+8yvIFjKzH5FQUq70OKZBkOt0zzv0THXL7vwzQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rollup/-/rollup-3.27.1.tgz}
     name: rollup
@@ -7507,3 +7519,7 @@ packages:
     version: 0.1.0
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false

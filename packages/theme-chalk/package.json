@@ -6,6 +6,6 @@
     "src"
   ],
   "scripts": {
-		"build": "vite build"
+    "build": "vite build"
   }
 }
