@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/koory1st/svelement-ui/compare/v0.4.1...v0.4.3) (2023-08-11)
+
+**Note:** Version bump only for package @svelement-ui/util-array-2-class-string
+
+
+
+
+
 ## [0.4.1](https://github.com/koory1st/svelement-ui/compare/v0.4.0...v0.4.1) (2023-08-10)
 
 

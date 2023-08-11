@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/util-errors",
-  "version": "0.4.0",
+  "version": "0.4.3",
   "type": "module",
   "main": "dist/index.js",
   "files": [
@@ -9,7 +9,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "vite build && tsc",
-		"clean": "rimraf dist"
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "typescript": "^5.0.2",
