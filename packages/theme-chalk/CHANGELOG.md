@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/koory1st/svelement-ui/compare/v0.4.1...v0.4.3) (2023-08-11)
+
+
+### Bug Fixes
+
+* **theme-chalk:** add base ([ff7247e](https://github.com/koory1st/svelement-ui/commit/ff7247e38709cb3b638158669609569e37101bb9))
+
+
+
+
+
 # [0.4.0](https://github.com/koory1st/svelement-ui/compare/v0.3.0...v0.4.0) (2023-08-09)
 
 

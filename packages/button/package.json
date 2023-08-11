@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/button",
-	"version": "0.4.1",
+	"version": "0.4.3",
 	"files": [
 		"dist/index.d.ts",
 		"dist/index.ts",
@@ -11,7 +11,7 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"default": "./dist/index.js"
 		},
 		"./dist/style.css": {
 			"import": "./dist/style.css",
@@ -20,9 +20,10 @@
 	},
 	"svelte": "./dist/index.js",
 	"scripts": {
-		"build": "svelte-package && vite build -c vite-style.config.ts && cp dist/style/style.css dist/style.css",
+		"build": "pnpm check && svelte-package && vite build -c vite-style.config.ts && cp build/style.css dist/style.css",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"clean": "rimraf build dist .svelte-kit"
 	},
 	"type": "module",
 	"devDependencies": {
