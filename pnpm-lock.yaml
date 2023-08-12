@@ -91,6 +91,25 @@ importers:
         specifier: ^1.64.2
         version: registry.npmmirror.com/sass@1.64.2
 
+  packages/container:
+    dependencies:
+      svelte:
+        specifier: ^4.0.5
+        version: registry.npmmirror.com/svelte@4.0.5
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+      '@sveltejs/package':
+        specifier: ^2.2.0
+        version: registry.npmmirror.com/@sveltejs/package@2.2.0(svelte@4.0.5)(typescript@5.1.6)
+      sass:
+        specifier: ^1.64.2
+        version: registry.npmmirror.com/sass@1.64.2
+
   packages/theme-chalk: {}
 
   packages/util-array-2-class-string:
