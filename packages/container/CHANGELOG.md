@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/koory1st/svelement-ui/compare/v0.5.0...v0.6.0) (2023-08-13)
+
+
+### Bug Fixes
+
+* **container:** change class name ([ae15cfc](https://github.com/koory1st/svelement-ui/commit/ae15cfc0e574f970f4804118b011c85cc379e9f6))
+
+
+
+
+
 # [0.5.0](https://github.com/koory1st/svelement-ui/compare/v0.4.3...v0.5.0) (2023-08-12)
 
 
