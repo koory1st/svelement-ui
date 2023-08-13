@@ -3,8 +3,8 @@
     <div>Basic 基础组件</div>
     <div>
       <ul>
-        <li><a href="{PUBLIC_BASE_PATH}/component/button">Button 按钮</a></li>
-        <li><a href="{PUBLIC_BASE_PATH}/component/container">Container 布局容器</a></li>
+        <li><a href="{PUBLIC_BASE_PATH}component/button">Button 按钮</a></li>
+        <li><a href="{PUBLIC_BASE_PATH}component/container">Container 布局容器</a></li>
       </ul>
     </div>
   </SvelAside>

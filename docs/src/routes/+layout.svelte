@@ -2,7 +2,7 @@
   <SvelHeader>
     SvelementUI header
     <nav>
-      <a href="{PUBLIC_BASE_PATH}/component">Component</a>
+      <a href="{PUBLIC_BASE_PATH}component">Component</a>
     </nav>
   </SvelHeader>
 
