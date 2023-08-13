@@ -5,15 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.7.0](https://github.com/koory1st/svelement-ui/compare/v0.6.1...v0.7.0) (2023-08-13)
 
-**Note:** Version bump only for package @svelement-ui/main
-
-
-
-
-
-# [0.6.0](https://github.com/koory1st/svelement-ui/compare/v0.5.0...v0.6.0) (2023-08-13)
-
 
 ### Features
 
-* **main:** add ([0b4aa42](https://github.com/koory1st/svelement-ui/commit/0b4aa421e0fc116804236bb2e84cd1f7f7a7992f))
+* **util-array-2-style-string:** add ([38c16ad](https://github.com/koory1st/svelement-ui/commit/38c16adc0bd5e17c3d0e0f012a28af14265bbd0b))

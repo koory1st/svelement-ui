@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/koory1st/svelement-ui/compare/v0.6.1...v0.7.0) (2023-08-13)
+
+
+### Bug Fixes
+
+* **docs:** add css ([9abe024](https://github.com/koory1st/svelement-ui/commit/9abe0244dd792992bf2ac2adbbfce333a659b5d0))
+* **row:** change class prefix ([5711c7e](https://github.com/koory1st/svelement-ui/commit/5711c7eea68c30b726a250bfdb1044d39a3c9ede))
+
+
+### Features
+
+* **col:** add ([51a817a](https://github.com/koory1st/svelement-ui/commit/51a817aed45b66f961f2ed07b3b42e534020bc4f))
+* **row:** add ([5ec602e](https://github.com/koory1st/svelement-ui/commit/5ec602e5112904079ec3648ab0d4493d410e50f5))
+* **util-array-2-style-string:** add ([38c16ad](https://github.com/koory1st/svelement-ui/commit/38c16adc0bd5e17c3d0e0f012a28af14265bbd0b))
+
+
+
+
+
 ## [0.6.1](https://github.com/koory1st/svelement-ui/compare/v0.6.0...v0.6.1) (2023-08-13)
 
 

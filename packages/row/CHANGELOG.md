@@ -5,15 +5,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.7.0](https://github.com/koory1st/svelement-ui/compare/v0.6.1...v0.7.0) (2023-08-13)
 
-**Note:** Version bump only for package @svelement-ui/footer
 
+### Bug Fixes
 
-
-
-
-# [0.6.0](https://github.com/koory1st/svelement-ui/compare/v0.5.0...v0.6.0) (2023-08-13)
+* **row:** change class prefix ([5711c7e](https://github.com/koory1st/svelement-ui/commit/5711c7eea68c30b726a250bfdb1044d39a3c9ede))
 
 
 ### Features
 
-* **footer:** add ([2c5e6b9](https://github.com/koory1st/svelement-ui/commit/2c5e6b990083aec3d33c6a9b6a41a17a9fd752ac))
+* **row:** add ([5ec602e](https://github.com/koory1st/svelement-ui/commit/5ec602e5112904079ec3648ab0d4493d410e50f5))
