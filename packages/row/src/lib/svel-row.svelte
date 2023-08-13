@@ -7,13 +7,13 @@
   export let justify = 'start'
   export let align = 'top'
 
-  setContext('seuRowGutter', gutter)
+  setContext('svelRowGutter', gutter)
 
   $: classString = a2s([
-    'seu-row',
+    'svel-row',
     [`is-justify-${justify}`, justify && justify !== 'start'],
     [`is-align-${align}`, align && align !== 'top'],
-    ['seu-row--flex', type === 'flex'],
+    ['svel-row--flex', type === 'flex'],
     $$props.class,
   ])
 
