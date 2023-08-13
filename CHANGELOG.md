@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/koory1st/svelement-ui/compare/v0.6.0...v0.6.1) (2023-08-13)
+
+
+### Bug Fixes
+
+* **docs:** add container ([83dccd6](https://github.com/koory1st/svelement-ui/commit/83dccd62fd913003ddfcf9fd52e813262e3691d3))
+* **docs:** remove slash ([910cc8b](https://github.com/koory1st/svelement-ui/commit/910cc8b4a3afdddb450bdf0ac3d488d6cc703d3a))
+
+
+
+
+
 # [0.6.0](https://github.com/koory1st/svelement-ui/compare/v0.5.0...v0.6.0) (2023-08-13)
 
 
