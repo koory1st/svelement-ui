@@ -1,0 +1,41 @@
+{
+	"name": "@svelement-ui/main",
+	"version": "0.6.0",
+	"files": [
+		"dist/index.d.ts",
+		"dist/index.ts",
+		"dist/style/style.css",
+		"dist/svel-main.svelte",
+		"dist/svel-main.svelte.d.ts"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./dist/style.css": {
+			"import": "./dist/style.css",
+			"require": "./dist/style.css"
+		}
+	},
+	"svelte": "./dist/index.js",
+	"scripts": {
+		"build": "pnpm check && svelte-package && vite build -c vite-style.config.ts && cp build/style.css dist/style.css",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"clean": "rimraf build dist .svelte-kit"
+	},
+	"type": "module",
+	"devDependencies": {
+		"@svelement-ui/theme-chalk": "workspace:^",
+		"@svelement-ui/util-array-2-class-string": "workspace:^",
+		"@sveltejs/package": "^2.2.0",
+		"sass": "^1.64.2"
+	},
+	"dependencies": {
+		"svelte": "^4.0.5"
+	},
+	"bundledDependencies": [
+		"@svelement-ui/util-array-2-class-string"
+	]
+}

@@ -62,9 +62,24 @@ importers:
 
   docs:
     devDependencies:
+      '@svelement-ui/aside':
+        specifier: workspace:^
+        version: link:../packages/aside
       '@svelement-ui/button':
         specifier: workspace:^
         version: link:../packages/button
+      '@svelement-ui/container':
+        specifier: workspace:^
+        version: link:../packages/container
+      '@svelement-ui/footer':
+        specifier: workspace:^
+        version: link:../packages/footer
+      '@svelement-ui/header':
+        specifier: workspace:^
+        version: link:../packages/header
+      '@svelement-ui/main':
+        specifier: workspace:^
+        version: link:../packages/main
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../packages/util-array-2-class-string
@@ -72,7 +87,102 @@ importers:
         specifier: ^2.0.3
         version: registry.npmmirror.com/@sveltejs/adapter-static@2.0.3(@sveltejs/kit@1.20.4)
 
+  packages/aside:
+    dependencies:
+      svelte:
+        specifier: ^4.0.5
+        version: registry.npmmirror.com/svelte@4.0.5
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+      '@sveltejs/package':
+        specifier: ^2.2.0
+        version: registry.npmmirror.com/@sveltejs/package@2.2.0(svelte@4.0.5)(typescript@5.1.6)
+      sass:
+        specifier: ^1.64.2
+        version: registry.npmmirror.com/sass@1.64.2
+
   packages/button:
+    dependencies:
+      svelte:
+        specifier: ^4.0.5
+        version: registry.npmmirror.com/svelte@4.0.5
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+      '@sveltejs/package':
+        specifier: ^2.2.0
+        version: registry.npmmirror.com/@sveltejs/package@2.2.0(svelte@4.0.5)(typescript@5.1.6)
+      sass:
+        specifier: ^1.64.2
+        version: registry.npmmirror.com/sass@1.64.2
+
+  packages/container:
+    dependencies:
+      svelte:
+        specifier: ^4.0.5
+        version: registry.npmmirror.com/svelte@4.0.5
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+      '@sveltejs/package':
+        specifier: ^2.2.0
+        version: registry.npmmirror.com/@sveltejs/package@2.2.0(svelte@4.0.5)(typescript@5.1.6)
+      sass:
+        specifier: ^1.64.2
+        version: registry.npmmirror.com/sass@1.64.2
+
+  packages/footer:
+    dependencies:
+      svelte:
+        specifier: ^4.0.5
+        version: registry.npmmirror.com/svelte@4.0.5
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+      '@sveltejs/package':
+        specifier: ^2.2.0
+        version: registry.npmmirror.com/@sveltejs/package@2.2.0(svelte@4.0.5)(typescript@5.1.6)
+      sass:
+        specifier: ^1.64.2
+        version: registry.npmmirror.com/sass@1.64.2
+
+  packages/header:
+    dependencies:
+      svelte:
+        specifier: ^4.0.5
+        version: registry.npmmirror.com/svelte@4.0.5
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+      '@sveltejs/package':
+        specifier: ^2.2.0
+        version: registry.npmmirror.com/@sveltejs/package@2.2.0(svelte@4.0.5)(typescript@5.1.6)
+      sass:
+        specifier: ^1.64.2
+        version: registry.npmmirror.com/sass@1.64.2
+
+  packages/main:
     dependencies:
       svelte:
         specifier: ^4.0.5
