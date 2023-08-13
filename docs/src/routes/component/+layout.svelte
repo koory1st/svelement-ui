@@ -17,6 +17,9 @@
 
 <script lang="ts">
 import { PUBLIC_BASE_PATH } from '$env/static/public';
+import "@svelement-ui/container/dist/style.css"
+import "@svelement-ui/aside/dist/style.css"
+import "@svelement-ui/main/dist/style.css"
 import SvelContainer from '@svelement-ui/container';
 import SvelAside from '@svelement-ui/aside';
 import SvelMain from '@svelement-ui/main';
