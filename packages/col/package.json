@@ -27,6 +27,7 @@
 	},
 	"type": "module",
 	"devDependencies": {
+		"@svelement-ui/theme-chalk": "workspace:^",
 		"@svelement-ui/util-array-2-class-string": "workspace:^",
 		"@svelement-ui/util-array-2-style-string": "workspace:^",
 		"@sveltejs/package": "^2.2.0",

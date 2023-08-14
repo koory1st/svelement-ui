@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -68,6 +64,9 @@ importers:
       '@svelement-ui/button':
         specifier: workspace:^
         version: link:../packages/button
+      '@svelement-ui/col':
+        specifier: workspace:^
+        version: link:../packages/col
       '@svelement-ui/container':
         specifier: workspace:^
         version: link:../packages/container
@@ -80,6 +79,9 @@ importers:
       '@svelement-ui/main':
         specifier: workspace:^
         version: link:../packages/main
+      '@svelement-ui/row':
+        specifier: workspace:^
+        version: link:../packages/row
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../packages/util-array-2-class-string
@@ -131,6 +133,9 @@ importers:
         specifier: ^4.0.5
         version: registry.npmmirror.com/svelte@4.0.5
     devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../util-array-2-class-string
@@ -226,6 +231,9 @@ importers:
         specifier: ^4.0.5
         version: registry.npmmirror.com/svelte@4.0.5
     devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../util-array-2-class-string
@@ -7680,3 +7688,7 @@ packages:
     version: 0.1.0
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
