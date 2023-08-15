@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/container",
-	"version": "0.7.0",
+	"version": "0.7.2",
 	"files": [
 		"dist/index.d.ts",
 		"dist/index.ts",
