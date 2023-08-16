@@ -62,9 +62,30 @@ importers:
 
   docs:
     devDependencies:
-      '@svelement-ui/all':
+      '@svelement-ui/aside':
         specifier: workspace:^
-        version: link:../packages/all
+        version: link:../packages/aside
+      '@svelement-ui/button':
+        specifier: workspace:^
+        version: link:../packages/button
+      '@svelement-ui/col':
+        specifier: workspace:^
+        version: link:../packages/col
+      '@svelement-ui/container':
+        specifier: workspace:^
+        version: link:../packages/container
+      '@svelement-ui/footer':
+        specifier: workspace:^
+        version: link:../packages/footer
+      '@svelement-ui/header':
+        specifier: workspace:^
+        version: link:../packages/header
+      '@svelement-ui/main':
+        specifier: workspace:^
+        version: link:../packages/main
+      '@svelement-ui/row':
+        specifier: workspace:^
+        version: link:../packages/row
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../packages/util-array-2-class-string
