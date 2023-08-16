@@ -1,0 +1,24 @@
+{
+	"name": "@svelement-ui/all",
+	"version": "0.7.2",
+	"main": "src/index.ts",
+	"files": ["src"],
+	"type": "module",
+	"devDependencies": {
+		"@svelement-ui/aside": "workspace:^",
+		"@svelement-ui/button": "workspace:^",
+		"@svelement-ui/col": "workspace:^",
+		"@svelement-ui/container": "workspace:^",
+		"@svelement-ui/footer": "workspace:^",
+		"@svelement-ui/header": "workspace:^",
+		"@svelement-ui/main": "workspace:^",
+		"@svelement-ui/row": "workspace:^",
+		"@svelement-ui/theme-chalk": "workspace:^",
+		"@svelement-ui/util-array-2-class-string": "workspace:^",
+		"@sveltejs/package": "^2.2.0",
+		"sass": "^1.64.2"
+	},
+	"dependencies": {
+		"svelte": "^4.0.5"
+	}
+}
