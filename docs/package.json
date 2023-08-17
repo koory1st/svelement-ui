@@ -11,6 +11,7 @@
 	},
 	"type": "module",
 	"devDependencies": {
+		"@svelement-ui/all": "workspace:^",
 		"@svelement-ui/aside": "workspace:^",
 		"@svelement-ui/button": "workspace:^",
 		"@svelement-ui/col": "workspace:^",

@@ -16,11 +16,6 @@
 		"@svelement-ui/main": "workspace:^",
 		"@svelement-ui/row": "workspace:^",
 		"@svelement-ui/theme-chalk": "workspace:^",
-		"@svelement-ui/util-array-2-class-string": "workspace:^",
-		"@sveltejs/package": "^2.2.0",
-		"sass": "^1.64.2"
-	},
-	"dependencies": {
-		"svelte": "^4.0.5"
+		"@svelement-ui/util-array-2-class-string": "workspace:^"
 	}
 }
