@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/aside",
-	"version": "0.8.0",
+	"version": "0.8.1",
 	"files": [
 		"src",
 		"dist/style.css"
