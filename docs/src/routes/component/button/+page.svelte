@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SvelButton from '@svelement-ui/button';
+	import { SvelButton } from '@svelement-ui/all';
 </script>
 
 <SvelButton>button</SvelButton>
