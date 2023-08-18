@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/all",
-	"version": "0.8.0",
+	"version": "0.8.2",
 	"main": "src/index.ts",
 	"files": [
 		"src"
@@ -16,11 +16,6 @@
 		"@svelement-ui/main": "workspace:^",
 		"@svelement-ui/row": "workspace:^",
 		"@svelement-ui/theme-chalk": "workspace:^",
-		"@svelement-ui/util-array-2-class-string": "workspace:^",
-		"@sveltejs/package": "^2.2.0",
-		"sass": "^1.64.2"
-	},
-	"dependencies": {
-		"svelte": "^4.0.5"
+		"@svelement-ui/util-array-2-class-string": "workspace:^"
 	}
 }

@@ -1,29 +1,30 @@
 {
 	"name": "@svelement-ui/aside",
-	"version": "0.8.0",
+	"version": "0.8.2",
 	"files": [
-		"dist/index.d.ts",
-		"dist/index.ts",
-		"dist/style/style.css",
-		"dist/svel-aside.svelte",
-		"dist/svel-aside.svelte.d.ts"
+		"src",
+		"dist/style.css"
 	],
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
-			"default": "./dist/index.js"
+			"import": "./src/svel-aside.svelte",
+			"require": "./src/svel-aside.svelte",
+			"svelte": "./src/svel-aside.svelte"
 		},
 		"./dist/style.css": {
 			"import": "./dist/style.css",
 			"require": "./dist/style.css"
+		},
+		"./src/svel-aside.svelte": {
+			"import": "./src/svel-aside.svelte",
+			"require": "./src/svel-aside.svelte",
+			"svelte": "./src/svel-aside.svelte"
 		}
 	},
-	"svelte": "./dist/index.js",
+	"svelte": "./src/svel-aside.svelte",
 	"scripts": {
-		"build": "pnpm check && svelte-package && vite build -c vite-style.config.ts && cp build/style.css dist/style.css",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"clean": "rimraf build dist .svelte-kit"
+		"build": "vite build",
+		"clean": "rimraf build dist"
 	},
 	"type": "module",
 	"devDependencies": {
