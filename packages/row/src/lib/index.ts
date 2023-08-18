@@ -1,2 +1,2 @@
-import SvelRow from './svel-row.svelte'
-export default SvelRow
+import SvelRow from './svel-row.svelte';
+export default SvelRow;

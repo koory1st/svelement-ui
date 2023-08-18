@@ -18,7 +18,7 @@
 		[`is-round`, round],
 		[`is-circle`, circle],
 		[`svel-button--${size}`, Boolean(size)],
-		['is-loading', loading]
+		['is-loading', loading],
 	]);
 </script>
 

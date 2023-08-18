@@ -1,3 +1,3 @@
 /** @format */
 
-export const noPxStyleList = ['z-index']
+export const noPxStyleList = ['z-index'];

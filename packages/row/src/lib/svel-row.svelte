@@ -1,28 +1,28 @@
 <script lang="ts">
-  import { setContext } from 'svelte'
-  import a2s from '@svelement-ui/util-array-2-class-string'
-  import a2st from '@svelement-ui/util-array-2-style-string'
-  export let gutter = 0
-  export let type = ''
-  export let justify = 'start'
-  export let align = 'top'
+	import { setContext } from 'svelte';
+	import a2s from '@svelement-ui/util-array-2-class-string';
+	import a2st from '@svelement-ui/util-array-2-style-string';
+	export let gutter = 0;
+	export let type = '';
+	export let justify = 'start';
+	export let align = 'top';
 
-  setContext('svelRowGutter', gutter)
+	setContext('svelRowGutter', gutter);
 
-  $: classString = a2s([
-    'svel-row',
-    [`is-justify-${justify}`, justify && justify !== 'start'],
-    [`is-align-${align}`, align && align !== 'top'],
-    ['svel-row--flex', type === 'flex'],
-    $$props.class,
-  ])
+	$: classString = a2s([
+		'svel-row',
+		[`is-justify-${justify}`, justify && justify !== 'start'],
+		[`is-align-${align}`, align && align !== 'top'],
+		['svel-row--flex', type === 'flex'],
+		$$props.class,
+	]);
 
-  $: style = a2st([
-    ['margin-left', -gutter / 2, Boolean(gutter)],
-    ['margin-right', -gutter / 2, Boolean(gutter)],
-  ])
+	$: style = a2st([
+		['margin-left', -gutter / 2, Boolean(gutter)],
+		['margin-right', -gutter / 2, Boolean(gutter)],
+	]);
 </script>
 
 <div class={classString} {style}>
-  <slot {gutter} />
+	<slot {gutter} />
 </div>

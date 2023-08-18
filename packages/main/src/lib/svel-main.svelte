@@ -1,3 +1,3 @@
 <main class="svel-main">
-  <slot />
+	<slot />
 </main>

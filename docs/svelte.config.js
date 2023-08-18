@@ -17,12 +17,12 @@ const config = {
 			assets: 'build',
 			fallback: undefined,
 			precompress: false,
-			strict: true
-		})
+			strict: true,
+		}),
 	},
 	paths: {
 		base: dev ? '' : process.env.PUBLIC_BASE_PATH,
-	}
+	},
 };
 
 export default config;

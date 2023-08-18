@@ -1,2 +1,2 @@
-import SvelContainer from './svel-container.svelte'
-export default SvelContainer
+import SvelContainer from './svel-container.svelte';
+export default SvelContainer;

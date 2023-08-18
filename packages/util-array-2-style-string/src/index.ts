@@ -1,4 +1,4 @@
-const noPxStyleList = ['z-index']
+const noPxStyleList = ['z-index'];
 
 /**
  * array2StyleString
@@ -18,61 +18,61 @@ const noPxStyleList = ['z-index']
  * @param input
  */
 export default function array2StyleString(
-  input: (
-    | string
-    | string[]
-    | [string, number]
-    | [string, null]
-    | [string, undefined]
-    | [string, string, boolean]
-    | [string, number, boolean]
-    | [string, []]
-  )[],
+	input: (
+		| string
+		| string[]
+		| [string, number]
+		| [string, null]
+		| [string, undefined]
+		| [string, string, boolean]
+		| [string, number, boolean]
+		| [string, []]
+	)[],
 ): string | null {
-  if (!input || input.length === 0) {
-    return null
-  }
+	if (!input || input.length === 0) {
+		return null;
+	}
 
-  let rt = ''
-  for (const item of input) {
-    // ["color:red", "font-size:10px"]
-    if (typeof item === 'string') {
-      rt += item
-      if (!rt.endsWith(';')) {
-        rt += ';'
-      }
-      continue
-    }
+	let rt = '';
+	for (const item of input) {
+		// ["color:red", "font-size:10px"]
+		if (typeof item === 'string') {
+			rt += item;
+			if (!rt.endsWith(';')) {
+				rt += ';';
+			}
+			continue;
+		}
 
-    // [["color", "red", false],["font-size", 10, false]]
-    if (item.length > 2 && !item[2]) {
-      continue
-    }
+		// [["color", "red", false],["font-size", 10, false]]
+		if (item.length > 2 && !item[2]) {
+			continue;
+		}
 
-    const key = item[0]
-    let value = item[1]
+		const key = item[0];
+		let value = item[1];
 
-    // [["color", undefined],["font-size", 10]] => "font-size:10px;"
-    // [["color", null],["font-size", 10]] => "font-size:10px;"
-    if (value === undefined || value === null) {
-      continue
-    }
+		// [["color", undefined],["font-size", 10]] => "font-size:10px;"
+		// [["color", null],["font-size", 10]] => "font-size:10px;"
+		if (value === undefined || value === null) {
+			continue;
+		}
 
-    // [["color", ""],["font-size", 10]] => "font-size:10px;"
-    if (typeof value === 'string' && !value) {
-      continue
-    }
+		// [["color", ""],["font-size", 10]] => "font-size:10px;"
+		if (typeof value === 'string' && !value) {
+			continue;
+		}
 
-    // [["color", "red"],["font-size", 10]]
-    if (typeof value === 'number' && value && !noPxStyleList.includes(key)) {
-      value = value + 'px'
-    }
-    rt += key + ':' + value
+		// [["color", "red"],["font-size", 10]]
+		if (typeof value === 'number' && value && !noPxStyleList.includes(key)) {
+			value = value + 'px';
+		}
+		rt += key + ':' + value;
 
-    if (!rt.endsWith(';')) {
-      rt += ';'
-    }
-  }
+		if (!rt.endsWith(';')) {
+			rt += ';';
+		}
+	}
 
-  return rt ? rt : null
+	return rt ? rt : null;
 }

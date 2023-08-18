@@ -1,18 +1,18 @@
 {
-  "name": "@svelement-ui/util-array-2-class-string",
-  "version": "0.8.0",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "vite build && tsc",
-    "clean": "rimraf dist"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
-  },
-  "dependencies": {
-    "@svelement-ui/util-errors": "workspace:^"
-  }
+	"name": "@svelement-ui/util-array-2-class-string",
+	"version": "0.8.3",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "vite build && tsc",
+		"clean": "rimraf dist"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.2",
+		"vite": "^4.4.5"
+	},
+	"dependencies": {
+		"@svelement-ui/util-errors": "workspace:^"
+	}
 }

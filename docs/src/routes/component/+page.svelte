@@ -1,6 +1,6 @@
-<aside>
-  <section>test</section>
-</aside>
-
 <script>
 </script>
+
+<aside>
+	<section>test</section>
+</aside>
