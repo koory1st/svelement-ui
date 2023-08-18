@@ -4,7 +4,7 @@ import { resolve } from 'path'
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/style.js'),
+      entry: resolve(__dirname, 'src/style.ts'),
       name: 'index',
       fileName: 'index',
 		}
