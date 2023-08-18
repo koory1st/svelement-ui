@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/theme-chalk",
-	"version": "0.8.0",
+	"version": "0.8.3",
 	"type": "module",
 	"files": [
 		"src"
