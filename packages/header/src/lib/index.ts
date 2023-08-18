@@ -1,2 +1,2 @@
-import SvelHeader from './svel-header.svelte'
-export default SvelHeader
+import SvelHeader from './svel-header.svelte';
+export default SvelHeader;

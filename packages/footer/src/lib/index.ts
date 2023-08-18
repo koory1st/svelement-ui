@@ -1,2 +1,2 @@
-import SvelFooter from './svel-footer.svelte'
-export default SvelFooter
+import SvelFooter from './svel-footer.svelte';
+export default SvelFooter;

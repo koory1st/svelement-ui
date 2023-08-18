@@ -1,11 +1,11 @@
 {
-  "name": "@svelement-ui/theme-chalk",
-  "version": "0.8.0",
-  "type": "module",
-  "files": [
-    "src"
-  ],
-  "scripts": {
-    "build": "vite build"
-  }
+	"name": "@svelement-ui/theme-chalk",
+	"version": "0.8.0",
+	"type": "module",
+	"files": [
+		"src"
+	],
+	"scripts": {
+		"build": "vite build"
+	}
 }

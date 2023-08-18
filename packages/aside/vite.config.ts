@@ -1,13 +1,12 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path'
+import { resolve } from 'path';
 
 export default defineConfig({
-  build: {
-    lib: {
-      entry: resolve(__dirname, 'src/style.ts'),
-      name: 'index',
-      fileName: 'index',
-		}
+	build: {
+		lib: {
+			entry: resolve(__dirname, 'src/style.ts'),
+			name: 'index',
+			fileName: 'index',
+		},
 	},
-
 });

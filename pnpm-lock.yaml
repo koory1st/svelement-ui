@@ -29,6 +29,9 @@ importers:
       eslint:
         specifier: ^8.28.0
         version: registry.npmmirror.com/eslint@8.28.0
+      eslint-config-prettier:
+        specifier: ^8.5.0
+        version: 8.5.0(eslint@8.28.0)
       eslint-plugin-svelte:
         specifier: ^2.30.0
         version: registry.npmmirror.com/eslint-plugin-svelte@2.30.0(eslint@8.28.0)(svelte@4.0.5)(ts-node@10.9.1)
@@ -41,6 +44,12 @@ importers:
       nx:
         specifier: ^16.6.0
         version: registry.npmmirror.com/nx@16.6.0
+      prettier:
+        specifier: ^2.8.0
+        version: 2.8.0
+      prettier-plugin-svelte:
+        specifier: ^2.10.1
+        version: 2.10.1(prettier@2.8.0)(svelte@4.0.5)
       rimraf:
         specifier: ^5.0.1
         version: registry.npmmirror.com/rimraf@5.0.1
@@ -880,6 +889,15 @@ packages:
       '@esbuild/win32-x64': 0.18.17
     dev: true
 
+  /eslint-config-prettier@8.5.0(eslint@8.28.0):
+    resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: registry.npmmirror.com/eslint@8.28.0
+    dev: true
+
   /esm-env@1.0.0:
     resolution: {integrity: sha512-Cf6VksWPsTuW01vU9Mk/3vRue91Zevka5SjyNf3nEpokFRuqt/KjUQoGAwq9qMmhpLTHmXzSIrFRw8zxWzmFBA==}
     dev: true
@@ -1006,6 +1024,22 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /prettier-plugin-svelte@2.10.1(prettier@2.8.0)(svelte@4.0.5):
+    resolution: {integrity: sha512-Wlq7Z5v2ueCubWo0TZzKc9XHcm7TDxqcuzRuGd0gcENfzfT4JZ9yDlCbEgxWgiPmLHkBjfOtpAWkcT28MCDpUQ==}
+    peerDependencies:
+      prettier: ^1.16.4 || ^2.0.0
+      svelte: ^3.2.0 || ^4.0.0-next.0
+    dependencies:
+      prettier: 2.8.0
+      svelte: registry.npmmirror.com/svelte@4.0.5
+    dev: true
+
+  /prettier@2.8.0:
+    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /rollup@3.27.1:

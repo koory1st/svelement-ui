@@ -1,4 +1,3 @@
 <script lang="ts">
-import SvelContainer from "@svelement-ui/container";
-
+	import SvelContainer from '@svelement-ui/container';
 </script>
