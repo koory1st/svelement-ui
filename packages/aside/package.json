@@ -14,27 +14,16 @@
 		"./dist/style.css": {
 			"import": "./dist/style.css",
 			"require": "./dist/style.css"
-		},
-		"./src/svel-aside.svelte": {
-			"import": "./src/svel-aside.svelte",
-			"require": "./src/svel-aside.svelte",
-			"svelte": "./src/svel-aside.svelte"
 		}
 	},
-	"svelte": "./src/svel-aside.svelte",
 	"scripts": {
 		"build": "vite build",
 		"clean": "rimraf build dist"
 	},
-	"type": "module",
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^",
 		"@svelement-ui/util-array-2-class-string": "workspace:^",
-		"@sveltejs/package": "^2.2.0",
 		"sass": "^1.64.2"
-	},
-	"dependencies": {
-		"svelte": "^4.0.5"
 	},
 	"bundledDependencies": [
 		"@svelement-ui/util-array-2-class-string"

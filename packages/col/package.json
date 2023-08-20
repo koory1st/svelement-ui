@@ -6,7 +6,7 @@
 		"src"
 	],
 	"exports": {
-		"./src/svel-col.svelte": {
+		".": {
 			"import": "./src/svel-col.svelte",
 			"require": "./src/svel-col.svelte",
 			"svelte": "./src/svel-col.svelte"
@@ -24,11 +24,7 @@
 		"@svelement-ui/theme-chalk": "workspace:^",
 		"@svelement-ui/util-array-2-class-string": "workspace:^",
 		"@svelement-ui/util-array-2-style-string": "workspace:^",
-		"@sveltejs/package": "^2.2.0",
 		"sass": "^1.64.2"
-	},
-	"dependencies": {
-		"svelte": "^4.0.5"
 	},
 	"bundledDependencies": [
 		"@svelement-ui/util-array-2-class-string",
