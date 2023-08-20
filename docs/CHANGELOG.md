@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/koory1st/svelement-ui/compare/v0.8.5...v0.9.0) (2023-08-20)
+
+
+### Bug Fixes
+
+* **docs:** use svel-link ([3d62072](https://github.com/koory1st/svelement-ui/commit/3d620721e16245a2523af1614071e06289d7e11d))
+
+
+### Features
+
+* **link:** add ([d756ed5](https://github.com/koory1st/svelement-ui/commit/d756ed522cbb72edd08c0fda5d32143e378db263))
+
+
+
+
+
 ## [0.8.5](https://github.com/koory1st/svelement-ui/compare/v0.8.4...v0.8.5) (2023-08-20)
 
 
