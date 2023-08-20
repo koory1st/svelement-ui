@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { PUBLIC_BASE_PATH } from '$env/static/public';
 	import './layout.scss';
-	import { SvelCol, SvelContainer } from '@svelement-ui/all';
+	import { SvelCol, SvelContainer, SvelFooter } from '@svelement-ui/all';
 	import SvelHeader from '@svelement-ui/header';
 	import SvelMain from '@svelement-ui/main';
-	import SvelFooter from '@svelement-ui/footer';
 	import SvelRow from '@svelement-ui/row';
 </script>
 
