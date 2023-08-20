@@ -1,13 +1,13 @@
 {
 	"name": "@svelement-ui/docs",
-	"version": "0.8.4",
+	"version": "0.8.5",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"clean": "rimraf dist .svelte-kit"
+		"clean": "rimraf dist"
 	},
 	"type": "module",
 	"devDependencies": {
