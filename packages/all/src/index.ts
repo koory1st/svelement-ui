@@ -4,9 +4,9 @@ import SvelAside from '@svelement-ui/aside';
 import SvelButton from '@svelement-ui/button';
 import SvelCol from '@svelement-ui/col';
 import SvelContainer from '@svelement-ui/container';
-export { default as SvelFooter } from '@svelement-ui/footer';
+import SvelFooter from '@svelement-ui/footer';
 export { default as SvelHeader } from '@svelement-ui/header';
 export { default as SvelMain } from '@svelement-ui/main';
 export { default as SvelRow } from '@svelement-ui/row';
 
-export { SvelAside, SvelButton, SvelCol, SvelContainer };
+export { SvelAside, SvelButton, SvelCol, SvelContainer, SvelFooter };
