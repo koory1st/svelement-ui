@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { PUBLIC_BASE_PATH } from '$env/static/public';
 	import './layout.scss';
-	import { SvelCol, SvelContainer, SvelFooter, SvelHeader, SvelMain } from '@svelement-ui/all';
-	import SvelRow from '@svelement-ui/row';
+	import {
+		SvelCol,
+		SvelContainer,
+		SvelFooter,
+		SvelHeader,
+		SvelMain,
+		SvelRow,
+	} from '@svelement-ui/all';
 </script>
 
 <SvelContainer direction="vertical">

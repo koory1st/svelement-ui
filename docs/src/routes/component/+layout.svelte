@@ -2,9 +2,7 @@
 	import { PUBLIC_BASE_PATH } from '$env/static/public';
 	import '@svelement-ui/container/dist/style.css';
 	import '@svelement-ui/main/dist/style.css';
-	import SvelContainer from '@svelement-ui/container';
-	import { SvelAside } from '@svelement-ui/all';
-	import SvelMain from '@svelement-ui/main';
+	import { SvelAside, SvelContainer, SvelMain } from '@svelement-ui/all';
 </script>
 
 <SvelContainer>
