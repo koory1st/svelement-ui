@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.5](https://github.com/koory1st/svelement-ui/compare/v0.8.4...v0.8.5) (2023-08-20)
+
+
+### Bug Fixes
+
+* **col:** simplify package ([41479ac](https://github.com/koory1st/svelement-ui/commit/41479ac6167a9bd785c511861d089941f22742b9))
+* **container:** simplify package ([d35abaf](https://github.com/koory1st/svelement-ui/commit/d35abafb2b745490c6107cb9de7e6c6dc43b99c8))
+* **main:** simplify package ([da30a9d](https://github.com/koory1st/svelement-ui/commit/da30a9d55aec92533633dea36ad2e8e7d09f4bc8))
+* **row:** simplify package ([371f2ba](https://github.com/koory1st/svelement-ui/commit/371f2ba1c4e306af77d9aad8fcfe88a4d2340764))
+
+
+
+
+
 ## [0.8.4](https://github.com/koory1st/svelement-ui/compare/v0.8.3...v0.8.4) (2023-08-18)
 
 
