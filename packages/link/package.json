@@ -1,5 +1,5 @@
 {
-	"name": "@svelement-ui/header",
+	"name": "@svelement-ui/link",
 	"version": "0.8.5",
 	"files": [
 		"dist/style.css",
@@ -7,9 +7,9 @@
 	],
 	"exports": {
 		".": {
-			"import": "./src/svel-header.svelte",
-			"require": "./src/svel-header.svelte",
-			"svelte": "./src/svel-header.svelte"
+			"import": "./src/svel-link.svelte",
+			"require": "./src/svel-link.svelte",
+			"svelte": "./src/svel-link.svelte"
 		},
 		"./dist/style.css": {
 			"import": "./dist/style.css",
@@ -22,6 +22,7 @@
 	},
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^",
+		"@svelement-ui/util-array-2-class-string": "workspace:^",
 		"sass": "^1.64.2"
 	},
 	"bundledDependencies": [

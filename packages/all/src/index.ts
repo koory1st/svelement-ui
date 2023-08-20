@@ -8,5 +8,16 @@ import SvelFooter from '@svelement-ui/footer';
 import SvelHeader from '@svelement-ui/header';
 import SvelMain from '@svelement-ui/main';
 import SvelRow from '@svelement-ui/row';
+import SvelLink from '@svelement-ui/link';
 
-export { SvelAside, SvelButton, SvelCol, SvelContainer, SvelFooter, SvelHeader, SvelMain, SvelRow };
+export {
+	SvelAside,
+	SvelButton,
+	SvelCol,
+	SvelContainer,
+	SvelFooter,
+	SvelHeader,
+	SvelMain,
+	SvelRow,
+	SvelLink,
+};

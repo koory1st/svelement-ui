@@ -23,9 +23,11 @@
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^",
 		"@svelement-ui/util-array-2-class-string": "workspace:^",
+		"@svelement-ui/util-array-2-style-string": "workspace:^",
 		"sass": "^1.64.2"
 	},
 	"bundledDependencies": [
-		"@svelement-ui/util-array-2-class-string"
+		"@svelement-ui/util-array-2-class-string",
+		"@svelement-ui/util-array-2-style-string"
 	]
 }

@@ -13,6 +13,7 @@
 		"@svelement-ui/container": "workspace:^",
 		"@svelement-ui/footer": "workspace:^",
 		"@svelement-ui/header": "workspace:^",
+		"@svelement-ui/link": "workspace:^",
 		"@svelement-ui/main": "workspace:^",
 		"@svelement-ui/row": "workspace:^",
 		"@svelement-ui/theme-chalk": "workspace:^",

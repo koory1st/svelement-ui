@@ -8,6 +8,7 @@
 		SvelHeader,
 		SvelMain,
 		SvelRow,
+		SvelLink,
 	} from '@svelement-ui/all';
 </script>
 
@@ -16,9 +17,7 @@
 		<SvelRow class="header-row">
 			<SvelCol span="6">SvelementUI</SvelCol>
 			<SvelCol span="18">
-				<nav>
-					<a href="{PUBLIC_BASE_PATH}component">Component</a>
-				</nav>
+				<SvelLink href="{PUBLIC_BASE_PATH}component">Component</SvelLink>
 			</SvelCol>
 		</SvelRow>
 	</SvelHeader>
