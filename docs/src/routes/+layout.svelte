@@ -12,12 +12,22 @@
 	} from '@svelement-ui/all';
 </script>
 
-<SvelContainer direction="vertical">
+<SvelContainer direction="vertical" class="docs-container">
 	<SvelHeader class="header">
 		<SvelRow class="header-row">
-			<SvelCol span="6">SvelementUI</SvelCol>
-			<SvelCol span="18">
-				<SvelLink href="{PUBLIC_BASE_PATH}component">Component</SvelLink>
+			<SvelCol span="6" class="title">
+				<SvelLink href={PUBLIC_BASE_PATH} type="primary" underline="false">SvelementUI</SvelLink>
+			</SvelCol>
+			<SvelCol span="18" class="content">
+				<SvelLink href="{PUBLIC_BASE_PATH}component" type="primary">Component</SvelLink>
+				<SvelLink href="https://github.com/koory1st/svelement-ui" type="primary">
+					<img
+						src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+						width="24"
+						height="24"
+						alt=""
+					/>
+				</SvelLink>
 			</SvelCol>
 		</SvelRow>
 	</SvelHeader>
