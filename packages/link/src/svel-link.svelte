@@ -1,7 +1,7 @@
 <script lang="ts">
 	import a2s from '@svelement-ui/util-array-2-class-string';
 	import { createEventDispatcher } from 'svelte';
-	export let type = 'default';
+	export let type: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' = 'default';
 	export let underline = true;
 	export let disabled = false;
 	export let href = '';
