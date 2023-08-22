@@ -1,23 +1,25 @@
 {
 	"name": "@svelement-ui/aside",
-	"version": "0.9.1",
+	"version": "0.9.2",
 	"files": [
-		"src",
-		"dist/style.css"
+		"dist"
 	],
 	"exports": {
 		".": {
-			"import": "./src/svel-aside.svelte",
-			"require": "./src/svel-aside.svelte",
-			"svelte": "./src/svel-aside.svelte"
+			"import": "./src/index.svelte",
+			"require": "./src/index.svelte",
+			"svelte": "./src/index.svelte"
 		},
 		"./dist/style.css": {
 			"import": "./dist/style.css",
 			"require": "./dist/style.css"
 		}
 	},
+	"types": "./dist/index.svelte.d.ts",
 	"scripts": {
-		"build": "vite build",
+		"build": "concurrently \"pnpm:build-*\" && cp dist_style/style.css dist/style.css && rm -rf dist/style.css dist/style.d.ts dist_style/",
+		"build-svelte": "svelte-package -i src/",
+		"build-css": "vite build --outDir dist_style/",
 		"clean": "rimraf build dist"
 	},
 	"devDependencies": {
