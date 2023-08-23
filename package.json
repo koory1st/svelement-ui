@@ -1,7 +1,24 @@
 {
 	"name": "svelement-ui",
 	"private": true,
+	"author": {
+		"name": "koory1st",
+		"email": "32436334@qq.com"
+	},
+	"description": "A UI component in Svelte",
+	"keywords": [
+		"svelte",
+		"element",
+		"ui"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/koory1st/svelement-ui"
+	},
+	"license": "MIT",
+	"homepage": "https://koory1st.github.io/svelement-ui/",
 	"scripts": {
+		"rush": "rush",
 		"dev-docs": "lerna run dev --scope @svelement-ui/docs",
 		"fix": "prettier --plugin-search-dir . --write . && eslint --fix .",
 		"build": "lerna run build",
