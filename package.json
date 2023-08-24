@@ -18,10 +18,8 @@
 	"license": "MIT",
 	"homepage": "https://koory1st.github.io/svelement-ui/",
 	"scripts": {
-		"rush": "rush",
 		"dev-docs": "lerna run dev --scope @svelement-ui/docs",
 		"fix": "prettier --plugin-search-dir . --write . && eslint --fix .",
-		"build": "lerna run build",
 		"check": "lerna run check",
 		"lerna-version": "lerna version --conventional-commits",
 		"prepare": "husky install",
@@ -30,6 +28,8 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.6.7",
 		"@commitlint/config-conventional": "^17.6.7",
+		"@lerna-lite/cli": "^2.5.0",
+		"@lerna-lite/version": "^2.5.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"@sveltejs/package": "^2.2.1",
@@ -40,7 +40,6 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
 		"husky": "^8.0.3",
-		"lerna": "^7.1.4",
 		"nx": "^16.6.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
