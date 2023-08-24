@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
@@ -26,12 +28,6 @@ jobs:
       - name: Version
         run: |
           pnpm lerna-version
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
 
       - name: Publish
         run: |
