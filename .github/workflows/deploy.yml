@@ -47,6 +47,8 @@ jobs:
 
       - name: Version
         run: |
+          echo ${GH_TOKEN}
+          git remote -v
           pnpm lerna-version
 
       - name: Publish
