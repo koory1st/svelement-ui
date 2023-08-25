@@ -54,8 +54,7 @@ jobs:
         run: |
           pnpm -r --filter="./packages/**" publish
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
   build_site:
     needs: publish
