@@ -18,5 +18,9 @@
 		"@svelement-ui/row": "workspace:^",
 		"@svelement-ui/theme-chalk": "workspace:^",
 		"@svelement-ui/util-array-2-class-string": "workspace:^"
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
 	}
 }

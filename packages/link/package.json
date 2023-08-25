@@ -22,10 +22,13 @@
 	},
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^",
-		"@svelement-ui/util-array-2-class-string": "workspace:^",
-		"sass": "^1.64.2"
+		"@svelement-ui/util-array-2-class-string": "workspace:^"
 	},
 	"bundledDependencies": [
 		"@svelement-ui/util-array-2-class-string"
-	]
+	],
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
+	}
 }

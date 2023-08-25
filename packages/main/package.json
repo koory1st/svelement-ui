@@ -21,10 +21,13 @@
 		"clean": "rimraf dist"
 	},
 	"devDependencies": {
-		"@svelement-ui/theme-chalk": "workspace:^",
-		"sass": "^1.64.2"
+		"@svelement-ui/theme-chalk": "workspace:^"
 	},
 	"bundledDependencies": [
 		"@svelement-ui/util-array-2-class-string"
-	]
+	],
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
+	}
 }
