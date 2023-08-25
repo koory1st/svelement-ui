@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/footer",
-	"version": "0.9.1",
+	"version": "0.9.3",
 	"files": [
 		"dist/style.css",
 		"src"
