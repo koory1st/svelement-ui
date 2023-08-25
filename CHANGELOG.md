@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.4](https://github.com/koory1st/svelement-ui/compare/v0.9.3...v0.9.4) (2023-08-25)
+
+### Bug Fixes
+
+* **lerna:** push ([f9735a2](https://github.com/koory1st/svelement-ui/commit/f9735a2a6a1668ca3af82e79bc90048d2d4e83a1))
+
 ## [0.9.3](https://github.com/koory1st/svelement-ui/compare/v0.9.2...v0.9.3) (2023-08-25)
 
 ### Bug Fixes
