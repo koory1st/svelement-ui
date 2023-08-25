@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.7](https://github.com/koory1st/svelement-ui/compare/v0.9.6...v0.9.7) (2023-08-25)
+
+### Bug Fixes
+
+* **package:** add publish config ([c1f8feb](https://github.com/koory1st/svelement-ui/commit/c1f8feb11e1e68e1dbf2fc1e2a6e25708c1c19ae))
+
 ## [0.9.6](https://github.com/koory1st/svelement-ui/compare/v0.9.5...v0.9.6) (2023-08-25)
 
 **Note:** Version bump only for package @svelement-ui/button
