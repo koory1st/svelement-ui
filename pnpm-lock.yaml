@@ -276,14 +276,7 @@ importers:
         specifier: ^4.4.5
         version: registry.npmmirror.com/vite@4.4.5(@types/node@20.4.7)
 
-  packages/util-errors:
-    devDependencies:
-      typescript:
-        specifier: ^5.0.2
-        version: registry.npmmirror.com/typescript@5.1.6
-      vite:
-        specifier: ^4.4.5
-        version: registry.npmmirror.com/vite@4.4.5(@types/node@20.4.7)
+  packages/util-errors: {}
 
 packages:
 
