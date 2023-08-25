@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.5](https://github.com/koory1st/svelement-ui/compare/v0.9.4...v0.9.5) (2023-08-25)
+
+### Bug Fixes
+
+* **github-action:** add setup-node ([7df9b87](https://github.com/koory1st/svelement-ui/commit/7df9b87c8f4f573e147f1f6b5fd086e68fffc1e9))
+* **lock:** change lockfile ([9f2ae5c](https://github.com/koory1st/svelement-ui/commit/9f2ae5c09ef5cacee3ed152d6063dcb7605fdc1a))
+* **package:** add pulish config ([f341c6a](https://github.com/koory1st/svelement-ui/commit/f341c6acb368908716a745d6d2e0d534202a54c9))
+
 ## [0.9.4](https://github.com/koory1st/svelement-ui/compare/v0.9.3...v0.9.4) (2023-08-25)
 
 ### Bug Fixes

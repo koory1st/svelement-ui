@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/row",
-	"version": "0.9.4",
+	"version": "0.9.5",
 	"files": [
 		"dist/style.css",
 		"src"
