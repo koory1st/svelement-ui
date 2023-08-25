@@ -21,7 +21,7 @@
 		"dev-docs": "lerna run dev --scope @svelement-ui/docs",
 		"fix": "prettier --plugin-search-dir . --write . && eslint --fix .",
 		"check": "lerna run check",
-		"lerna-version": "lerna version -y --conventional-commits --no-push",
+		"lerna-version": "lerna version -y --conventional-commits",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
