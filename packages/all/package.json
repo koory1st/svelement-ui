@@ -1,11 +1,17 @@
 {
 	"name": "@svelement-ui/all",
 	"version": "0.9.8",
-	"main": "src/index.ts",
-	"files": [
-		"src"
-	],
+	"exports": {
+		".": {
+			"types": "./dist/lib/index.d.ts",
+			"import": "./dist/lib/index.js",
+			"require": "./dist/lib/index.js"
+		}
+	},
 	"type": "module",
+	"scripts": {
+		"build": "svelte-kit sync && svelte-package -i src/ && publint"
+	},
 	"devDependencies": {
 		"@svelement-ui/aside": "workspace:^",
 		"@svelement-ui/button": "workspace:^",
