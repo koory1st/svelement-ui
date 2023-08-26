@@ -44,6 +44,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Version
+        run: |
+          pnpm check && pnpm lint
+
       - name: Git Identity
         run: |
           git config --global user.name 'github-actions[bot]'
