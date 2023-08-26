@@ -2,22 +2,25 @@
 	"name": "@svelement-ui/header",
 	"version": "0.9.7",
 	"files": [
-		"dist/style.css",
-		"src"
+		"dist"
 	],
 	"exports": {
 		".": {
-			"import": "./src/svel-header.svelte",
-			"require": "./src/svel-header.svelte",
-			"svelte": "./src/svel-header.svelte"
+			"import": "./src/index.svelte",
+			"require": "./src/index.svelte",
+			"svelte": "./src/index.svelte"
 		},
 		"./dist/style.css": {
 			"import": "./dist/style.css",
 			"require": "./dist/style.css"
 		}
 	},
+	"types": "./dist/index.svelte.d.ts",
 	"scripts": {
-		"build": "vite build",
+		"build": "concurrently \"pnpm:build-*\" && cp dist_style/style.css dist/style.css && rm -rf dist/style.css dist/style.d.ts dist_style/",
+		"build-svelte": "svelte-package -i src/",
+		"build-css": "vite build --outDir dist_style/",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"clean": "rimraf dist"
 	},
 	"devDependencies": {
