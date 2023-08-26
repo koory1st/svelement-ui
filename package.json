@@ -21,7 +21,7 @@
 		"dev-docs": "lerna run dev --scope @svelement-ui/docs",
 		"fix": "concurrently \"prettier --plugin-search-dir . --write .\" \"eslint --fix .\"",
 		"lint": "concurrently \"prettier -c --plugin-search-dir . .\" \"eslint .\"",
-		"check": "pnpm -r run check lint",
+		"check": "pnpm -r run check && pnpm lint",
 		"lerna-version": "lerna version -y --conventional-commits",
 		"prepare": "husky install"
 	},
