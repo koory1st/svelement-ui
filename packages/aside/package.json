@@ -20,7 +20,7 @@
 		"build": "concurrently \"pnpm:build-*\" && cp dist_style/style.css dist/style.css && rm -rf dist/style.css dist/style.d.ts dist_style/",
 		"build-svelte": "svelte-package -i src/",
 		"build-css": "vite build --outDir dist_style/",
-		"clean": "rimraf build dist"
+		"clean": "rimraf dist"
 	},
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^"
