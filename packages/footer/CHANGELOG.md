@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.8](https://github.com/koory1st/svelement-ui/compare/v0.9.7...v0.9.8) (2023-08-26)
+
+### Bug Fixes
+
+* **footer:** add svelte build ([45c3f86](https://github.com/koory1st/svelement-ui/commit/45c3f861a60acfdefd5bec4db062d54e5fda1650))
+
 ## [0.9.7](https://github.com/koory1st/svelement-ui/compare/v0.9.6...v0.9.7) (2023-08-25)
 
 ### Bug Fixes

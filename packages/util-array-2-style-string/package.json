@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/util-array-2-style-string",
-	"version": "0.9.7",
+	"version": "0.9.8",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
