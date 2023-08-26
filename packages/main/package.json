@@ -17,8 +17,8 @@
 	},
 	"types": "./dist/index.svelte.d.ts",
 	"scripts": {
-		"build": "concurrently \"pnpm:build-*\" && cp dist_style/style.css dist/style.css && rm -rf dist/style.css dist/style.d.ts dist_style/",
-		"build-svelte": "svelte-package -i src/",
+		"build": "concurrently \"pnpm:build-*\" && cp dist_style/style.css dist/style.css && rm -rf dist/style.css dist/style.d.ts dist_style/ && publint",
+		"build-svelte": "svelte-kit sync && svelte-package -i src/",
 		"build-css": "vite build --outDir dist_style/",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"clean": "rimraf dist"
