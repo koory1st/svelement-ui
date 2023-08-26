@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Version
+      - name: Check and Lint
         run: |
           pnpm check && pnpm lint
 
