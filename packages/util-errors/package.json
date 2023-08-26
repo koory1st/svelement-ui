@@ -12,7 +12,8 @@
 		}
 	},
 	"scripts": {
-		"build": "vite build && tsc",
+		"check": "tsc",
+		"build": "vite build",
 		"clean": "rimraf dist"
 	},
 	"publishConfig": {
