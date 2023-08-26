@@ -15,10 +15,10 @@
 <SvelContainer direction="vertical" class="docs-container">
 	<SvelHeader class="header">
 		<SvelRow class="header-row">
-			<SvelCol span="6" class="title">
-				<SvelLink href={PUBLIC_BASE_PATH} type="primary" underline="false">SvelementUI</SvelLink>
+			<SvelCol span={6} class="title">
+				<SvelLink href={PUBLIC_BASE_PATH} type="primary" underline={false}>SvelementUI</SvelLink>
 			</SvelCol>
-			<SvelCol span="18" class="content">
+			<SvelCol span={18} class="content">
 				<SvelLink href="{PUBLIC_BASE_PATH}component" type="primary">Component</SvelLink>
 				<SvelLink href="https://github.com/koory1st/svelement-ui" type="primary">
 					<img
