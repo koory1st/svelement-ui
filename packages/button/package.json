@@ -2,28 +2,31 @@
 	"name": "@svelement-ui/button",
 	"version": "0.9.6",
 	"files": [
-		"dist/style.css",
-		"src"
+		"dist"
 	],
 	"exports": {
 		".": {
-			"import": "./src/svel-button.svelte",
-			"require": "./src/svel-button.svelte",
-			"svelte": "./src/svel-button.svelte"
+			"import": "./src/index.svelte",
+			"require": "./src/index.svelte",
+			"svelte": "./src/index.svelte"
 		},
 		"./dist/style.css": {
 			"import": "./dist/style.css",
 			"require": "./dist/style.css"
 		}
 	},
+	"types": "./dist/index.svelte.d.ts",
 	"scripts": {
-		"build": "vite build",
+		"build": "concurrently \"pnpm:build-*\" && cp dist_style/style.css dist/style.css && rm -rf dist/style.css dist/style.d.ts dist_style/",
+		"build-svelte": "svelte-package -i src/",
+		"build-css": "vite build --outDir dist_style/",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"clean": "rimraf dist"
 	},
-	"type": "module",
 	"devDependencies": {
 		"@svelement-ui/theme-chalk": "workspace:^",
-		"@svelement-ui/util-array-2-class-string": "workspace:^"
+		"@svelement-ui/util-array-2-class-string": "workspace:^",
+		"typed-scss-modules": "^7.1.4"
 	},
 	"bundledDependencies": [
 		"@svelement-ui/util-array-2-class-string"
