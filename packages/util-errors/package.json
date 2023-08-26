@@ -1,6 +1,6 @@
 {
 	"name": "@svelement-ui/util-errors",
-	"version": "0.9.5",
+	"version": "0.9.8",
 	"type": "module",
 	"files": [
 		"dist"
