@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './app.css';
 	import { PUBLIC_BASE_PATH } from '$env/static/public';
-	import './layout.scss';
 	import {
 		SvelCol,
 		SvelContainer,
@@ -14,12 +13,14 @@
 </script>
 
 <SvelContainer direction="vertical" class="docs-container">
-	<SvelHeader class="header">
-		<SvelRow class="header-row">
+	<SvelHeader class="flex border-b border-solid border-gray-200">
+		<SvelRow class="lg:w-6/12 mx-auto items-center">
 			<SvelCol span={6} class="title">
-				<SvelLink href={PUBLIC_BASE_PATH} type="primary" underline={false}>SvelementUI</SvelLink>
+				<SvelLink href={PUBLIC_BASE_PATH} type="primary" underline={false}>
+					<span class="text-2xl font-bold">SvelementUI</span>
+				</SvelLink>
 			</SvelCol>
-			<SvelCol span={18} class="content">
+			<SvelCol span={18} class="flex justify-end">
 				<SvelLink href="{PUBLIC_BASE_PATH}component" type="primary">Component</SvelLink>
 				<SvelLink href="https://github.com/koory1st/svelement-ui" type="primary">
 					<img
@@ -34,9 +35,15 @@
 	</SvelHeader>
 
 	<SvelMain>
-		<slot />
+		<div class="lg:w-6/12 mx-auto">
+			<slot />
+		</div>
 	</SvelMain>
-	<SvelFooter>SvelementUI footer</SvelFooter>
+	<SvelFooter>
+		<div class="border-t border-solid border-gray-200">
+			<div class="lg:w-6/12 mx-auto">SvelementUI footer</div>
+		</div>
+	</SvelFooter>
 </SvelContainer>
 
 <style>
