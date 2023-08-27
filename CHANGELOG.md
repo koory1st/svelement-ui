@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.9](https://github.com/koory1st/svelement-ui/compare/v0.9.8...v0.9.9) (2023-08-26)
+
+### Bug Fixes
+
+* add publint ([aa12a04](https://github.com/koory1st/svelement-ui/commit/aa12a04037cb4f96627c5ba5199ec40d22eb579b))
+* **all:** add build ([6a4099c](https://github.com/koory1st/svelement-ui/commit/6a4099cb601424964e274157b9fe639a7131adc9))
+* change lint scope, not include docs ([6ffaa30](https://github.com/koory1st/svelement-ui/commit/6ffaa30b2dee7cf476021a49d63fe9501e091cdb))
+* **docs:** css check ([9998ae4](https://github.com/koory1st/svelement-ui/commit/9998ae440357b3ed00ee75761afda4eb985febaa))
+* format ([dee3360](https://github.com/koory1st/svelement-ui/commit/dee3360b0820d5051a36dffce2f5e4656ec1ce01))
+* **package:** add publint and vitest ([6f2867c](https://github.com/koory1st/svelement-ui/commit/6f2867c705a61e6007bd05051f6810837f9b666a))
+
 ## [0.9.8](https://github.com/koory1st/svelement-ui/compare/v0.9.7...v0.9.8) (2023-08-26)
 
 ### Bug Fixes

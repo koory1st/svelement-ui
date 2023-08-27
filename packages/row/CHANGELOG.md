@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.9](https://github.com/koory1st/svelement-ui/compare/v0.9.8...v0.9.9) (2023-08-26)
+
+### Bug Fixes
+
+* add publint ([aa12a04](https://github.com/koory1st/svelement-ui/commit/aa12a04037cb4f96627c5ba5199ec40d22eb579b))
+
 ## [0.9.8](https://github.com/koory1st/svelement-ui/compare/v0.9.7...v0.9.8) (2023-08-26)
 
 ### Bug Fixes
