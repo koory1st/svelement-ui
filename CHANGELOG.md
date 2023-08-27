@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.10](https://github.com/koory1st/svelement-ui/compare/v0.9.9...v0.9.10) (2023-08-27)
+
+### Bug Fixes
+
+* **all:** try to add typing ([986ad47](https://github.com/koory1st/svelement-ui/commit/986ad473f34bf3f755cd1d0162313a23840f0566))
+* **docs:** add tailwind ([1254fdf](https://github.com/koory1st/svelement-ui/commit/1254fdf5b7eb4da870ecd6c2f3bfc4a53723921f))
+* **docs:** add tailwind ([5469421](https://github.com/koory1st/svelement-ui/commit/546942185b2140a52707d7661bbb4b73f1625cd8))
+* **docs:** format ([fbfddcc](https://github.com/koory1st/svelement-ui/commit/fbfddcc577b55d5d4ce9b5f2466a7e8362b97825))
+* use pnpm to run ([77adc4b](https://github.com/koory1st/svelement-ui/commit/77adc4b7877d88977a8138b32f6ce102fef50094))
+
 ## [0.9.9](https://github.com/koory1st/svelement-ui/compare/v0.9.8...v0.9.9) (2023-08-26)
 
 ### Bug Fixes
