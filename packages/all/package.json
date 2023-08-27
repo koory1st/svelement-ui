@@ -8,6 +8,7 @@
 			"require": "./dist/lib/index.js"
 		}
 	},
+	"typings": "./dist/lib/index.d.ts",
 	"type": "module",
 	"scripts": {
 		"build": "svelte-kit sync && svelte-package -i src/ && publint"
