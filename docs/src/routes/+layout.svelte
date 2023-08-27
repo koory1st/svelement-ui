@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './app.css';
 	import { PUBLIC_BASE_PATH } from '$env/static/public';
 	import './layout.scss';
 	import {

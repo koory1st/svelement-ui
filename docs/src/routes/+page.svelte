@@ -3,3 +3,9 @@
 	Visit <a href="https://koory1st.github.io/svelement-ui">koory1st.github.io/svelement-ui</a> to read
 	the documentation
 </p>
+
+<style lang="postcss">
+	:global(html) {
+		background-color: theme(colors.gray.100);
+	}
+</style>
