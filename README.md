@@ -1,3 +1,3 @@
 # docs
 
-https://koory1st.github.io/svelement-ui/
+[docs](https://koory1st.github.io/svelement-ui/)
