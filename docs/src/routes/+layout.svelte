@@ -22,7 +22,7 @@
 			</SvelCol>
 			<SvelCol span={18} class="flex justify-end">
 				<SvelLink href="{PUBLIC_BASE_PATH}component" type="primary">Component</SvelLink>
-				<SvelLink href="https://github.com/koory1st/svelement-ui" type="primary">
+				<SvelLink href="https://github.com/koory1st/svelement-ui" type="primary" target="_blank">
 					<img
 						src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 						width="24"
