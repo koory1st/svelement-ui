@@ -3,4 +3,5 @@
 	console.log('🚀 ~ file: +page.svelte:3 ~ data:', data);
 </script>
 
-{data.comp}
+<!-- /* eslint-disable */ -->
+<p>{@html data.content}</p>
