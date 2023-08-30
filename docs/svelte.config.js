@@ -19,6 +19,9 @@ const config = {
       precompress: false,
       strict: true,
     }),
+    prerender: {
+      entries: ["*", "/component/button", "/component/container",]
+    },
   },
   paths: {
     base: dev ? '' : process.env.PUBLIC_BASE_PATH,
