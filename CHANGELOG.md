@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.13](https://github.com/koory1st/svelement-ui/compare/v0.9.12...v0.9.13) (2023-08-30)
+
+### Bug Fixes
+
+* **docs:** add prerender entries ([c104fa5](https://github.com/koory1st/svelement-ui/commit/c104fa5a47629800cd3331641986bdc68533af9f))
+* **docs:** add read md file ([6b62370](https://github.com/koory1st/svelement-ui/commit/6b623705dd81813fffc7c36784b745c517d058e7))
+* **docs:** add route ([e7ba40f](https://github.com/koory1st/svelement-ui/commit/e7ba40f209d137cb9398262adb8be2a1330d5729))
+
 ## [0.9.12](https://github.com/koory1st/svelement-ui/compare/v0.9.11...v0.9.12) (2023-08-28)
 
 **Note:** Version bump only for package svelement-ui
