@@ -11,13 +11,13 @@ import SvelRow from '@svelement-ui/row';
 import SvelLink from '@svelement-ui/link';
 
 export {
-	SvelAside,
-	SvelButton,
-	SvelCol,
-	SvelContainer,
-	SvelFooter,
-	SvelHeader,
-	SvelMain,
-	SvelRow,
-	SvelLink,
+  SvelAside,
+  SvelButton,
+  SvelCol,
+  SvelContainer,
+  SvelFooter,
+  SvelHeader,
+  SvelMain,
+  SvelRow,
+  SvelLink,
 };

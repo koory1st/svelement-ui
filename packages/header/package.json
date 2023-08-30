@@ -1,37 +1,37 @@
 {
-	"name": "@svelement-ui/header",
-	"version": "0.9.12",
-	"files": [
-		"dist"
-	],
-	"exports": {
-		".": {
-			"types": "./dist/index.svelte.d.ts",
-			"import": "./dist/index.svelte",
-			"require": "./dist/index.svelte",
-			"svelte": "./dist/index.svelte"
-		},
-		"./dist/style.css": {
-			"import": "./dist/style.css",
-			"require": "./dist/style.css"
-		}
-	},
-	"types": "./dist/index.svelte.d.ts",
-	"scripts": {
-		"build": "concurrently \"pnpm:build-*\" && publint && cp dist_style/style.css dist/style.css && rm -rf dist/style.js dist/style.d.ts dist_style/",
-		"build-svelte": "svelte-kit sync && svelte-package -i src/",
-		"build-css": "vite build --outDir dist_style/",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"clean": "rimraf dist"
-	},
-	"devDependencies": {
-		"@svelement-ui/theme-chalk": "workspace:^"
-	},
-	"bundledDependencies": [
-		"@svelement-ui/util-array-2-class-string"
-	],
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org"
-	}
+  "name": "@svelement-ui/header",
+  "version": "0.9.12",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.svelte.d.ts",
+      "import": "./dist/index.svelte",
+      "require": "./dist/index.svelte",
+      "svelte": "./dist/index.svelte"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "types": "./dist/index.svelte.d.ts",
+  "scripts": {
+    "build": "concurrently \"pnpm:build-*\" && publint && cp dist_style/style.css dist/style.css && rm -rf dist/style.js dist/style.d.ts dist_style/",
+    "build-svelte": "svelte-kit sync && svelte-package -i src/",
+    "build-css": "vite build --outDir dist_style/",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@svelement-ui/theme-chalk": "workspace:^"
+  },
+  "bundledDependencies": [
+    "@svelement-ui/util-array-2-class-string"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }

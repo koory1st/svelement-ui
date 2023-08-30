@@ -1,33 +1,33 @@
 {
-	"name": "@svelement-ui/all",
-	"version": "0.9.12",
-	"exports": {
-		".": {
-			"types": "./dist/lib/index.d.ts",
-			"import": "./dist/lib/index.js",
-			"require": "./dist/lib/index.js"
-		}
-	},
-	"typings": "./dist/lib/index.d.ts",
-	"type": "module",
-	"scripts": {
-		"build": "svelte-kit sync && svelte-package -i src/ && publint"
-	},
-	"devDependencies": {
-		"@svelement-ui/aside": "workspace:^",
-		"@svelement-ui/button": "workspace:^",
-		"@svelement-ui/col": "workspace:^",
-		"@svelement-ui/container": "workspace:^",
-		"@svelement-ui/footer": "workspace:^",
-		"@svelement-ui/header": "workspace:^",
-		"@svelement-ui/link": "workspace:^",
-		"@svelement-ui/main": "workspace:^",
-		"@svelement-ui/row": "workspace:^",
-		"@svelement-ui/theme-chalk": "workspace:^",
-		"@svelement-ui/util-array-2-class-string": "workspace:^"
-	},
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org"
-	}
+  "name": "@svelement-ui/all",
+  "version": "0.9.12",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js",
+      "require": "./dist/lib/index.js"
+    }
+  },
+  "typings": "./dist/lib/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "svelte-kit sync && svelte-package -i src/ && publint"
+  },
+  "devDependencies": {
+    "@svelement-ui/aside": "workspace:^",
+    "@svelement-ui/button": "workspace:^",
+    "@svelement-ui/col": "workspace:^",
+    "@svelement-ui/container": "workspace:^",
+    "@svelement-ui/footer": "workspace:^",
+    "@svelement-ui/header": "workspace:^",
+    "@svelement-ui/link": "workspace:^",
+    "@svelement-ui/main": "workspace:^",
+    "@svelement-ui/row": "workspace:^",
+    "@svelement-ui/theme-chalk": "workspace:^",
+    "@svelement-ui/util-array-2-class-string": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }

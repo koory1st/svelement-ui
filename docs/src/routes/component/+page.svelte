@@ -2,5 +2,5 @@
 </script>
 
 <aside>
-	<section>test</section>
+  <section>test</section>
 </aside>

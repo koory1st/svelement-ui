@@ -1,23 +1,23 @@
 {
-	"name": "@svelement-ui/util-errors",
-	"version": "0.9.11",
-	"type": "module",
-	"files": [
-		"dist"
-	],
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"default": "./dist/index.js"
-		}
-	},
-	"scripts": {
-		"check": "tsc",
-		"build": "vite build",
-		"clean": "rimraf dist"
-	},
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org"
-	}
+  "name": "@svelement-ui/util-errors",
+  "version": "0.9.11",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "check": "tsc",
+    "build": "vite build",
+    "clean": "rimraf dist"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }

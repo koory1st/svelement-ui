@@ -1,15 +1,15 @@
 {
-	"name": "@svelement-ui/theme-chalk",
-	"version": "0.9.5",
-	"type": "module",
-	"files": [
-		"src"
-	],
-	"scripts": {
-		"build": "vite build"
-	},
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org"
-	}
+  "name": "@svelement-ui/theme-chalk",
+  "version": "0.9.5",
+  "type": "module",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
 }

@@ -3,10 +3,10 @@
 @use 'common/var' as *;
 
 @include b(footer) {
-	@include set-component-css-var('footer', $footer);
+  @include set-component-css-var('footer', $footer);
 
-	padding: getCssVar('footer-padding');
-	box-sizing: border-box;
-	flex-shrink: 0;
-	height: getCssVar('footer-height');
+  padding: getCssVar('footer-padding');
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: getCssVar('footer-height');
 }
