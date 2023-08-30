@@ -20,7 +20,7 @@ const config = {
       strict: true,
     }),
     prerender: {
-      entries: ["*", "/component/button", "/component/container",]
+      entries: ['*', '/component/button', '/component/container'],
     },
   },
   paths: {
