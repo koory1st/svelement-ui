@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
+import { component_route_list } from './src/lib/component_info.js';
 
 const dev = process.argv.includes('dev');
 
@@ -20,7 +21,7 @@ const config = {
       strict: true,
     }),
     prerender: {
-      entries: ['*', '/component/button', '/component/container'],
+      entries: ['*', '/component', ...component_route_list],
     },
   },
   paths: {
