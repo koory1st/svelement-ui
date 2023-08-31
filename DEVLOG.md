@@ -1,3 +1,9 @@
+# 20230831
+
+Configurate markdown file, reference:
+
+https://github.com/rodneylab/sveltekit-blog-mdx/blob/main/svelte.config.js
+
 # 20230810
 
 在 button 里添加了编译 css 的功能，但是在 docs 里 import 这个 css 的时候提示错误：`Missing "./dist/style/style.css" specifier in "@svelement-ui/button" package`
