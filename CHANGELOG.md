@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.14](https://github.com/koory1st/svelement-ui/compare/v0.9.13...v0.9.14) (2023-09-03)
+
+### Bug Fixes
+
+* **button:** add type option ([3f90fbb](https://github.com/koory1st/svelement-ui/commit/3f90fbb6dcb72c3e53006994d5636609913781c0))
+* **docs:** add button docs ([670fc94](https://github.com/koory1st/svelement-ui/commit/670fc948408d021920adab4d6eda79d987efa61c))
+* **docs:** add component config file ([a3097a6](https://github.com/koory1st/svelement-ui/commit/a3097a665aa95e30c71b1d8b79bd5f9f6856748a))
+* **docs:** add md support ([4de959c](https://github.com/koory1st/svelement-ui/commit/4de959c9f47c7cc930ef6faa3dbb61fa1e9ff891))
+* **docs:** add svelte in md ([090f634](https://github.com/koory1st/svelement-ui/commit/090f6341fd0b7882577f59ad06078b0621699961))
+* **docs:** remove md support ([7e41e4e](https://github.com/koory1st/svelement-ui/commit/7e41e4e51a4ed1aac9b3bc97e8219b32fd6978d8))
+
 ## [0.9.13](https://github.com/koory1st/svelement-ui/compare/v0.9.12...v0.9.13) (2023-08-30)
 
 ### Bug Fixes
