@@ -1,6 +1,6 @@
 <script lang="ts">
   import a2s from '@svelement-ui/util-array-2-class-string';
-  export let type = 'default';
+  export let type: 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'default' = 'default';
   export let size = '';
   export let icon = '';
   export let nativeType: 'button' | 'submit' | 'reset' | null | undefined = 'button';
