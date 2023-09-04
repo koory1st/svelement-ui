@@ -8,6 +8,8 @@
   export let icon = '';
   export let target: '_blank' | '_self' | '_parent' | '_top' | null = null;
 
+  const otherProps = { ...$$props };
+
   $: classString = a2s([
     'svel-link',
     `svel-link--${type}`,
@@ -25,7 +27,13 @@
   }
 </script>
 
-<a class={classString} href={disabled ? null : href ? href : null} {target} on:click={handleClick}>
+<a
+  class={classString}
+  href={disabled ? null : href ? href : null}
+  {target}
+  {...otherProps}
+  on:click={handleClick}
+>
   {#if icon}<i class={icon} />{/if}
   {#if $$slots.default}
     <span class="svel-link--inner">
