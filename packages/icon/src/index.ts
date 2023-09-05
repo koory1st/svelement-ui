@@ -1,5 +1,5 @@
-import './style';
+import './style.ts';
 
 import Loading from './loading.svelte';
 
-export { Loading };
+export default { Loading };

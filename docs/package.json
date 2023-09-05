@@ -18,6 +18,7 @@
     "@svelement-ui/container": "workspace:^",
     "@svelement-ui/footer": "workspace:^",
     "@svelement-ui/header": "workspace:^",
+    "@svelement-ui/icon": "workspace:^",
     "@svelement-ui/main": "workspace:^",
     "@svelement-ui/row": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
