@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/koory1st/svelement-ui/compare/v0.9.15...v0.10.0) (2023-09-05)
+
+### Bug Fixes
+
+* **icon:** add style ([8168a1c](https://github.com/koory1st/svelement-ui/commit/8168a1c44531a818077b9372a9b382dd132b6c0b))
+
 ## [0.9.13](https://github.com/koory1st/svelement-ui/compare/v0.9.12...v0.9.13) (2023-08-30)
 
 **Note:** Version bump only for package @svelement-ui/theme-chalk

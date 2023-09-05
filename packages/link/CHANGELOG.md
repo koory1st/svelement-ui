@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/koory1st/svelement-ui/compare/v0.9.15...v0.10.0) (2023-09-05)
+
+### Bug Fixes
+
+* **link:** add other props ([7954875](https://github.com/koory1st/svelement-ui/commit/7954875647a2964904759c66a1c00b22b5a681a6))
+
 ## [0.9.15](https://github.com/koory1st/svelement-ui/compare/v0.9.14...v0.9.15) (2023-09-04)
 
 **Note:** Version bump only for package @svelement-ui/link
