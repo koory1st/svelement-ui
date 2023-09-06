@@ -8,7 +8,7 @@
   $: classString = a2s(['svel-icon', $$props.class]);
   $: style = a2st([
     ['font-size', `${size}px`, Boolean(size)],
-    ['margin-right', `${color}`, Boolean(color)],
+    ['color', `${color}`, Boolean(color)],
   ]);
 </script>
 
