@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://github.com/koory1st/svelement-ui/compare/v0.10.0...v0.10.1) (2023-09-06)
+
+### Bug Fixes
+
+* add type ([8c39e40](https://github.com/koory1st/svelement-ui/commit/8c39e40d76b524f93b630dcb8bb78045a3058f7a))
+* **icon:** change svelte ([0cbf694](https://github.com/koory1st/svelement-ui/commit/0cbf694b7f10b2f1a78674de087933c09ff7012b))
+
 # [0.10.0](https://github.com/koory1st/svelement-ui/compare/v0.9.15...v0.10.0) (2023-09-05)
 
 ### Bug Fixes
