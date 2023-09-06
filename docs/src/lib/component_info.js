@@ -10,6 +10,9 @@ export const component_group_list = [
 ];
 
 function get_component_route_list() {
+  /**
+   * @type {string[]}
+   */
   const ret = [];
 
   component_group_list.forEach((g) =>
