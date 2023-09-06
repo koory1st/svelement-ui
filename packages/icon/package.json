@@ -2,26 +2,32 @@
   "name": "@svelement-ui/icon",
   "version": "0.10.0",
   "files": [
-    "dist"
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
   ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "svelte": "./dist/index.js"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     }
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "concurrently \"pnpm:build-*\" && publint && cp dist_style/style.css dist/style.css && rm -rf dist/style.js dist/style.d.ts dist_style/",
-    "build-svelte": "svelte-kit sync && svelte-package -i src/",
-    "build-css": "vite build --outDir dist_style/",
+    "build-svelte": "vite build && svelte-kit sync && svelte-package",
+    "build-css": "vite build --outDir dist_style/ -c vite-style.config.ts",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "clean": "rimraf dist"
+  },
+  "peerDependencies": {
+    "svelte": "^4.0.0"
   },
   "devDependencies": {
     "@svelement-ui/theme-chalk": "workspace:^",
