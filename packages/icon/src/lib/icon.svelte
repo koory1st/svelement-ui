@@ -9,6 +9,7 @@
   $: style = a2st([
     ['font-size', `${size}px`, Boolean(size)],
     ['color', `${color}`, Boolean(color)],
+    $$props.style || '',
   ]);
 </script>
 
