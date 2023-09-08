@@ -1,16 +1,45 @@
 <script lang="ts">
-  import Icon from '../icon.svelte';
-  import Loading from '../loading.svelte';
+  import { HighlightAuto, HighlightSvelte } from 'svelte-highlight';
+  import github from 'svelte-highlight/styles/github';
+
+  import SvelIcon from '../icon.svelte';
+  import Edit from '../edit.svelte';
+
+  const codePnpmInstall = `$ pnpm install @svelement-ui/icon`;
+
+  const codeBasic = `
+<script lang="ts">
+  import SvelIcon from '../icon.svelte';
+  import Edit from '../edit.svelte';
+
+  let size = 20;
+  let color = 'red';
+<\/script>
+
+<!-- 使用 SvelIcon 为 SVG 图标提供属性 -->
+<SvelIcon {size} {color}>
+  <Edit \/>
+<\/SvelIcon>
+<!-- 或者独立使用它，不从父级获取属性 -->
+<Edit \/>
+  `;
+
+  let size = 20;
+  let color = 'red';
 </script>
 
-<!-- <Loading /> -->
+<svelte:head>
+  {@html github}
+</svelte:head>
 
 <h1>安装</h1>
 <h2>使用包管理器</h2>
-<pre>$ pnpm install @svelement-ui/icon</pre>
+<HighlightAuto code={codePnpmInstall} />
 
 <h2>基础用法</h2>
 
-<Icon size={80} color="red" class="is-loading">
-  <Loading />
-</Icon>
+<HighlightAuto code={codeBasic} />
+<SvelIcon {size} {color}>
+  <Edit />
+</SvelIcon>
+<Edit />

@@ -33,7 +33,9 @@
   "devDependencies": {
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
-    "@svelement-ui/util-array-2-style-string": "workspace:^"
+    "@svelement-ui/util-array-2-style-string": "workspace:^",
+    "highlight.js": "^11.8.0",
+    "svelte-highlight": "^7.3.0"
   },
   "bundledDependencies": [
     "@svelement-ui/util-array-2-class-string",

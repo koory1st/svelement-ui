@@ -18,6 +18,7 @@
   "license": "MIT",
   "homepage": "https://koory1st.github.io/svelement-ui/",
   "scripts": {
+    "build": "pnpm -r build",
     "dev-docs": "pnpm --filter=docs run dev",
     "fix": "concurrently \"prettier --plugin-search-dir . --write .\" \"eslint --fix .\"",
     "lint": "concurrently \"prettier -c --plugin-search-dir . .\" \"eslint .\"",
