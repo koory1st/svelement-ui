@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/icon",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "files": [
     "dist",
     "!dist/**/*.test.*",
