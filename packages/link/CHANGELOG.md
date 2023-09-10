@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.8](https://github.com/koory1st/svelement-ui/compare/v0.10.7...v0.10.8) (2023-09-10)
+
+### Bug Fixes
+
+* **docs:** add icon ([90aa33c](https://github.com/koory1st/svelement-ui/commit/90aa33ce2bc26b1044ac5bfa4dc16e28b5296786))
+
 # [0.10.0](https://github.com/koory1st/svelement-ui/compare/v0.9.15...v0.10.0) (2023-09-05)
 
 ### Bug Fixes
