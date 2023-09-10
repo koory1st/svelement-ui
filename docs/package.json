@@ -24,7 +24,9 @@
     "@svelement-ui/util-array-2-class-string": "workspace:^",
     "@sveltejs/adapter-static": "^2.0.3",
     "autoprefixer": "^10.4.15",
+    "highlight.js": "^11.8.0",
     "postcss": "^8.4.28",
+    "svelte-highlight": "^7.3.0",
     "svelte-preprocess": "^5.0.4",
     "tailwindcss": "^3.3.3"
   }

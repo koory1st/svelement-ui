@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import { component_route_list } from './src/lib/component_info.js';
 
 const dev = process.argv.includes('dev');
 
@@ -20,9 +19,6 @@ const config = {
       precompress: false,
       strict: true,
     }),
-    prerender: {
-      entries: ['*', '/component', ...component_route_list],
-    },
   },
   paths: {
     base: dev ? '' : process.env.PUBLIC_BASE_PATH,
