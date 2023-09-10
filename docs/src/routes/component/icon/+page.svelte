@@ -3,7 +3,43 @@
   import bash from 'svelte-highlight/languages/bash';
   import 'svelte-highlight/styles/github.css';
 
-  import { SvelIcon, Edit, Share, Delete, Loading, Search } from '@svelement-ui/icon';
+  import {
+    SvelIcon,
+    Edit,
+    Share,
+    Delete,
+    Loading,
+    Search,
+    Plus,
+    Minus,
+    CirclePlus,
+    Female,
+    Male,
+    Aim,
+    House,
+    FullScreen,
+    Link,
+    Service,
+    Pointer,
+    Star,
+    Notification,
+    Connection,
+    ChatDotRound,
+    Setting,
+    Clock,
+    Position,
+    Discount,
+    Odometer,
+    ChatSquare,
+    ChatRound,
+    ChatLineRound,
+    ChatLineSquare,
+    ChatDotSquare,
+    View,
+    Hide,
+    Unlock,
+    Lock,
+  } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
   import { SvelRow, SvelCol, SvelButton } from '@svelement-ui/all';
@@ -45,6 +81,22 @@ let baseColor = 'green';
   </SvelIcon>
 </SvelButton>
   `;
+
+  let codeSvg = `
+<div style="font-size: 20px">
+  <!-- 由于SVG图标默认不携带任何属性 -->
+  <!-- 你需要直接提供它们 -->
+  <Edit style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Share style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Delete style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Search style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+</div>
+  `;
+
+  import IconName from './icon-item.svelte';
+  function copy2Clip() {
+    console.log("🚀 ~ file: +page.svelte:98 ~ copy2Clip ~ 'aaaa':", 'aaaa');
+  }
 </script>
 
 <h1>Icon 图标</h1>
@@ -103,3 +155,63 @@ let baseColor = 'green';
 </SvelRow>
 
 <h2>直接使用 SVG 图标</h2>
+
+<HighlightSvelte code={codeSvg} />
+<div style="font-size: 20px">
+  <!-- 由于SVG图标默认不携带任何属性 -->
+  <!-- 你需要直接提供它们 -->
+  <Edit style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Share style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Delete style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Search style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+</div>
+
+<h2>图标集合</h2>
+<h3>System</h3>
+<ul class="demo-icon-list">
+  <IconName name="Plus"><Plus /></IconName>
+  <IconName name="Minus"><Minus /></IconName>
+  <IconName name="CirclePlus"><CirclePlus /></IconName>
+  <IconName name="CirclePlus"><CirclePlus /></IconName>
+  <IconName name="Search"><Search /></IconName>
+  <IconName name="Female"><Female /></IconName>
+  <IconName name="Male"><Male /></IconName>
+  <IconName name="Aim"><Aim /></IconName>
+  <IconName name="House"><House /></IconName>
+  <IconName name="FullScreen"><FullScreen /></IconName>
+  <IconName name="Loading"><Loading /></IconName>
+  <IconName name="Link"><Link /></IconName>
+  <IconName name="Service"><Service /></IconName>
+  <IconName name="Pointer"><Pointer /></IconName>
+  <IconName name="Star"><Star /></IconName>
+  <IconName name="Notification"><Notification /></IconName>
+  <IconName name="Connection"><Connection /></IconName>
+  <IconName name="ChatDotRound"><ChatDotRound /></IconName>
+  <IconName name="Setting"><Setting /></IconName>
+  <IconName name="Clock"><Clock /></IconName>
+  <IconName name="Position"><Position /></IconName>
+  <IconName name="Discount"><Discount /></IconName>
+  <IconName name="Odometer"><Odometer /></IconName>
+  <IconName name="ChatSquare"><ChatSquare /></IconName>
+  <IconName name="ChatRound"><ChatRound /></IconName>
+  <IconName name="ChatLineRound"><ChatLineRound /></IconName>
+  <IconName name="ChatLineSquare"><ChatLineSquare /></IconName>
+  <IconName name="ChatDotSquare"><ChatDotSquare /></IconName>
+  <IconName name="View"><View /></IconName>
+  <IconName name="Hide"><Hide /></IconName>
+  <IconName name="Unlock"><Unlock /></IconName>
+  <IconName name="Lock"><Lock /></IconName>
+</ul>
+
+<style lang="scss">
+  .demo-icon-list {
+    overflow: hidden;
+    list-style: none;
+    padding: 0 !important;
+    border-top: 1px solid var(--svel-border-color);
+    border-left: 1px solid var(--svel-border-color);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+</style>
