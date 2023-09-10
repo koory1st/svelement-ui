@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<script lang="ts">
+  export let style: string | null = null;
+</script>
+
+<svg {style} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
   <path
     fill="currentColor"
     d="M640 608h-64V416h64v192zm0 160v160a32 32 0 0 1-32 32H416a32 32 0 0 1-32-32V768h64v128h128V768h64zM384 608V416h64v192h-64zm256-352h-64V128H448v128h-64V96a32 32 0 0 1 32-32h192a32 32 0 0 1 32 32v160z"
