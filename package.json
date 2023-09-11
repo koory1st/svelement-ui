@@ -54,6 +54,9 @@
     "vite": "^4.4.2",
     "vitest": "^0.34.3"
   },
+  "peerDependencies": {
+    "svelte": "^4.0.0"
+  },
   "packageManager": "pnpm@8.6.12",
   "engines": {
     "pnpm": "^8.0.0"
