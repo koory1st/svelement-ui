@@ -9,6 +9,7 @@ import SvelHeader from '@svelement-ui/header';
 import SvelMain from '@svelement-ui/main';
 import SvelRow from '@svelement-ui/row';
 import SvelLink from '@svelement-ui/link';
+import SvelCode from '@svelement-ui/code';
 
 export {
   SvelAside,
@@ -20,4 +21,5 @@ export {
   SvelMain,
   SvelRow,
   SvelLink,
+  SvelCode,
 };

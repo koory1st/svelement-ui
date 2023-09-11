@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { Highlight, HighlightSvelte } from 'svelte-highlight';
-  import bash from 'svelte-highlight/languages/bash';
-  import 'svelte-highlight/styles/github.css';
+  import { SvelCode } from '@svelement-ui/all';
 
   import {
     SvelIcon,
@@ -43,8 +41,6 @@
   import '@svelement-ui/icon/dist/style.css';
 
   import { SvelRow, SvelCol, SvelButton } from '@svelement-ui/all';
-
-  let codePnpm = `pnpm install -D @svelement-ui/icon`;
 
   let baseSize = 50;
   let baseColor = 'green';
@@ -101,10 +97,10 @@ let baseColor = 'green';
 
 <h1>Icon 图标</h1>
 <h2>使用图标</h2>
-<Highlight language={bash} code={codePnpm} />
+<SvelCode language="bash" code="pnpm install -D @svelement-ui/icon" />
 
 <h2>基础用法</h2>
-<HighlightSvelte code={codeBase} />
+<SvelCode language="svelte" code={codeBase} />
 <div>
   <SvelRow>
     <SvelIcon size={baseSize} color={baseColor}>
@@ -119,7 +115,7 @@ let baseColor = 'green';
 
 <h2>结合 SvelIcon 使用</h2>
 <p>SvelIcon 为 raw SVG 图标提供额外的属性, 提供的详细属性请继续阅读。</p>
-<HighlightSvelte code={codeWithIcon} />
+<SvelCode language="svelte" code={codeWithIcon} />
 <p>
   通过添加额外的类名 is-loading，你的图标就可以在 2 秒内旋转 360度，当然你也可以自己改写想要的动画。
 </p>
@@ -156,7 +152,7 @@ let baseColor = 'green';
 
 <h2>直接使用 SVG 图标</h2>
 
-<HighlightSvelte code={codeSvg} />
+<SvelCode language="svelte" code={codeSvg} />
 <div style="font-size: 20px">
   <!-- 由于SVG图标默认不携带任何属性 -->
   <!-- 你需要直接提供它们 -->

@@ -21,7 +21,7 @@
   "peerDependencies": {
     "svelte": "^4.0.0"
   },
-  "devDependencies": {
+  "dependencies": {
     "highlight.js": "^11.8.0",
     "svelte-highlight": "^7.3.0"
   },
