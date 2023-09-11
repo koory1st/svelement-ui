@@ -21,7 +21,10 @@
   "peerDependencies": {
     "svelte": "^4.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "highlight.js": "^11.8.0",
+    "svelte-highlight": "^7.3.0"
+  },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",

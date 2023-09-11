@@ -198,6 +198,19 @@ importers:
         specifier: ^7.1.4
         version: 7.1.4(sass@1.64.2)
 
+  packages/code:
+    dependencies:
+      svelte:
+        specifier: ^4.0.0
+        version: 4.0.5
+    devDependencies:
+      highlight.js:
+        specifier: ^11.8.0
+        version: 11.8.0
+      svelte-highlight:
+        specifier: ^7.3.0
+        version: 7.3.0
+
   packages/col:
     devDependencies:
       '@svelement-ui/theme-chalk':
