@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/koory1st/svelement-ui/compare/v0.11.1...v0.11.2) (2023-09-12)
+
+### Bug Fixes
+
+* **code:** use prismjs ([4058274](https://github.com/koory1st/svelement-ui/commit/40582746638495406eebaa388aba9abcb7f4de19))
+
 ## [0.11.1](https://github.com/koory1st/svelement-ui/compare/v0.11.0...v0.11.1) (2023-09-11)
 
 ### Bug Fixes
