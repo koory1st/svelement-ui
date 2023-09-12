@@ -1,28 +1,26 @@
 <script lang="ts">
-  import { Highlight, HighlightSvelte, HighlightAuto } from 'svelte-highlight';
-  import 'svelte-highlight/styles/github.css';
-  import { getLang } from './language.js';
-  import type { Language } from 'highlight.js';
+  import PrismBase from './prism_base.svelte';
+  import PrismSvelte from './prism_svelte.svelte';
 
   export let language: string;
   export let code: string;
-  let lang: Language | null;
   $: {
-    lang = getLang(language);
-  }
-
-  $: {
-    code = code.replaceAll('!@/', '</');
+    code = code.replaceAll('!@/', '</').trimStart().trimEnd();
   }
 </script>
 
+<svelte:head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/prism-themes@1.4.0/themes/prism-vs.css"
+    rel="stylesheet"
+  />
+</svelte:head>
+
 <div class="svel-code" data-lang={language}>
   {#if code === 'svelte'}
-    <HighlightSvelte {code} />
-  {:else if lang}
-    <Highlight language={lang} {code} />
+    <PrismSvelte {code} />
   {:else}
-    <HighlightAuto {code} />
+    <PrismBase {code} {language} />
   {/if}
 </div>
 

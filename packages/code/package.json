@@ -18,18 +18,18 @@
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
-  "peerDependencies": {
-    "svelte": "^4.0.0"
-  },
-  "dependencies": {
-    "highlight.js": "^11.8.0",
-    "svelte-highlight": "^7.3.0"
-  },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "prism-svelte": "^0.5.0",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0"
   }
 }
