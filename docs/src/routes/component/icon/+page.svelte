@@ -37,6 +37,24 @@
     Hide,
     Unlock,
     Lock,
+    RefreshRight,
+    RefreshLeft,
+    Refresh,
+    Bell,
+    MuteNotification,
+    User,
+    Check,
+    CircleCheck,
+    Warning,
+    CircleClose,
+    Close,
+    PieChart,
+    More,
+    Compass,
+    Filter,
+    Switch,
+    Select,
+    SemiSelect,
   } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
@@ -44,50 +62,6 @@
 
   let baseSize = 50;
   let baseColor = 'green';
-  let codeBase = `
-import { SvelIcon, Edit } from '@svelement-ui/icon';
-import '@svelement-ui/icon/dist/style.css';
-let baseSize = 50;
-let baseColor = 'green';
-
-<div>
-  <!-- 使用 el-icon 为 SVG 图标提供属性 -->
-  <SvelIcon size={baseSize} color={baseColor}>
-    <Edit />
-  </SvelIcon>
-  <!-- 或者独立使用它，不从父级获取属性 -->
-  <Edit />
-</div>
-
-  `;
-
-  let codeWithIcon = `
-<SvelIcon size={20}>
-  <Edit />
-</SvelIcon>
-<SvelIcon color="#409EFC" class="no-inherit">
-  <Share />
-</SvelIcon>
-<SvelIcon class="is-loading">
-  <Loading />
-</SvelIcon>
-<SvelButton type="primary">
-  <SvelIcon>
-    <Search />
-  </SvelIcon>
-</SvelButton>
-  `;
-
-  let codeSvg = `
-<div style="font-size: 20px">
-  <!-- 由于SVG图标默认不携带任何属性 -->
-  <!-- 你需要直接提供它们 -->
-  <Edit style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
-  <Share style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
-  <Delete style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
-  <Search style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
-</div>
-  `;
 
   import IconName from './icon-item.svelte';
   function copy2Clip() {
@@ -100,7 +74,23 @@ let baseColor = 'green';
 <SvelCode language="bash" code="pnpm install -D @svelement-ui/icon" />
 
 <h2>基础用法</h2>
-<SvelCode language="svelte" code={codeBase} />
+<SvelCode
+  language="svelte"
+  code={`<script lang="ts">
+import { SvelIcon, Edit } from '@svelement-ui/icon';
+import '@svelement-ui/icon/dist/style.css';
+let baseSize = 50;
+let baseColor = 'green';
+!@/script>
+<div>
+  <!-- 使用 el-icon 为 SVG 图标提供属性 -->
+  <SvelIcon size={baseSize} color={baseColor}>
+    <Edit />
+  </SvelIcon>
+  <!-- 或者独立使用它，不从父级获取属性 -->
+  <Edit />
+</div>`}
+/>
 <div>
   <SvelRow>
     <SvelIcon size={baseSize} color={baseColor}>
@@ -115,7 +105,23 @@ let baseColor = 'green';
 
 <h2>结合 SvelIcon 使用</h2>
 <p>SvelIcon 为 raw SVG 图标提供额外的属性, 提供的详细属性请继续阅读。</p>
-<SvelCode language="svelte" code={codeWithIcon} />
+<SvelCode
+  language="svelte"
+  code={`<SvelIcon size={20}>
+  <Edit />
+</SvelIcon>
+<SvelIcon color="#409EFC" class="no-inherit">
+  <Share />
+</SvelIcon>
+<SvelIcon class="is-loading">
+  <Loading />
+</SvelIcon>
+<SvelButton type="primary">
+  <SvelIcon>
+    <Search />
+  </SvelIcon>
+</SvelButton>`}
+/>
 <p>
   通过添加额外的类名 is-loading，你的图标就可以在 2 秒内旋转 360度，当然你也可以自己改写想要的动画。
 </p>
@@ -152,7 +158,17 @@ let baseColor = 'green';
 
 <h2>直接使用 SVG 图标</h2>
 
-<SvelCode language="svelte" code={codeSvg} />
+<SvelCode
+  language="svelte"
+  code={`<div style="font-size: 20px">
+  <!-- 由于SVG图标默认不携带任何属性 -->
+  <!-- 你需要直接提供它们 -->
+  <Edit style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Share style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Delete style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+  <Search style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
+</div>`}
+/>
 <div style="font-size: 20px">
   <!-- 由于SVG图标默认不携带任何属性 -->
   <!-- 你需要直接提供它们 -->
@@ -167,7 +183,6 @@ let baseColor = 'green';
 <ul class="demo-icon-list">
   <IconName name="Plus"><Plus /></IconName>
   <IconName name="Minus"><Minus /></IconName>
-  <IconName name="CirclePlus"><CirclePlus /></IconName>
   <IconName name="CirclePlus"><CirclePlus /></IconName>
   <IconName name="Search"><Search /></IconName>
   <IconName name="Female"><Female /></IconName>
@@ -197,6 +212,24 @@ let baseColor = 'green';
   <IconName name="Hide"><Hide /></IconName>
   <IconName name="Unlock"><Unlock /></IconName>
   <IconName name="Lock"><Lock /></IconName>
+  <IconName name="RefreshRight"><RefreshRight /></IconName>
+  <IconName name="RefreshLeft"><RefreshLeft /></IconName>
+  <IconName name="Refresh"><Refresh /></IconName>
+  <IconName name="Bell"><Bell /></IconName>
+  <IconName name="MuteNotification"><MuteNotification /></IconName>
+  <IconName name="User"><User /></IconName>
+  <IconName name="Check"><Check /></IconName>
+  <IconName name="CircleCheck"><CircleCheck /></IconName>
+  <IconName name="Warning"><Warning /></IconName>
+  <IconName name="CircleClose"><CircleClose /></IconName>
+  <IconName name="Close"><Close /></IconName>
+  <IconName name="PieChart"><PieChart /></IconName>
+  <IconName name="More"><More /></IconName>
+  <IconName name="Compass"><Compass /></IconName>
+  <IconName name="Filter"><Filter /></IconName>
+  <IconName name="Switch"><Switch /></IconName>
+  <IconName name="Select"><Select /></IconName>
+  <IconName name="SemiSelect"><SemiSelect /></IconName>
 </ul>
 
 <style lang="scss">
