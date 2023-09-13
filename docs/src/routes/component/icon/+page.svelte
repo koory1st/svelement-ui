@@ -55,6 +55,42 @@
     Switch,
     Select,
     SemiSelect,
+    CloseBold,
+    EditPen,
+    Message,
+    MessageBox,
+    TurnOff,
+    Finished,
+    Crop,
+    SwitchButton,
+    Operation,
+    Open,
+    Remove,
+    ZoomOut,
+    ZoomIn,
+    InfoFilled,
+    CircleCheckFilled,
+    SuccessFilled,
+    WarningFilled,
+    CircleCloseFilled,
+    QuestionFilled,
+    WarnTriangleFilled,
+    UserFilled,
+    MoreFilled,
+    Tools,
+    HomeFilled,
+    Menu,
+    UploadFilled,
+    Avatar,
+    HelpFilled,
+    StarFilled,
+    Comment,
+    Histogram,
+    Grid,
+    Promotion,
+    DeleteFilled,
+    RemoveFilled,
+    CirclePlusFilled,
   } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
@@ -230,6 +266,45 @@ let baseColor = 'green';
   <IconName name="Switch"><Switch /></IconName>
   <IconName name="Select"><Select /></IconName>
   <IconName name="SemiSelect"><SemiSelect /></IconName>
+  <IconName name="CloseBold"><CloseBold /></IconName>
+  <IconName name="EditPen"><EditPen /></IconName>
+  <IconName name="Edit"><Edit /></IconName>
+  <IconName name="Message"><Message /></IconName>
+  <IconName name="MessageBox"><MessageBox /></IconName>
+  <IconName name="TurnOff"><TurnOff /></IconName>
+  <IconName name="Finished"><Finished /></IconName>
+  <IconName name="Delete"><Delete /></IconName>
+  <IconName name="Crop"><Crop /></IconName>
+  <IconName name="SwitchButton"><SwitchButton /></IconName>
+  <IconName name="Operation"><Operation /></IconName>
+  <IconName name="Open"><Open /></IconName>
+  <IconName name="Remove"><Remove /></IconName>
+  <IconName name="ZoomOut"><ZoomOut /></IconName>
+  <IconName name="ZoomIn"><ZoomIn /></IconName>
+  <IconName name="InfoFilled"><InfoFilled /></IconName>
+  <IconName name="CircleCheckFilled"><CircleCheckFilled /></IconName>
+  <IconName name="SuccessFilled"><SuccessFilled /></IconName>
+  <IconName name="WarningFilled"><WarningFilled /></IconName>
+  <IconName name="CircleCloseFilled"><CircleCloseFilled /></IconName>
+  <IconName name="QuestionFilled"><QuestionFilled /></IconName>
+  <IconName name="WarnTriangleFilled"><WarnTriangleFilled /></IconName>
+  <IconName name="UserFilled"><UserFilled /></IconName>
+  <IconName name="MoreFilled"><MoreFilled /></IconName>
+  <IconName name="Tools"><Tools /></IconName>
+  <IconName name="HomeFilled"><HomeFilled /></IconName>
+  <IconName name="Menu"><Menu /></IconName>
+  <IconName name="UploadFilled"><UploadFilled /></IconName>
+  <IconName name="Avatar"><Avatar /></IconName>
+  <IconName name="HelpFilled"><HelpFilled /></IconName>
+  <IconName name="Share"><Share /></IconName>
+  <IconName name="StarFilled"><StarFilled /></IconName>
+  <IconName name="Comment"><Comment /></IconName>
+  <IconName name="Histogram"><Histogram /></IconName>
+  <IconName name="Grid"><Grid /></IconName>
+  <IconName name="Promotion"><Promotion /></IconName>
+  <IconName name="DeleteFilled"><DeleteFilled /></IconName>
+  <IconName name="RemoveFilled"><RemoveFilled /></IconName>
+  <IconName name="CirclePlusFilled"><CirclePlusFilled /></IconName>
 </ul>
 
 <style lang="scss">
