@@ -4,8 +4,6 @@
   export let code: string;
 </script>
 
-<pre>
-<code class={`language-${language}`}>
-  {code}
-</code>
+<pre class={`language-${language}`}>
+<code>{code}</code>
 </pre>

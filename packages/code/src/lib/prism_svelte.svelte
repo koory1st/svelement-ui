@@ -5,7 +5,5 @@
 </script>
 
 <pre class="language-svelte">
-<code>
-  {code}
-</code>
+<code>{code}</code>
 </pre>
