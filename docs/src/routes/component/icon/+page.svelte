@@ -186,6 +186,41 @@
     LocationFilled,
     Van,
     Iphone,
+    Watermelon,
+    Pear,
+    NoSmoking,
+    Smoking,
+    Mug,
+    GobletSquareFull,
+    GobletFull,
+    KnifeFork,
+    Sugar,
+    Bowl,
+    MilkTea,
+    Lollipop,
+    Coffee,
+    Chicken,
+    Dish,
+    IceTea,
+    ColdDrink,
+    CoffeeCup,
+    DishDot,
+    IceDrink,
+    IceCream,
+    Dessert,
+    IceCreamSquare,
+    ForkSpoon,
+    IceCreamRound,
+    Food,
+    Grape,
+    Fries,
+    Apple,
+    Burger,
+    Goblet,
+    GobletSquare,
+    Orange,
+    Cherry,
+    HotWater,
   } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
@@ -494,6 +529,11 @@ let baseColor = 'green';
   <IconName name="Platform"><Platform /></IconName>
   <IconName name="CameraFilled"><CameraFilled /></IconName>
   <IconName name="BellFilled"><BellFilled /></IconName>
+</ul>
+
+<h3>Traffic</h3>
+<ul class="demo-icon-list">
+  <IconName name="Location"><Location /></IconName>
   <IconName name="LocationInformation"><LocationInformation /></IconName>
   <IconName name="DeleteLocation"><DeleteLocation /></IconName>
   <IconName name="Coordinate"><Coordinate /></IconName>
@@ -508,9 +548,43 @@ let baseColor = 'green';
   <IconName name="Van"><Van /></IconName>
 </ul>
 
-<h3>Traffic</h3>
+<h3>Food</h3>
 <ul class="demo-icon-list">
-  <IconName name="Location"><Location /></IconName>
+  <IconName name="Watermelon"><Watermelon /></IconName>
+  <IconName name="Pear"><Pear /></IconName>
+  <IconName name="NoSmoking"><NoSmoking /></IconName>
+  <IconName name="Smoking"><Smoking /></IconName>
+  <IconName name="Mug"><Mug /></IconName>
+  <IconName name="GobletSquareFull"><GobletSquareFull /></IconName>
+  <IconName name="GobletFull"><GobletFull /></IconName>
+  <IconName name="KnifeFork"><KnifeFork /></IconName>
+  <IconName name="Sugar"><Sugar /></IconName>
+  <IconName name="Bowl"><Bowl /></IconName>
+  <IconName name="MilkTea"><MilkTea /></IconName>
+  <IconName name="Lollipop"><Lollipop /></IconName>
+  <IconName name="Coffee"><Coffee /></IconName>
+  <IconName name="Chicken"><Chicken /></IconName>
+  <IconName name="Dish"><Dish /></IconName>
+  <IconName name="IceTea"><IceTea /></IconName>
+  <IconName name="ColdDrink"><ColdDrink /></IconName>
+  <IconName name="CoffeeCup"><CoffeeCup /></IconName>
+  <IconName name="DishDot"><DishDot /></IconName>
+  <IconName name="IceDrink"><IceDrink /></IconName>
+  <IconName name="IceCream"><IceCream /></IconName>
+  <IconName name="Dessert"><Dessert /></IconName>
+  <IconName name="IceCreamSquare"><IceCreamSquare /></IconName>
+  <IconName name="ForkSpoon"><ForkSpoon /></IconName>
+  <IconName name="IceCreamRound"><IceCreamRound /></IconName>
+  <IconName name="Food"><Food /></IconName>
+  <IconName name="HotWater"><HotWater /></IconName>
+  <IconName name="Grape"><Grape /></IconName>
+  <IconName name="Fries"><Fries /></IconName>
+  <IconName name="Apple"><Apple /></IconName>
+  <IconName name="Burger"><Burger /></IconName>
+  <IconName name="Goblet"><Goblet /></IconName>
+  <IconName name="GobletSquare"><GobletSquare /></IconName>
+  <IconName name="Orange"><Orange /></IconName>
+  <IconName name="Cherry"><Cherry /></IconName>
 </ul>
 
 <style lang="scss">
