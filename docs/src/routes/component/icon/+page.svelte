@@ -91,6 +91,45 @@
     DeleteFilled,
     RemoveFilled,
     CirclePlusFilled,
+    ArrowLeft,
+    ArrowUp,
+    ArrowRight,
+    ArrowDown,
+    ArrowLeftBold,
+    ArrowUpBold,
+    ArrowRightBold,
+    ArrowDownBold,
+    DArrowRight,
+    DArrowLeft,
+    Download,
+    Upload,
+    Top,
+    Bottom,
+    Back,
+    Right,
+    TopRight,
+    TopLeft,
+    BottomRight,
+    BottomLeft,
+    Sort,
+    SortUp,
+    SortDown,
+    Rank,
+    CaretLeft,
+    CaretTop,
+    CaretRight,
+    CaretBottom,
+    DCaret,
+    Expand,
+    Fold,
+    DocumentAdd,
+    Document,
+    Notebook,
+    Tickets,
+    Memo,
+    Collection,
+    Postcard,
+    ScaleToOriginal,
   } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
@@ -305,6 +344,53 @@ let baseColor = 'green';
   <IconName name="DeleteFilled"><DeleteFilled /></IconName>
   <IconName name="RemoveFilled"><RemoveFilled /></IconName>
   <IconName name="CirclePlusFilled"><CirclePlusFilled /></IconName>
+</ul>
+
+<h3>Arrow</h3>
+<ul class="demo-icon-list">
+  <IconName name="ArrowLeft"><ArrowLeft /></IconName>
+  <IconName name="ArrowUp"><ArrowUp /></IconName>
+  <IconName name="ArrowRight"><ArrowRight /></IconName>
+  <IconName name="ArrowDown"><ArrowDown /></IconName>
+  <IconName name="ArrowLeftBold"><ArrowLeftBold /></IconName>
+  <IconName name="ArrowUpBold"><ArrowUpBold /></IconName>
+  <IconName name="ArrowRightBold"><ArrowRightBold /></IconName>
+  <IconName name="ArrowDownBold"><ArrowDownBold /></IconName>
+  <IconName name="DArrowRight"><DArrowRight /></IconName>
+  <IconName name="DArrowLeft"><DArrowLeft /></IconName>
+  <IconName name="Download"><Download /></IconName>
+  <IconName name="Upload"><Upload /></IconName>
+  <IconName name="Top"><Top /></IconName>
+  <IconName name="Bottom"><Bottom /></IconName>
+  <IconName name="Back"><Back /></IconName>
+  <IconName name="Right"><Right /></IconName>
+  <IconName name="TopRight"><TopRight /></IconName>
+  <IconName name="TopLeft"><TopLeft /></IconName>
+  <IconName name="BottomRight"><BottomRight /></IconName>
+  <IconName name="BottomLeft"><BottomLeft /></IconName>
+  <IconName name="Sort"><Sort /></IconName>
+  <IconName name="SortUp"><SortUp /></IconName>
+  <IconName name="SortDown"><SortDown /></IconName>
+  <IconName name="Rank"><Rank /></IconName>
+  <IconName name="CaretLeft"><CaretLeft /></IconName>
+  <IconName name="CaretTop"><CaretTop /></IconName>
+  <IconName name="CaretRight"><CaretRight /></IconName>
+  <IconName name="CaretBottom"><CaretBottom /></IconName>
+  <IconName name="DCaret"><DCaret /></IconName>
+  <IconName name="Expand"><Expand /></IconName>
+  <IconName name="Fold"><Fold /></IconName>
+</ul>
+
+<h3>Document</h3>
+<ul class="demo-icon-list">
+  <IconName name="DocumentAdd"><DocumentAdd /></IconName>
+  <IconName name="Document"><Document /></IconName>
+  <IconName name="Notebook"><Notebook /></IconName>
+  <IconName name="Tickets"><Tickets /></IconName>
+  <IconName name="Memo"><Memo /></IconName>
+  <IconName name="Collection"><Collection /></IconName>
+  <IconName name="Postcard"><Postcard /></IconName>
+  <IconName name="ScaleToOriginal"><ScaleToOriginal /></IconName>
 </ul>
 
 <style lang="scss">
