@@ -130,6 +130,62 @@
     Collection,
     Postcard,
     ScaleToOriginal,
+    SetUp,
+    DocumentDelete,
+    DocumentChecked,
+    DataBoard,
+    DataAnalysis,
+    CopyDocument,
+    FolderChecked,
+    Files,
+    Folder,
+    FolderDelete,
+    FolderRemove,
+    FolderOpened,
+    DocumentCopy,
+    DocumentRemove,
+    FolderAdd,
+    FirstAidKit,
+    Reading,
+    DataLine,
+    Management,
+    Checked,
+    Ticket,
+    Failed,
+    TrendCharts,
+    List,
+    Microphone,
+    Mute,
+    Mic,
+    VideoPause,
+    VideoCamera,
+    VideoPlay,
+    Headset,
+    Monitor,
+    Film,
+    Camera,
+    Picture,
+    PictureRounded,
+    Cellphone,
+    VideoCameraFilled,
+    PictureFilled,
+    Platform,
+    CameraFilled,
+    BellFilled,
+    Location,
+    LocationInformation,
+    DeleteLocation,
+    Coordinate,
+    Bicycle,
+    OfficeBuilding,
+    School,
+    Guide,
+    AddLocation,
+    MapLocation,
+    Place,
+    LocationFilled,
+    Van,
+    Iphone,
   } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
@@ -391,6 +447,70 @@ let baseColor = 'green';
   <IconName name="Collection"><Collection /></IconName>
   <IconName name="Postcard"><Postcard /></IconName>
   <IconName name="ScaleToOriginal"><ScaleToOriginal /></IconName>
+  <IconName name="SetUp"><SetUp /></IconName>
+  <IconName name="DocumentDelete"><DocumentDelete /></IconName>
+  <IconName name="DocumentChecked"><DocumentChecked /></IconName>
+  <IconName name="DataBoard"><DataBoard /></IconName>
+  <IconName name="DataAnalysis"><DataAnalysis /></IconName>
+  <IconName name="CopyDocument"><CopyDocument /></IconName>
+  <IconName name="FolderChecked"><FolderChecked /></IconName>
+  <IconName name="Files"><Files /></IconName>
+  <IconName name="Folder"><Folder /></IconName>
+  <IconName name="FolderDelete"><FolderDelete /></IconName>
+  <IconName name="FolderRemove"><FolderRemove /></IconName>
+  <IconName name="FolderOpened"><FolderOpened /></IconName>
+  <IconName name="DocumentCopy"><DocumentCopy /></IconName>
+  <IconName name="DocumentRemove"><DocumentRemove /></IconName>
+  <IconName name="FolderAdd"><FolderAdd /></IconName>
+  <IconName name="FirstAidKit"><FirstAidKit /></IconName>
+  <IconName name="Reading"><Reading /></IconName>
+  <IconName name="DataLine"><DataLine /></IconName>
+  <IconName name="Management"><Management /></IconName>
+  <IconName name="Checked"><Checked /></IconName>
+  <IconName name="Ticket"><Ticket /></IconName>
+  <IconName name="Failed"><Failed /></IconName>
+  <IconName name="TrendCharts"><TrendCharts /></IconName>
+  <IconName name="List"><List /></IconName>
+</ul>
+
+<h3>Media</h3>
+<ul class="demo-icon-list">
+  <IconName name="Microphone"><Microphone /></IconName>
+  <IconName name="Mute"><Mute /></IconName>
+  <IconName name="Mic"><Mic /></IconName>
+  <IconName name="VideoPause"><VideoPause /></IconName>
+  <IconName name="VideoCamera"><VideoCamera /></IconName>
+  <IconName name="VideoPlay"><VideoPlay /></IconName>
+  <IconName name="Headset"><Headset /></IconName>
+  <IconName name="Monitor"><Monitor /></IconName>
+  <IconName name="Film"><Film /></IconName>
+  <IconName name="Camera"><Camera /></IconName>
+  <IconName name="Picture"><Picture /></IconName>
+  <IconName name="PictureRounded"><PictureRounded /></IconName>
+  <IconName name="Iphone"><Iphone /></IconName>
+  <IconName name="Cellphone"><Cellphone /></IconName>
+  <IconName name="VideoCameraFilled"><VideoCameraFilled /></IconName>
+  <IconName name="PictureFilled"><PictureFilled /></IconName>
+  <IconName name="Platform"><Platform /></IconName>
+  <IconName name="CameraFilled"><CameraFilled /></IconName>
+  <IconName name="BellFilled"><BellFilled /></IconName>
+  <IconName name="LocationInformation"><LocationInformation /></IconName>
+  <IconName name="DeleteLocation"><DeleteLocation /></IconName>
+  <IconName name="Coordinate"><Coordinate /></IconName>
+  <IconName name="Bicycle"><Bicycle /></IconName>
+  <IconName name="OfficeBuilding"><OfficeBuilding /></IconName>
+  <IconName name="School"><School /></IconName>
+  <IconName name="Guide"><Guide /></IconName>
+  <IconName name="AddLocation"><AddLocation /></IconName>
+  <IconName name="MapLocation"><MapLocation /></IconName>
+  <IconName name="Place"><Place /></IconName>
+  <IconName name="LocationFilled"><LocationFilled /></IconName>
+  <IconName name="Van"><Van /></IconName>
+</ul>
+
+<h3>Traffic</h3>
+<ul class="demo-icon-list">
+  <IconName name="Location"><Location /></IconName>
 </ul>
 
 <style lang="scss">
