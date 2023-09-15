@@ -1,4 +1,5 @@
 <script context="module">
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   import Prism from 'prismjs';
 </script>
 
