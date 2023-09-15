@@ -221,6 +221,81 @@
     Orange,
     Cherry,
     HotWater,
+    Printer,
+    Calendar,
+    CreditCard,
+    Box,
+    Money,
+    Refrigerator,
+    Cpu,
+    Football,
+    Brush,
+    Suitcase,
+    SuitcaseLine,
+    Umbrella,
+    AlarmClock,
+    Medal,
+    GoldMedal,
+    Present,
+    Mouse,
+    Watch,
+    QuartzWatch,
+    Magnet,
+    Help,
+    Soccer,
+    ToiletPaper,
+    ReadingLamp,
+    Paperclip,
+    MagicStick,
+    Basketball,
+    Baseball,
+    Coin,
+    Goods,
+    Sell,
+    SoldOut,
+    Key,
+    ShoppingCart,
+    ShoppingCartFull,
+    ShoppingTrolley,
+    Phone,
+    Scissor,
+    Handbag,
+    ShoppingBag,
+    Trophy,
+    TrophyBase,
+    Stopwatch,
+    Timer,
+    CollectionTag,
+    TakeawayBox,
+    PriceTag,
+    Wallet,
+    Opportunity,
+    PhoneFilled,
+    WalletFilled,
+    GoodsFilled,
+    Flag,
+    BrushFilled,
+    Briefcase,
+    Stamp,
+    Sunrise,
+    Sunny,
+    Ship,
+    MostlyCloudy,
+    PartlyCloudy,
+    Sunset,
+    Drizzling,
+    Pouring,
+    Cloudy,
+    Moon,
+    MoonNight,
+    Lightning,
+    ChromeFilled,
+    Eleme,
+    ElemeFilled,
+    ElementPlus,
+    Shop,
+    SwitchFilled,
+    WindPower,
   } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
@@ -585,6 +660,93 @@ let baseColor = 'green';
   <IconName name="GobletSquare"><GobletSquare /></IconName>
   <IconName name="Orange"><Orange /></IconName>
   <IconName name="Cherry"><Cherry /></IconName>
+</ul>
+
+<h3>Items</h3>
+<ul class="demo-icon-list">
+  <IconName name="Printer"><Printer /></IconName>
+  <IconName name="Calendar"><Calendar /></IconName>
+  <IconName name="CreditCard"><CreditCard /></IconName>
+  <IconName name="Box"><Box /></IconName>
+  <IconName name="Money"><Money /></IconName>
+  <IconName name="Refrigerator"><Refrigerator /></IconName>
+  <IconName name="Cpu"><Cpu /></IconName>
+  <IconName name="Football"><Football /></IconName>
+  <IconName name="Brush"><Brush /></IconName>
+  <IconName name="Suitcase"><Suitcase /></IconName>
+  <IconName name="SuitcaseLine"><SuitcaseLine /></IconName>
+  <IconName name="Umbrella"><Umbrella /></IconName>
+  <IconName name="AlarmClock"><AlarmClock /></IconName>
+  <IconName name="Medal"><Medal /></IconName>
+  <IconName name="GoldMedal"><GoldMedal /></IconName>
+  <IconName name="Present"><Present /></IconName>
+  <IconName name="Mouse"><Mouse /></IconName>
+  <IconName name="Watch"><Watch /></IconName>
+  <IconName name="QuartzWatch"><QuartzWatch /></IconName>
+  <IconName name="Magnet"><Magnet /></IconName>
+  <IconName name="Help"><Help /></IconName>
+  <IconName name="Soccer"><Soccer /></IconName>
+  <IconName name="ToiletPaper"><ToiletPaper /></IconName>
+  <IconName name="ReadingLamp"><ReadingLamp /></IconName>
+  <IconName name="Paperclip"><Paperclip /></IconName>
+  <IconName name="MagicStick"><MagicStick /></IconName>
+  <IconName name="Basketball"><Basketball /></IconName>
+  <IconName name="Baseball"><Baseball /></IconName>
+  <IconName name="Coin"><Coin /></IconName>
+  <IconName name="Goods"><Goods /></IconName>
+  <IconName name="Sell"><Sell /></IconName>
+  <IconName name="SoldOut"><SoldOut /></IconName>
+  <IconName name="Key"><Key /></IconName>
+  <IconName name="ShoppingCart"><ShoppingCart /></IconName>
+  <IconName name="ShoppingCartFull"><ShoppingCartFull /></IconName>
+  <IconName name="ShoppingTrolley"><ShoppingTrolley /></IconName>
+  <IconName name="Phone"><Phone /></IconName>
+  <IconName name="Scissor"><Scissor /></IconName>
+  <IconName name="Handbag"><Handbag /></IconName>
+  <IconName name="ShoppingBag"><ShoppingBag /></IconName>
+  <IconName name="Trophy"><Trophy /></IconName>
+  <IconName name="TrophyBase"><TrophyBase /></IconName>
+  <IconName name="Stopwatch"><Stopwatch /></IconName>
+  <IconName name="Timer"><Timer /></IconName>
+  <IconName name="CollectionTag"><CollectionTag /></IconName>
+  <IconName name="TakeawayBox"><TakeawayBox /></IconName>
+  <IconName name="PriceTag"><PriceTag /></IconName>
+  <IconName name="Wallet"><Wallet /></IconName>
+  <IconName name="Opportunity"><Opportunity /></IconName>
+  <IconName name="PhoneFilled"><PhoneFilled /></IconName>
+  <IconName name="WalletFilled"><WalletFilled /></IconName>
+  <IconName name="GoodsFilled"><GoodsFilled /></IconName>
+  <IconName name="Flag"><Flag /></IconName>
+  <IconName name="BrushFilled"><BrushFilled /></IconName>
+  <IconName name="Briefcase"><Briefcase /></IconName>
+  <IconName name="Stamp"><Stamp /></IconName>
+</ul>
+
+<h3>Items</h3>
+<ul class="demo-icon-list">
+  <IconName name="Sunrise"><Sunrise /></IconName>
+  <IconName name="Sunny"><Sunny /></IconName>
+  <IconName name="Ship"><Ship /></IconName>
+  <IconName name="MostlyCloudy"><MostlyCloudy /></IconName>
+  <IconName name="PartlyCloudy"><PartlyCloudy /></IconName>
+  <IconName name="Sunset"><Sunset /></IconName>
+  <IconName name="Drizzling"><Drizzling /></IconName>
+  <IconName name="Pouring"><Pouring /></IconName>
+  <IconName name="Cloudy"><Cloudy /></IconName>
+  <IconName name="Moon"><Moon /></IconName>
+  <IconName name="MoonNight"><MoonNight /></IconName>
+  <IconName name="Lightning"><Lightning /></IconName>
+</ul>
+
+<h3>Other</h3>
+<ul class="demo-icon-list">
+  <IconName name="ChromeFilled"><ChromeFilled /></IconName>
+  <IconName name="Eleme"><Eleme /></IconName>
+  <IconName name="ElemeFilled"><ElemeFilled /></IconName>
+  <IconName name="ElementPlus"><ElementPlus /></IconName>
+  <IconName name="Shop"><Shop /></IconName>
+  <IconName name="SwitchFilled"><SwitchFilled /></IconName>
+  <IconName name="WindPower"><WindPower /></IconName>
 </ul>
 
 <style lang="scss">
