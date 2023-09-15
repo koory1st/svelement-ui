@@ -1,3 +1,7 @@
+<script context="module">
+  import Prism from 'prismjs';
+</script>
+
 <script lang="ts">
   import PrismBase from './prism_base.svelte';
   import PrismSvelte from './prism_svelte.svelte';

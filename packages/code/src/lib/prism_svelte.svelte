@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Prism from 'prismjs';
   import 'prism-svelte';
   export let code: string;
 </script>
