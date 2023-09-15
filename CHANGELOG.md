@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.5](https://github.com/koory1st/svelement-ui/compare/v0.11.4...v0.11.5) (2023-09-15)
+
+### Bug Fixes
+
+* **code:** move prism out ([cc83f87](https://github.com/koory1st/svelement-ui/commit/cc83f872c629121b5c7132a2c2b4f1b935411067))
+* **docs:** add icon ([84967db](https://github.com/koory1st/svelement-ui/commit/84967db127ababbbc5d42095a0531c3d61582072))
+
 ## [0.11.4](https://github.com/koory1st/svelement-ui/compare/v0.11.3...v0.11.4) (2023-09-14)
 
 ### Bug Fixes
