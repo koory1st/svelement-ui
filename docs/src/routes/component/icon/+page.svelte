@@ -311,6 +311,7 @@
 </script>
 
 <h1>Icon 图标</h1>
+<p>Svelement-ui和Element Plus一样，提供了一套常用的图标集合。</p>
 <h2>使用图标</h2>
 <SvelCode language="bash" code="pnpm install -D @svelement-ui/icon" />
 

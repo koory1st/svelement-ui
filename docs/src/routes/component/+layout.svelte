@@ -23,6 +23,12 @@
   </SvelAside>
 
   <SvelMain>
-    <slot />
+    <div class="doc-content-wrapper">
+      <div class="doc-content-container">
+        <div class="doc-content">
+          <slot />
+        </div>
+      </div>
+    </div>
   </SvelMain>
 </SvelContainer>
