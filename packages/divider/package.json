@@ -1,0 +1,33 @@
+{
+  "name": "@svelement-ui/divider",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && svelte-kit sync && svelte-package && publint",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@svelement-ui/theme-chalk": "workspace:^",
+    "@svelement-ui/util-array-2-class-string": "workspace:^",
+    "@svelement-ui/util-array-2-style-string": "workspace:^"
+  }
+}
