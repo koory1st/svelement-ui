@@ -7,7 +7,16 @@
 <p>常用的操作按钮。</p>
 
 <h2>基础用法</h2>
-<p>使用 type、plain、round 和 circle 来定义按钮的样式。</p>
+<p>
+  使用 <span class="code">type</span>
+  、
+  <span class="code">plain</span>
+  、
+  <span class="code">round</span>
+  和
+  <span class="code">circle</span>
+  来定义按钮的样式。
+</p>
 
 <SvelRow class="mb-4">
   <SvelButton>Default</SvelButton>
