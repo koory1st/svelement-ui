@@ -296,6 +296,10 @@
     Shop,
     SwitchFilled,
     WindPower,
+    ArrowLeftRight,
+    ConicalFlask,
+    CopyDocumentSquare,
+    Github,
   } from '@svelement-ui/icon';
   import '@svelement-ui/icon/dist/style.css';
 
@@ -546,6 +550,7 @@ let baseColor = 'green';
   <IconName name="DCaret"><DCaret /></IconName>
   <IconName name="Expand"><Expand /></IconName>
   <IconName name="Fold"><Fold /></IconName>
+  <IconName name="ArrowLeftRight"><ArrowLeftRight /></IconName>
 </ul>
 
 <h3>Document</h3>
@@ -582,6 +587,7 @@ let baseColor = 'green';
   <IconName name="Failed"><Failed /></IconName>
   <IconName name="TrendCharts"><TrendCharts /></IconName>
   <IconName name="List"><List /></IconName>
+  <IconName name="CopyDocumentSquare"><CopyDocumentSquare /></IconName>
 </ul>
 
 <h3>Media</h3>
@@ -721,9 +727,10 @@ let baseColor = 'green';
   <IconName name="BrushFilled"><BrushFilled /></IconName>
   <IconName name="Briefcase"><Briefcase /></IconName>
   <IconName name="Stamp"><Stamp /></IconName>
+  <IconName name="ConicalFlask"><ConicalFlask /></IconName>
 </ul>
 
-<h3>Items</h3>
+<h3>Weather</h3>
 <ul class="demo-icon-list">
   <IconName name="Sunrise"><Sunrise /></IconName>
   <IconName name="Sunny"><Sunny /></IconName>
@@ -748,6 +755,7 @@ let baseColor = 'green';
   <IconName name="Shop"><Shop /></IconName>
   <IconName name="SwitchFilled"><SwitchFilled /></IconName>
   <IconName name="WindPower"><WindPower /></IconName>
+  <IconName name="Github"><Github /></IconName>
 </ul>
 
 <style lang="scss">
