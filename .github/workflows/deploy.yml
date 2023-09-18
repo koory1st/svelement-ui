@@ -44,6 +44,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Check and Lint
+        run: |
+          pnpm build && pnpm check && pnpm lint
+
       - name: Git Identity
         run: |
           git config --global user.name 'github-actions[bot]'
@@ -55,10 +59,6 @@ jobs:
       - name: Version
         run: |
           pnpm lerna-version
-
-      - name: Check and Lint
-        run: |
-          pnpm check && pnpm lint
 
       - name: Publish
         run: |
