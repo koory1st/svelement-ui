@@ -10,6 +10,7 @@ import SvelMain from '@svelement-ui/main';
 import SvelRow from '@svelement-ui/row';
 import SvelLink from '@svelement-ui/link';
 import SvelCode from '@svelement-ui/code';
+import SvelDivider from '@svelement-ui/divider';
 
 export {
   SvelAside,
@@ -22,4 +23,5 @@ export {
   SvelRow,
   SvelLink,
   SvelCode,
+  SvelDivider,
 };

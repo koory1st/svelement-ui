@@ -158,6 +158,9 @@ importers:
       '@svelement-ui/container':
         specifier: workspace:^
         version: link:../container
+      '@svelement-ui/divider':
+        specifier: workspace:^
+        version: link:../divider
       '@svelement-ui/footer':
         specifier: workspace:^
         version: link:../footer

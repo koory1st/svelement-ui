@@ -19,6 +19,7 @@
     "@svelement-ui/code": "workspace:^",
     "@svelement-ui/col": "workspace:^",
     "@svelement-ui/container": "workspace:^",
+    "@svelement-ui/divider": "workspace:^",
     "@svelement-ui/footer": "workspace:^",
     "@svelement-ui/header": "workspace:^",
     "@svelement-ui/link": "workspace:^",
