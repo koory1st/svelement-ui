@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/koory1st/svelement-ui/compare/v0.11.7...v0.12.0) (2023-09-18)
+
+### Bug Fixes
+
+* **button:** add loading icon ([7a006c4](https://github.com/koory1st/svelement-ui/commit/7a006c4bbe2c98f9bf0943ec322e491726f34426))
+* **button:** add ts import ([18a498b](https://github.com/koory1st/svelement-ui/commit/18a498bebd3df9ae6dee576d3815f339edada4d8))
+* **docs:** button style ([092a9a6](https://github.com/koory1st/svelement-ui/commit/092a9a6af6f577f89163252f68d9c73e21e23485))
+* **docs:** style ([08b0198](https://github.com/koory1st/svelement-ui/commit/08b01981574df107d468b0eee8b4ad8b108aee8d))
+* **icon:** add icons ([1c1cea6](https://github.com/koory1st/svelement-ui/commit/1c1cea66ed3ba71c5204392f19fa985281478155))
+
+### Features
+
+* **divider:** add ([a6ac86e](https://github.com/koory1st/svelement-ui/commit/a6ac86e0e72ec0cd7993528d059ea1d880bd2d24))
+
 ## [0.11.7](https://github.com/koory1st/svelement-ui/compare/v0.11.6...v0.11.7) (2023-09-15)
 
 ### Bug Fixes
