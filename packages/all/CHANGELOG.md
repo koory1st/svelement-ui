@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.1](https://github.com/koory1st/svelement-ui/compare/v0.12.0...v0.12.1) (2023-09-18)
+
+### Bug Fixes
+
+* **all:** add divider ([d18eedd](https://github.com/koory1st/svelement-ui/commit/d18eedddb45f5fb21115d55432e73081c9967d40))
+
 # [0.12.0](https://github.com/koory1st/svelement-ui/compare/v0.11.7...v0.12.0) (2023-09-18)
 
 **Note:** Version bump only for package @svelement-ui/all
