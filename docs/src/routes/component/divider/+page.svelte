@@ -1,5 +1,6 @@
 <script lang="ts">
   import { SvelDivider } from '@svelement-ui/all';
+  import Example from '$lib/example.svelte';
 </script>
 
 <h1>Divider 分割线</h1>
@@ -8,6 +9,8 @@
 <h2>基础用法</h2>
 <p>对不同段落的文本进行分割。</p>
 
+<Example
+  code={`
 <div>
   <span>What you are you do not see, what you see is your shadow.</span>
   <SvelDivider contentPosition="left">Rabindranath Tagore</SvelDivider>
@@ -15,7 +18,17 @@
   <SvelDivider>abc</SvelDivider>
   <span>I cannot choose the best. The best chooses me.</span>
   <SvelDivider contentPosition="right">abc</SvelDivider>
-</div>
+</div>`}
+>
+  <div>
+    <span>What you are you do not see, what you see is your shadow.</span>
+    <SvelDivider contentPosition="left">Rabindranath Tagore</SvelDivider>
+    <span>My wishes are fools, they shout across thy song, my Master. Let me but listen.</span>
+    <SvelDivider>abc</SvelDivider>
+    <span>I cannot choose the best. The best chooses me.</span>
+    <SvelDivider contentPosition="right">abc</SvelDivider>
+  </div>
+</Example>
 
 <div>
   <span>What you are you do not see, what you see is your shadow.</span>

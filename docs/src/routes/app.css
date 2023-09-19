@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  --border-color: var(--svel-border-color);
+  --bg-color: var(--svel-bg-color);
+  --text-color-lighter: var(--svel-text-color-secondary);
   --code-font-size: var(--svel-font-size-base);
   --code-font-family: var(--font-family-mono);
   --font-family-mono: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
