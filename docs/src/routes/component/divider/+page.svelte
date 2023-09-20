@@ -11,6 +11,32 @@
 
 <Example
   code={`
+<script lang="ts">
+  import { SvelDivider } from '@svelement-ui/all';
+!@/script>
+<div>
+  <span>
+    I sit at my window this morning where the world like a passer-by stops for a moment, nods to
+    me and goes.
+  </span>
+  <SvelDivider />
+  <span>
+    There little thoughts are the rustle of leaves; they have their whisper of joy in my mind.
+  </span>
+</div>`}
+>
+  <div>
+    <span>
+      I sit at my window this morning where the world like a passer-by stops for a moment, nods to
+      me and goes.
+    </span>
+    <SvelDivider />
+    <span>
+      There little thoughts are the rustle of leaves; they have their whisper of joy in my mind.
+    </span>
+  </div>
+</Example>
+
 <div>
   <span>What you are you do not see, what you see is your shadow.</span>
   <SvelDivider contentPosition="left">Rabindranath Tagore</SvelDivider>
@@ -18,18 +44,7 @@
   <SvelDivider>abc</SvelDivider>
   <span>I cannot choose the best. The best chooses me.</span>
   <SvelDivider contentPosition="right">abc</SvelDivider>
-</div>`}
->
-  <div>
-    <span>What you are you do not see, what you see is your shadow.</span>
-    <SvelDivider contentPosition="left">Rabindranath Tagore</SvelDivider>
-    <span>My wishes are fools, they shout across thy song, my Master. Let me but listen.</span>
-    <SvelDivider>abc</SvelDivider>
-    <span>I cannot choose the best. The best chooses me.</span>
-    <SvelDivider contentPosition="right">abc</SvelDivider>
-  </div>
-</Example>
-
+</div>
 <div>
   <span>What you are you do not see, what you see is your shadow.</span>
   <SvelDivider borderStyle="dashed" />

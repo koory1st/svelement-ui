@@ -309,9 +309,6 @@
   let baseColor = 'green';
 
   import IconName from './icon-item.svelte';
-  function copy2Clip() {
-    console.log("🚀 ~ file: +page.svelte:98 ~ copy2Clip ~ 'aaaa':", 'aaaa');
-  }
 </script>
 
 <h1>Icon 图标</h1>

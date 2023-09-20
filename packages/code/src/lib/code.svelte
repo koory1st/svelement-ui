@@ -35,7 +35,7 @@
     z-index: 2;
   }
   .svel-code {
-    margin: 1rem 0;
+    // margin: 1rem 0;
     border-radius: 6px;
     position: relative;
     overflow-x: auto;
