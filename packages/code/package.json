@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/code",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",

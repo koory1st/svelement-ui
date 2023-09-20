@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.4](https://github.com/koory1st/svelement-ui/compare/v0.12.3...v0.12.4) (2023-09-20)
+
+### Bug Fixes
+
+* **main:** remove overflow ([1beed46](https://github.com/koory1st/svelement-ui/commit/1beed46aa463ae444dd2c8ab7e2d1b67a79a1e3b))
+
 # [0.12.0](https://github.com/koory1st/svelement-ui/compare/v0.11.7...v0.12.0) (2023-09-18)
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/button",
-  "version": "0.12.2",
+  "version": "0.12.4",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.4](https://github.com/koory1st/svelement-ui/compare/v0.12.3...v0.12.4) (2023-09-20)
+
+### Bug Fixes
+
+* **code:** change style ([83770a0](https://github.com/koory1st/svelement-ui/commit/83770a0cff4fa921d1aea616a1592e2b24c47743))
+* **docs:** make tailwind important ([3e7bc31](https://github.com/koory1st/svelement-ui/commit/3e7bc31e02a34b44eaaf3061f471df2d04797bc9))
+* **main:** remove overflow ([1beed46](https://github.com/koory1st/svelement-ui/commit/1beed46aa463ae444dd2c8ab7e2d1b67a79a1e3b))
+
 ## [0.12.3](https://github.com/koory1st/svelement-ui/compare/v0.12.2...v0.12.3) (2023-09-20)
 
 ### Bug Fixes
