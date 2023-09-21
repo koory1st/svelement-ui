@@ -2,16 +2,9 @@
   export let style: string | null = null;
 </script>
 
-<svg {style} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-  <title>flask</title>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="invisible_box" data-name="invisible box">
-      <rect width="48" height="48" fill="none" />
-    </g>
-    <g id="Layer_6" data-name="Layer 6">
-      <path
-        d="M43.8,41.2,30,17V8h2a2,2,0,0,0,2-2,1.9,1.9,0,0,0-2-2H15.9a2,2,0,1,0,0,4H18v9L4.2,41.2A2,2,0,0,0,6,44H42A2,2,0,0,0,43.8,41.2ZM22,18.1V8h4V18.1L31.7,28H16.3ZM9.5,40,14,32H34l4.5,8Z"
-      />
-    </g>
-  </g>
+<svg {style} viewBox="0 0 24 24">
+  <path
+    fill="currentColor"
+    d="M16 2v2h-1v3.243c0 1.158.251 2.301.736 3.352l4.282 9.276A1.5 1.5 0 0 1 18.656 22H5.344a1.5 1.5 0 0 1-1.362-2.129l4.282-9.276A7.994 7.994 0 0 0 9 7.243V4H8V2h8zm-2.612 8.001h-2.776c-.104.363-.23.721-.374 1.071l-.158.361L6.125 20h11.749l-3.954-8.567a9.978 9.978 0 0 1-.532-1.432zM11 7.243c0 .253-.01.506-.029.758h2.058a8.777 8.777 0 0 1-.021-.364L13 7.243V4h-2v3.243z"
+  />
 </svg>
