@@ -11,7 +11,7 @@
   export let language: string;
   export let code: string;
   $: {
-    code = code.replaceAll('!@/', '</').trimStart().trimEnd();
+    code = code.replaceAll('@@@>', '').trimStart().trimEnd();
   }
 </script>
 
