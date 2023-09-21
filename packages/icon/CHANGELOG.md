@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.5](https://github.com/koory1st/svelement-ui/compare/v0.12.4...v0.12.5) (2023-09-21)
+
+### Bug Fixes
+
+* **icon:** conical-flask ([7f34727](https://github.com/koory1st/svelement-ui/commit/7f34727d52ac6d0d6e47117fd902637f1865f8a8))
+
 ## [0.12.4](https://github.com/koory1st/svelement-ui/compare/v0.12.3...v0.12.4) (2023-09-20)
 
 **Note:** Version bump only for package @svelement-ui/icon
