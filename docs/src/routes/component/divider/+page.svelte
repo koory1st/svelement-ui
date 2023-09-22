@@ -165,7 +165,7 @@
         <td>horizontal</td>
       </tr>
       <tr>
-        <td>border-style</td>
+        <td>borderStyle</td>
         <td>设置分隔符样式</td>
         <td>
           <span class="inline-flex items-center">
@@ -211,7 +211,7 @@
         <td>solid</td>
       </tr>
       <tr>
-        <td>content-position</td>
+        <td>contentPosition</td>
         <td>自定义分隔线内容的位置</td>
         <td>
           <span class="inline-flex items-center">
