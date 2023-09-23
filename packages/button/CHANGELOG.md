@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.6](https://github.com/koory1st/svelement-ui/compare/v0.12.5...v0.12.6) (2023-09-23)
+
+### Bug Fixes
+
+* **button:** use icon slot ([e5978bb](https://github.com/koory1st/svelement-ui/commit/e5978bbb8c2b7eec6b7e514e0c52336e49d91ee6))
+
 ## [0.12.5](https://github.com/koory1st/svelement-ui/compare/v0.12.4...v0.12.5) (2023-09-21)
 
 **Note:** Version bump only for package @svelement-ui/button
