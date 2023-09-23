@@ -4,7 +4,6 @@
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   export let type: 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'default' = 'default';
   export let size = '';
-  export let icon = '';
   export let nativeType: 'button' | 'submit' | 'reset' | null | undefined = 'button';
   export let disabled = false;
   export let loading = false;
@@ -28,7 +27,9 @@
 
 <button class={classString} type={nativeType} disabled={disabled || loading} on:click>
   {#if loading}<SvelIcon class="is-loading"><Loading /></SvelIcon>{/if}
-  {#if icon && !loading}<i class={icon} />{/if}
+  {#if $$slots.icon && !loading}
+    <slot name="icon" />
+  {/if}
   {#if $$slots.default}
     <span>
       <slot />
