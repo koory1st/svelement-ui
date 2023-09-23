@@ -1,6 +1,9 @@
 <script lang="ts">
   import SvelButton from '@svelement-ui/button';
   import SvelRow from '@svelement-ui/row';
+  import Example from '$lib/example.svelte';
+
+  import { SvelIcon, Search, Edit, Check, Message, Star, Delete } from '@svelement-ui/icon';
 </script>
 
 <h1>Button 按钮</h1>
@@ -18,6 +21,12 @@
   来定义按钮的样式。
 </p>
 
+<Example
+  code={`
+<script lang="ts">
+  import SvelButton from '@svelement-ui/button';
+  import { SvelIcon, Search, Edit, Check, Message, Star, Delete } from '@svelement-ui/icon';
+@@@/>
 <SvelRow class="mb-4">
   <SvelButton>Default</SvelButton>
   <SvelButton type="primary">Primary</SvelButton>
@@ -45,10 +54,46 @@
 </SvelRow>
 
 <SvelRow class="mb-4">
-  <SvelButton circle>Default</SvelButton>
-  <SvelButton circle type="primary">Primary</SvelButton>
-  <SvelButton circle type="success">Success</SvelButton>
-  <SvelButton circle type="info">Info</SvelButton>
-  <SvelButton circle type="warning">Warning</SvelButton>
-  <SvelButton circle type="danger">Danger</SvelButton>
-</SvelRow>
+  <SvelButton circle><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+  <SvelButton circle type="primary"><SvelIcon slot="icon"><Edit /></SvelIcon></SvelButton>
+  <SvelButton circle type="success"><SvelIcon slot="icon"><Check /></SvelIcon></SvelButton>
+  <SvelButton circle type="info"><SvelIcon slot="icon"><Message /></SvelIcon></SvelButton>
+  <SvelButton circle type="warning"><SvelIcon slot="icon"><Star /></SvelIcon></SvelButton>
+  <SvelButton circle type="danger"><SvelIcon slot="icon"><Delete /></SvelIcon></SvelButton>
+</SvelRow>`}
+>
+  <SvelRow class="mb-4">
+    <SvelButton>Default</SvelButton>
+    <SvelButton type="primary">Primary</SvelButton>
+    <SvelButton type="success">Success</SvelButton>
+    <SvelButton type="info">Info</SvelButton>
+    <SvelButton type="warning">Warning</SvelButton>
+    <SvelButton type="danger">Danger</SvelButton>
+  </SvelRow>
+  <SvelRow class="mb-4">
+    <SvelButton plain>Default</SvelButton>
+    <SvelButton plain type="primary">Primary</SvelButton>
+    <SvelButton plain type="success">Success</SvelButton>
+    <SvelButton plain type="info">Info</SvelButton>
+    <SvelButton plain type="warning">Warning</SvelButton>
+    <SvelButton plain type="danger">Danger</SvelButton>
+  </SvelRow>
+
+  <SvelRow class="mb-4">
+    <SvelButton round>Default</SvelButton>
+    <SvelButton round type="primary">Primary</SvelButton>
+    <SvelButton round type="success">Success</SvelButton>
+    <SvelButton round type="info">Info</SvelButton>
+    <SvelButton round type="warning">Warning</SvelButton>
+    <SvelButton round type="danger">Danger</SvelButton>
+  </SvelRow>
+
+  <SvelRow class="mb-4">
+    <SvelButton circle><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+    <SvelButton circle type="primary"><SvelIcon slot="icon"><Edit /></SvelIcon></SvelButton>
+    <SvelButton circle type="success"><SvelIcon slot="icon"><Check /></SvelIcon></SvelButton>
+    <SvelButton circle type="info"><SvelIcon slot="icon"><Message /></SvelIcon></SvelButton>
+    <SvelButton circle type="warning"><SvelIcon slot="icon"><Star /></SvelIcon></SvelButton>
+    <SvelButton circle type="danger"><SvelIcon slot="icon"><Delete /></SvelIcon></SvelButton>
+  </SvelRow>
+</Example>
