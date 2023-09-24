@@ -97,3 +97,54 @@
     <SvelButton circle type="danger"><SvelIcon slot="icon"><Delete /></SvelIcon></SvelButton>
   </SvelRow>
 </Example>
+
+<h2>禁用状态</h2>
+<p>
+  你可以使用 <span class="code">disabled</span>
+  属性来定义按钮是否被禁用。
+</p>
+<p>
+  使用 <span class="code">disabled</span>
+  属性来控制按钮是否为禁用状态。 该属性接受一个
+  <span class="code">Boolean</span>
+  类型的值。
+</p>
+
+<Example
+  code={`
+<SvelRow class="mb-4">
+  <SvelButton disabled>Default</SvelButton>
+  <SvelButton type="primary" disabled>Primary</SvelButton>
+  <SvelButton type="success" disabled>Success</SvelButton>
+  <SvelButton type="info" disabled>Info</SvelButton>
+  <SvelButton type="warning" disabled>Warning</SvelButton>
+  <SvelButton type="danger" disabled>Danger</SvelButton>
+</SvelRow>
+<SvelRow class="mb-4">
+  <SvelButton plain disabled>Default</SvelButton>
+  <SvelButton plain type="primary" disabled>Primary</SvelButton>
+  <SvelButton plain type="success" disabled>Success</SvelButton>
+  <SvelButton plain type="info" disabled>Info</SvelButton>
+  <SvelButton plain type="warning" disabled>Warning</SvelButton>
+  <SvelButton plain type="danger" disabled>Danger</SvelButton>
+</SvelRow>`}
+>
+  <SvelRow class="mb-4">
+    <SvelButton disabled>Default</SvelButton>
+    <SvelButton type="primary" disabled>Primary</SvelButton>
+    <SvelButton type="success" disabled>Success</SvelButton>
+    <SvelButton type="info" disabled>Info</SvelButton>
+    <SvelButton type="warning" disabled>Warning</SvelButton>
+    <SvelButton type="danger" disabled>Danger</SvelButton>
+  </SvelRow>
+  <SvelRow class="mb-4">
+    <SvelButton plain disabled>Default</SvelButton>
+    <SvelButton plain type="primary" disabled>Primary</SvelButton>
+    <SvelButton plain type="success" disabled>Success</SvelButton>
+    <SvelButton plain type="info" disabled>Info</SvelButton>
+    <SvelButton plain type="warning" disabled>Warning</SvelButton>
+    <SvelButton plain type="danger" disabled>Danger</SvelButton>
+  </SvelRow>
+</Example>
+
+<h2>文字按钮</h2>
