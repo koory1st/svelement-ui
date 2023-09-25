@@ -157,7 +157,7 @@
 </Example>
 
 <h2>文字按钮</h2>
-
+<p>没有边框和背景色的按钮。</p>
 <Example
   code={`
 <script lang="ts">
