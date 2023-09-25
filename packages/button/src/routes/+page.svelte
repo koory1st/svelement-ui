@@ -12,3 +12,5 @@
 <Button loading>aaa</Button>
 
 <Button><SvelIcon slot="icon"><Delete /></SvelIcon></Button>
+
+<Button text>aaa</Button>

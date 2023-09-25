@@ -10,6 +10,8 @@
   export let plain = false;
   export let round = false;
   export let circle = false;
+  export let text = false;
+  export let bg = false;
 
   $: size = size || getContext('svel-size');
 
@@ -22,6 +24,8 @@
     [`is-circle`, circle],
     [`svel-button--${size}`, Boolean(size)],
     ['is-loading', loading],
+    ['is-text', text],
+    ['is-has-bg', bg],
   ]);
 </script>
 

@@ -4,6 +4,15 @@
   import Example from '$lib/example.svelte';
 
   import { SvelIcon, Search, Edit, Check, Message, Star, Delete, Share } from '@svelement-ui/icon';
+
+  const buttons = [
+    { type: '', text: 'plain' },
+    { type: 'primary', text: 'primary' },
+    { type: 'success', text: 'success' },
+    { type: 'info', text: 'info' },
+    { type: 'warning', text: 'warning' },
+    { type: 'danger', text: 'danger' },
+  ] as const;
 </script>
 
 <h1>Button 按钮</h1>
@@ -148,6 +157,69 @@
 </Example>
 
 <h2>文字按钮</h2>
+
+<Example
+  code={`
+<script lang="ts">
+  import SvelButton from '@svelement-ui/button';
+  import SvelRow from '@svelement-ui/row';
+  import Example from '$lib/example.svelte';
+
+  import { SvelIcon, Search, Edit, Check, Message, Star, Delete, Share } from '@svelement-ui/icon';
+
+  const buttons = [
+  { type: '', text: 'plain' },
+  { type: 'primary', text: 'primary' },
+  { type: 'success', text: 'success' },
+  { type: 'info', text: 'info' },
+  { type: 'warning', text: 'warning' },
+  { type: 'danger', text: 'danger' },
+] as const
+@@@/>
+
+<p>Basic text button</p>
+<div class="flex justify-space-between mb-4 flex-wrap gap-4">
+  {#each buttons as button}
+    <SvelButton type={button.type} text>{button.text}</SvelButton>
+  {/each}
+</div>
+
+<p>Background color always on</p>
+<div class="flex justify-space-between mb-4 flex-wrap gap-4">
+  {#each buttons as button}
+    <SvelButton type={button.type} text bg>{button.text}</SvelButton>
+  {/each}
+</div>
+
+<p>Disabled text button</p>
+<div class="flex justify-space-between mb-4 flex-wrap gap-4">
+  {#each buttons as button}
+    <SvelButton type={button.type} text disabled>{button.text}</SvelButton>
+  {/each}
+</div>
+`}
+>
+  <p>Basic text button</p>
+  <div class="flex justify-space-between mb-4 flex-wrap gap-4">
+    {#each buttons as button}
+      <SvelButton type={button.type} text>{button.text}</SvelButton>
+    {/each}
+  </div>
+
+  <p>Background color always on</p>
+  <div class="flex justify-space-between mb-4 flex-wrap gap-4">
+    {#each buttons as button}
+      <SvelButton type={button.type} text bg>{button.text}</SvelButton>
+    {/each}
+  </div>
+
+  <p>Disabled text button</p>
+  <div class="flex justify-space-between mb-4 flex-wrap gap-4">
+    {#each buttons as button}
+      <SvelButton type={button.type} text disabled>{button.text}</SvelButton>
+    {/each}
+  </div>
+</Example>
 
 <h2>图标按钮</h2>
 <p>使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。</p>
