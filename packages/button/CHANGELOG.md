@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.7](https://github.com/koory1st/svelement-ui/compare/v0.12.6...v0.12.7) (2023-09-25)
+
+### Bug Fixes
+
+* **button:** add text and bg ([eb421fe](https://github.com/koory1st/svelement-ui/commit/eb421fe39d89add82acde91e0d3eb5097afd13fa))
+
 ## [0.12.6](https://github.com/koory1st/svelement-ui/compare/v0.12.5...v0.12.6) (2023-09-23)
 
 ### Bug Fixes
