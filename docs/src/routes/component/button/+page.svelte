@@ -3,7 +3,7 @@
   import SvelRow from '@svelement-ui/row';
   import Example from '$lib/example.svelte';
 
-  import { SvelIcon, Search, Edit, Check, Message, Star, Delete } from '@svelement-ui/icon';
+  import { SvelIcon, Search, Edit, Check, Message, Star, Delete, Share } from '@svelement-ui/icon';
 </script>
 
 <h1>Button 按钮</h1>
@@ -148,3 +148,33 @@
 </Example>
 
 <h2>文字按钮</h2>
+
+<h2>图标按钮</h2>
+<p>使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。</p>
+
+<Example
+  code={`
+<script lang="ts">
+  import SvelButton from '@svelement-ui/button';
+  import { SvelIcon, Search, Edit, Delete, Share } from '@svelement-ui/icon';
+@@@/>
+<div class="flex">
+  <SvelButton type="primary"><SvelIcon><Edit /></SvelIcon></SvelButton>
+  <SvelButton type="primary"><SvelIcon><Share /></SvelIcon></SvelButton>
+  <SvelButton type="primary"><SvelIcon><Delete /></SvelIcon></SvelButton>
+  <SvelButton type="primary"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+  <SvelButton type="primary">
+    Upload<SvelIcon class="svel-icon--right"><Search /></SvelIcon>
+  </SvelButton>
+</div>`}
+>
+  <div class="flex">
+    <SvelButton type="primary"><SvelIcon><Edit /></SvelIcon></SvelButton>
+    <SvelButton type="primary"><SvelIcon><Share /></SvelIcon></SvelButton>
+    <SvelButton type="primary"><SvelIcon><Delete /></SvelIcon></SvelButton>
+    <SvelButton type="primary"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+    <SvelButton type="primary">
+      Upload<SvelIcon class="svel-icon--right"><Search /></SvelIcon>
+    </SvelButton>
+  </div>
+</Example>
