@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.8](https://github.com/koory1st/svelement-ui/compare/v0.12.7...v0.12.8) (2023-09-27)
+
+### Bug Fixes
+
+* **code:** add vite-plugin-prismjs ([bb3b2ae](https://github.com/koory1st/svelement-ui/commit/bb3b2ae93c9cfc4cd8a93633e97e750cac1276c5))
+* **docs:** add text ([ad38796](https://github.com/koory1st/svelement-ui/commit/ad387960dbb4f11060cbc00a9fc9de3af4324452))
+* **docs:** button ([a4b9187](https://github.com/koory1st/svelement-ui/commit/a4b918749f8564674e9f13797dbebb1deecd5bab))
+* **docs:** button add text ([0d75578](https://github.com/koory1st/svelement-ui/commit/0d7557815da8499afe7813064c9d1ccc97e35d4b))
+* **docs:** style ([9966a77](https://github.com/koory1st/svelement-ui/commit/9966a77c4d6cef22b1f73bd190158a97ec9b4df0))
+
 ## [0.12.7](https://github.com/koory1st/svelement-ui/compare/v0.12.6...v0.12.7) (2023-09-25)
 
 ### Bug Fixes
