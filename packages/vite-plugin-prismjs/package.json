@@ -1,0 +1,18 @@
+{
+  "name": "@svelement-ui/vite-plugin-prismjs",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "devDependencies": {
+    "@rollup/pluginutils": "^5.0.4",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.0",
+    "babel-plugin-prismjs": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

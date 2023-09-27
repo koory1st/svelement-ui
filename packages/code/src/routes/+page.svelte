@@ -23,6 +23,6 @@ const add = (a: number, b: number) => a + b;
   $: {
     lang = getLang(language);
   }
-!@/script>
+@@@/script>
 `}
 />

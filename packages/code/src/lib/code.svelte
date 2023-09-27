@@ -1,26 +1,27 @@
-<script context="module">
+<script lang="ts">
   /* eslint-disable @typescript-eslint/no-unused-vars */
   import Prism from 'prismjs';
-</script>
-
-<script lang="ts">
-  import PrismBase from './prism_base.svelte';
-  import PrismSvelte from './prism_svelte.svelte';
+  import 'prism-svelte';
+  import { afterUpdate } from 'svelte';
   import './prism.css';
 
   export let language: string;
   export let code: string;
+
+  let divRef: Element;
   $: {
-    code = code.replaceAll('@@@>', '').trimStart().trimEnd();
+    code = code.replaceAll('@@@/', '</').trimStart().trimEnd();
   }
+
+  afterUpdate(() => {
+    Prism.highlightElement(divRef);
+  });
 </script>
 
 <div class="svel-code" data-lang={language}>
-  {#if code === 'svelte'}
-    <PrismSvelte {code} />
-  {:else}
-    <PrismBase {code} {language} />
-  {/if}
+  <pre class={`language-${language}`} bind:this={divRef}>
+<code>{code}</code>
+</pre>
 </div>
 
 <style lang="scss">
