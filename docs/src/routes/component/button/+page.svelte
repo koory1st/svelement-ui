@@ -253,9 +253,16 @@
 
 <h2>按钮组</h2>
 <p>以按钮组的方式出现，常用于多项类似操作。</p>
-<p>使用 <span class="code">&lt;svel-button-group&gt;</span> 对多个按钮分组。</p>
-
+<p>
+  使用 <span class="code">&lt;svel-button-group&gt;</span>
+   对多个按钮分组。
+</p>
 
 <h2>加载状态按钮</h2>
 <p>点击按钮来加载数据，并向用户反馈加载状态。</p>
-<p>通过设置 <span class="code">loading</span> 属性为 <span class="code">true</span> 来显示加载中状态。</p>
+<p>
+  通过设置 <span class="code">loading</span>
+  属性为
+  <span class="code">true</span>
+   来显示加载中状态。
+</p>
