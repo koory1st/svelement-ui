@@ -255,7 +255,7 @@
 <p>以按钮组的方式出现，常用于多项类似操作。</p>
 <p>
   使用 <span class="code">&lt;svel-button-group&gt;</span>
-   对多个按钮分组。
+  对多个按钮分组。
 </p>
 
 <h2>加载状态按钮</h2>
@@ -264,5 +264,5 @@
   通过设置 <span class="code">loading</span>
   属性为
   <span class="code">true</span>
-   来显示加载中状态。
+  来显示加载中状态。
 </p>
