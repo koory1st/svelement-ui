@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/divider",
-  "version": "0.12.4",
+  "version": "0.13.0",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",
