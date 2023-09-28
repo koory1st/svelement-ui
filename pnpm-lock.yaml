@@ -149,6 +149,9 @@ importers:
       '@svelement-ui/button':
         specifier: workspace:^
         version: link:../button
+      '@svelement-ui/button-group':
+        specifier: workspace:^
+        version: link:../button-group
       '@svelement-ui/code':
         specifier: workspace:^
         version: link:../code
@@ -203,6 +206,12 @@ importers:
       typed-scss-modules:
         specifier: ^7.1.4
         version: 7.1.4(sass@1.64.2)
+
+  packages/button-group:
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
 
   packages/code:
     dependencies:
