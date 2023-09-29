@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
+  import { getContext, setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   export let type:
@@ -33,16 +33,23 @@
     [`is-round`, round],
     [`is-circle`, circle],
     [`svel-button--${size}`, Boolean(size)],
-    ['is-loading', loading],
+    ['is-loading', loading || $$slots.loadingIcon],
     ['is-text', text],
     ['is-has-bg', bg],
     $$props.class,
   ]);
+
+  if ($$slots.loadingIcon) {
+    setContext('svel-loading-icon', true);
+  }
 </script>
 
 <button class={classString} type={nativeType} disabled={disabled || loading} on:click>
-  {#if loading}<SvelIcon class="is-loading"><Loading /></SvelIcon>{/if}
-  {#if $$slots.icon && !loading}
+  {#if $$slots.loadingIcon}
+    <slot name="loadingIcon" />
+  {/if}
+  {#if loading && !$$slots.loadingIcon}<SvelIcon class="is-loading"><Loading /></SvelIcon>{/if}
+  {#if $$slots.icon && !loading && !$$slots.loadingIcon}
     <slot name="icon" />
   {/if}
   {#if $$slots.default}

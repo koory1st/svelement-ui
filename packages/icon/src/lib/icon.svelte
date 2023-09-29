@@ -1,15 +1,18 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
+  import { getContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
 
   export let size: number | null = null;
   export let color: string | null = null;
+  let isLoading = getContext('svel-loading-icon');
 
   $: classString = a2s(['svel-icon', $$props.class]);
   $: style = a2st([
     ['font-size', `${size}px`, Boolean(size)],
     ['color', `${color}`, Boolean(color)],
+    ['is-loading', isLoading],
     $$props.style || '',
   ]);
   const dispatch = createEventDispatcher();

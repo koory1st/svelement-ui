@@ -2,6 +2,7 @@
   import SvelRow from '@svelement-ui/row';
   import Example from '$lib/example.svelte';
   import { SvelButton, SvelButtonGroup } from '@svelement-ui/all';
+  import zh from '$lib/i18nZhCn';
 
   import {
     SvelIcon,
@@ -26,6 +27,7 @@
   ] as const;
 </script>
 
+<p>{zh['test']}</p>
 <h1>Button 按钮</h1>
 <p>常用的操作按钮。</p>
 
@@ -345,3 +347,25 @@
   <span class="code">true</span>
   来显示加载中状态。
 </p>
+<p>
+  也可以通过 <span class="code">loadingIcon</span>
+   slot 设置其他 icon
+</p>
+
+<Example
+  code={`
+<SvelButton type="primary" loading>Loading</SvelButton>
+<SvelButton type="primary">
+  <SvelIcon slot="loadingIcon" class="is-loading">
+    <Edit />
+  </SvelIcon>
+</SvelButton>`}
+>
+  <SvelButton type="primary" loading>Loading</SvelButton>
+  <SvelButton type="primary">
+    <SvelIcon slot="loadingIcon" class="is-loading">
+      <Edit />
+    </SvelIcon>
+    Loading
+  </SvelButton>
+</Example>
