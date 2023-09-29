@@ -212,6 +212,9 @@ importers:
       '@svelement-ui/theme-chalk':
         specifier: workspace:^
         version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: ^0.13.0
+        version: 0.13.0
 
   packages/code:
     dependencies:
@@ -1277,6 +1280,10 @@ packages:
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
+    dev: true
+
+  /@svelement-ui/util-array-2-class-string@0.13.0:
+    resolution: {integrity: sha512-m0cnWL08ItYaHkY+Crbf+Y4WyLdqSEydaSkGoqFvqbsSvgWgAKVwmfmbLp95JgXmNT0+vfuSKMZmZHaZNT8ntw==}
     dev: true
 
   /@sveltejs/kit@1.20.4(svelte@4.0.5)(vite@4.4.5):

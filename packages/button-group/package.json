@@ -35,7 +35,8 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "devDependencies": {
-    "@svelement-ui/theme-chalk": "workspace:^"
+    "@svelement-ui/theme-chalk": "workspace:^",
+    "@svelement-ui/util-array-2-class-string": "^0.13.0"
   },
   "publishConfig": {
     "access": "public",

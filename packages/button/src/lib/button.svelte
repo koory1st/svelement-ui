@@ -2,7 +2,16 @@
   import { getContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { SvelIcon, Loading } from '@svelement-ui/icon';
-  export let type: 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'default' = 'default';
+  export let type:
+    | 'primary'
+    | 'success'
+    | 'info'
+    | 'warning'
+    | 'danger'
+    | 'default'
+    | ''
+    | null
+    | undefined = null;
   export let size = '';
   export let nativeType: 'button' | 'submit' | 'reset' | null | undefined = 'button';
   export let disabled = false;
@@ -14,6 +23,7 @@
   export let bg = false;
 
   $: size = size || getContext('svel-size');
+  $: type = type || getContext('svel-button-type');
 
   $: classString = a2s([
     'svel-button',
@@ -26,6 +36,7 @@
     ['is-loading', loading],
     ['is-text', text],
     ['is-has-bg', bg],
+    $$props.class,
   ]);
 </script>
 

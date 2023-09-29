@@ -1,9 +1,20 @@
 <script lang="ts">
-  import SvelButton from '@svelement-ui/button';
   import SvelRow from '@svelement-ui/row';
   import Example from '$lib/example.svelte';
+  import { SvelButton, SvelButtonGroup } from '@svelement-ui/all';
 
-  import { SvelIcon, Search, Edit, Check, Message, Star, Delete, Share } from '@svelement-ui/icon';
+  import {
+    SvelIcon,
+    Search,
+    Edit,
+    Check,
+    Message,
+    Star,
+    Delete,
+    Share,
+    ArrowLeft,
+    ArrowRight,
+  } from '@svelement-ui/icon';
 
   const buttons = [
     { type: '', text: 'plain' },
@@ -257,6 +268,74 @@
   使用 <span class="code">&lt;svel-button-group&gt;</span>
   对多个按钮分组。
 </p>
+
+<Example
+  code={`
+<SvelButtonGroup type="primary">
+  <SvelButton>
+    <SvelIcon slot="icon">
+      <ArrowLeft />
+    </SvelIcon>Previous Page
+  </SvelButton>
+  <SvelButton>
+    Next Page
+    <SvelIcon class="svel-icon--right">
+      <ArrowRight />
+    </SvelIcon>
+  </SvelButton>
+</SvelButtonGroup>
+
+<SvelButtonGroup type="success" size="small" class="ml-4">
+  <SvelButton>
+    <SvelIcon slot="icon">
+      <Edit />
+    </SvelIcon>
+  </SvelButton>
+  <SvelButton >
+    <SvelIcon slot="icon">
+      <Share />
+    </SvelIcon>
+  </SvelButton>
+  <SvelButton >
+    <SvelIcon slot="icon">
+      <Delete />
+    </SvelIcon>
+  </SvelButton>
+</SvelButtonGroup>
+`}
+>
+  <SvelButtonGroup type="primary">
+    <SvelButton>
+      <SvelIcon slot="icon">
+        <ArrowLeft />
+      </SvelIcon>Previous Page
+    </SvelButton>
+    <SvelButton>
+      Next Page
+      <SvelIcon class="svel-icon--right">
+        <ArrowRight />
+      </SvelIcon>
+    </SvelButton>
+  </SvelButtonGroup>
+
+  <SvelButtonGroup type="success" size="small" class="ml-4">
+    <SvelButton>
+      <SvelIcon slot="icon">
+        <Edit />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton>
+      <SvelIcon slot="icon">
+        <Share />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton>
+      <SvelIcon slot="icon">
+        <Delete />
+      </SvelIcon>
+    </SvelButton>
+  </SvelButtonGroup>
+</Example>
 
 <h2>加载状态按钮</h2>
 <p>点击按钮来加载数据，并向用户反馈加载状态。</p>
