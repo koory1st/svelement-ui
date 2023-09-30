@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.2](https://github.com/koory1st/svelement-ui/compare/v0.13.1...v0.13.2) (2023-09-30)
+
+### Bug Fixes
+
+* **button:** loading and loading icon ([9ae359f](https://github.com/koory1st/svelement-ui/commit/9ae359f4f72531a6a5115e892885173585ccace0))
+
 # [0.13.0](https://github.com/koory1st/svelement-ui/compare/v0.12.8...v0.13.0) (2023-09-28)
 
 **Note:** Version bump only for package @svelement-ui/icon
