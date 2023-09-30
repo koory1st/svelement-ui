@@ -11,6 +11,11 @@
     SvelLink,
   } from '@svelement-ui/all';
   import { SvelIcon, Github } from '@svelement-ui/icon';
+  import { setContext } from 'svelte';
+  import zh from '$lib/i18nZhCn';
+  import type GetText from '$lib/i18n';
+
+  setContext('lang', zh as GetText);
 </script>
 
 <SvelContainer direction="vertical" class="docs-container">

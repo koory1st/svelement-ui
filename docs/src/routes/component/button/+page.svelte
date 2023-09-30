@@ -1,8 +1,7 @@
 <script lang="ts">
-  import SvelRow from '@svelement-ui/row';
   import Example from '$lib/example.svelte';
-  import { SvelButton, SvelButtonGroup } from '@svelement-ui/all';
-  import zh from '$lib/i18nZhCn';
+  import type GetText from '$lib/i18n';
+  import { SvelButton, SvelButtonGroup, SvelRow } from '@svelement-ui/all';
 
   import {
     SvelIcon,
@@ -25,13 +24,16 @@
     { type: 'warning', text: 'warning' },
     { type: 'danger', text: 'danger' },
   ] as const;
+
+  import { getContext } from 'svelte';
+
+  let lang: GetText = getContext('lang');
 </script>
 
-<p>{zh['test']}</p>
-<h1>Button 按钮</h1>
-<p>常用的操作按钮。</p>
+<h1>{lang('cb01010')}</h1>
+<p>{lang('cb01020')}</p>
 
-<h2>基础用法</h2>
+<h2>{lang('cb01030')}</h2>
 <p>
   使用 <span class="code">type</span>
   、
@@ -120,7 +122,7 @@
   </SvelRow>
 </Example>
 
-<h2>禁用状态</h2>
+<h2>{lang('cb02010')}</h2>
 <p>
   你可以使用 <span class="code">disabled</span>
   属性来定义按钮是否被禁用。
@@ -169,8 +171,8 @@
   </SvelRow>
 </Example>
 
-<h2>文字按钮</h2>
-<p>没有边框和背景色的按钮。</p>
+<h2>{lang('cb03010')}</h2>
+<p>{lang('cb03020')}</p>
 <Example
   code={`
 <script lang="ts">
@@ -234,7 +236,7 @@
   </div>
 </Example>
 
-<h2>图标按钮</h2>
+<h2>{lang('cb04010')}</h2>
 <p>使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。</p>
 
 <Example
@@ -264,7 +266,7 @@
   </div>
 </Example>
 
-<h2>按钮组</h2>
+<h2>{lang('cb05010')}</h2>
 <p>以按钮组的方式出现，常用于多项类似操作。</p>
 <p>
   使用 <span class="code">&lt;svel-button-group&gt;</span>
@@ -339,7 +341,7 @@
   </SvelButtonGroup>
 </Example>
 
-<h2>加载状态按钮</h2>
+<h2>{lang('cb06010')}</h2>
 <p>点击按钮来加载数据，并向用户反馈加载状态。</p>
 <p>
   通过设置 <span class="code">loading</span>
@@ -349,7 +351,7 @@
 </p>
 <p>
   也可以通过 <span class="code">loadingIcon</span>
-   slot 设置其他 icon
+  slot 设置其他 icon
 </p>
 
 <Example
@@ -368,4 +370,55 @@
     </SvelIcon>
     Loading
   </SvelButton>
+</Example>
+
+<h2>{lang('cb07010')}</h2>
+<p>{lang('cb07020')}</p>
+<p>{@html lang('cb07030')}</p>
+
+<Example
+  code={`
+<SvelRow>
+  <SvelButton size="large">Large</SvelButton>
+  <SvelButton>Default</SvelButton>
+  <SvelButton size="small">Small</SvelButton>
+  <SvelButton size="large"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+  <SvelButton><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+  <SvelButton size="small"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+</SvelRow>
+<SvelRow class="my-4">
+  <SvelButton round size="large">Large</SvelButton>
+  <SvelButton round>Default</SvelButton>
+  <SvelButton round size="small">Small</SvelButton>
+  <SvelButton round size="large"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+  <SvelButton round><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+  <SvelButton round size="small"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+</SvelRow>
+<SvelRow>
+  <SvelButton circle size="large"><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+  <SvelButton circle><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+  <SvelButton circle size="small"><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+</SvelRow>`}
+>
+  <SvelRow>
+    <SvelButton size="large">Large</SvelButton>
+    <SvelButton>Default</SvelButton>
+    <SvelButton size="small">Small</SvelButton>
+    <SvelButton size="large"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+    <SvelButton><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+    <SvelButton size="small"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+  </SvelRow>
+  <SvelRow class="my-4">
+    <SvelButton round size="large">Large</SvelButton>
+    <SvelButton round>Default</SvelButton>
+    <SvelButton round size="small">Small</SvelButton>
+    <SvelButton round size="large"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+    <SvelButton round><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+    <SvelButton round size="small"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+  </SvelRow>
+  <SvelRow>
+    <SvelButton circle size="large"><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+    <SvelButton circle><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+    <SvelButton circle size="small"><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+  </SvelRow>
 </Example>
