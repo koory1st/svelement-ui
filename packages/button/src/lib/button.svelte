@@ -1,7 +1,9 @@
 <script lang="ts">
   import { getContext, setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
-  import { SvelIcon, Loading } from '@svelement-ui/icon';
+  import { SvelIcon, Loading, Avatar } from '@svelement-ui/icon';
+  import { get } from 'svelte/store';
+  import { getButtonStyle } from './button-custom.ts';
   export let type:
     | 'primary'
     | 'success'
@@ -21,6 +23,19 @@
   export let circle = false;
   export let text = false;
   export let bg = false;
+  export let color: string | null = null;
+
+  let dark: boolean;
+  $: dark = getContext('svel-dark');
+
+  let style;
+
+  $: style = getButtonStyle({
+    disabled,
+    plain,
+    color,
+    dark,
+  });
 
   $: size = size || getContext('svel-size');
   $: type = type || getContext('svel-button-type');

@@ -194,6 +194,9 @@ importers:
 
   packages/button:
     devDependencies:
+      '@ctrl/tinycolor':
+        specifier: ^4.0.2
+        version: 4.0.2
       '@svelement-ui/icon':
         specifier: workspace:^
         version: link:../icon
@@ -214,7 +217,7 @@ importers:
         version: link:../theme-chalk
       '@svelement-ui/util-array-2-class-string':
         specifier: ^0.13.0
-        version: 0.13.0
+        version: link:../util-array-2-class-string
 
   packages/code:
     dependencies:
@@ -580,6 +583,11 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
     dev: false
+
+  /@ctrl/tinycolor@4.0.2:
+    resolution: {integrity: sha512-fKQinXE9pJ83J1n+C3rDl2xNLJwfoYNvXLRy5cYZA9hBJJw2q+sbb/AOSNKmLxnTWyNTmy4994dueSwP4opi5g==}
+    engines: {node: '>=14'}
+    dev: true
 
   /@esbuild/android-arm64@0.18.17:
     resolution: {integrity: sha512-9np+YYdNDed5+Jgr1TdWBsozZ85U1Oa3xW0c7TWqH0y2aGghXtZsuT8nYRbzOMcl0bXZXjOGbksoTtVOlWrRZg==}
@@ -1280,10 +1288,6 @@ packages:
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
-    dev: true
-
-  /@svelement-ui/util-array-2-class-string@0.13.0:
-    resolution: {integrity: sha512-m0cnWL08ItYaHkY+Crbf+Y4WyLdqSEydaSkGoqFvqbsSvgWgAKVwmfmbLp95JgXmNT0+vfuSKMZmZHaZNT8ntw==}
     dev: true
 
   /@sveltejs/kit@1.20.4(svelte@4.0.5)(vite@4.4.5):

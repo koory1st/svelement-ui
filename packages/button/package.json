@@ -22,6 +22,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "devDependencies": {
+    "@ctrl/tinycolor": "^4.0.2",
     "@svelement-ui/icon": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
