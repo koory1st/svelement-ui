@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.3](https://github.com/koory1st/svelement-ui/compare/v0.13.2...v0.13.3) (2023-10-02)
+
+### Bug Fixes
+
+* **button:** add color ([0a08c64](https://github.com/koory1st/svelement-ui/commit/0a08c64351f9a69c6c6abb287324e50217017edb))
+* **button:** add color ([be65477](https://github.com/koory1st/svelement-ui/commit/be65477509c560de55e18dd77a185ee74bd328e2))
+* **button:** fix import ([35ff909](https://github.com/koory1st/svelement-ui/commit/35ff909993177d524e8649b8c4e196294edbfdb0))
+
 ## [0.13.2](https://github.com/koory1st/svelement-ui/compare/v0.13.1...v0.13.2) (2023-09-30)
 
 ### Bug Fixes

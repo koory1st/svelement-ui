@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/all",
-  "version": "0.13.2",
+  "version": "0.13.3",
   "exports": {
     ".": {
       "types": "./dist/lib/index.d.ts",
