@@ -422,3 +422,21 @@
     <SvelButton circle size="small"><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
   </SvelRow>
 </Example>
+
+<h2>{lang('cb08010')}</h2>
+<p>{lang('cb08020')}</p>
+<p>{lang('cb08030')}</p>
+
+<Example
+  code={`
+<SvelButton color="#626aef" dark>Default</SvelButton>
+<SvelButton color="#626aef" dark plain>Default</SvelButton>
+<SvelButton color="#626aef" dark disabled>Default</SvelButton>
+<SvelButton color="#626aef" dark plain disabled>Default</SvelButton>
+`}
+>
+  <SvelButton color="#626aef" dark>Default</SvelButton>
+  <SvelButton color="#626aef" dark plain>Default</SvelButton>
+  <SvelButton color="#626aef" dark disabled>Default</SvelButton>
+  <SvelButton color="#626aef" dark plain disabled>Default</SvelButton>
+</Example>

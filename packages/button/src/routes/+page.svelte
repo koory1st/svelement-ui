@@ -2,16 +2,12 @@
   import { setContext } from 'svelte';
 
   setContext('svel-size', 'small');
-  setContext('svel-dark', true);
   import Button from '$lib/index.ts';
 
   import { Delete, SvelIcon } from '@svelement-ui/icon';
 </script>
 
-<Button>aaa</Button>
-
-<Button loading>aaa</Button>
-
-<Button><SvelIcon slot="icon"><Delete /></SvelIcon></Button>
-
-<Button text>aaa</Button>
+<Button color="#626aef" dark>Default</Button>
+<Button color="#626aef" dark plain>Default</Button>
+<Button color="#626aef" dark disabled>Default</Button>
+<Button color="#626aef" dark plain disabled>Default</Button>

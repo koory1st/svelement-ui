@@ -22,10 +22,10 @@
   export let circle = false;
   export let text = false;
   export let bg = false;
+  export let dark = false;
   export let color: string | null = null;
 
-  let dark: boolean;
-  $: dark = getContext('svel-dark');
+  $: dark = dark || getContext('svel-dark');
 
   let style: string | null;
 

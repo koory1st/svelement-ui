@@ -19,6 +19,9 @@ const langDict: { [key: string]: string } = {
   cb07020: '除了默认的大小，按钮组件还提供了几种额外的尺寸可供选择，以便适配不同的场景。',
   cb07030:
     '使用 <span class="code">size</span> 属性额外配置尺寸，可使用 <span class="code">large</span>和<span class="code">small</span>两种值。',
+  cb08010: '自定义颜色',
+  cb08020: '您可以自定义按钮的颜色。',
+  cb08030: '我们将自动计算按钮处于 hover 和 active 状态时的颜色。',
 };
 
 function getText(key: string): string {
