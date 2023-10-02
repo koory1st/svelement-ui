@@ -35,24 +35,43 @@
 <h1>{lang('ccon02010')}</h1>
 <Example
   code={`
-<script lang="ts">
-  import SvelButton from '@svelement-ui/button';
-  import { SvelIcon, Search, Edit, Delete, Share } from '@svelement-ui/icon';
-@@@/>
-<div class="flex">
-  <SvelButton type="primary"><SvelIcon><Edit /></SvelIcon></SvelButton>
-  <SvelButton type="primary"><SvelIcon><Share /></SvelIcon></SvelButton>
-  <SvelButton type="primary"><SvelIcon><Delete /></SvelIcon></SvelButton>
-  <SvelButton type="primary"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
-  <SvelButton type="primary">
-    Upload<SvelIcon class="svel-icon--right"><Search /></SvelIcon>
-  </SvelButton>
+<div class="common-layout">
+  <SvelContainer class="common-layout" direction="vertical">
+    <SvelHeader>Header</SvelHeader>
+    <SvelMain>Main</SvelMain>
+  </SvelContainer>
 </div>`}
 >
   <div class="common-layout">
-    <SvelContainer class="aaa">
+    <SvelContainer class="common-layout" direction="vertical">
       <SvelHeader>Header</SvelHeader>
       <SvelMain>Main</SvelMain>
     </SvelContainer>
   </div>
 </Example>
+
+<style>
+  :global(.common-layout .svel-header, .common-layout .svel-footer) {
+    background-color: var(--svel-color-primary-light-7);
+    color: var(--svel-text-color-primary);
+    text-align: center;
+  }
+
+  :global(
+      .common-layout .svel-header,
+      .common-layout .svel-footer,
+      .common-layout .svel-main,
+      .common-layout .svel-aside
+    ) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :global(.common-layout .svel-main) {
+    background-color: var(--svel-color-primary-light-9);
+    color: var(--svel-text-color-primary);
+    text-align: center;
+    height: 150px;
+  }
+</style>
