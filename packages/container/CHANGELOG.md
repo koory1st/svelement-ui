@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.5](https://github.com/koory1st/svelement-ui/compare/v0.13.4...v0.13.5) (2023-10-02)
+
+### Bug Fixes
+
+* **container:** add isVertical ([30c272a](https://github.com/koory1st/svelement-ui/commit/30c272ab8b4bae5a673fc6a9b7e6026adeeb02cf))
+
 # [0.13.0](https://github.com/koory1st/svelement-ui/compare/v0.12.8...v0.13.0) (2023-09-28)
 
 **Note:** Version bump only for package @svelement-ui/container
