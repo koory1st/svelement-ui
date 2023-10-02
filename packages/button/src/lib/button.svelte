@@ -2,7 +2,7 @@
   import { getContext, setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { SvelIcon, Loading } from '@svelement-ui/icon';
-  import { getButtonStyle } from './button-custom.ts';
+  import { getButtonStyle } from './button-custom.js';
   export let type:
     | 'primary'
     | 'success'
