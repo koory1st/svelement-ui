@@ -3,8 +3,6 @@
 
   setContext('svel-size', 'small');
   import Button from '$lib/index.ts';
-
-  import { Delete, SvelIcon } from '@svelement-ui/icon';
 </script>
 
 <Button color="#626aef" dark>Default</Button>
