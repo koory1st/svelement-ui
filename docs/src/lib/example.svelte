@@ -22,9 +22,11 @@
   function copy2Clip() {
     navigator.clipboard.writeText(code);
   }
+
+  let classString = 'example ' + $$props.class;
 </script>
 
-<div class="example">
+<div class={classString}>
   <div class="example-showcase"><slot /></div>
   <SvelDivider class="m-0" />
   <div class="op-btns">
