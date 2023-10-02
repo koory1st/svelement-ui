@@ -1,8 +1,7 @@
 <script lang="ts">
   import { getContext, setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
-  import { SvelIcon, Loading, Avatar } from '@svelement-ui/icon';
-  import { get } from 'svelte/store';
+  import { SvelIcon, Loading } from '@svelement-ui/icon';
   import { getButtonStyle } from './button-custom.ts';
   export let type:
     | 'primary'
@@ -28,7 +27,7 @@
   let dark: boolean;
   $: dark = getContext('svel-dark');
 
-  let style;
+  let style: string | null;
 
   $: style = getButtonStyle({
     disabled,
@@ -59,7 +58,7 @@
   }
 </script>
 
-<button class={classString} type={nativeType} disabled={disabled || loading} on:click>
+<button class={classString} {style} type={nativeType} disabled={disabled || loading} on:click>
   {#if $$slots.loadingIcon}
     <slot name="loadingIcon" />
   {/if}

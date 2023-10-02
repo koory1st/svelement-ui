@@ -206,6 +206,9 @@ importers:
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../util-array-2-class-string
+      '@svelement-ui/util-array-2-style-string':
+        specifier: workspace:^
+        version: link:../util-array-2-style-string
       typed-scss-modules:
         specifier: ^7.1.4
         version: 7.1.4(sass@1.64.2)

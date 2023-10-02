@@ -26,6 +26,7 @@
     "@svelement-ui/icon": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
+    "@svelement-ui/util-array-2-style-string": "workspace:^",
     "typed-scss-modules": "^7.1.4"
   },
   "bundledDependencies": [

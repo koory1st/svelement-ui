@@ -2,6 +2,7 @@
   import { setContext } from 'svelte';
 
   setContext('svel-size', 'small');
+  setContext('svel-dark', true);
   import Button from '$lib/index.ts';
 
   import { Delete, SvelIcon } from '@svelement-ui/icon';
