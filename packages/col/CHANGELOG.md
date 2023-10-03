@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.7](https://github.com/koory1st/svelement-ui/compare/v0.13.6...v0.13.7) (2023-10-03)
+
+### Bug Fixes
+
+* **col:** svelte build ([39a9d4d](https://github.com/koory1st/svelement-ui/commit/39a9d4d8cdba803fef9f218e86bcee9deb97dd88))
+
 # [0.13.0](https://github.com/koory1st/svelement-ui/compare/v0.12.8...v0.13.0) (2023-09-28)
 
 **Note:** Version bump only for package @svelement-ui/col

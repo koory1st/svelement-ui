@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.7](https://github.com/koory1st/svelement-ui/compare/v0.13.6...v0.13.7) (2023-10-03)
+
+### Bug Fixes
+
+* **row:** use svelte build ([b1a20ab](https://github.com/koory1st/svelement-ui/commit/b1a20ab8fb445aaa6a0cb02610306607bea94409))
+
 # [0.13.0](https://github.com/koory1st/svelement-ui/compare/v0.12.8...v0.13.0) (2023-09-28)
 
 **Note:** Version bump only for package @svelement-ui/row

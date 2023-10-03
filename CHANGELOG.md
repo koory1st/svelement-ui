@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.7](https://github.com/koory1st/svelement-ui/compare/v0.13.6...v0.13.7) (2023-10-03)
+
+### Bug Fixes
+
+* **col:** svelte build ([39a9d4d](https://github.com/koory1st/svelement-ui/commit/39a9d4d8cdba803fef9f218e86bcee9deb97dd88))
+* **docs:** add text ([81b8db1](https://github.com/koory1st/svelement-ui/commit/81b8db19fb8e1cd47ce589d2ea70cb374efe55af))
+* **docs:** container ([b73cc98](https://github.com/koory1st/svelement-ui/commit/b73cc98090c8a877111ae6639d1c5546f9baafd2))
+* **docs:** container ([c7dced6](https://github.com/koory1st/svelement-ui/commit/c7dced662cc14db09ea52a8d8691baf74d397fb7))
+* **row:** use svelte build ([b1a20ab](https://github.com/koory1st/svelement-ui/commit/b1a20ab8fb445aaa6a0cb02610306607bea94409))
+
 ## [0.13.6](https://github.com/koory1st/svelement-ui/compare/v0.13.5...v0.13.6) (2023-10-02)
 
 ### Bug Fixes
