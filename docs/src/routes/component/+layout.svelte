@@ -1,6 +1,10 @@
 <script lang="ts">
   import { PUBLIC_BASE_PATH } from '$env/static/public';
   import { SvelAside, SvelContainer, SvelMain, SvelLink } from '@svelement-ui/all';
+  import type GetText from '$lib/i18n';
+  import { getContext } from 'svelte';
+  let lang: GetText = getContext('lang');
+
   export let data;
 </script>
 
@@ -13,7 +17,7 @@
           {#each group.component_list as component}
             <li>
               <SvelLink href="{PUBLIC_BASE_PATH}component/{component.key}">
-                {component.name + ' ' + component.name_cn}
+                {lang(component.name)}
               </SvelLink>
             </li>
           {/each}

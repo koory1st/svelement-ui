@@ -2,13 +2,16 @@
   import { SvelDivider } from '@svelement-ui/all';
   import { SvelIcon, StarFilled } from '@svelement-ui/icon';
   import Example from '$lib/example.svelte';
+  import type GetText from '$lib/i18n';
+  import { getContext } from 'svelte';
+  let lang: GetText = getContext('lang');
 </script>
 
-<h1>Divider 分割线</h1>
-<p>区隔内容的分割线。</p>
+<h1>{lang('odiv01010')}</h1>
+<p>{lang('odiv01020')}</p>
 
-<h2>基础用法</h2>
-<p>对不同段落的文本进行分割。</p>
+<h2>{lang('odiv01030')}</h2>
+<p>{lang('odiv01040')}</p>
 
 <Example
   code={`
@@ -38,8 +41,8 @@
   </div>
 </Example>
 
-<h2>设置文案</h2>
-<p>可以在分割线上自定义文本内容</p>
+<h2>{lang('odiv01050')}</h2>
+<p>{lang('odiv01060')}</p>
 
 <Example
   code={`

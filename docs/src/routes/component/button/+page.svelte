@@ -1,6 +1,7 @@
 <script lang="ts">
   import Example from '$lib/example.svelte';
   import type GetText from '$lib/i18n';
+  import { getContext } from 'svelte';
   import { SvelButton, SvelButtonGroup, SvelRow } from '@svelement-ui/all';
 
   import {
@@ -24,8 +25,6 @@
     { type: 'warning', text: 'warning' },
     { type: 'danger', text: 'danger' },
   ] as const;
-
-  import { getContext } from 'svelte';
 
   let lang: GetText = getContext('lang');
 </script>

@@ -32,7 +32,7 @@
   {lang('ccon01070')}
 </p>
 
-<h1>{lang('ccon02010')}</h1>
+<h2>{lang('ccon02010')}</h2>
 
 <Example
   code={`
