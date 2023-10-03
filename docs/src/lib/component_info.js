@@ -6,6 +6,7 @@ export const component_group_list = [
       { key: 'button', name: 'cbut01010' },
       { key: 'container', name: 'ccon01010' },
       { key: 'icon', name: 'cico01010' },
+      { key: 'layout', name: 'clay01010' },
     ],
   },
   {

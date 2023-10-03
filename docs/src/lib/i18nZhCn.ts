@@ -29,6 +29,8 @@ const langDict: { [key: string]: string } = {
 
   cico01010: 'Icon 图标',
 
+  clay01010: 'Layout 布局',
+
   odiv01010: 'Divider 分割线',
   odiv01020: '区隔内容的分割线。',
   odiv01030: '基础用法',
