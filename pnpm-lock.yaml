@@ -122,6 +122,9 @@ importers:
       '@svelement-ui/row':
         specifier: workspace:^
         version: link:../packages/row
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../packages/theme-chalk
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../packages/util-array-2-class-string
