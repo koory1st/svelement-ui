@@ -46,6 +46,23 @@ const langDict: { [key: string]: string } = {
   clay06020: '默认使用 flex 布局来对分栏进行灵活的对齐。',
   clay06030:
     '您可以通过justify 属性来定义子元素的排版方式，其取值为start、center、end、space-between、space-around或space-evenly。',
+  clay07010: '响应式布局',
+  clay07020: '参照了 Bootstrap 的 响应式设计，预设了五个响应尺寸：xs、sm、md、lg 和 xl。',
+  clay08010: '基于断点的隐藏类',
+  clay08020:
+    '同Element Plus 一样，Svelement-ui 额外提供了一系列类名，用于在某些条件下隐藏元素。 这些类名可以添加在任何 DOM 元素或自定义组件上。 如果需要，请自行引入以下文件：',
+  clay08030: '这些类名为：',
+  clay08040: '当视口在 xs 尺寸时隐藏',
+  clay08050: '当视口在 sm 尺寸时隐藏',
+  clay08060: '当视口在 sm 及以下尺寸时隐藏',
+  clay08070: '当视口在 sm 及以上尺寸时隐藏',
+  clay08080: '当视口在 md 尺寸时隐藏',
+  clay08090: '当视口在 md 及以下尺寸时隐藏',
+  clay08100: '当视口在 md 及以上尺寸时隐藏',
+  clay08110: '当视口在 lg 尺寸时隐藏',
+  clay08120: '当视口在 lg 及以下尺寸时隐藏',
+  clay08130: '当视口在 lg 及以上尺寸时隐藏',
+  clay08140: '当视口在 xl 尺寸时隐藏',
 
   odiv01010: 'Divider 分割线',
   odiv01020: '区隔内容的分割线。',

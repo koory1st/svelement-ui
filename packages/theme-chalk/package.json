@@ -3,7 +3,8 @@
   "version": "0.13.0",
   "type": "module",
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "scripts": {
     "build": "vite build"

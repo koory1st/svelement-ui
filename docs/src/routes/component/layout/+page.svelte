@@ -232,6 +232,75 @@
   </SvelRow>
 </Example>
 
+<h2>{lang('clay07010')}</h2>
+<p>{lang('clay07020')}</p>
+<Example
+  code={`
+<SvelRow gutter={10}>
+  <SvelCol xs={8} sm={6} md={4} lg={3} xl={1}><div class="grid-content ep-bg-purple" /></SvelCol>
+  <SvelCol xs={4} sm={6} md={8} lg={9} xl={11}>
+    <div class="grid-content ep-bg-purple-light" />
+  </SvelCol>
+  <SvelCol xs={4} sm={6} md={8} lg={9} xl={11}><div class="grid-content ep-bg-purple" /></SvelCol>
+  <SvelCol xs={8} sm={6} md={4} lg={3} xl={1}>
+    <div class="grid-content ep-bg-purple-light" />
+  </SvelCol>
+</SvelRow>`}
+>
+  <SvelRow gutter={10}>
+    <SvelCol xs={8} sm={6} md={4} lg={3} xl={1}><div class="grid-content ep-bg-purple" /></SvelCol>
+    <SvelCol xs={4} sm={6} md={8} lg={9} xl={11}>
+      <div class="grid-content ep-bg-purple-light" />
+    </SvelCol>
+    <SvelCol xs={4} sm={6} md={8} lg={9} xl={11}><div class="grid-content ep-bg-purple" /></SvelCol>
+    <SvelCol xs={8} sm={6} md={4} lg={3} xl={1}>
+      <div class="grid-content ep-bg-purple-light" />
+    </SvelCol>
+  </SvelRow>
+</Example>
+
+<h2>{lang('clay08010')}</h2>
+<p>{lang('clay08020')}</p>
+<p>{lang('clay08030')}</p>
+<ul>
+  <li>
+    <span class="code">hidden-xs-only</span>
+    - {lang('clay08040')}
+  </li>
+  <li>
+    <span class="code">hidden-sm-only</span>
+    - {lang('clay08050')}
+  </li>
+</ul>
+
+<Example>
+  <div class="grid-content mb-2 ep-bg-purple w-100 h-10 hidden-xs-only">hidden-xs-only 1</div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-sm-only">hidden-sm-only 2</div>
+  <div class="grid-content mb-2 ep-bg-purple w-100 h-10 hidden-sm-and-down">
+    hidden-sm-and-down 3
+  </div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-sm-and-up">
+    hidden-sm-and-up 4
+  </div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-md-only">hidden-md-only 5</div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-md-and-down">
+    hidden-md-and-down 6
+  </div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-md-and-up">
+    hidden-md-and-up 7
+  </div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-lg-only">hidden-lg-only 8</div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-lg-and-down">
+    hidden-lg-and-down 9
+  </div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-lg-and-up">
+    hidden-lg-and-up 10
+  </div>
+  <div class="grid-content mb-2 ep-bg-purple-light w-100 h-10 hidden-xl-only">
+    hidden-xl-only 11
+  </div>
+</Example>
+
 <style>
   :global(:root) {
     --ep-c-bg-row: #f9fafc;

@@ -22,6 +22,7 @@
     "@svelement-ui/icon": "workspace:^",
     "@svelement-ui/main": "workspace:^",
     "@svelement-ui/row": "workspace:^",
+    "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
     "@sveltejs/adapter-static": "^2.0.3",
     "autoprefixer": "^10.4.15",

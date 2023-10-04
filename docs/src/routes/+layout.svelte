@@ -38,13 +38,15 @@
   </SvelHeader>
 
   <SvelMain>
-    <div class="lg:w-6/12 mx-auto">
+    <div class="xs:w-12/12 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-6/12 mx-auto">
       <slot />
     </div>
   </SvelMain>
   <SvelFooter>
     <div class="border-t border-solid border-gray-200">
-      <div class="lg:w-6/12 mx-auto">SvelementUI footer</div>
+      <div class="xs:w-12/12 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-6/12 mx-auto">
+        SvelementUI footer
+      </div>
     </div>
   </SvelFooter>
 </SvelContainer>
