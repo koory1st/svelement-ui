@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.9](https://github.com/koory1st/svelement-ui/compare/v0.13.8...v0.13.9) (2023-10-04)
+
+### Bug Fixes
+
+* add pnpm lock ([9a97e18](https://github.com/koory1st/svelement-ui/commit/9a97e186d44d5f9662b7ba9383bfaa7a97de7830))
+* **docs:** layout ([27255ae](https://github.com/koory1st/svelement-ui/commit/27255ae76a3494e1967f1b6f226deac1d0821f9f))
+
 ## [0.13.8](https://github.com/koory1st/svelement-ui/compare/v0.13.7...v0.13.8) (2023-10-03)
 
 ### Bug Fixes
