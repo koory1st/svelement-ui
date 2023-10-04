@@ -5,7 +5,6 @@
   export let underline = true;
   export let disabled = false;
   export let href = '';
-  export let icon = '';
   export let target: '_blank' | '_self' | '_parent' | '_top' | null = null;
 
   $: classString = a2s([
@@ -26,7 +25,9 @@
 </script>
 
 <a class={classString} href={disabled ? null : href ? href : null} {target} on:click={handleClick}>
-  {#if icon}<i class={icon} />{/if}
+  {#if $$slots.iconLeft}
+    <slot name="iconLeft" />
+  {/if}
   {#if $$slots.default}
     <span class="svel-link--inner">
       <slot />
