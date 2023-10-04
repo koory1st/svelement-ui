@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.10](https://github.com/koory1st/svelement-ui/compare/v0.13.9...v0.13.10) (2023-10-04)
+
+### Bug Fixes
+
+* **link:** add slot ([d51b736](https://github.com/koory1st/svelement-ui/commit/d51b7362ace3384774a71d2240283aa7390390ac))
+
 ## [0.13.9](https://github.com/koory1st/svelement-ui/compare/v0.13.8...v0.13.9) (2023-10-04)
 
 **Note:** Version bump only for package @svelement-ui/link
