@@ -7,6 +7,7 @@ export const component_group_list = [
       { key: 'container', name: 'ccon01010' },
       { key: 'icon', name: 'cico01010' },
       { key: 'layout', name: 'clay01010' },
+      { key: 'link', name: 'clin01010' },
     ],
   },
   {
