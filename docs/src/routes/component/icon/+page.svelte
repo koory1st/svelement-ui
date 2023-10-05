@@ -301,7 +301,6 @@
     CopyDocumentSquare,
     Github,
   } from '@svelement-ui/icon';
-  import '@svelement-ui/icon/dist/style.css';
 
   import { SvelRow, SvelCol, SvelButton } from '@svelement-ui/all';
 
@@ -321,7 +320,6 @@
   language="svelte"
   code={`<script lang="ts">
 import { SvelIcon, Edit } from '@svelement-ui/icon';
-import '@svelement-ui/icon/dist/style.css';
 let baseSize = 50;
 let baseColor = 'green';
 !@/script>
