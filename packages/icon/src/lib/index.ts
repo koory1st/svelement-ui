@@ -1,3 +1,6 @@
+import '@svelement-ui/theme-chalk/src/base.scss';
+import '@svelement-ui/theme-chalk/src/icon.scss';
+
 export { default as SvelIcon } from './icon.svelte';
 
 export { default as AddLocation } from './add-location.svelte';
