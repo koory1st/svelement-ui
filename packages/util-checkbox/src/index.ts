@@ -1,4 +1,4 @@
-import { SeuPropValidateError } from './ErrorUtil'
+import { SvelPropValidateError } from '@svelement-ui/util-errors';
 /**
  * getDisabled
  *
@@ -96,7 +96,7 @@ export function validateCheckedValue(
   }
 
   if (checkedValue === uncheckedValue) {
-    throw new SeuPropValidateError('checkedValue is the same with uncheckedValue')
+    throw new SvelPropValidateError('checkedValue is the same with uncheckedValue')
   }
 }
 
@@ -130,12 +130,12 @@ export function getInnerCheckedByValue(
   group: Array<string | number | boolean>,
   innerCheckedValue: boolean | string | number | null,
 ): boolean {
+  if (innerCheckedValue === null) {
+    return Boolean(value)
+  }
+
   if (!isGroup) {
-    if (innerCheckedValue === null) {
-      return Boolean(value)
-    } else {
-      return value === innerCheckedValue
-    }
+    return value === innerCheckedValue
   } else {
     const groupSet = new Set(group)
     return groupSet.has(innerCheckedValue)
