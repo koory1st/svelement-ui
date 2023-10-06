@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/koory1st/svelement-ui/compare/v0.13.12...v0.14.0) (2023-10-06)
+
+### Bug Fixes
+
+* **head:** remove page ([67cc4ba](https://github.com/koory1st/svelement-ui/commit/67cc4ba16007423d5d8108cdfe95f61e80afc841))
+* **main:** remove page ([16838f0](https://github.com/koory1st/svelement-ui/commit/16838f00b08ed26fa7d9821dd462a93c6cd53014))
+* **util-checkbox:** add ([1b58002](https://github.com/koory1st/svelement-ui/commit/1b580021aacafacf1d723d9182a2a23839ee1552))
+* **util-checkbox:** fix name and type ([1cb271d](https://github.com/koory1st/svelement-ui/commit/1cb271d2056ac24e240158422e925225da44bf2f))
+
+### Features
+
+* **checkbox:** add ([6ecd8ea](https://github.com/koory1st/svelement-ui/commit/6ecd8ea688103787bc1831beb5a2d685b90ff49b))
+
 ## [0.13.12](https://github.com/koory1st/svelement-ui/compare/v0.13.11...v0.13.12) (2023-10-06)
 
 ### Bug Fixes
