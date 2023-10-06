@@ -1,0 +1,19 @@
+{
+  "name": "@svelement-ui/util-checkbox",
+  "version": "0.13.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "check": "tsc",
+    "build": "vite build && tsc",
+    "clean": "rimraf dist"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@svelement-ui/util-errors": "workspace:^"
+  }
+}

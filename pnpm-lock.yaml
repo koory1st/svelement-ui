@@ -336,6 +336,12 @@ importers:
 
   packages/util-array-2-style-string: {}
 
+  packages/util-checkbox:
+    devDependencies:
+      '@svelement-ui/util-errors':
+        specifier: workspace:^
+        version: link:../util-errors
+
   packages/util-errors: {}
 
   packages/vite-plugin-prismjs:
@@ -5437,7 +5443,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.4.7
+      '@types/node': registry.npmmirror.com/@types/node@20.4.7
       esbuild: 0.18.17
       postcss: 8.4.28
       rollup: 3.27.1
