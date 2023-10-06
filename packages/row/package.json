@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/row",
-  "version": "0.13.9",
+  "version": "0.13.12",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",

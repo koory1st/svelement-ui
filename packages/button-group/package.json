@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/button-group",
-  "version": "0.13.9",
+  "version": "0.13.12",
   "author": {
     "name": "koory1st"
   },
@@ -36,7 +36,7 @@
   "type": "module",
   "devDependencies": {
     "@svelement-ui/theme-chalk": "workspace:^",
-    "@svelement-ui/util-array-2-class-string": "^0.13.0"
+    "@svelement-ui/util-array-2-class-string": "^0.13.12"
   },
   "publishConfig": {
     "access": "public",
