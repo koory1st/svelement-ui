@@ -20,20 +20,20 @@ export function getDisabled(
   innerChecked: boolean,
 ): boolean {
   if (!groupFlg) {
-    return disabledProp
+    return disabledProp;
   }
 
-  const max = Number(maxInput)
-  const min = Number(minInput)
+  const max = Number(maxInput);
+  const min = Number(minInput);
 
   if (max && group.length >= max && !innerChecked) {
-    return true
+    return true;
   }
 
   if (min && group.length <= min && innerChecked) {
-    return true
+    return true;
   }
-  return disabledProp
+  return disabledProp;
 }
 
 export function getInnerCheckedValue(
@@ -44,20 +44,20 @@ export function getInnerCheckedValue(
   // not in group
   if (!isGroup) {
     if (checkedValue !== null && checkedValue !== undefined) {
-      return checkedValue
+      return checkedValue;
     }
-    return null
+    return null;
   }
 
   // in group
   if (checkedValue !== null && checkedValue !== undefined) {
-    return checkedValue
+    return checkedValue;
   }
 
   if (label !== null && label !== undefined) {
-    return label
+    return label;
   }
-  return null
+  return null;
 }
 
 export function getValueByInnerChecked(
@@ -67,14 +67,14 @@ export function getValueByInnerChecked(
 ): boolean | string | number {
   if (innerChecked) {
     if (innerCheckedValue === null) {
-      return true
+      return true;
     }
-    return innerCheckedValue
+    return innerCheckedValue;
   } else {
     if (uncheckedValue === null || uncheckedValue === undefined) {
-      return false
+      return false;
     }
-    return uncheckedValue
+    return uncheckedValue;
   }
 }
 
@@ -83,20 +83,20 @@ export function validateCheckedValue(
   uncheckedValue: string | number | boolean | null | undefined,
 ) {
   if (checkedValue === null) {
-    return
+    return;
   }
   if (checkedValue === undefined) {
-    return
+    return;
   }
   if (uncheckedValue === null) {
-    return
+    return;
   }
   if (uncheckedValue === undefined) {
-    return
+    return;
   }
 
   if (checkedValue === uncheckedValue) {
-    throw new SvelPropValidateError('checkedValue is the same with uncheckedValue')
+    throw new SvelPropValidateError('checkedValue is the same with uncheckedValue');
   }
 }
 
@@ -104,24 +104,24 @@ export function getGroupByInnerChecked(
   isGroup: boolean,
   innerChecked: boolean,
   group: Array<string | number | boolean>,
-  innerCheckedValue: boolean | string | number,
+  innerCheckedValue: boolean | string | number | null,
 ): Array<string | number | boolean> {
   if (!isGroup) {
-    return group
+    return group;
   }
 
   if (innerCheckedValue === null) {
-    return group
+    return group;
   }
 
-  const groupSet = new Set(group)
+  const groupSet = new Set(group);
   if (innerChecked) {
-    groupSet.add(innerCheckedValue)
-    return Array.from(groupSet)
+    groupSet.add(innerCheckedValue);
+    return Array.from(groupSet);
   }
 
-  groupSet.delete(innerCheckedValue)
-  return Array.from(groupSet)
+  groupSet.delete(innerCheckedValue);
+  return Array.from(groupSet);
 }
 
 export function getInnerCheckedByValue(
@@ -131,13 +131,20 @@ export function getInnerCheckedByValue(
   innerCheckedValue: boolean | string | number | null,
 ): boolean {
   if (innerCheckedValue === null) {
-    return Boolean(value)
+    return Boolean(value);
   }
 
   if (!isGroup) {
-    return value === innerCheckedValue
+    return value === innerCheckedValue;
   } else {
-    const groupSet = new Set(group)
-    return groupSet.has(innerCheckedValue)
+    const groupSet = new Set(group);
+    return groupSet.has(innerCheckedValue);
   }
+}
+
+export function boolNull(value: boolean | null): boolean | null {
+  if (value) {
+    return true;
+  }
+  return null;
 }
