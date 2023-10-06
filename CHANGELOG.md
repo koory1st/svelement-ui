@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.12](https://github.com/koory1st/svelement-ui/compare/v0.13.11...v0.13.12) (2023-10-06)
+
+### Bug Fixes
+
+* **docs:** remove icon style ([7ce9c20](https://github.com/koory1st/svelement-ui/commit/7ce9c20d17d8fcc1b9f8e3b8371ffb241cea0626))
+* **icon:** remove style ([9961279](https://github.com/koory1st/svelement-ui/commit/99612791bd33966e910cd2e2e8cae3d45529878d))
+* **icon:** remove style.ts ([a7b7a16](https://github.com/koory1st/svelement-ui/commit/a7b7a169fcf9da7ff35b15f6deea9c842ed06d68))
+
 ## [0.13.11](https://github.com/koory1st/svelement-ui/compare/v0.13.10...v0.13.11) (2023-10-05)
 
 **Note:** Version bump only for package svelement-ui
