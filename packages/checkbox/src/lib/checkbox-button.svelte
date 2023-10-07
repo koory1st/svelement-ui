@@ -13,10 +13,8 @@
   export let group: Array<string | number | boolean> = [];
   export let value: boolean | string | number | null = false;
   export let label: string | number | boolean | null | undefined;
-  export let indeterminate = false;
   export let disabled = false;
   export let name: string | null = null;
-  export let border = false;
   export let size: string | null = null;
   export let checkedValue: string | number | boolean | null | undefined = null;
   export let uncheckedValue: string | number | boolean | null | undefined = null;
@@ -33,12 +31,6 @@
 
   let isFocus = false;
 
-  let ariaChecked: 'mixed' | null;
-
-  $: tabindex = indeterminate ? 0 : null;
-  $: role = indeterminate ? 'checkbox' : null;
-  $: ariaChecked = indeterminate ? 'mixed' : null;
-
   // innerCheckedValue, get by props
   $: innerCheckedValue = getInnerCheckedValue(isGroup, checkedValue, label);
   // fired by value and group props changed
@@ -53,12 +45,11 @@
   );
 
   $: classString = a2s([
-    'svel-checkbox',
-    [`svel-checkbox--${size}`, Boolean(size)],
+    'svel-checkbox-button',
+    [`svel-checkbox-button--${size}`, Boolean(size)],
     [`is-checked`, innerChecked],
     [`is-disabled`, isDisabled],
-    [`is-indeterminate`, indeterminate],
-    [`is-bordered`, border],
+    [`is-focus`, isFocus],
   ]);
 
   function handleKeydown(event: KeyboardEvent) {
@@ -94,33 +85,18 @@
 
 <!-- svelte-ignore a11y-role-has-required-aria-props -->
 <!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
-<label role="checkbox" class={classString} on:keydown={handleKeydown}>
+<label role="checkbox" class={classString} aria-disabled={isDisabled} on:keydown={handleKeydown}>
   <input
-    class="svel-checkbox__original"
+    class="svel-checkbox-button__original"
     type="checkbox"
     checked={innerChecked}
-    aria-hidden={indeterminate ? 'true' : 'false'}
     {name}
     disabled={isDisabled}
     on:focus={() => (isFocus = true)}
     on:blur={() => (isFocus = false)}
     on:change={handleChange}
   />
-  <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-  <span
-    class="svel-checkbox__input"
-    class:is-checked={innerChecked}
-    class:is-disabled={isDisabled}
-    class:is-indeterminate={indeterminate}
-    class:is-focus={isFocus}
-    {role}
-    {tabindex}
-    aria-checked={ariaChecked}
-  >
-    <span class="svel-checkbox__inner" />
-  </span>
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <span class="svel-checkbox__label" on:keydown|stopPropagation>
+  <span class="svel-checkbox-button__inner">
     {#if $$slots.default}
       <slot />
     {:else}{label}{/if}
