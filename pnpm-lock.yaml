@@ -219,7 +219,7 @@ importers:
         specifier: workspace:^
         version: link:../theme-chalk
       '@svelement-ui/util-array-2-class-string':
-        specifier: ^0.13.12
+        specifier: ^0.14.0
         version: link:../util-array-2-class-string
 
   packages/checkbox:
