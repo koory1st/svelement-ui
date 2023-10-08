@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
   import { SvelCheckbox, SvelCheckboxButton, SvelCheckboxGroup } from '$lib/index.js';
 
-  let group: number[];
-  let changedValue: number;
+  let group;
+  let changedValue;
 </script>
 
 <div>

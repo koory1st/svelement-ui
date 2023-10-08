@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { createEventDispatcher } from 'svelte';
   import { getContext } from 'svelte';
@@ -10,24 +10,31 @@
     getGroupByInnerChecked,
     getInnerCheckedByValue,
   } from '@svelement-ui/util-checkbox';
-  export let group: Array<string | number | boolean> = [];
-  export let value: boolean | string | number | null = false;
-  export let label: string | number | boolean | null | undefined;
+
+  /** @type {string[]|number[]|boolean[]} */
+  export let group = [];
+  /** @type {boolean | string | number} */
+  export let value = false;
+  /** @type {string | number | boolean} */
+  export let label;
   export let disabled = false;
-  export let name: string | null = null;
-  export let size: string | null = null;
-  export let checkedValue: string | number | boolean | null | undefined = null;
-  export let uncheckedValue: string | number | boolean | null | undefined = null;
+  /** @type {string} */
+  export let name;
+  /** @type {string} */
+  export let size;
+  /** @type {string | number | boolean} */
+  export let checkedValue = null;
+  /** @type {string | number | boolean} */
+  export let uncheckedValue = null;
+
   const dispatch = createEventDispatcher();
 
   validateCheckedValue(checkedValue, uncheckedValue);
 
-  const isGroup: boolean = getContext('checkboxGroup_flg');
-  const changeEvent: (groupFromChild: Array<string | number | boolean>) => void = getContext(
-    'checkboxGroup_changeEvent',
-  );
-  const checkboxGroupMax: string | number | null = getContext('checkboxGroup_max');
-  const checkboxGroupMin: string | number | null = getContext('checkboxGroup_min');
+  const isGroup = getContext('checkboxGroup_flg');
+  const changeEvent = getContext('checkboxGroup_changeEvent');
+  const checkboxGroupMax = getContext('checkboxGroup_max');
+  const checkboxGroupMin = getContext('checkboxGroup_min');
 
   let isFocus = false;
 
@@ -52,7 +59,7 @@
     [`is-focus`, isFocus],
   ]);
 
-  function handleKeydown(event: KeyboardEvent) {
+  function handleKeydown(event) {
     if (event.code !== 'Space') {
       return;
     }
@@ -69,8 +76,7 @@
     }
   }
 
-  function handleChange(e: Event) {
-    const target = e.target as HTMLInputElement;
+  function handleChange({ target }) {
     innerChecked = target.checked;
     value = getValueByInnerChecked(innerChecked, innerCheckedValue, uncheckedValue);
     group = getGroupByInnerChecked(isGroup, innerChecked, group, innerCheckedValue);

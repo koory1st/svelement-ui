@@ -1,42 +1,37 @@
-<script lang="ts">
+<script>
   import SvelCheckbox from './checkbox.svelte';
   import SvelCheckboxButton from './checkbox-button.svelte';
   import { setContext } from 'svelte';
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
-  export let options: Array<
-    string | { label: string; value: string | number | boolean; disabled?: boolean }
-  > = [];
-  export let group: Array<string | number | boolean> = [];
+
+  /** @type {string[]|{ label: string; value: string | number | boolean; disabled?: boolean }[]} */
+  export let options = [];
+  /** @type {string[]|number[]|boolean[]} */
+  export let group = [];
   export let border = false;
-  export let size: string | null = null;
+  /** @type {string} */
+  export let size = null;
   export let disabled = false;
-  export let type: string | null = null;
+  /** @type {string} */
+  export let type = null;
   /**
    * max and min props are only avalible in creation
    */
-  export let max: string | number | null = null;
-  export let min: string | number | null = null;
+  /** @type {string|number} */
+  export let max = null;
+  /** @type {string|number} */
+  export let min = null;
 
   setContext('checkboxGroup_flg', true);
   setContext('checkboxGroup_changeEvent', changeEventForChild);
   setContext('checkboxGroup_max', max);
   setContext('checkboxGroup_min', min);
 
-  let checkboxPropList: Array<{
-    label?: string;
-    checked?: boolean;
-    checkedValue?: string | number | boolean;
-    disabled?: boolean;
-  }> = [];
+  let checkboxPropList = [];
 
   for (let index = 0; index < options.length; index++) {
-    const checkboxProp: {
-      label?: string;
-      checked?: boolean;
-      checkedValue?: string | number | boolean;
-      disabled?: boolean;
-    } = {};
+    const checkboxProp = {};
     const option = options[index];
 
     if (typeof option === 'string') {
@@ -59,7 +54,7 @@
     }
   }
 
-  function changeEventForChild(groupFromChild: Array<string | number>) {
+  function changeEventForChild(groupFromChild) {
     group = groupFromChild;
     dispatch('change', groupFromChild);
   }
