@@ -12,6 +12,7 @@ import SvelRow from '@svelement-ui/row';
 import SvelLink from '@svelement-ui/link';
 import SvelCode from '@svelement-ui/code';
 import SvelDivider from '@svelement-ui/divider';
+import { SvelCheckbox, SvelCheckboxButton, SvelCheckboxGroup } from '@svelement-ui/checkbox';
 
 export {
   SvelAside,
@@ -26,4 +27,7 @@ export {
   SvelLink,
   SvelCode,
   SvelDivider,
+  SvelCheckbox,
+  SvelCheckboxButton,
+  SvelCheckboxGroup,
 };

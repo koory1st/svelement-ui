@@ -16,6 +16,7 @@
     "@svelement-ui/aside": "workspace:^",
     "@svelement-ui/button": "workspace:^",
     "@svelement-ui/button-group": "workspace:^",
+    "@svelement-ui/checkbox": "workspace:^",
     "@svelement-ui/code": "workspace:^",
     "@svelement-ui/col": "workspace:^",
     "@svelement-ui/container": "workspace:^",

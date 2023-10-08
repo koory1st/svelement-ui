@@ -152,6 +152,9 @@ importers:
       '@svelement-ui/button-group':
         specifier: workspace:^
         version: link:../button-group
+      '@svelement-ui/checkbox':
+        specifier: workspace:^
+        version: link:../checkbox
       '@svelement-ui/code':
         specifier: workspace:^
         version: link:../code
