@@ -11,7 +11,7 @@
 <SvelContainer>
   <SvelAside>
     {#each data.component_group_list as group}
-      <div>{group.name} {group.name_cn}</div>
+      <div>{lang(group.name)}</div>
       <div>
         <ul>
           {#each group.component_list as component}

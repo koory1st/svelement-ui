@@ -1,4 +1,7 @@
 const langDict: { [key: string]: string } = {
+  cutil01010: 'Basic 基础组件',
+  cutil02020: 'Form 表单组件',
+  cutil03020: 'Others 其他',
   cbut01010: 'Button 按钮',
   cbut01020: '常用的操作按钮。',
   cbut01030: '基础用法',
@@ -74,6 +77,8 @@ const langDict: { [key: string]: string } = {
   clin04020: '文字链接下划线。',
   clin05010: '图标',
   clin05020: '带图标的链接',
+
+  ccheckbox01010: 'Checkbox 多选框',
 
   odiv01010: 'Divider 分割线',
   odiv01020: '区隔内容的分割线。',

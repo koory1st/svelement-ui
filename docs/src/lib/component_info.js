@@ -1,7 +1,6 @@
 export const component_group_list = [
   {
-    name: 'Basic',
-    name_cn: '基础组件',
+    name: 'cutil01010',
     component_list: [
       { key: 'button', name: 'cbut01010' },
       { key: 'container', name: 'ccon01010' },
@@ -11,8 +10,11 @@ export const component_group_list = [
     ],
   },
   {
-    name: 'Others',
-    name_cn: '其他',
+    name: 'cutil02020',
+    component_list: [{ key: 'checkbox', name: 'ccheckbox01010' }],
+  },
+  {
+    name: 'cutil03020',
     component_list: [{ key: 'divider', name: 'odiv01010' }],
   },
 ];
