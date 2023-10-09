@@ -2,10 +2,10 @@
   import { setContext } from 'svelte';
 
   setContext('svel-size', 'small');
-  import Button from '$lib/index.ts';
+  import { SvelButton } from '$lib/index.ts';
 </script>
 
-<Button color="#626aef" dark>Default</Button>
-<Button color="#626aef" dark plain>Default</Button>
-<Button color="#626aef" dark disabled>Default</Button>
-<Button color="#626aef" dark plain disabled>Default</Button>
+<SvelButton color="#626aef" dark>Default</SvelButton>
+<SvelButton color="#626aef" dark plain>Default</SvelButton>
+<SvelButton color="#626aef" dark disabled>Default</SvelButton>
+<SvelButton color="#626aef" dark plain disabled>Default</SvelButton>

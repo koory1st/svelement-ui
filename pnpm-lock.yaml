@@ -149,9 +149,6 @@ importers:
       '@svelement-ui/button':
         specifier: workspace:^
         version: link:../button
-      '@svelement-ui/button-group':
-        specifier: workspace:^
-        version: link:../button-group
       '@svelement-ui/checkbox':
         specifier: workspace:^
         version: link:../checkbox
@@ -215,15 +212,6 @@ importers:
       typed-scss-modules:
         specifier: ^7.1.4
         version: 7.1.4(sass@1.64.2)
-
-  packages/button-group:
-    devDependencies:
-      '@svelement-ui/theme-chalk':
-        specifier: workspace:^
-        version: link:../theme-chalk
-      '@svelement-ui/util-array-2-class-string':
-        specifier: ^0.14.0
-        version: link:../util-array-2-class-string
 
   packages/checkbox:
     devDependencies:
