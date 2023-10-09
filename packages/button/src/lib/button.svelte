@@ -1,20 +1,14 @@
-<script lang="ts">
+<script>
   import { getContext, setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   import { getButtonStyle } from './button-custom.js';
-  export let type:
-    | 'primary'
-    | 'success'
-    | 'info'
-    | 'warning'
-    | 'danger'
-    | 'default'
-    | ''
-    | null
-    | undefined = null;
+  /** @type {'primary'|'success'|'info'|'warning'|'danger'|'default'} */
+  export let type = null;
+  /** @type {string} */
   export let size = '';
-  export let nativeType: 'button' | 'submit' | 'reset' | null | undefined = 'button';
+  /** @type {'button' | 'submit' | 'reset'} */
+  export let nativeType = 'button';
   export let disabled = false;
   export let loading = false;
   export let plain = false;
@@ -23,11 +17,12 @@
   export let text = false;
   export let bg = false;
   export let dark = false;
-  export let color: string | null = null;
+  /** @type {string} */
+  export let color = null;
 
   $: dark = dark || getContext('svel-dark');
 
-  let style: string | null;
+  let style;
 
   $: style = getButtonStyle({
     disabled,

@@ -1,8 +1,10 @@
-<script lang="ts">
+<script>
   import { setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
-  export let size: 'large' | 'default' | 'small' | undefined = undefined;
-  export let type: 'primary' | 'success' | 'warning' | 'danger' | 'info' | undefined = undefined;
+  /** @type {'large' | 'default' | 'small'} */
+  export let size = null;
+  /** @type {'primary' | 'success' | 'warning' | 'danger' | 'info'} */
+  export let type = undefined;
 
   $: classString = a2s(['svel-button-group', $$props.class]);
 

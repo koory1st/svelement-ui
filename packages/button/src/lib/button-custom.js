@@ -1,16 +1,11 @@
 import { TinyColor } from '@ctrl/tinycolor';
 import a2st from '@svelement-ui/util-array-2-style-string';
 
-export function darken(color: TinyColor, amount = 20) {
+export function darken(color, amount = 20) {
   return color.mix('#141414', amount).toString();
 }
 
-export function getButtonStyle(props: {
-  dark: boolean;
-  disabled: boolean;
-  plain: boolean;
-  color: string | null;
-}): string | null {
+export function getButtonStyle(props) {
   if (!props.color) {
     return null;
   }

@@ -2,7 +2,7 @@
   import { setContext } from 'svelte';
 
   setContext('svel-size', 'small');
-  import { SvelButton } from '$lib/index.ts';
+  import { SvelButton } from '$lib/index.js';
 </script>
 
 <SvelButton color="#626aef" dark>Default</SvelButton>
