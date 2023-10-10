@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { SvelCode } from '@svelement-ui/all';
 
   import {

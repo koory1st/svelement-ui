@@ -1,10 +1,9 @@
-<script lang="ts">
+<script>
   import { SvelDivider } from '@svelement-ui/all';
   import { SvelIcon, StarFilled } from '@svelement-ui/icon';
   import Example from '$lib/example.svelte';
-  import type GetText from '$lib/i18n';
   import { getContext } from 'svelte';
-  let lang: GetText = getContext('lang');
+  let lang = getContext('lang');
 </script>
 
 <h1>{lang('odiv01010')}</h1>

@@ -1,11 +1,9 @@
-<script lang="ts">
+<script>
   import { SvelAside, SvelContainer, SvelFooter, SvelHeader, SvelMain } from '@svelement-ui/all';
-  import type GetText from '$lib/i18n';
-
   import { getContext } from 'svelte';
   import Example from '$lib/example.svelte';
 
-  let lang: GetText = getContext('lang');
+  let lang = getContext('lang');
 </script>
 
 <h1>{lang('ccon01010')}</h1>

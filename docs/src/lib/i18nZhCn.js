@@ -1,4 +1,4 @@
-const langDict: { [key: string]: string } = {
+const langDict = {
   cutil01010: 'Basic 基础组件',
   cutil02020: 'Form 表单组件',
   cutil03020: 'Others 其他',
@@ -88,7 +88,7 @@ const langDict: { [key: string]: string } = {
   odiv01060: '可以在分割线上自定义文本内容',
 };
 
-function getText(key: string): string {
+function getText(key) {
   return langDict[key];
 }
 

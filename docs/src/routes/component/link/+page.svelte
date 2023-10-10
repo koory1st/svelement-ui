@@ -1,9 +1,8 @@
-<script lang="ts">
+<script>
   import { SvelLink } from '@svelement-ui/all';
-  import type GetText from '$lib/i18n';
   import { getContext } from 'svelte';
   import Example from '$lib/example.svelte';
-  let lang: GetText = getContext('lang');
+  let lang = getContext('lang');
   import { SvelIcon, Edit, View } from '@svelement-ui/icon';
 </script>
 

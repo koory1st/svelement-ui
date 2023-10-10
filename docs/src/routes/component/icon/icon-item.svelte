@@ -1,6 +1,6 @@
-<script lang="ts">
+<script>
   import { SvelIcon } from '@svelement-ui/icon';
-  export let name: string;
+  export let name;
 
   function copy2Clip() {
     navigator.clipboard.writeText(`<SvelIcon><${name} /></SvelIcon>`);
