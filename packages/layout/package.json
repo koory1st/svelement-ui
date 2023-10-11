@@ -1,5 +1,5 @@
 {
-  "name": "@svelement-ui/row",
+  "name": "@svelement-ui/layout",
   "version": "0.14.1",
   "keywords": [
     "svelte",
@@ -9,7 +9,8 @@
     "element",
     "ui",
     "layout",
-    "row"
+    "row",
+    "col"
   ],
   "scripts": {
     "dev": "vite dev",

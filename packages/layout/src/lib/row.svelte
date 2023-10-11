@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';

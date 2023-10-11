@@ -12,12 +12,7 @@
   "type": "module",
   "devDependencies": {
     "@svelement-ui/all": "workspace:^",
-    "@svelement-ui/button": "workspace:^",
-    "@svelement-ui/code": "workspace:^",
-    "@svelement-ui/col": "workspace:^",
-    "@svelement-ui/container": "workspace:^",
     "@svelement-ui/icon": "workspace:^",
-    "@svelement-ui/row": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
     "@sveltejs/adapter-static": "^2.0.3",

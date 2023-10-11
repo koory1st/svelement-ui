@@ -24,11 +24,10 @@
     "@svelement-ui/button": "workspace:^",
     "@svelement-ui/checkbox": "workspace:^",
     "@svelement-ui/code": "workspace:^",
-    "@svelement-ui/col": "workspace:^",
     "@svelement-ui/container": "workspace:^",
     "@svelement-ui/divider": "workspace:^",
     "@svelement-ui/link": "workspace:^",
-    "@svelement-ui/row": "workspace:^",
+    "@svelement-ui/layout": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^"
   },

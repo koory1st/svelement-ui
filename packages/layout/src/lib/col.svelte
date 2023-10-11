@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { getContext, setContext } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
@@ -13,7 +13,7 @@
   export let lg = 0;
   export let xl = 0;
 
-  let gutter: number = getContext('svelRowGutter');
+  let gutter = getContext('svelRowGutter');
   setContext('svelRowGutter', 0);
 
   $: classString = a2s([

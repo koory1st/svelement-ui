@@ -1,7 +1,7 @@
 import '@svelement-ui/theme-chalk/src/index.scss';
 
 import { SvelButton, SvelButtonGroup } from '@svelement-ui/button';
-import SvelCol from '@svelement-ui/col';
+import { SvelRow, SvelCol } from '@svelement-ui/layout';
 import {
   SvelContainer,
   SvelAside,
@@ -9,7 +9,6 @@ import {
   SvelMain,
   SvelFooter,
 } from '@svelement-ui/container';
-import SvelRow from '@svelement-ui/row';
 import SvelLink from '@svelement-ui/link';
 import SvelCode from '@svelement-ui/code';
 import SvelDivider from '@svelement-ui/divider';
