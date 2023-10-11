@@ -1,6 +1,16 @@
 {
   "name": "@svelement-ui/row",
   "version": "0.14.1",
+  "keywords": [
+    "svelte",
+    "element-ui",
+    "svelement",
+    "svelement-ui",
+    "element",
+    "ui",
+    "layout",
+    "row"
+  ],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",

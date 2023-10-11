@@ -1,6 +1,14 @@
 {
   "name": "@svelement-ui/all",
   "version": "0.14.4",
+  "keywords": [
+    "svelte",
+    "element-ui",
+    "svelement",
+    "svelement-ui",
+    "element",
+    "ui"
+  ],
   "exports": {
     ".": {
       "types": "./dist/lib/index.d.ts",

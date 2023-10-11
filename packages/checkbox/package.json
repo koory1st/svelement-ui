@@ -1,6 +1,16 @@
 {
   "name": "@svelement-ui/checkbox",
   "version": "0.14.2",
+  "keywords": [
+    "svelte",
+    "element-ui",
+    "svelement",
+    "svelement-ui",
+    "element",
+    "ui",
+    "checkbox",
+    "group"
+  ],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",

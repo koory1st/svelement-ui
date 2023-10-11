@@ -1,6 +1,16 @@
 {
   "name": "@svelement-ui/header",
   "version": "0.14.1",
+  "keywords": [
+    "svelte",
+    "element-ui",
+    "svelement",
+    "svelement-ui",
+    "element",
+    "ui",
+    "container",
+    "header"
+  ],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",

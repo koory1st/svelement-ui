@@ -1,6 +1,16 @@
 {
   "name": "@svelement-ui/button",
   "version": "0.14.3",
+  "keywords": [
+    "svelte",
+    "element-ui",
+    "svelement",
+    "svelement-ui",
+    "element",
+    "ui",
+    "button",
+    "group"
+  ],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",
