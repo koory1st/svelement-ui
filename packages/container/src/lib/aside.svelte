@@ -1,4 +1,5 @@
-<script lang="ts">
+<script>
+  /** @type {string} */
   export let width = '300px';
 </script>
 

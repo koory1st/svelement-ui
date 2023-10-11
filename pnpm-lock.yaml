@@ -89,9 +89,6 @@ importers:
       '@svelement-ui/all':
         specifier: workspace:^
         version: link:../packages/all
-      '@svelement-ui/aside':
-        specifier: workspace:^
-        version: link:../packages/aside
       '@svelement-ui/button':
         specifier: workspace:^
         version: link:../packages/button
@@ -104,18 +101,9 @@ importers:
       '@svelement-ui/container':
         specifier: workspace:^
         version: link:../packages/container
-      '@svelement-ui/footer':
-        specifier: workspace:^
-        version: link:../packages/footer
-      '@svelement-ui/header':
-        specifier: workspace:^
-        version: link:../packages/header
       '@svelement-ui/icon':
         specifier: workspace:^
         version: link:../packages/icon
-      '@svelement-ui/main':
-        specifier: workspace:^
-        version: link:../packages/main
       '@svelement-ui/row':
         specifier: workspace:^
         version: link:../packages/row
@@ -143,9 +131,6 @@ importers:
 
   packages/all:
     devDependencies:
-      '@svelement-ui/aside':
-        specifier: workspace:^
-        version: link:../aside
       '@svelement-ui/button':
         specifier: workspace:^
         version: link:../button
@@ -164,18 +149,9 @@ importers:
       '@svelement-ui/divider':
         specifier: workspace:^
         version: link:../divider
-      '@svelement-ui/footer':
-        specifier: workspace:^
-        version: link:../footer
-      '@svelement-ui/header':
-        specifier: workspace:^
-        version: link:../header
       '@svelement-ui/link':
         specifier: workspace:^
         version: link:../link
-      '@svelement-ui/main':
-        specifier: workspace:^
-        version: link:../main
       '@svelement-ui/row':
         specifier: workspace:^
         version: link:../row
@@ -185,12 +161,6 @@ importers:
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../util-array-2-class-string
-
-  packages/aside:
-    devDependencies:
-      '@svelement-ui/theme-chalk':
-        specifier: workspace:^
-        version: link:../theme-chalk
 
   packages/button:
     devDependencies:
@@ -274,18 +244,6 @@ importers:
         specifier: workspace:^
         version: link:../util-array-2-style-string
 
-  packages/footer:
-    devDependencies:
-      '@svelement-ui/theme-chalk':
-        specifier: workspace:^
-        version: link:../theme-chalk
-
-  packages/header:
-    devDependencies:
-      '@svelement-ui/theme-chalk':
-        specifier: workspace:^
-        version: link:../theme-chalk
-
   packages/icon:
     dependencies:
       svelte:
@@ -310,12 +268,6 @@ importers:
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../util-array-2-class-string
-
-  packages/main:
-    devDependencies:
-      '@svelement-ui/theme-chalk':
-        specifier: workspace:^
-        version: link:../theme-chalk
 
   packages/row:
     devDependencies:

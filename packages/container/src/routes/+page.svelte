@@ -1,5 +1,5 @@
-<script lang="ts">
-  import SvelContainer from '$lib/index.js';
+<script>
+  import { SvelContainer } from '$lib/index.js';
 </script>
 
 <SvelContainer>

@@ -1,11 +1,12 @@
-<script lang="ts">
+<script>
   import a2s from '@svelement-ui/util-array-2-class-string';
 
-  export let direction: 'horizontal' | 'vertical' | null = null;
-  let selfElement: Element;
+  /** @type {'horizontal' | 'vertical'} */
+  export let direction = null;
+  let selfElement;
 
   let verticalFlg = false;
-  function isVertical(selfElement: Element) {
+  function isVertical(selfElement) {
     if (direction === 'horizontal') {
       return false;
     }

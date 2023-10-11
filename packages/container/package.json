@@ -8,7 +8,11 @@
     "svelement-ui",
     "element",
     "ui",
-    "container"
+    "container",
+    "aside",
+    "header",
+    "main",
+    "footer"
   ],
   "scripts": {
     "dev": "vite dev",
