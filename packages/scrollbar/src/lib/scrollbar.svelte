@@ -2,10 +2,10 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
   import Bar from '$lib/bar.svelte';
+  import { GAP } from './util';
 
   /** @type {string | number} */
   export let height;
-  console.log('🚀 ~ file: scrollbar.svelte:8 ~ height:', height);
   /** @type {string | number} */
   export let maxHeight;
   console.log('🚀 ~ file: scrollbar.svelte:11 ~ maxHeight:', maxHeight);
@@ -13,7 +13,6 @@
   console.log('🚀 ~ file: scrollbar.svelte:13 ~ native:', native);
   /** @type {string | object} */
   export let wrapStyle;
-  console.log('🚀 ~ file: scrollbar.svelte:16 ~ wrapStyle:', wrapStyle);
   /** @type {string | object} */
   export let wrapClass;
   /** @type {string | object} */
@@ -46,9 +45,35 @@
 
   let moveX = 0;
   let moveY = 0;
+
+  $: if (wrapRef) {
+    const offsetHeight = wrapRef.offsetHeight - GAP;
+    const offsetWidth = wrapRef.offsetWidth - GAP;
+
+    const originalHeight = offsetHeight ** 2 / wrapRef.scrollHeight;
+    const originalWidth = offsetWidth ** 2 / wrapRef.scrollWidth;
+    const height = Math.max(originalHeight, minSize);
+    const width = Math.max(originalWidth, minSize);
+
+    ratioY = originalHeight / (offsetHeight - originalHeight) / (height / (offsetHeight - height));
+    ratioX = originalWidth / (offsetWidth - originalWidth) / (width / (offsetWidth - width));
+
+    sizeHeight = height + GAP < offsetHeight ? `${height}px` : '';
+    sizeWidth = width + GAP < offsetWidth ? `${width}px` : '';
+  }
+
+  function handleMouseMove() {}
+
+  function handleMouseLeave() {}
 </script>
 
-<div class={scrollbarClass} bind:this={scrollbarRef}>
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div
+  class={scrollbarClass}
+  bind:this={scrollbarRef}
+  on:mousemove={handleMouseMove}
+  on:mouseleave={handleMouseLeave}
+>
   <div class={wrapClass} style={wrapStyle} style:height bind:this={wrapRef}>
     <div class="svel-scrollbar__view" bind:this={resizeRef}>
       <slot />

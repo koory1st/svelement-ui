@@ -1,4 +1,6 @@
 <script>
+  import a2s from '@svelement-ui/util-array-2-class-string';
+  import { BAR_MAP } from './util';
   export let vertical = false;
   console.log('🚀 ~ file: bar.svelte:3 ~ vertical:', vertical);
   export let size;
@@ -10,10 +12,27 @@
   export let always;
   console.log('🚀 ~ file: bar.svelte:11 ~ always:', always);
 
-  let bar;
-  let thum;
+  const bar = BAR_MAP[vertical ? 'vertical' : 'horizontal'];
+  $: barClass = a2s(['svel-scrollbar__bar', `is-${bar.key}`]);
+
+  let barRef;
+  let thumRef;
+
+  let visible = false;
+
+  $: height = vertical ? size : null;
+  $: width = vertical ? null : size;
+  $: transform = `translate${bar.axis}(${move}%)`;
+  $: display = always || visible ? null : 'none';
 </script>
 
-<div class="svel-scrollbar__bar" bind:this={bar}>
-  <div class="svel-scrollbar__thumb" bind:this={thum} />
+<div class={barClass} bind:this={barRef}>
+  <div
+    class="svel-scrollbar__thumb"
+    style:height
+    style:width
+    style:transform
+    style:display
+    bind:this={thumRef}
+  />
 </div>
