@@ -62,9 +62,18 @@
     sizeWidth = width + GAP < offsetWidth ? `${width}px` : '';
   }
 
-  function handleMouseMove() {}
+  let barX;
+  let barY;
 
-  function handleMouseLeave() {}
+  function handleMouseMove() {
+    barX.handleMouseMoveScrollbar();
+    barY.handleMouseMoveScrollbar();
+  }
+
+  function handleMouseLeave() {
+    barX.handleMouseLeaveScrollbar();
+    barY.handleMouseLeaveScrollbar();
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -79,6 +88,6 @@
       <slot />
     </div>
   </div>
-  <Bar move={moveX} ratio={ratioX} size={sizeWidth} {always} />
-  <Bar move={moveY} ratio={ratioY} size={sizeHeight} {always} vertical />
+  <Bar move={moveX} ratio={ratioX} size={sizeWidth} {always} bind:this={barX} />
+  <Bar move={moveY} ratio={ratioY} size={sizeHeight} {always} vertical bind:this={barY} />
 </div>

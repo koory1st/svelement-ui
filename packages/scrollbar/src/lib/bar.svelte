@@ -1,4 +1,5 @@
 <script>
+  import { fade } from 'svelte/transition';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { BAR_MAP } from './util';
   export let vertical = false;
@@ -12,6 +13,18 @@
   export let always;
   console.log('🚀 ~ file: bar.svelte:11 ~ always:', always);
 
+  let cursorDown = false;
+  let cursorLeave = false;
+  let originalOnSelectStart = null;
+
+  export const handleMouseMoveScrollbar = () => {
+    cursorLeave = false;
+    visible = !!size;
+  };
+  export const handleMouseLeaveScrollbar = () => {
+    cursorLeave = true;
+    visible = cursorDown;
+  };
   const bar = BAR_MAP[vertical ? 'vertical' : 'horizontal'];
   $: barClass = a2s(['svel-scrollbar__bar', `is-${bar.key}`]);
 
@@ -23,16 +36,16 @@
   $: height = vertical ? size : null;
   $: width = vertical ? null : size;
   $: transform = `translate${bar.axis}(${move}%)`;
-  $: display = always || visible ? null : 'none';
 </script>
 
-<div class={barClass} bind:this={barRef}>
-  <div
-    class="svel-scrollbar__thumb"
-    style:height
-    style:width
-    style:transform
-    style:display
-    bind:this={thumRef}
-  />
-</div>
+{#if always || visible}
+  <div class={barClass} bind:this={barRef} transition:fade={{ delay: 250, duration: 300 }}>
+    <div
+      class="svel-scrollbar__thumb"
+      style:height
+      style:width
+      style:transform
+      bind:this={thumRef}
+    />
+  </div>
+{/if}
