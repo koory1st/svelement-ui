@@ -2,6 +2,7 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
   import Bar from '$lib/bar.svelte';
+  import { setContext } from 'svelte';
   import { GAP } from './util';
 
   /** @type {string | number} */
@@ -60,6 +61,9 @@
 
     sizeHeight = height + GAP < offsetHeight ? `${height}px` : '';
     sizeWidth = width + GAP < offsetWidth ? `${width}px` : '';
+
+    moveY = ((wrapRef.scrollTop * 100) / offsetHeight) * ratioY;
+    moveX = ((wrapRef.scrollLeft * 100) / offsetWidth) * ratioX;
   }
 
   let barX;
@@ -74,6 +78,9 @@
     barX.handleMouseLeaveScrollbar();
     barY.handleMouseLeaveScrollbar();
   }
+  setContext('setWrapSize', (scroll, size) => {
+    wrapRef[scroll] = size;
+  });
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -88,6 +95,6 @@
       <slot />
     </div>
   </div>
-  <Bar move={moveX} ratio={ratioX} size={sizeWidth} {always} bind:this={barX} />
-  <Bar move={moveY} ratio={ratioY} size={sizeHeight} {always} vertical bind:this={barY} />
+  <Bar move={moveX} ratio={ratioX} size={sizeWidth} {always} {wrapRef} bind:this={barX} />
+  <Bar move={moveY} ratio={ratioY} size={sizeHeight} {always} {wrapRef} vertical bind:this={barY} />
 </div>
