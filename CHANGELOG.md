@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/koory1st/svelement-ui/compare/v0.14.4...v0.15.0) (2023-10-13)
+
+### Bug Fixes
+
+* **container:** merge ([8d9ed06](https://github.com/koory1st/svelement-ui/commit/8d9ed06c8574450eb5c68f62b7f5f363762c2515))
+* **container:** package ([db950c4](https://github.com/koory1st/svelement-ui/commit/db950c4b0209759a3088cb079e827eee47903219))
+* **layout:** merge ([d24d8fb](https://github.com/koory1st/svelement-ui/commit/d24d8fb61304e5bf5c8b684477e8edd5ce6dd6d0))
+* **layout:** package ([215c7ab](https://github.com/koory1st/svelement-ui/commit/215c7aba31acf46d428b5612878df6add8fea17c))
+* **scrollbar:** add style ([e36da82](https://github.com/koory1st/svelement-ui/commit/e36da82630e616703d21d072d535d54da3078baf))
+* **scrollbar:** rm ts ([d431eb7](https://github.com/koory1st/svelement-ui/commit/d431eb7336330b692e02ef8461cf17f66c179914))
+* **scrollbar:** show thum ([fa12e1b](https://github.com/koory1st/svelement-ui/commit/fa12e1b18e71a3d7c7bb24a82065a1382a8fe2d3))
+
+### Features
+
+* **scrollbar:** init ([60c1b79](https://github.com/koory1st/svelement-ui/commit/60c1b79724ae9afd869dc6c8d5b13a003ba196c0))
+
 ## [0.14.4](https://github.com/koory1st/svelement-ui/compare/v0.14.3...v0.14.4) (2023-10-10)
 
 ### Bug Fixes

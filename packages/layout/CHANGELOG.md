@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/koory1st/svelement-ui/compare/v0.14.4...v0.15.0) (2023-10-13)
+
+### Bug Fixes
+
+* **layout:** merge ([d24d8fb](https://github.com/koory1st/svelement-ui/commit/d24d8fb61304e5bf5c8b684477e8edd5ce6dd6d0))
+* **layout:** package ([215c7ab](https://github.com/koory1st/svelement-ui/commit/215c7aba31acf46d428b5612878df6add8fea17c))
+
 ## [0.14.1](https://github.com/koory1st/svelement-ui/compare/v0.14.0...v0.14.1) (2023-10-07)
 
 **Note:** Version bump only for package @svelement-ui/row

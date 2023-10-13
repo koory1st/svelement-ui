@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/all",
-  "version": "0.14.4",
+  "version": "0.15.0",
   "keywords": [
     "svelte",
     "element-ui",
@@ -26,8 +26,8 @@
     "@svelement-ui/code": "workspace:^",
     "@svelement-ui/container": "workspace:^",
     "@svelement-ui/divider": "workspace:^",
-    "@svelement-ui/link": "workspace:^",
     "@svelement-ui/layout": "workspace:^",
+    "@svelement-ui/link": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^"
   },
