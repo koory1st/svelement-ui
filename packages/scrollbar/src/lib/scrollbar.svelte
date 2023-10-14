@@ -1,6 +1,5 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
-  import a2st from '@svelement-ui/util-array-2-style-string';
   import Bar from '$lib/bar.svelte';
   import { setContext } from 'svelte';
   import { GAP } from './util';
@@ -62,8 +61,7 @@
     sizeHeight = height + GAP < offsetHeight ? `${height}px` : '';
     sizeWidth = width + GAP < offsetWidth ? `${width}px` : '';
 
-    moveY = ((wrapRef.scrollTop * 100) / offsetHeight) * ratioY;
-    moveX = ((wrapRef.scrollLeft * 100) / offsetWidth) * ratioX;
+    handleScroll();
   }
 
   let barX;
@@ -81,6 +79,14 @@
   setContext('setWrapSize', (scroll, size) => {
     wrapRef[scroll] = size;
   });
+
+  function handleScroll() {
+    const offsetHeight = wrapRef.offsetHeight - GAP;
+    const offsetWidth = wrapRef.offsetWidth - GAP;
+
+    moveY = ((wrapRef.scrollTop * 100) / offsetHeight) * ratioY;
+    moveX = ((wrapRef.scrollLeft * 100) / offsetWidth) * ratioX;
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -90,7 +96,13 @@
   on:mousemove={handleMouseMove}
   on:mouseleave={handleMouseLeave}
 >
-  <div class={wrapClass} style={wrapStyle} style:height bind:this={wrapRef}>
+  <div
+    class={wrapClass}
+    style={wrapStyle}
+    style:height
+    bind:this={wrapRef}
+    on:scroll={handleScroll}
+  >
     <div class="svel-scrollbar__view" bind:this={resizeRef}>
       <slot />
     </div>
