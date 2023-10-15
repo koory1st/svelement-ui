@@ -79,6 +79,12 @@ export const langDict = {
   clin05020: '带图标的链接',
 
   ccheckbox01010: 'Checkbox 多选框',
+  ccheckbox01011: '在一组备选项中进行多选。',
+  ccheckbox02010: '基础用法',
+  ccheckbox02011: '单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。',
+  ccheckbox03010: '禁用状态',
+  ccheckbox03020: '多选框不可用状态。',
+  ccheckbox03030: '设置 disabled 属性即可。',
 
   odiv01010: 'Divider 分割线',
   odiv01020: '区隔内容的分割线。',

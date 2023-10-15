@@ -28,6 +28,7 @@
     "@svelement-ui/divider": "workspace:^",
     "@svelement-ui/layout": "workspace:^",
     "@svelement-ui/link": "workspace:^",
+    "@svelement-ui/scrollbar": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^"
   },
