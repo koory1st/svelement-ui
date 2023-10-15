@@ -1,39 +1,37 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
+  import a2st from '@svelement-ui/util-array-2-style-string';
   import Bar from '$lib/bar.svelte';
-  import { setContext } from 'svelte';
+  import { setContext, onMount, tick, afterUpdate } from 'svelte';
   import { GAP } from './util';
 
   /** @type {string | number} */
   export let height;
   /** @type {string | number} */
   export let maxHeight;
-  console.log('🚀 ~ file: scrollbar.svelte:11 ~ maxHeight:', maxHeight);
   export let native = false;
-  console.log('🚀 ~ file: scrollbar.svelte:13 ~ native:', native);
   /** @type {string | object} */
   export let wrapStyle;
   /** @type {string | object} */
   export let wrapClass;
   /** @type {string | object} */
   export let viewStyle;
-  console.log('🚀 ~ file: scrollbar.svelte:21 ~ viewStyle:', viewStyle);
   /** @type {string | object} */
   export let viewClass;
-  console.log('🚀 ~ file: scrollbar.svelte:24 ~ viewClass:', viewClass);
   export let noresize = false;
-  console.log('🚀 ~ file: scrollbar.svelte:26 ~ noresize:', noresize);
   export let always = false;
   export let minSize = 20;
-  console.log('🚀 ~ file: scrollbar.svelte:29 ~ minSize:', minSize);
-
   $: scrollbarClass = a2s(['svel-scrollbar', $$props.class]);
 
   $: wrapClass = a2s(['svel-scrollbar__wrap', ['svel-scrollbar__wrap--hidden-default', !native]]);
   $: if (typeof height !== 'string') {
     height = `${height}px`;
   }
-
+  $: if (typeof maxHeight !== 'string') {
+    maxHeight = `${maxHeight}px`;
+  }
+  $: wrapStyle = a2st([['max-height', maxHeight, true], [wrapStyle]]);
+  $: resizeClass = a2s(['svel-scrollbar__view', viewClass]);
   let scrollbarRef;
   let wrapRef;
   let resizeRef;
@@ -45,8 +43,30 @@
 
   let moveX = 0;
   let moveY = 0;
+  onMount(() => {
+    if (!native) {
+      tick(() => update());
+    }
+    let resizeObserver;
+    if (!noresize) {
+      resizeObserver = new ResizeObserver((entries) => {
+        update();
+      });
 
-  $: if (wrapRef) {
+      resizeObserver.observe(resizeRef);
+    }
+    return () => {
+      if (resizeObserver) {
+        resizeObserver.unobserve(resizeRef);
+      }
+    };
+  });
+  afterUpdate(() => update());
+
+  function update() {
+    if (!wrapRef) {
+      return;
+    }
     const offsetHeight = wrapRef.offsetHeight - GAP;
     const offsetWidth = wrapRef.offsetWidth - GAP;
 
@@ -103,7 +123,7 @@
     bind:this={wrapRef}
     on:scroll={handleScroll}
   >
-    <div class="svel-scrollbar__view" bind:this={resizeRef}>
+    <div class={resizeClass} style={viewStyle} bind:this={resizeRef}>
       <slot />
     </div>
   </div>

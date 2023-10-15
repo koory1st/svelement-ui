@@ -7,14 +7,14 @@
   }
 </script>
 
-<SvelScrollbar height={400}>
+<SvelScrollbar maxHeight={400} always>
   {#each list as item}
     <p class="scrollbar-demo-item">{item}</p>
   {/each}
 </SvelScrollbar>
 
 <div class="outer">
-  <SvelScrollbar>
+  <SvelScrollbar always>
     <div class="scrollbar-flex-content">
       {#each list as item}
         <p class="scrollbar-demo-item2">{item}</p>
@@ -39,7 +39,8 @@
     color: var(--svel-color-primary);
   }
   .outer {
-    width: 500px;
+    max-width: 1500px;
+    min-width: 500px;
   }
   .scrollbar-demo-item2 {
     flex-shrink: 0;
