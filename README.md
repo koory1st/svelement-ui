@@ -15,3 +15,4 @@ pnpm -r build
 - [x] site
 - [x] button
 - [] scrollbar
+- [] prismjs-theme

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import { slide } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   import { SvelDivider, SvelCode } from '@svelement-ui/all';

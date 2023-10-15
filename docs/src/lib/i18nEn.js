@@ -1,5 +1,5 @@
 export const langDict = {
-  cutil01010: 'Basic 基础组件',
+  cutil01010: 'Basic',
   cutil02020: 'Form 表单组件',
   cutil03020: 'Others 其他',
   cbut01010: 'Button 按钮',

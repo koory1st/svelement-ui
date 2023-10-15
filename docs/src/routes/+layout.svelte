@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import './app.css';
   import { PUBLIC_BASE_PATH } from '$env/static/public';
   import {
@@ -9,13 +9,28 @@
     SvelMain,
     SvelRow,
     SvelLink,
+    SvelButton,
   } from '@svelement-ui/all';
   import { SvelIcon, Github } from '@svelement-ui/icon';
   import { setContext } from 'svelte';
-  import zh from '$lib/i18nZhCn';
-  import type GetText from '$lib/i18n';
+  import { writable } from 'svelte/store';
+  import { default as zh, langDict as zhLangDict } from '$lib/i18nZhCn';
+  import { default as en, langDict as enLangDict } from '$lib/i18nEn';
 
-  setContext('lang', zh as GetText);
+  let langString = 'EN';
+  let langFn = writable(zh);
+  setContext('lang', zh);
+  setContext('langFn', langFn);
+
+  function handleLang() {
+    if (langString === 'CN') {
+      langString = 'EN';
+      $langFn = zh;
+      return;
+    }
+    langString = 'CN';
+    $langFn = en;
+  }
 </script>
 
 <SvelContainer direction="vertical" class="docs-container">
@@ -30,7 +45,11 @@
         <SvelLink href="{PUBLIC_BASE_PATH}component" type="primary" underline={false}>
           Component
         </SvelLink>
+        <SvelButton class="ml-2" type="primary" text on:click={handleLang}>
+          {langString}
+        </SvelButton>
         <SvelLink
+          class="ml-2"
           href="https://github.com/koory1st/svelement-ui"
           type="primary"
           target="_blank"
