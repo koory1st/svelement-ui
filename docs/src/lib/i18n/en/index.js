@@ -1,5 +1,5 @@
-import util from '$lib/i18n/en/util.js'
-import button from '$lib/i18n/en/button.js'
+import util from '$lib/i18n/en/util.js';
+import button from '$lib/i18n/en/button.js';
 
 export const langDict = {
   ...util,

@@ -112,16 +112,8 @@
 </Example>
 
 <h2>{$langFn('cbut02010')}</h2>
-<p>
-  你可以使用 <span class="code">disabled</span>
-  属性来定义按钮是否被禁用。
-</p>
-<p>
-  使用 <span class="code">disabled</span>
-  属性来控制按钮是否为禁用状态。 该属性接受一个
-  <span class="code">Boolean</span>
-  类型的值。
-</p>
+<p>{$langFn('cbut02020')}</p>
+<p>{$langFn('cbut02030')}</p>
 
 <Example
   code={`
@@ -226,7 +218,7 @@
 </Example>
 
 <h2>{$langFn('cbut04010')}</h2>
-<p>使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。</p>
+<p>{$langFn('cbut04020')}</p>
 
 <Example
   code={`
@@ -256,11 +248,7 @@
 </Example>
 
 <h2>{$langFn('cbut05010')}</h2>
-<p>以按钮组的方式出现，常用于多项类似操作。</p>
-<p>
-  使用 <span class="code">&lt;svel-button-group&gt;</span>
-  对多个按钮分组。
-</p>
+<p>{$langFn('cbut05020')}</p>
 
 <Example
   code={`
@@ -331,17 +319,8 @@
 </Example>
 
 <h2>{$langFn('cbut06010')}</h2>
-<p>点击按钮来加载数据，并向用户反馈加载状态。</p>
-<p>
-  通过设置 <span class="code">loading</span>
-  属性为
-  <span class="code">true</span>
-  来显示加载中状态。
-</p>
-<p>
-  也可以通过 <span class="code">loadingIcon</span>
-  slot 设置其他 icon
-</p>
+<p>{$langFn('cbut06020')}</p>
+<p>{$langFn('cbut06030')}</p>
 
 <Example
   code={`
@@ -363,7 +342,7 @@
 
 <h2>{$langFn('cbut07010')}</h2>
 <p>{$langFn('cbut07020')}</p>
-<p>{@html $langFn('cbut07030')}</p>
+<p>{$langFn('cbut07030')}</p>
 
 <Example
   code={`
