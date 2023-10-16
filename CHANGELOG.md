@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.5](https://github.com/koory1st/svelement-ui/compare/v0.15.4...v0.15.5) (2023-10-16)
+
+### Bug Fixes
+
+* **checkbox:** add types ([9df91fe](https://github.com/koory1st/svelement-ui/commit/9df91fe3f3595885bf3046905aacd6493a19719e))
+
 ## [0.15.4](https://github.com/koory1st/svelement-ui/compare/v0.15.3...v0.15.4) (2023-10-15)
 
 ### Bug Fixes
