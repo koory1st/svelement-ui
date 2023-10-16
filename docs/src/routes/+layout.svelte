@@ -14,8 +14,8 @@
   import { SvelIcon, Github } from '@svelement-ui/icon';
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
-  import { default as zh, langDict as zhLangDict } from '$lib/i18nZhCn';
-  import { default as en, langDict as enLangDict } from '$lib/i18nEn';
+  import { default as zh } from '$lib/i18n/zh/index.js';
+  import { default as en } from '$lib/i18n/en/index.js';
 
   let langString = 'EN';
   let langFn = writable(zh);
@@ -23,12 +23,12 @@
   setContext('langFn', langFn);
 
   function handleLang() {
-    if (langString === 'CN') {
+    if (langString === '中文') {
       langString = 'EN';
       $langFn = zh;
       return;
     }
-    langString = 'CN';
+    langString = '中文';
     $langFn = en;
   }
 </script>

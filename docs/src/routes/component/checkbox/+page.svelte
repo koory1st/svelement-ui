@@ -1,5 +1,5 @@
 <script>
-  import { SvelCheckbox } from '@svelement-ui/all';
+  import { SvelCheckbox, SvelCheckboxGroup } from '@svelement-ui/all';
   import Example from '$lib/example.svelte';
   import { getContext } from 'svelte';
 
@@ -10,6 +10,29 @@
 
   let check1 = false;
   let check2 = true;
+
+  let groupValue = ['selected and disabled'];
+  let groupOptions = [
+    { label: 'Option A', value: 'Option A' },
+    { label: 'Option B', value: 'Option B' },
+    { label: 'Option C', value: 'Option C' },
+    { label: 'disabled', value: 'disabled', disabled: true },
+    { label: 'selected and disabled', value: 'selected and disabled', disabled: true },
+  ];
+
+  let checkAll = false;
+  let isIndeterminate = true;
+  let checkedCities = ['Shanghai', 'Beijing'];
+  let cities = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'];
+  function handleCheckAllChange({ detail }) {
+    checkedCities = detail ? cities : [];
+    isIndeterminate = false;
+  }
+  function handleCheckedCitiesChange({ detail }) {
+    const checkedCount = detail.length;
+    checkAll = checkedCount === cities.length;
+    isIndeterminate = checkedCount > 0 && checkedCount < cities.length;
+  }
 </script>
 
 <h1>{$langFn('ccheckbox01010')}</h1>
@@ -73,4 +96,45 @@
 >
   <SvelCheckbox bind:value={check1} disabled>Disabled</SvelCheckbox>
   <SvelCheckbox bind:value={check2}>Not disabled</SvelCheckbox>
+</Example>
+
+<h2>{$langFn('ccheckbox04010')}</h2>
+<p>{$langFn('ccheckbox04020')}</p>
+<Example
+  code={`
+<script>
+  let groupValue = ['selected and disabled'];
+  let groupOptions = [
+    { label: 'Option A', value: 'Option A' },
+    { label: 'Option B', value: 'Option B' },
+    { label: 'Option C', value: 'Option C' },
+    { label: 'disabled', value: 'disabled', disabled: true },
+    { label: 'selected and disabled', value: 'selected and disabled', disabled: true },
+  ];
+@@@/script>
+<SvelCheckboxGroup bind:group={groupValue} options={groupOptions} />
+`}
+>
+  {groupValue}
+  <SvelCheckboxGroup bind:group={groupValue} options={groupOptions} />
+</Example>
+
+<h2>{$langFn('ccheckbox05010')}</h2>
+<p>{$langFn('ccheckbox05020')}</p>
+<Example
+  code={`
+
+`}
+>
+  <SvelCheckbox
+    bind:value={checkAll}
+    label="Check All"
+    indeterminate={isIndeterminate}
+    on:change={handleCheckAllChange}
+  />
+  <SvelCheckboxGroup
+    bind:group={checkedCities}
+    options={cities}
+    on:change={handleCheckedCitiesChange}
+  />
 </Example>

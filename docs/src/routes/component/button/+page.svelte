@@ -25,23 +25,14 @@
     { type: 'danger', text: 'danger' },
   ];
 
-  let lang = getContext('lang');
+  let langFn = getContext('langFn');
 </script>
 
-<h1>{lang('cbut01010')}</h1>
-<p>{lang('cbut01020')}</p>
+<h1>{$langFn('cbut01010')}</h1>
+<p>{$langFn('cbut01020')}</p>
 
-<h2>{lang('cbut01030')}</h2>
-<p>
-  使用 <span class="code">type</span>
-  、
-  <span class="code">plain</span>
-  、
-  <span class="code">round</span>
-  和
-  <span class="code">circle</span>
-  来定义按钮的样式。
-</p>
+<h2>{$langFn('cbut01030')}</h2>
+<p>{$langFn('cbut01040')}</p>
 
 <Example
   code={`
@@ -120,7 +111,7 @@
   </SvelRow>
 </Example>
 
-<h2>{lang('cbut02010')}</h2>
+<h2>{$langFn('cbut02010')}</h2>
 <p>
   你可以使用 <span class="code">disabled</span>
   属性来定义按钮是否被禁用。
@@ -169,8 +160,8 @@
   </SvelRow>
 </Example>
 
-<h2>{lang('cbut03010')}</h2>
-<p>{lang('cbut03020')}</p>
+<h2>{$langFn('cbut03010')}</h2>
+<p>{$langFn('cbut03020')}</p>
 <Example
   code={`
 <script lang="ts">
@@ -234,7 +225,7 @@
   </div>
 </Example>
 
-<h2>{lang('cbut04010')}</h2>
+<h2>{$langFn('cbut04010')}</h2>
 <p>使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。</p>
 
 <Example
@@ -264,7 +255,7 @@
   </div>
 </Example>
 
-<h2>{lang('cbut05010')}</h2>
+<h2>{$langFn('cbut05010')}</h2>
 <p>以按钮组的方式出现，常用于多项类似操作。</p>
 <p>
   使用 <span class="code">&lt;svel-button-group&gt;</span>
@@ -339,7 +330,7 @@
   </SvelButtonGroup>
 </Example>
 
-<h2>{lang('cbut06010')}</h2>
+<h2>{$langFn('cbut06010')}</h2>
 <p>点击按钮来加载数据，并向用户反馈加载状态。</p>
 <p>
   通过设置 <span class="code">loading</span>
@@ -370,9 +361,9 @@
   </SvelButton>
 </Example>
 
-<h2>{lang('cbut07010')}</h2>
-<p>{lang('cbut07020')}</p>
-<p>{@html lang('cbut07030')}</p>
+<h2>{$langFn('cbut07010')}</h2>
+<p>{$langFn('cbut07020')}</p>
+<p>{@html $langFn('cbut07030')}</p>
 
 <Example
   code={`
@@ -421,9 +412,9 @@
   </SvelRow>
 </Example>
 
-<h2>{lang('cbut08010')}</h2>
-<p>{lang('cbut08020')}</p>
-<p>{lang('cbut08030')}</p>
+<h2>{$langFn('cbut08010')}</h2>
+<p>{$langFn('cbut08020')}</p>
+<p>{$langFn('cbut08030')}</p>
 
 <Example
   code={`

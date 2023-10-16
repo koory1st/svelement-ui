@@ -1,15 +1,4 @@
-import util from '$lib/i18n/zh/util.js'
-import button from '$lib/i18n/zh/button.js'
-import container from '$lib/i18n/zh/container.js'
-import icon from '$lib/i18n/zh/icon.js'
-
-export const langDict = {
-  ...util,
-  ...button,
-  ...container,
-  ...icon,
-
-
+export default {
   clay01010: 'Layout 布局',
   clay01020: '通过基础的 24 分栏，迅速简便地创建布局。',
   clay02010: '基础布局',
@@ -44,45 +33,4 @@ export const langDict = {
   clay08120: '当视口在 lg 及以下尺寸时隐藏',
   clay08130: '当视口在 lg 及以上尺寸时隐藏',
   clay08140: '当视口在 xl 尺寸时隐藏',
-
-  clin01010: 'Link 链接',
-  clin01020: '文字超链接',
-  clin02010: '基础用法',
-  clin02020: '基础的文字链接用法。',
-  clin03010: '禁用状态',
-  clin03020: '文字链接不可用状态。',
-  clin04010: '下划线',
-  clin04020: '文字链接下划线。',
-  clin05010: '图标',
-  clin05020: '带图标的链接',
-
-  cscr01010: 'Scrollbar 滚动条',
-
-  ccheckbox01010: 'Checkbox 多选框',
-  ccheckbox01011: '在一组备选项中进行多选。',
-  ccheckbox02010: '基础用法',
-  ccheckbox02011: '单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。',
-  ccheckbox03010: '禁用状态',
-  ccheckbox03020: '多选框不可用状态。',
-  ccheckbox03030: '设置 disabled 属性即可。',
-  ccheckbox04010: '多选框组',
-  ccheckbox04020: '适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。',
-  ccheckbox05010: '中间状态',
-  ccheckbox05020: 'indeterminate 属性用以表示 checkbox 的不确定状态，一般用于实现全选的效果',
-
-  odiv01010: 'Divider 分割线',
-  odiv01020: '区隔内容的分割线。',
-  odiv01030: '基础用法',
-  odiv01040: '对不同段落的文本进行分割。',
-  odiv01050: '设置文案',
-  odiv01060: '可以在分割线上自定义文本内容',
-};
-
-function getText(key) {
-  if (key in langDict) {
-    return langDict[key];
-  }
-  return 'todo';
 }
-
-export default getText;
