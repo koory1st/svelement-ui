@@ -23,12 +23,12 @@
   setContext('langFn', langFn);
 
   function handleLang() {
-    if (langString === '中文') {
+    if (langString === '中') {
       langString = 'EN';
       $langFn = zh;
       return;
     }
-    langString = '中文';
+    langString = '中';
     $langFn = en;
   }
 </script>

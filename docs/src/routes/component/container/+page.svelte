@@ -3,34 +3,34 @@
   import { getContext } from 'svelte';
   import Example from '$lib/example.svelte';
 
-  let lang = getContext('lang');
+  let langFn = getContext('langFn');
 </script>
 
-<h1>{lang('ccon01010')}</h1>
-<p>{lang('ccon01020')}</p>
+<h1>{$langFn('ccon01010')}</h1>
+<p>{$langFn('ccon01020')}</p>
 <p>
   <span class="code">&lt;SvelContainer&gt;</span>
-  {lang('ccon01030')}
+  {$langFn('ccon01030')}
 </p>
 <p>
   <span class="code">&lt;SvelHeader&gt;</span>
-  {lang('ccon01040')}
+  {$langFn('ccon01040')}
 </p>
 
 <p>
   <span class="code">&lt;SvelAside&gt;</span>
-  {lang('ccon01050')}
+  {$langFn('ccon01050')}
 </p>
 <p>
   <span class="code">&lt;SvelMain&gt;</span>
-  {lang('ccon01060')}
+  {$langFn('ccon01060')}
 </p>
 <p>
   <span class="code">&lt;SvelFooter&gt;</span>
-  {lang('ccon01070')}
+  {$langFn('ccon01070')}
 </p>
 
-<h2>{lang('ccon02010')}</h2>
+<h2>{$langFn('ccon02010')}</h2>
 
 <Example
   code={`
