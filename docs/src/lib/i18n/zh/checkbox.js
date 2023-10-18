@@ -11,4 +11,6 @@ export default {
     '适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。',
   ccheckbox05010: '中间状态',
   ccheckbox05020: 'indeterminate 属性用以表示 checkbox 的不确定状态，一般用于实现全选的效果',
+  ccheckbox06010: '可选项目数量的限制',
+  ccheckbox06020: '使用 min 和 max 属性能够限制可以被勾选的项目的数量。',
 };

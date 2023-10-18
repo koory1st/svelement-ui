@@ -27,15 +27,17 @@
     </SvelScrollbar>
   </SvelAside>
 
-  <SvelMain>
-    <div class="doc-content-wrapper">
-      <div class="doc-content-container">
-        <div class="doc-content">
-          <SvelScrollbar>
-            <slot />
-          </SvelScrollbar>
+  <SvelScrollbar maxHeight={880}>
+    <SvelMain>
+      <div class="doc-content-wrapper">
+        <div class="doc-content-container">
+          <div class="doc-content">
+            <SvelScrollbar>
+              <slot />
+            </SvelScrollbar>
+          </div>
         </div>
       </div>
-    </div>
-  </SvelMain>
+    </SvelMain>
+  </SvelScrollbar>
 </SvelContainer>

@@ -33,6 +33,8 @@
     checkAll = checkedCount === cities.length;
     isIndeterminate = checkedCount > 0 && checkedCount < cities.length;
   }
+
+  let checkedCities2 = ['Shanghai', 'Beijing'];
 </script>
 
 <h1>{$langFn('ccheckbox01010')}</h1>
@@ -123,7 +125,32 @@
 <p>{$langFn('ccheckbox05020')}</p>
 <Example
   code={`
-
+<script>
+  let checkAll = false;
+  let isIndeterminate = true;
+  let checkedCities = ['Shanghai', 'Beijing'];
+  let cities = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'];
+  function handleCheckAllChange({ detail }) {
+    checkedCities = detail ? cities : [];
+    isIndeterminate = false;
+  }
+  function handleCheckedCitiesChange({ detail }) {
+    const checkedCount = detail.length;
+    checkAll = checkedCount === cities.length;
+    isIndeterminate = checkedCount > 0 && checkedCount < cities.length;
+  }
+@@@/script>
+  <SvelCheckbox
+    bind:value={checkAll}
+    label="Check All"
+    indeterminate={isIndeterminate}
+    on:change={handleCheckAllChange}
+  />
+  <SvelCheckboxGroup
+    bind:group={checkedCities}
+    options={cities}
+    on:change={handleCheckedCitiesChange}
+  />
 `}
 >
   <SvelCheckbox
@@ -137,4 +164,19 @@
     options={cities}
     on:change={handleCheckedCitiesChange}
   />
+</Example>
+
+<h2>{$langFn('ccheckbox06010')}</h2>
+<p>{$langFn('ccheckbox06020')}</p>
+
+<Example
+  code={`
+<script>
+  let checkedCities2 = ['Shanghai', 'Beijing'];
+  let cities = ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'];
+@@@/script>
+<SvelCheckboxGroup bind:group={checkedCities2} options={cities} min={1} max={2} />
+`}
+>
+  <SvelCheckboxGroup bind:group={checkedCities2} options={cities} min={1} max={2} />
 </Example>
