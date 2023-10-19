@@ -27,7 +27,7 @@
     </SvelScrollbar>
   </SvelAside>
 
-  <SvelScrollbar maxHeight={880}>
+  <SvelScrollbar>
     <SvelMain>
       <div class="doc-content-wrapper">
         <div class="doc-content-container">

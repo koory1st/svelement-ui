@@ -35,6 +35,10 @@
   }
 
   let checkedCities2 = ['Shanghai', 'Beijing'];
+  let buttonChecked1 = ['Shanghai'];
+  let buttonChecked2 = ['Shanghai'];
+  let buttonChecked3 = ['Shanghai'];
+  let buttonChecked4 = ['Shanghai'];
 </script>
 
 <h1>{$langFn('ccheckbox01010')}</h1>
@@ -179,4 +183,49 @@
 `}
 >
   <SvelCheckboxGroup bind:group={checkedCities2} options={cities} min={1} max={2} />
+</Example>
+
+<h2>{$langFn('ccheckbox07010')}</h2>
+<p>{$langFn('ccheckbox07020')}</p>
+
+<Example
+  code={`
+<div class="mb-4">
+  <SvelCheckboxGroup bind:group={buttonChecked1} options={cities} type="button" size="large" />
+</div>
+<div class="mb-4">
+  <SvelCheckboxGroup bind:group={buttonChecked2} options={cities} type="button" />
+</div>
+<div class="mb-4">
+  <SvelCheckboxGroup bind:group={buttonChecked3} options={cities} type="button" size="small" />
+</div>
+<div class="mb-4">
+  <SvelCheckboxGroup
+    bind:group={buttonChecked4}
+    options={cities}
+    type="button"
+    size="small"
+    disabled
+  />
+</div>
+`}
+>
+  <div class="mb-4">
+    <SvelCheckboxGroup bind:group={buttonChecked1} options={cities} type="button" size="large" />
+  </div>
+  <div class="mb-4">
+    <SvelCheckboxGroup bind:group={buttonChecked2} options={cities} type="button" />
+  </div>
+  <div class="mb-4">
+    <SvelCheckboxGroup bind:group={buttonChecked3} options={cities} type="button" size="small" />
+  </div>
+  <div class="mb-4">
+    <SvelCheckboxGroup
+      bind:group={buttonChecked4}
+      options={cities}
+      type="button"
+      size="small"
+      disabled
+    />
+  </div>
 </Example>

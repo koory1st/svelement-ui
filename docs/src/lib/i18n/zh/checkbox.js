@@ -13,4 +13,6 @@ export default {
   ccheckbox05020: 'indeterminate 属性用以表示 checkbox 的不确定状态，一般用于实现全选的效果',
   ccheckbox06010: '可选项目数量的限制',
   ccheckbox06020: '使用 min 和 max 属性能够限制可以被勾选的项目的数量。',
+  ccheckbox07010: '按钮样式',
+  ccheckbox07020: '按钮样式的多选组合。',
 };
