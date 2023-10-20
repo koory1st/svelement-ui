@@ -39,6 +39,13 @@
   let buttonChecked2 = ['Shanghai'];
   let buttonChecked3 = ['Shanghai'];
   let buttonChecked4 = ['Shanghai'];
+
+  let border11 = true;
+  let border12 = false;
+  let border21 = false;
+  let border22 = true;
+  let borderOptions = ['Option1', 'Option2'];
+  let borderGroup = ['Option1'];
 </script>
 
 <h1>{$langFn('ccheckbox01010')}</h1>
@@ -199,7 +206,7 @@
 <div class="mb-4">
   <SvelCheckboxGroup bind:group={buttonChecked3} options={cities} type="button" size="small" />
 </div>
-<div class="mb-4">
+<div>
   <SvelCheckboxGroup
     bind:group={buttonChecked4}
     options={cities}
@@ -219,12 +226,42 @@
   <div class="mb-4">
     <SvelCheckboxGroup bind:group={buttonChecked3} options={cities} type="button" size="small" />
   </div>
-  <div class="mb-4">
+  <div>
     <SvelCheckboxGroup
       bind:group={buttonChecked4}
       options={cities}
       type="button"
       size="small"
+      disabled
+    />
+  </div>
+</Example>
+
+<h2>{$langFn('ccheckbox08010')}</h2>
+<p>{$langFn('ccheckbox08020')}</p>
+
+<Example
+  code={`
+
+`}
+>
+  <div class="mb-4">
+    <SvelCheckbox bind:value={border11} label="Option1" size="large" border />
+    <SvelCheckbox bind:value={border12} label="Option2" size="large" border />
+  </div>
+  <div class="mb-4">
+    <SvelCheckbox bind:value={border21} label="Option1" size="large" border />
+    <SvelCheckbox bind:value={border22} label="Option2" size="large" border />
+  </div>
+  <div class="mb-4">
+    <SvelCheckboxGroup bind:group={borderGroup} options={borderOptions} size="small" border />
+  </div>
+  <div>
+    <SvelCheckboxGroup
+      bind:group={borderGroup}
+      options={borderOptions}
+      size="small"
+      border
       disabled
     />
   </div>

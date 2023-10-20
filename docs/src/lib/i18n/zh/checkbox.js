@@ -15,4 +15,6 @@ export default {
   ccheckbox06020: '使用 min 和 max 属性能够限制可以被勾选的项目的数量。',
   ccheckbox07010: '按钮样式',
   ccheckbox07020: '按钮样式的多选组合。',
+  ccheckbox08010: '带有边框',
+  ccheckbox08020: '设置border属性可以渲染为带有边框的多选框。',
 };
