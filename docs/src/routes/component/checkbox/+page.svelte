@@ -242,7 +242,33 @@
 
 <Example
   code={`
-
+<script>
+  let border11 = true;
+  let border12 = false;
+  let border21 = false;
+  let border22 = true;
+  let borderOptions = ['Option1', 'Option2'];
+  let borderGroup = ['Option1'];
+@@@/script>
+<div class="mb-4">
+  <SvelCheckbox bind:value={border11} label="Option1" size="large" border />
+  <SvelCheckbox bind:value={border12} label="Option2" size="large" border />
+</div>
+<div class="mb-4">
+  <SvelCheckbox bind:value={border21} label="Option1" size="large" border />
+  <SvelCheckbox bind:value={border22} label="Option2" size="large" border />
+</div>
+<div class="mb-4">
+  <SvelCheckboxGroup bind:group={borderGroup} options={borderOptions} size="small" border />
+</div>
+<div>
+  <SvelCheckboxGroup
+    bind:group={borderGroup}
+    options={borderOptions}
+    size="small"
+    border
+    disabled
+  />
 `}
 >
   <div class="mb-4">
