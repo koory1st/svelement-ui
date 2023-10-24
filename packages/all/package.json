@@ -7,7 +7,17 @@
     "svelement",
     "svelement-ui",
     "element",
-    "ui"
+    "ui",
+    "button",
+    "checkbox",
+    "code",
+    "container",
+    "divider",
+    "icon",
+    "layout",
+    "link",
+    "radio",
+    "scrollbar"
   ],
   "exports": {
     ".": {
@@ -28,6 +38,7 @@
     "@svelement-ui/divider": "workspace:^",
     "@svelement-ui/layout": "workspace:^",
     "@svelement-ui/link": "workspace:^",
+    "@svelement-ui/radio": "workspace:^",
     "@svelement-ui/scrollbar": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^"
@@ -35,5 +46,15 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koory1st/svelement-ui"
+  },
+  "license": "MIT",
+  "homepage": "https://koory1st.github.io/svelement-ui/",
+  "author": {
+    "name": "koory1st",
+    "email": "32436334@qq.com"
   }
 }
