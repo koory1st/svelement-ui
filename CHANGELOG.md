@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.6](https://github.com/koory1st/svelement-ui/compare/v0.15.5...v0.15.6) (2023-10-24)
+
+### Bug Fixes
+
+* **all:** add radio ([b3df9a1](https://github.com/koory1st/svelement-ui/commit/b3df9a1f4cb77217c6ad0ef7717f7cf69505f395))
+* **docs:** checkbox ([e8c4934](https://github.com/koory1st/svelement-ui/commit/e8c49341d13fc004ebe87cc282c8cc740318eac1))
+* **docs:** checkbox ([70a5d68](https://github.com/koory1st/svelement-ui/commit/70a5d68faeffd6ac7149d3b23b309f72e234a549))
+* **docs:** checkbox ([f5c34c4](https://github.com/koory1st/svelement-ui/commit/f5c34c444ba868a9d40a95789df2ed4025105720))
+* **docs:** checkbox add ([8f6ce0d](https://github.com/koory1st/svelement-ui/commit/8f6ce0d981a0ae5c023d814a6ab7778652a2f16d))
+* **docs:** checkbox add code ([4cd542e](https://github.com/koory1st/svelement-ui/commit/4cd542e70e86836ed20eeac62568d9dc72cd4ecd))
+* **docs:** container i18n ([f5b5f61](https://github.com/koory1st/svelement-ui/commit/f5b5f61d4142c895770e4acafa251c6a38b2e26f))
+* **docs:** remove en i18n ([a4a836e](https://github.com/koory1st/svelement-ui/commit/a4a836e8801709889ad3014411357f99deafe78a))
+* **radio:** init ([40d341a](https://github.com/koory1st/svelement-ui/commit/40d341ac01230b7a394e292671c106397a3fa17b))
+* **theme:** radio select ([0cc3a3a](https://github.com/koory1st/svelement-ui/commit/0cc3a3abf600c3adfd6f944b4376e443bd288a6d))
+
 ## [0.15.5](https://github.com/koory1st/svelement-ui/compare/v0.15.4...v0.15.5) (2023-10-16)
 
 ### Bug Fixes

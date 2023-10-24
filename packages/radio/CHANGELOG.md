@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.6](https://github.com/koory1st/svelement-ui/compare/v0.15.5...v0.15.6) (2023-10-24)
+
+### Bug Fixes
+
+* **radio:** init ([40d341a](https://github.com/koory1st/svelement-ui/commit/40d341ac01230b7a394e292671c106397a3fa17b))
+
 ## [0.15.5](https://github.com/koory1st/svelement-ui/compare/v0.15.4...v0.15.5) (2023-10-16)
 
 ### Bug Fixes
