@@ -7,7 +7,7 @@ export const component_group_list = [
       { key: 'icon', name: 'cico01010' },
       { key: 'layout', name: 'clay01010' },
       { key: 'link', name: 'clin01010' },
-      { key: 'scrollbar', name: 'cscr01010' },
+      { key: 'scrollbar', name: 'cscrollbar01010' },
     ],
   },
   {
