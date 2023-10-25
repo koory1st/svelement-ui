@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.6](https://github.com/koory1st/svelement-ui/compare/v0.15.5...v0.15.6) (2023-10-24)
+
+### Bug Fixes
+
+* **all:** add radio ([b3df9a1](https://github.com/koory1st/svelement-ui/commit/b3df9a1f4cb77217c6ad0ef7717f7cf69505f395))
+
 ## [0.15.5](https://github.com/koory1st/svelement-ui/compare/v0.15.4...v0.15.5) (2023-10-16)
 
 **Note:** Version bump only for package @svelement-ui/all
