@@ -32,7 +32,7 @@
 </SvelScrollbar>
 `}
 >
-  <SvelScrollbar maxHeight={400} always>
+  <SvelScrollbar maxHeight={400}>
     {#each list as item}
       <p class="scrollbar-demo-item">{item}</p>
     {/each}
