@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.8](https://github.com/koory1st/svelement-ui/compare/v0.15.7...v0.15.8) (2023-10-27)
+
+### Bug Fixes
+
+* **docs:** add scrollbar content ([0fcabc7](https://github.com/koory1st/svelement-ui/commit/0fcabc7c96b582cd7bb8e759c19d12dc55a3b180))
+* **docs:** scroll update ([1d90336](https://github.com/koory1st/svelement-ui/commit/1d903362b891483fc08d540d7db624aacf0cc6f0))
+* **docs:** scrollbar content ([f0ea6d0](https://github.com/koory1st/svelement-ui/commit/f0ea6d0c0a7df2121531a4eead48757a98c11f82))
+
 ## [0.15.7](https://github.com/koory1st/svelement-ui/compare/v0.15.6...v0.15.7) (2023-10-25)
 
 ### Bug Fixes
