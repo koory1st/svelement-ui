@@ -38,5 +38,15 @@
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
     "@svelement-ui/util-array-2-style-string": "workspace:^"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koory1st/svelement-ui"
+  },
+  "license": "MIT",
+  "homepage": "https://koory1st.github.io/svelement-ui/",
+  "author": {
+    "name": "koory1st",
+    "email": "32436334@qq.com"
   }
 }

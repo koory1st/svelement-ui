@@ -45,5 +45,15 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koory1st/svelement-ui"
+  },
+  "license": "MIT",
+  "homepage": "https://koory1st.github.io/svelement-ui/",
+  "author": {
+    "name": "koory1st",
+    "email": "32436334@qq.com"
   }
 }
