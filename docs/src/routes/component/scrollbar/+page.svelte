@@ -1,5 +1,5 @@
 <script>
-  import { SvelScrollbar } from '@svelement-ui/all';
+  import { SvelButton, SvelScrollbar } from '@svelement-ui/all';
   import Example from '$lib/example.svelte';
   import { getContext } from 'svelte';
 
@@ -14,6 +14,19 @@
   for (let i = 0; i < 50; i++) {
     list2.push(i);
   }
+
+  let list3 = [0, 1, 2];
+
+  const add = () => {
+    list3.push(list3.length);
+    list3 = list3;
+  };
+  const onDelete = () => {
+    if (list3.length > 0) {
+      list3.pop();
+      list3 = list3;
+    }
+  };
 </script>
 
 <h1>{$langFn('cscrollbar01010')}</h1>
@@ -30,14 +43,14 @@
     list.push(i);
   }
 @@@/script>
-<SvelScrollbar maxHeight={400} always>
+<SvelScrollbar height={400} always>
   {#each list as item}
     <p class="scrollbar-demo-item">{item}</p>
   {/each}
 </SvelScrollbar>
 `}
 >
-  <SvelScrollbar maxHeight={400}>
+  <SvelScrollbar height={400}>
     {#each list as item}
       <p class="scrollbar-demo-item">{item}</p>
     {/each}
@@ -50,24 +63,66 @@
 <Example
   code={`
 <script>
-  let list = [];
-  for (let i = 0; i < 10; i++) {
-    list.push(i);
+  let list2 = [];
+  for (let i = 0; i < 50; i++) {
+    list2.push(i);
   }
 @@@/script>
-<SvelScrollbar maxHeight={400} always>
-  {#each list as item}
-    <p class="scrollbar-demo-item">{item}</p>
-  {/each}
+<SvelScrollbar>
+  <div class="scrollbar-flex-content">
+    {#each list2 as item}
+      <p class="scrollbar-demo-item2">{item}</p>
+    {/each}
+  </div>
 </SvelScrollbar>
 `}
 >
-  <SvelScrollbar maxHeight={400}>
+  <SvelScrollbar>
     <div class="scrollbar-flex-content">
       {#each list2 as item}
         <p class="scrollbar-demo-item2">{item}</p>
       {/each}
     </div>
+  </SvelScrollbar>
+</Example>
+
+<h2>{$langFn('cscrollbar04010')}</h2>
+<p>{$langFn('cscrollbar04020')}</p>
+
+<Example
+  code={`
+<script>
+  let list3 = [];
+  for (let i = 0; i < 3; i++) {
+    list3.push(i);
+  }
+
+  const add = () => {
+    list3.push(list3.length);
+    list3 = list3;
+  };
+  const onDelete = () => {
+    if (list3.length > 0) {
+      list3.pop();
+      list3 = list3;
+    }
+  };
+@@@/script>
+<SvelButton on:click={add}>Add Item</SvelButton>
+<SvelButton on:click={onDelete}>Delete Item</SvelButton>
+<SvelScrollbar maxHeight={400}>
+  {#each list3 as item}
+    <p class="scrollbar-demo-item">{item}</p>
+  {/each}
+</SvelScrollbar>
+`}
+>
+  <SvelButton on:click={add}>Add Item</SvelButton>
+  <SvelButton on:click={onDelete}>Delete Item</SvelButton>
+  <SvelScrollbar maxHeight={400}>
+    {#each list3 as item}
+      <p class="scrollbar-demo-item">{item}</p>
+    {/each}
   </SvelScrollbar>
 </Example>
 
