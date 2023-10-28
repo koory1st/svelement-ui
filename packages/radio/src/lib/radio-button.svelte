@@ -25,11 +25,12 @@
   $: tabindex = isDisabled || (radioGroupFlg && value !== label) ? -1 : 0;
 
   $: classString = a2s([
-    'seu-radio-button',
-    [`seu-radio-button--${size}`, Boolean(size)],
+    'svel-radio-button',
+    [`svel-radio-button--${size}`, Boolean(size)],
     [`is-active`, isChecked],
     [`is-focus`, isFocus],
     [`is-disabled`, isDisabled],
+    $$props.class,
   ]);
 
   function handleKeydown(event) {
@@ -63,7 +64,7 @@
   on:keydown={handleKeydown}
 >
   <input
-    class="seu-radio-button__orig-radio"
+    class="svel-radio-button__original-radio"
     type="radio"
     value={label}
     bind:group={value}
@@ -76,7 +77,7 @@
     on:change={handleChange}
   />
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <span class="seu-radio-button__inner" on:keydown|stopPropagation>
+  <span class="svel-radio-button__inner" on:keydown|stopPropagation>
     <slot />
     {#if !$$slots.default}{label}{/if}
   </span>

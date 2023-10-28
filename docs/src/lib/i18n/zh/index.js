@@ -7,6 +7,7 @@ import link from '$lib/i18n/zh/link.js';
 import scrollbar from '$lib/i18n/zh/scrollbar.js';
 import checkbox from '$lib/i18n/zh/checkbox.js';
 import divider from '$lib/i18n/zh/divider.js';
+import radio from '$lib/i18n/zh/radio.js';
 
 export const langDict = {
   ...util,
@@ -17,6 +18,7 @@ export const langDict = {
   ...link,
   ...scrollbar,
   ...checkbox,
+  ...radio,
   ...divider,
 };
 

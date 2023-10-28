@@ -28,10 +28,11 @@
   $: classString = a2s([
     'svel-radio',
     [`is-bordered`, border],
-    [`svel-radio--${size}`, size && border],
+    [`svel-radio--${size}`, Boolean(size)],
     [`is-checked`, isChecked],
     [`is-focus`, isFocus],
     [`is-disabled`, isDisabled],
+    $$props.class,
   ]);
 
   function handleKeydown(event) {

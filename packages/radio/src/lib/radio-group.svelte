@@ -1,11 +1,12 @@
 <script>
+  import a2s from '@svelement-ui/util-array-2-class-string';
   import SvelRadio from '$lib/radio.svelte';
   import SvelRadioButton from '$lib/radio-button.svelte';
   import { setContext, createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
   /** @type {string | number} */
   export let value;
-  /** @type {string[] | { label: string; value: string | number | boolean; disabled?: boolean }[]} */
+  /** @type {Array<string> | Array<{ label: string; value: string | number | boolean; disabled?: boolean }>} */
   export let options = [];
   export let border = false;
   /** @type {string} */
@@ -21,6 +22,8 @@
   setContext('radioGroup_name', name);
 
   let propList = [];
+
+  $: classString = a2s(['svel-radio-group', $$props.class]);
 
   for (let index = 0; index < options.length; index++) {
     const prop = {};
@@ -52,7 +55,7 @@
   }
 </script>
 
-<div class="svel-radio-group">
+<div class={classString}>
   {#each propList as radio}
     {#if type === 'button'}
       <SvelRadioButton

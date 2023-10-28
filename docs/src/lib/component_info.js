@@ -12,7 +12,10 @@ export const component_group_list = [
   },
   {
     name: 'cutil02020',
-    component_list: [{ key: 'checkbox', name: 'ccheckbox01010' }],
+    component_list: [
+      { key: 'checkbox', name: 'ccheckbox01010' },
+      { key: 'radio', name: 'cradio01010' },
+    ],
   },
   {
     name: 'cutil03020',
