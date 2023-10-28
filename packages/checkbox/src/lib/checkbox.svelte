@@ -65,6 +65,7 @@
     [`is-disabled`, isDisabled],
     [`is-indeterminate`, indeterminate],
     [`is-bordered`, border],
+    $$props.class,
   ]);
 
   function handleKeydown(event) {

@@ -57,6 +57,7 @@
     [`is-checked`, innerChecked],
     [`is-disabled`, isDisabled],
     [`is-focus`, isFocus],
+    $$props.class,
   ]);
 
   function handleKeydown(event) {

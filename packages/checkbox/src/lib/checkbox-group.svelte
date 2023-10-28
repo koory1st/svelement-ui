@@ -1,4 +1,5 @@
 <script>
+  import a2s from '@svelement-ui/util-array-2-class-string';
   import SvelCheckbox from './checkbox.svelte';
   import SvelCheckboxButton from './checkbox-button.svelte';
   import { setContext } from 'svelte';
@@ -27,6 +28,8 @@
   setContext('checkboxGroup_changeEvent', changeEventForChild);
   setContext('checkboxGroup_max', max);
   setContext('checkboxGroup_min', min);
+
+  $: classString = a2s(['svel-checkbox-group', $$props.class]);
 
   let checkboxPropList = [];
 
@@ -60,7 +63,7 @@
   }
 </script>
 
-<div class="svel-checkbox-group">
+<div class={classString}>
   {#each checkboxPropList as prop}
     {#if type === 'button'}
       <SvelCheckboxButton
