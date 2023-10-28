@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.1](https://github.com/koory1st/svelement-ui/compare/v0.16.0...v0.16.1) (2023-10-28)
+
+### Bug Fixes
+
+* **checkbox:** add class ([21b370a](https://github.com/koory1st/svelement-ui/commit/21b370af8f9f6d2f8b0f9c55fd730b319ecb13bc))
+* **docs:** add radio content ([b7b0f4c](https://github.com/koory1st/svelement-ui/commit/b7b0f4c68ea2e4ce4ed7f7411a0f2fa7ac75bb32))
+
 # [0.16.0](https://github.com/koory1st/svelement-ui/compare/v0.15.8...v0.16.0) (2023-10-28)
 
 ### Features
