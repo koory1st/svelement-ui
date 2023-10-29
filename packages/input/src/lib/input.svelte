@@ -142,26 +142,26 @@
   function setCursor(inputRef, selectionInfo) {
     if (inputRef.value == undefined || selectionInfo == undefined) return;
 
-    const { value } = inputRef.value;
+    const inputValue = inputRef.value;
     const { beforeTxt, afterTxt, selectionStart } = selectionInfo;
 
     if (beforeTxt == undefined || afterTxt == undefined || selectionStart == undefined) return;
 
     let startPos = value.length;
 
-    if (value.endsWith(afterTxt)) {
-      startPos = value.length - afterTxt.length;
-    } else if (value.startsWith(beforeTxt)) {
+    if (inputValue.endsWith(afterTxt)) {
+      startPos = inputValue.length - afterTxt.length;
+    } else if (inputValue.startsWith(beforeTxt)) {
       startPos = beforeTxt.length;
     } else {
       const beforeLastChar = beforeTxt[selectionStart - 1];
-      const newIndex = value.indexOf(beforeLastChar, selectionStart - 1);
+      const newIndex = inputValue.indexOf(beforeLastChar, selectionStart - 1);
       if (newIndex !== -1) {
         startPos = newIndex + 1;
       }
     }
 
-    inputRef.value.setSelectionRange(startPos, startPos);
+    inputRef.setSelectionRange(startPos, startPos);
   }
 
   function clear(event) {
