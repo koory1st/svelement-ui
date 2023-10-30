@@ -1,6 +1,6 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
-  import { tick } from 'svelte';
+  import { tick, onMount } from 'svelte';
   import { SvelIcon, CircleClose } from '@svelement-ui/icon';
   /** @type {'text' | 'textarea' | 'password' | 'button' | 'checkbox' | 'file' | 'number' | 'radio'} */
   export let type = 'text';
@@ -64,18 +64,21 @@
 
   $: nativeInputValue = value === null ? '' : String(value);
   $: setNativeInputValue(nativeInputValue);
+  $: type &&
+    (async () => {
+      await tick();
+      setNativeInputValue();
+    })();
 
-  function getRefValue() {
+  const setNativeInputValue = () => {
     if (!inputRef) {
       return;
     }
-    return inputRef.value;
-  }
-  const setNativeInputValue = (nativeInputValue) => {
-    let input = getRefValue();
-    const formatterValue = formatter ? formatter(nativeInputValue) : nativeInputValue;
-    if (!input || input === formatterValue) return;
-    nativeInputValue = formatterValue;
+    let inputValue = inputRef.value;
+    const formatterValue = formatter ? formatter(value) : value;
+
+    if (!formatterValue || inputValue === formatterValue) return;
+    inputRef.value = formatterValue;
   };
 
   let inputDisabled;
@@ -98,25 +101,23 @@
   let isComposing = false;
   async function handleInput(event) {
     let selectionInfo = recordCursor(inputRef);
-    let targetValue = event.target.value;
+    value = event.target.value;
     if (formatter) {
-      targetValue = parser ? parser(value) : targetValue;
+      value = parser ? parser(value) : value;
     }
 
     if (isComposing) {
       return;
     }
 
-    if (targetValue === nativeInputValue) {
+    if (value === nativeInputValue) {
       setNativeInputValue(nativeInputValue);
-      value = nativeInputValue;
       return;
     }
 
     await tick();
     // todo
     setNativeInputValue(nativeInputValue);
-    value = nativeInputValue;
     setCursor(inputRef, selectionInfo);
   }
 
@@ -163,6 +164,14 @@
 
     inputRef.setSelectionRange(startPos, startPos);
   }
+
+  onMount(() => {
+    if (!formatter && parser) {
+      console.debug('ElInput', 'If you set the parser, you also need to set the formatter.');
+    }
+    setNativeInputValue();
+    // todo
+  });
 
   function clear(event) {
     nativeInputValue = '';
