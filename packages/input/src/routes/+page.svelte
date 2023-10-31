@@ -17,4 +17,5 @@
   parser={(value) => value.replace(/\$\s?|(,*)/g, '')}
 />
 
+<SvelInput bind:value={input} placeholder="Please input" type="password" />
 {input}

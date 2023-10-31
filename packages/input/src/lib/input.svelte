@@ -61,6 +61,7 @@
   let inputRef;
 
   let hovering = false;
+  let passwordVisible = false;
 
   $: nativeInputValue = value === null ? '' : String(value);
   $: setNativeInputValue(nativeInputValue);
@@ -196,19 +197,37 @@
 
   {#if type !== 'textarea'}
     <div class="svel-input__wrapper" bind:this={wrapRef} tabindex="-1">
-      <input
-        class="svel-input__inner"
-        bind:value={nativeInputValue}
-        bind:this={inputRef}
-        {autocomplete}
-        {readonly}
-        {parser}
-        {tabindex}
-        aria-label={label}
-        {placeholder}
-        disabled={inputDisabled}
-        on:input={handleInput}
-      />
+      {#if type === 'text' || (type === 'text' && showPassword && passwordVisible)}
+        <input
+          class="svel-input__inner"
+          bind:value={nativeInputValue}
+          bind:this={inputRef}
+          type="text"
+          {autocomplete}
+          {readonly}
+          {parser}
+          {tabindex}
+          aria-label={label}
+          {placeholder}
+          disabled={inputDisabled}
+          on:input={handleInput}
+        />
+      {:else}
+        <input
+          class="svel-input__inner"
+          bind:value={nativeInputValue}
+          bind:this={inputRef}
+          type="password"
+          {autocomplete}
+          {readonly}
+          {parser}
+          {tabindex}
+          aria-label={label}
+          {placeholder}
+          disabled={inputDisabled}
+          on:input={handleInput}
+        />
+      {/if}
       {#if suffixVisible}
         <span class="svel-input__suffix">
           <span class="svel-input__suffix-inner">
