@@ -1,7 +1,7 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { tick, onMount } from 'svelte';
-  import { SvelIcon, CircleClose } from '@svelement-ui/icon';
+  import { SvelIcon, CircleClose, View, Hide } from '@svelement-ui/icon';
   /** @type {'text' | 'textarea' | 'password' | 'button' | 'checkbox' | 'file' | 'number' | 'radio'} */
   export let type = 'text';
   /** @type {string | number} */
@@ -88,14 +88,23 @@
     inputDisabled = disabled;
   }
 
-  let showClear;
-  $: {
-    // todo
-    showClear = clearable && !inputDisabled && !readonly && !!nativeInputValue && hovering;
-  }
+  // todo
+  $: showClear = clearable && !inputDisabled && !readonly && !!nativeInputValue && hovering;
 
   // todo
-  $: suffixVisible = showClear;
+  $: suffixVisible = !!$$slots.suffix || showClear || showPassword;
+  // todo
+  $: showPwdVisible = showPassword && !readonly && !!nativeInputValue;
+  function handlePasswordVisible() {
+    passwordVisible = !passwordVisible;
+  }
+
+  async function focus() {
+    await tick();
+    if (inputRef) {
+      inputRef.focus();
+    }
+  }
 
   $: containerClass = a2s(['svel-input', ['is-disabled', inputDisabled], $$props.class]);
 
@@ -197,7 +206,7 @@
 
   {#if type !== 'textarea'}
     <div class="svel-input__wrapper" bind:this={wrapRef} tabindex="-1">
-      {#if type === 'text' || (type === 'text' && showPassword && passwordVisible)}
+      {#if type === 'text' || (showPassword && passwordVisible)}
         <input
           class="svel-input__inner"
           bind:value={nativeInputValue}
@@ -234,6 +243,18 @@
             {#if showClear}
               <SvelIcon class="svel-input__clear" on:click={clear}>
                 <CircleClose />
+              </SvelIcon>
+            {/if}
+            {#if showPwdVisible}
+              <SvelIcon
+                class="svel-input__icon svel-input__password"
+                on:click={handlePasswordVisible}
+              >
+                {#if passwordVisible}
+                  <Hide />
+                {:else}
+                  <View />
+                {/if}
               </SvelIcon>
             {/if}
           </span>
