@@ -5,7 +5,7 @@
   let input = '1';
 </script>
 
-<SvelInput bind:value={input} placeholder="Please input" />
+<!-- <SvelInput bind:value={input} placeholder="Please input" />
 
 <SvelInput bind:value={input} placeholder="Please input" disabled />
 
@@ -30,5 +30,7 @@
   <SvelIcon slot="suffix">
     <Calendar />
   </SvelIcon>
-</SvelInput>
+</SvelInput> -->
+
+<SvelInput bind:value={input} placeholder="Please input" type="textarea" autosize />
 {input}
