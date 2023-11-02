@@ -206,6 +206,13 @@
 
   {#if type !== 'textarea'}
     <div class="svel-input__wrapper" bind:this={wrapRef} tabindex="-1">
+      {#if $$slots.prefix}
+        <span class="svel-input__prefix">
+          <span class="svel-input__prefix-inner">
+            <slot name="prefix" />
+          </span>
+        </span>
+      {/if}
       {#if type === 'text' || (showPassword && passwordVisible)}
         <input
           class="svel-input__inner"
@@ -240,6 +247,7 @@
       {#if suffixVisible}
         <span class="svel-input__suffix">
           <span class="svel-input__suffix-inner">
+            <slot name="suffix" />
             {#if showClear}
               <SvelIcon class="svel-input__clear" on:click={clear}>
                 <CircleClose />
