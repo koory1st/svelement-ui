@@ -1,5 +1,6 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
+  import a2st from '@svelement-ui/util-array-2-style-string';
   import { tick, onMount } from 'svelte';
   import { SvelIcon, CircleClose, View, Hide } from '@svelement-ui/icon';
   /** @type {'text' | 'textarea' | 'password' | 'button' | 'checkbox' | 'file' | 'number' | 'radio'} */
@@ -59,6 +60,7 @@
 
   let wrapRef;
   let inputRef;
+  let textAreaRef;
 
   let hovering = false;
   let passwordVisible = false;
@@ -98,6 +100,8 @@
   function handlePasswordVisible() {
     passwordVisible = !passwordVisible;
   }
+
+  $: textareaStyle = a2st([inputStyle, ['resize', resize]]);
 
   async function focus() {
     await tick();
@@ -204,6 +208,7 @@
     </div>
   {/if}
 
+  <!-- input -->
   {#if type !== 'textarea'}
     <div class="svel-input__wrapper" bind:this={wrapRef} tabindex="-1">
       {#if $$slots.prefix}
@@ -269,5 +274,21 @@
         </span>
       {/if}
     </div>
+    <!-- textarea -->
+  {:else}
+    <textarea
+      bind:this={textAreaRef}
+      class="svel-textarea__inner"
+      bind:value={nativeInputValue}
+      {tabindex}
+      disabled={inputDisabled}
+      {readonly}
+      {autocomplete}
+      aria-label={label}
+      {placeholder}
+      {rows}
+      style={textareaStyle}
+      on:input={handleInput}
+    />
   {/if}
 </div>
