@@ -121,6 +121,7 @@
     ['svel-input-group', $$slots.prepend || $$slots.append],
     ['svel-input-group--prepend', $$slots.prepend],
     ['svel-input-group--append', $$slots.append],
+    [`svel-input--${size}`, Boolean(size)],
   ]);
 
   let isComposing = false;

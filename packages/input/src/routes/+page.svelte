@@ -51,3 +51,6 @@
     <Search />
   </SvelIcon>
 </SvelInput>
+
+<SvelInput bind:value={input} placeholder="Please input" size="large" />
+<SvelInput bind:value={input} placeholder="Please input" size="small" />
