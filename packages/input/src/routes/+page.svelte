@@ -32,5 +32,22 @@
   </SvelIcon>
 </SvelInput> -->
 
-<SvelInput bind:value={input} placeholder="Please input" type="textarea" autosize />
+<!-- <SvelInput bind:value={input} placeholder="Please input" type="textarea" autosize /> -->
 {input}
+
+<SvelInput bind:value={input} placeholder="Please input">
+  <svelte:fragment slot="prepend">Http://</svelte:fragment>
+</SvelInput>
+
+<SvelInput bind:value={input} placeholder="Please input">
+  <svelte:fragment slot="append">.com</svelte:fragment>
+</SvelInput>
+
+<SvelInput bind:value={input} placeholder="Please input">
+  <SvelIcon slot="prepend">
+    <Search />
+  </SvelIcon>
+  <SvelIcon slot="append">
+    <Search />
+  </SvelIcon>
+</SvelInput>

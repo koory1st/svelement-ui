@@ -114,7 +114,14 @@
     }
   }
 
-  $: containerClass = a2s(['svel-input', ['is-disabled', inputDisabled], $$props.class]);
+  $: containerClass = a2s([
+    'svel-input',
+    ['is-disabled', inputDisabled],
+    $$props.class,
+    ['svel-input-group', $$slots.prepend || $$slots.append],
+    ['svel-input-group--prepend', $$slots.prepend],
+    ['svel-input-group--append', $$slots.append],
+  ]);
 
   let isComposing = false;
   async function handleInput(event) {
@@ -407,6 +414,12 @@
         </span>
       {/if}
     </div>
+
+    {#if $$slots.append}
+      <div class="svel-input-group__append">
+        <slot name="append" />
+      </div>
+    {/if}
     <!-- textarea -->
   {:else}
     <textarea
