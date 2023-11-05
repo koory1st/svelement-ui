@@ -5,7 +5,7 @@
   let input = '1';
 </script>
 
-<!-- <SvelInput bind:value={input} placeholder="Please input" />
+<SvelInput bind:value={input} placeholder="Please input" />
 
 <SvelInput bind:value={input} placeholder="Please input" disabled />
 
@@ -32,7 +32,7 @@
   </SvelIcon>
 </SvelInput> -->
 
-<!-- <SvelInput bind:value={input} placeholder="Please input" type="textarea" autosize /> -->
+<SvelInput bind:value={input} placeholder="Please input" type="textarea" autosize />
 {input}
 
 <SvelInput bind:value={input} placeholder="Please input">
@@ -67,6 +67,6 @@
   placeholder="Please input"
   size="small"
   showWordLimit
-  maxlength={10}
-  resize="horizontal"
+  resize="vertical"
+  autosize
 />

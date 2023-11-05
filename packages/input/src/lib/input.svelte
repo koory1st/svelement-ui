@@ -9,8 +9,8 @@
   export let value;
   /** @type {string | number} */
   export let maxlength;
-  /** @type {number} */
-  export let minlength;
+  // /** @type {number} */
+  // export let minlength;
   /** @type {boolean} */
   export let showWordLimit = false;
   /** @type {string} */
@@ -34,27 +34,27 @@
   /** @type {string} */
   export let autocomplete = 'off';
   /** @type {string} */
-  export let name = 'off';
+  export let name = null;
   /** @type {boolean} */
   export let readonly = false;
-  /** @type {number} */
-  export let max = null;
-  /** @type {number} */
-  export let min = null;
-  /** @type {number} */
-  export let step = null;
+  // /** @type {number} */
+  // export let max = null;
+  // /** @type {number} */
+  // export let min = null;
+  // /** @type {number} */
+  // export let step = null;
   /** @type {'none' | 'both' | 'horizontal' | 'vertical'} */
   export let resize = 'none';
-  /** @type {boolean} */
-  export let autofocus = false;
-  /** @type {string} */
-  export let form = null;
+  // /** @type {boolean} */
+  // export let autofocus = false;
+  // /** @type {string} */
+  // export let form = null;
   /** @type {string} */
   export let label = null;
   /** @type {string | number} */
   export let tabindex = '0';
-  /** @type {boolean} */
-  export let validateEvent = true;
+  // /** @type {boolean} */
+  // export let validateEvent = true;
   /** @type {string | Object} */
   export let inputStyle = {};
 
@@ -98,6 +98,7 @@
   $: showPwdVisible = showPassword && !readonly && !!nativeInputValue;
   function handlePasswordVisible() {
     passwordVisible = !passwordVisible;
+    focus();
   }
 
   let textareaCalcStyle = '';
@@ -201,15 +202,15 @@
     textareaCalcStyle = resizeTextarea();
   });
 
-  function clear(event) {
+  function clear() {
     nativeInputValue = '';
     value = '';
   }
 
-  function handleMouseEnter(event) {
+  function handleMouseEnter() {
     hovering = true;
   }
-  function handleMouseLeave(event) {
+  function handleMouseLeave() {
     hovering = false;
   }
 
@@ -383,6 +384,7 @@
           {placeholder}
           disabled={inputDisabled}
           {maxlength}
+          {name}
           on:input={handleInput}
         />
       {:else}
@@ -397,6 +399,7 @@
           {tabindex}
           aria-label={label}
           {placeholder}
+          {name}
           disabled={inputDisabled}
           on:input={handleInput}
         />
@@ -425,7 +428,7 @@
 
             {#if isWordLimitVisible}
               <span class="svel-input__count">
-                <span :class="svel-input__count-inner">
+                <span class="svel-input__count-inner">
                   {textLength} / {maxlength}
                 </span>
               </span>
@@ -455,6 +458,7 @@
       {rows}
       style={textareaStyle}
       {maxlength}
+      {name}
       on:input={handleInput}
     />
     {#if isWordLimitVisible}
