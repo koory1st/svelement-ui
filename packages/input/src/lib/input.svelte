@@ -93,8 +93,7 @@
   // todo
   $: showClear = clearable && !inputDisabled && !readonly && !!nativeInputValue && hovering;
 
-  // todo
-  $: suffixVisible = !!$$slots.suffix || showClear || showPassword;
+  $: suffixVisible = !!$$slots.suffix || showClear || showPassword || isWordLimitVisible;
   // todo
   $: showPwdVisible = showPassword && !readonly && !!nativeInputValue;
   function handlePasswordVisible() {
@@ -115,13 +114,14 @@
   }
 
   $: containerClass = a2s([
-    'svel-input',
+    `svel-${type === 'textarea' ? 'textarea' : 'input'}`,
     ['is-disabled', inputDisabled],
     $$props.class,
     ['svel-input-group', $$slots.prepend || $$slots.append],
     ['svel-input-group--prepend', $$slots.prepend],
     ['svel-input-group--append', $$slots.append],
     [`svel-input--${size}`, Boolean(size)],
+    [`svel-input-exceed`, inputExceed],
   ]);
 
   let isComposing = false;
@@ -339,6 +339,16 @@
   function isNumber(val) {
     return typeof val === 'number';
   }
+
+  $: isWordLimitVisible =
+    showWordLimit &&
+    !!maxlength &&
+    (type === 'text' || type === 'textarea') &&
+    !inputDisabled &&
+    !readonly &&
+    !showPassword;
+  $: textLength = nativeInputValue.length;
+  $: inputExceed = !!isWordLimitVisible && textLength > Number(maxlength);
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -372,6 +382,7 @@
           aria-label={label}
           {placeholder}
           disabled={inputDisabled}
+          {maxlength}
           on:input={handleInput}
         />
       {:else}
@@ -411,6 +422,14 @@
                 {/if}
               </SvelIcon>
             {/if}
+
+            {#if isWordLimitVisible}
+              <span class="svel-input__count">
+                <span :class="svel-input__count-inner">
+                  {textLength} / {maxlength}
+                </span>
+              </span>
+            {/if}
           </span>
         </span>
       {/if}
@@ -435,7 +454,13 @@
       {placeholder}
       {rows}
       style={textareaStyle}
+      {maxlength}
       on:input={handleInput}
     />
+    {#if isWordLimitVisible}
+      <span class="svel-input__count">
+        {textLength} / {maxlength}
+      </span>
+    {/if}
   {/if}
 </div>

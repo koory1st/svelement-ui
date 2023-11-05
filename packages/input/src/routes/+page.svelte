@@ -53,4 +53,20 @@
 </SvelInput>
 
 <SvelInput bind:value={input} placeholder="Please input" size="large" />
-<SvelInput bind:value={input} placeholder="Please input" size="small" />
+<SvelInput
+  bind:value={input}
+  placeholder="Please input"
+  size="small"
+  showWordLimit
+  maxlength={10}
+/>
+
+<SvelInput
+  type="textarea"
+  bind:value={input}
+  placeholder="Please input"
+  size="small"
+  showWordLimit
+  maxlength={10}
+  resize="horizontal"
+/>
