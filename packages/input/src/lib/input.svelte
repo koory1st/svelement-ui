@@ -357,6 +357,9 @@
   function handleBlur(e) {
     dispatch('blur', e);
   }
+  function handleFocus(e) {
+    dispatch('focus', e);
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -394,6 +397,7 @@
           {name}
           on:input={handleInput}
           on:blur={handleBlur}
+          on:focus={handleFocus}
         />
       {:else}
         <input
@@ -411,6 +415,7 @@
           disabled={inputDisabled}
           on:input={handleInput}
           on:blur={handleBlur}
+          on:focus={handleFocus}
         />
       {/if}
       {#if suffixVisible}
@@ -470,6 +475,7 @@
       {name}
       on:input={handleInput}
       on:blur={handleBlur}
+      on:focus={handleFocus}
     />
     {#if isWordLimitVisible}
       <span class="svel-input__count">
