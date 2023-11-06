@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.2](https://github.com/koory1st/svelement-ui/compare/v0.17.1...v0.17.2) (2023-11-06)
+
+### Bug Fixes
+
+* **input:** default props value ([ba37390](https://github.com/koory1st/svelement-ui/commit/ba37390beb31ae1953ad68192e8433fd68df6005))
+
 # [0.17.0](https://github.com/koory1st/svelement-ui/compare/v0.16.1...v0.17.0) (2023-11-05)
 
 ### Bug Fixes
