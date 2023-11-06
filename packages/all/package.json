@@ -17,7 +17,8 @@
     "layout",
     "link",
     "radio",
-    "scrollbar"
+    "scrollbar",
+    "input"
   ],
   "exports": {
     ".": {
@@ -36,6 +37,7 @@
     "@svelement-ui/code": "workspace:^",
     "@svelement-ui/container": "workspace:^",
     "@svelement-ui/divider": "workspace:^",
+    "@svelement-ui/input": "workspace:^",
     "@svelement-ui/layout": "workspace:^",
     "@svelement-ui/link": "workspace:^",
     "@svelement-ui/radio": "workspace:^",

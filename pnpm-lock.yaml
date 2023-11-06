@@ -131,6 +131,9 @@ importers:
       '@svelement-ui/divider':
         specifier: workspace:^
         version: link:../divider
+      '@svelement-ui/input':
+        specifier: workspace:^
+        version: link:../input
       '@svelement-ui/layout':
         specifier: workspace:^
         version: link:../layout

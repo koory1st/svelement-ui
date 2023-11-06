@@ -13,6 +13,7 @@ export const component_group_list = [
   {
     name: 'cutil02020',
     component_list: [
+      { key: 'input', name: 'cinput01010' },
       { key: 'checkbox', name: 'ccheckbox01010' },
       { key: 'radio', name: 'cradio01010' },
     ],
