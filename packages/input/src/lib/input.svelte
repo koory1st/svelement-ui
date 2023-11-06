@@ -14,13 +14,13 @@
   /** @type {boolean} */
   export let showWordLimit = false;
   /** @type {string} */
-  export let placeholder = false;
+  export let placeholder = null;
   /** @type {boolean} */
   export let clearable = false;
   /** @type {Function} */
-  export let formatter = false;
+  export let formatter = null;
   /** @type {Function} */
-  export let parser = false;
+  export let parser = null;
   /** @type {boolean} */
   export let showPassword = false;
   /** @type {boolean} */
