@@ -94,11 +94,13 @@
   }
 
   // todo
-  $: showClear = clearable && !inputDisabled && !readonly && !!nativeInputValue && hovering;
+  $: showClear =
+    clearable && !inputDisabled && !readonly && !!nativeInputValue && hovering && isFocused;
 
   $: suffixVisible = !!$$slots.suffix || showClear || showPassword || isWordLimitVisible;
   // todo
-  $: showPwdVisible = showPassword && !readonly && !!nativeInputValue;
+  $: showPwdVisible =
+    showPassword && !readonly && !!nativeInputValue && (!!nativeInputValue || isFocused);
   function handlePasswordVisible() {
     passwordVisible = !passwordVisible;
     focus();
@@ -124,9 +126,11 @@
     ['svel-input-group', $$slots.prepend || $$slots.append],
     ['svel-input-group--prepend', $$slots.prepend],
     ['svel-input-group--append', $$slots.append],
-    [`svel-input--${size}`, Boolean(size)],
+    [`svel-input--${size}`, size !== 'default'],
     [`svel-input-exceed`, inputExceed],
   ]);
+
+  $: wrapperClass = a2s([`svel-input__wrapper`, ['is-focus', isFocused]]);
 
   let isComposing = false;
   async function handleInput(event) {
@@ -355,10 +359,16 @@
   $: inputExceed = !!isWordLimitVisible && textLength > Number(maxlength);
 
   function handleBlur(e) {
+    isFocused = false;
     dispatch('blur', e);
   }
+  let isFocused = false;
   function handleFocus(e) {
+    isFocused = true;
     dispatch('focus', e);
+  }
+  function handleChange(e) {
+    dispatch('change', e);
   }
 </script>
 
@@ -372,7 +382,7 @@
 
   <!-- input -->
   {#if type !== 'textarea'}
-    <div class="svel-input__wrapper" bind:this={wrapRef} tabindex="-1">
+    <div class={wrapperClass} bind:this={wrapRef} tabindex="-1">
       {#if $$slots.prefix}
         <span class="svel-input__prefix">
           <span class="svel-input__prefix-inner">
@@ -398,6 +408,7 @@
           on:input={handleInput}
           on:blur={handleBlur}
           on:focus={handleFocus}
+          on:change={handleChange}
         />
       {:else}
         <input
@@ -416,6 +427,7 @@
           on:input={handleInput}
           on:blur={handleBlur}
           on:focus={handleFocus}
+          on:change={handleChange}
         />
       {/if}
       {#if suffixVisible}
@@ -476,6 +488,7 @@
       on:input={handleInput}
       on:blur={handleBlur}
       on:focus={handleFocus}
+      on:change={handleChange}
     />
     {#if isWordLimitVisible}
       <span class="svel-input__count">
