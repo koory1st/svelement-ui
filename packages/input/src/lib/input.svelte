@@ -3,6 +3,9 @@
   import a2st from '@svelement-ui/util-array-2-style-string';
   import { tick, onMount } from 'svelte';
   import { SvelIcon, CircleClose, View, Hide } from '@svelement-ui/icon';
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
+
   /** @type {'text' | 'textarea' | 'password' | 'button' | 'checkbox' | 'file' | 'number' | 'radio'} */
   export let type = 'text';
   /** @type {string | number} */
@@ -350,6 +353,10 @@
     !showPassword;
   $: textLength = nativeInputValue.length;
   $: inputExceed = !!isWordLimitVisible && textLength > Number(maxlength);
+
+  function handleBlur(e) {
+    dispatch('blur', e);
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -386,6 +393,7 @@
           {maxlength}
           {name}
           on:input={handleInput}
+          on:blur={handleBlur}
         />
       {:else}
         <input
@@ -402,6 +410,7 @@
           {name}
           disabled={inputDisabled}
           on:input={handleInput}
+          on:blur={handleBlur}
         />
       {/if}
       {#if suffixVisible}
@@ -460,6 +469,7 @@
       {maxlength}
       {name}
       on:input={handleInput}
+      on:blur={handleBlur}
     />
     {#if isWordLimitVisible}
       <span class="svel-input__count">
