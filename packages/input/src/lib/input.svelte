@@ -209,9 +209,12 @@
     textareaCalcStyle = resizeTextarea();
   });
 
-  function clear() {
+  function handleClear() {
     nativeInputValue = '';
     value = '';
+    dispatch('change', '');
+    dispatch('clear', '');
+    dispatch('input', '');
   }
 
   function handleMouseEnter() {
@@ -435,7 +438,7 @@
           <span class="svel-input__suffix-inner">
             <slot name="suffix" />
             {#if showClear}
-              <SvelIcon class="svel-input__clear" on:click={clear}>
+              <SvelIcon class="svel-input__clear" on:click={handleClear}>
                 <CircleClose />
               </SvelIcon>
             {/if}
