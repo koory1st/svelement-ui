@@ -217,11 +217,16 @@
     dispatch('input', '');
   }
 
-  function handleMouseEnter() {
+  function handleMouseEnter(e) {
     hovering = true;
+    dispatch('mouseenter', e);
   }
-  function handleMouseLeave() {
+  function handleMouseLeave(e) {
     hovering = false;
+    dispatch('mouseleave', e);
+  }
+  function handleKeydown(e) {
+    dispatch('keydown', e);
   }
 
   $: {
@@ -412,6 +417,7 @@
           on:blur={handleBlur}
           on:focus={handleFocus}
           on:change={handleChange}
+          on:keydown={handleKeydown}
         />
       {:else}
         <input
@@ -431,6 +437,7 @@
           on:blur={handleBlur}
           on:focus={handleFocus}
           on:change={handleChange}
+          on:keydown={handleKeydown}
         />
       {/if}
       {#if suffixVisible}
@@ -492,6 +499,7 @@
       on:blur={handleBlur}
       on:focus={handleFocus}
       on:change={handleChange}
+      on:keydown={handleKeydown}
     />
     {#if isWordLimitVisible}
       <span class="svel-input__count">
