@@ -68,6 +68,7 @@
   let hovering = false;
   let passwordVisible = false;
 
+  // let nativeInputValue = '';
   $: nativeInputValue = value === null ? '' : String(value);
   $: setNativeInputValue(nativeInputValue);
   $: type &&
@@ -144,10 +145,7 @@
       return;
     }
 
-    if (value === nativeInputValue) {
-      setNativeInputValue(nativeInputValue);
-      return;
-    }
+    dispatch('input', value);
 
     await tick();
     // todo
@@ -175,7 +173,7 @@
   }
 
   function setCursor(inputRef, selectionInfo) {
-    if (inputRef.value == undefined || selectionInfo == undefined) return;
+    if (inputRef == undefined || selectionInfo == undefined) return;
 
     const inputValue = inputRef.value;
     const { beforeTxt, afterTxt, selectionStart } = selectionInfo;
@@ -228,7 +226,24 @@
   function handleKeydown(e) {
     dispatch('keydown', e);
   }
-
+  function handleCompositionStart(e) {
+    dispatch('compositionstart', e);
+    isComposing = true;
+  }
+  function handleCompositionUpdate(e) {
+    dispatch('compositionupdate', e);
+    const text = e.target.value;
+    const lastCharacter = text[text.length - 1] || '';
+    isComposing = !isKorean(lastCharacter);
+  }
+  function handleCompositionEnd(e) {
+    dispatch('compositionend', e);
+    if (isComposing) {
+      isComposing = false;
+      handleInput(e);
+    }
+  }
+  const isKorean = (text) => /([\uAC00-\uD7AF\u3130-\u318F])+/gi.test(text);
   $: {
     value;
     textareaCalcStyle = resizeTextarea();
@@ -418,6 +433,9 @@
           on:focus={handleFocus}
           on:change={handleChange}
           on:keydown={handleKeydown}
+          on:compositionstart={handleCompositionStart}
+          on:compositionupdate={handleCompositionUpdate}
+          on:compositionend={handleCompositionEnd}
         />
       {:else}
         <input
