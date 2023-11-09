@@ -12,6 +12,27 @@
 <p>{$langFn('cinput01020')}</p>
 
 <h2>{$langFn('cinput02010')}</h2>
-<Example>
-  <SvelInput bind:value={input1} />
+<Example
+  code={`
+<script>
+  let input1 = '';
+@@@/script>
+<SvelInput bind:value={input1} placeholder="Please input" />
+`}
+>
+  <SvelInput bind:value={input1} placeholder="Please input" />
+</Example>
+
+<h2>{$langFn('cinput03010')}</h2>
+<p>{$langFn('cinput03020')}</p>
+
+<Example
+  code={`
+<script>
+  let input1 = '';
+@@@/script>
+<SvelInput bind:value={input1} placeholder="Please input" disabled />
+`}
+>
+  <SvelInput bind:value={input1} placeholder="Please input" disabled />
 </Example>

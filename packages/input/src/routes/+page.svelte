@@ -3,10 +3,28 @@
   import { SvelIcon, Calendar, Search } from '@svelement-ui/icon';
 
   let input = '1';
+  function test(e) {
+    console.log('🚀 ~ file: +page.svelte:7 ~ test ~ e:', e);
+  }
 </script>
 
-<SvelInput bind:value={input} placeholder="Please input" />
-
+<SvelInput bind:value={input} placeholder="Please input" on:input={test} clearable />
+<SvelInput
+  bind:value={input}
+  placeholder="Please input"
+  on:input={test}
+  type="password"
+  clearable
+/>
+<SvelInput
+  bind:value={input}
+  placeholder="Please input"
+  type="textarea"
+  autosize
+  on:input={test}
+  clearable
+/>
+<!--
 <SvelInput bind:value={input} placeholder="Please input" disabled />
 
 <SvelInput bind:value={input} placeholder="Please input" clearable />
@@ -30,7 +48,7 @@
   <SvelIcon slot="suffix">
     <Calendar />
   </SvelIcon>
-</SvelInput> -->
+</SvelInput>
 
 <SvelInput bind:value={input} placeholder="Please input" type="textarea" autosize />
 {input}
@@ -69,4 +87,4 @@
   showWordLimit
   resize="vertical"
   autosize
-/>
+/> -->
