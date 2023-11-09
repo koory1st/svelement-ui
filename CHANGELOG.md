@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.5](https://github.com/koory1st/svelement-ui/compare/v0.17.4...v0.17.5) (2023-11-08)
+
+### Bug Fixes
+
+* **input:** add composing ([354bb1e](https://github.com/koory1st/svelement-ui/commit/354bb1e67523ea28adf873bb80fe1fdcba1294f1))
+
 ## [0.17.4](https://github.com/koory1st/svelement-ui/compare/v0.17.3...v0.17.4) (2023-11-07)
 
 ### Bug Fixes
