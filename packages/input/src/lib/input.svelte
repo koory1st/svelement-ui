@@ -69,7 +69,7 @@
   let passwordVisible = false;
 
   // let nativeInputValue = '';
-  $: nativeInputValue = value === null ? '' : String(value);
+  $: nativeInputValue = value === null || value === undefined ? '' : String(value);
   $: setNativeInputValue(nativeInputValue);
   $: type &&
     (async () => {
@@ -78,11 +78,13 @@
     })();
 
   const setNativeInputValue = () => {
+    console.log("🚀 ~ file: input.svelte:86 ~ setNativeInputValue ~33333")
     if (!inputRef) {
       return;
     }
     let inputValue = inputRef.value;
-    const formatterValue = formatter ? formatter(value) : value;
+    const formatterValue = formatter ? formatter(inputValue) : inputValue;
+    console.log("🚀 ~ file: input.svelte:86 ~ setNativeInputValue ~ formatterValue:", formatterValue)
 
     if (!formatterValue || inputValue === formatterValue) return;
     inputRef.value = formatterValue;
@@ -136,16 +138,17 @@
   let isComposing = false;
   async function handleInput(event) {
     let selectionInfo = recordCursor(inputRef);
-    value = event.target.value;
+    let eventValue = event.target.value;
     if (formatter) {
-      value = parser ? parser(value) : value;
+      eventValue = parser ? parser(eventValue) : eventValue;
     }
 
     if (isComposing) {
       return;
     }
 
-    dispatch('input', value);
+    value = eventValue;
+    dispatch('input', eventValue);
 
     await tick();
     // todo
@@ -416,7 +419,6 @@
       {#if type === 'text' || (showPassword && passwordVisible)}
         <input
           class="svel-input__inner"
-          bind:value={nativeInputValue}
           bind:this={inputRef}
           type="text"
           {autocomplete}
@@ -440,7 +442,6 @@
       {:else}
         <input
           class="svel-input__inner"
-          bind:value={nativeInputValue}
           bind:this={inputRef}
           type="password"
           {autocomplete}
@@ -502,7 +503,6 @@
     <textarea
       bind:this={textAreaRef}
       class="svel-textarea__inner"
-      bind:value={nativeInputValue}
       {tabindex}
       disabled={inputDisabled}
       {readonly}

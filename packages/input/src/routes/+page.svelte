@@ -7,7 +7,7 @@
     console.log('🚀 ~ file: +page.svelte:7 ~ test ~ e:', e);
   }
 </script>
-
+{input}
 <SvelInput bind:value={input} placeholder="Please input" on:input={test} clearable />
 <SvelInput
   bind:value={input}
