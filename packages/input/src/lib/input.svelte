@@ -64,11 +64,12 @@
   let wrapRef;
   let inputRef;
   let textAreaRef;
+  $: _ref = inputRef || textAreaRef;
 
   let hovering = false;
   let passwordVisible = false;
 
-  // let nativeInputValue = '';
+  let nativeInputValue = '';
   $: nativeInputValue = value === null || value === undefined ? '' : String(value);
   $: setNativeInputValue(nativeInputValue);
   $: type &&
@@ -78,16 +79,14 @@
     })();
 
   const setNativeInputValue = () => {
-    console.log("🚀 ~ file: input.svelte:86 ~ setNativeInputValue ~33333")
-    if (!inputRef) {
+    if (!_ref) {
       return;
     }
-    let inputValue = inputRef.value;
-    const formatterValue = formatter ? formatter(inputValue) : inputValue;
-    console.log("🚀 ~ file: input.svelte:86 ~ setNativeInputValue ~ formatterValue:", formatterValue)
+    let inputValue = _ref.value;
+    const formatterValue = formatter ? formatter(nativeInputValue) : nativeInputValue;
 
-    if (!formatterValue || inputValue === formatterValue) return;
-    inputRef.value = formatterValue;
+    if (inputValue === formatterValue) return;
+    _ref.value = formatterValue;
   };
 
   let inputDisabled;
@@ -117,8 +116,8 @@
 
   async function focus() {
     await tick();
-    if (inputRef) {
-      inputRef.focus();
+    if (_ref) {
+      _ref.focus();
     }
   }
 
@@ -457,6 +456,9 @@
           on:focus={handleFocus}
           on:change={handleChange}
           on:keydown={handleKeydown}
+          on:compositionstart={handleCompositionStart}
+          on:compositionupdate={handleCompositionUpdate}
+          on:compositionend={handleCompositionEnd}
         />
       {/if}
       {#if suffixVisible}
@@ -518,6 +520,9 @@
       on:focus={handleFocus}
       on:change={handleChange}
       on:keydown={handleKeydown}
+      on:compositionstart={handleCompositionStart}
+      on:compositionupdate={handleCompositionUpdate}
+      on:compositionend={handleCompositionEnd}
     />
     {#if isWordLimitVisible}
       <span class="svel-input__count">
