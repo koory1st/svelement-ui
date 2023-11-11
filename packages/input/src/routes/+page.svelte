@@ -7,6 +7,7 @@
     console.log('🚀 ~ file: +page.svelte:7 ~ test ~ e:', e);
   }
 </script>
+
 {input}
 <SvelInput bind:value={input} placeholder="Please input" on:input={test} clearable />
 <SvelInput
@@ -15,6 +16,7 @@
   on:input={test}
   type="password"
   clearable
+  showPassword
 />
 <SvelInput
   bind:value={input}

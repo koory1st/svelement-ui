@@ -63,11 +63,20 @@
 
   let wrapRef;
   let inputRef;
+  let passwordRef;
   let textAreaRef;
-  $: _ref = inputRef || textAreaRef;
+  let _ref;
+  let passwordVisible = false;
+  $: {
+    _ref =
+      type === 'textarea'
+        ? textAreaRef
+        : type === 'text' || passwordVisible
+        ? inputRef
+        : passwordRef;
+  }
 
   let hovering = false;
-  let passwordVisible = false;
 
   let nativeInputValue = '';
   $: nativeInputValue = value === null || value === undefined ? '' : String(value);
@@ -103,9 +112,11 @@
   // todo
   $: showPwdVisible =
     showPassword && !readonly && !!nativeInputValue && (!!nativeInputValue || isFocused);
-  function handlePasswordVisible() {
+  async function handlePasswordVisible() {
     passwordVisible = !passwordVisible;
-    focus();
+    await tick();
+    setNativeInputValue();
+    await focus();
   }
 
   let textareaCalcStyle = '';
@@ -136,7 +147,7 @@
 
   let isComposing = false;
   async function handleInput(event) {
-    let selectionInfo = recordCursor(inputRef);
+    let selectionInfo = recordCursor(_ref);
     let eventValue = event.target.value;
     if (formatter) {
       eventValue = parser ? parser(eventValue) : eventValue;
@@ -152,11 +163,11 @@
     await tick();
     // todo
     setNativeInputValue(nativeInputValue);
-    setCursor(inputRef, selectionInfo);
+    setCursor(_ref, selectionInfo);
   }
 
   function recordCursor(input) {
-    if (input == undefined) return;
+    if (input === undefined) return;
 
     const { selectionStart, selectionEnd, value } = input;
 
@@ -175,12 +186,12 @@
   }
 
   function setCursor(inputRef, selectionInfo) {
-    if (inputRef == undefined || selectionInfo == undefined) return;
+    if (inputRef === undefined || selectionInfo === undefined) return;
 
     const inputValue = inputRef.value;
     const { beforeTxt, afterTxt, selectionStart } = selectionInfo;
 
-    if (beforeTxt == undefined || afterTxt == undefined || selectionStart == undefined) return;
+    if (beforeTxt === undefined || afterTxt === undefined || selectionStart === undefined) return;
 
     let startPos = value.length;
 
@@ -441,7 +452,7 @@
       {:else}
         <input
           class="svel-input__inner"
-          bind:this={inputRef}
+          bind:this={passwordRef}
           type="password"
           {autocomplete}
           {readonly}
