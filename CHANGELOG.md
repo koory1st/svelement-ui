@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.7](https://github.com/koory1st/svelement-ui/compare/v0.17.6...v0.17.7) (2023-11-11)
+
+### Bug Fixes
+
+* **input:** fix value ([f1344d5](https://github.com/koory1st/svelement-ui/commit/f1344d534d1473bdf585409eb8127649d8e04e43))
+* **input:** native value ([ffc4d4a](https://github.com/koory1st/svelement-ui/commit/ffc4d4a468829d2a13ab17e5fb1eb0ab43c747f2))
+* **input:** showpassword empty ([91be96e](https://github.com/koory1st/svelement-ui/commit/91be96ea976e68fb5def86eea01abc4469585c39))
+
 ## [0.17.6](https://github.com/koory1st/svelement-ui/compare/v0.17.5...v0.17.6) (2023-11-09)
 
 ### Bug Fixes
