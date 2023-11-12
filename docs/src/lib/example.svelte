@@ -11,7 +11,7 @@
     CaretTop,
   } from '@svelement-ui/icon';
   export let code = '';
-  $: code = code.replaceAll('@@@>', '').trimStart().trimEnd();
+  $: code = code.replaceAll('@@@>', '').replaceAll('@@@dolor', '$').trimStart().trimEnd();
 
   let codeShowFlg = false;
 

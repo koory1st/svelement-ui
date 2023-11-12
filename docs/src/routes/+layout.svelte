@@ -2,16 +2,16 @@
   import './app.css';
   import { PUBLIC_BASE_PATH } from '$env/static/public';
   import {
+    SvelButton,
     SvelCol,
     SvelContainer,
     SvelFooter,
     SvelHeader,
+    SvelLink,
     SvelMain,
     SvelRow,
-    SvelLink,
-    SvelButton,
   } from '@svelement-ui/all';
-  import { SvelIcon, Github } from '@svelement-ui/icon';
+  import { Github, SvelIcon } from '@svelement-ui/icon';
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
   import { default as zh } from '$lib/i18n/zh/index.js';
@@ -33,26 +33,26 @@
   }
 </script>
 
-<SvelContainer direction="vertical" class="docs-container">
+<SvelContainer class="docs-container" direction="vertical">
   <SvelHeader class="flex border-b border-solid border-gray-200">
     <SvelRow class="lg:w-6/12 mx-auto items-center">
-      <SvelCol span={6} class="title">
+      <SvelCol class="title" span={6}>
         <SvelLink href={PUBLIC_BASE_PATH} type="primary" underline={false}>
           <span class="text-2xl font-bold">SvelementUI</span>
         </SvelLink>
       </SvelCol>
-      <SvelCol span={18} class="flex justify-end">
+      <SvelCol class="flex justify-end" span={18}>
         <SvelLink href="{PUBLIC_BASE_PATH}component" type="primary" underline={false}>
           Component
         </SvelLink>
-        <SvelButton class="ml-2" type="primary" text on:click={handleLang}>
+        <SvelButton class="ml-2" on:click={handleLang} text type="primary">
           {langString}
         </SvelButton>
         <SvelLink
           class="ml-2"
           href="https://github.com/koory1st/svelement-ui"
-          type="primary"
           target="_blank"
+          type="primary"
           underline={false}
         >
           <SvelIcon size={24}>
@@ -64,7 +64,7 @@
   </SvelHeader>
 
   <SvelMain>
-    <div class="xs:w-12/12 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-6/12 mx-auto">
+    <div class="xs:w-12/12 sm:w-8/12 md:w-8/12 lg:w-12/12 xl:w-12/12 mx-auto">
       <slot />
     </div>
   </SvelMain>
