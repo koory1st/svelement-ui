@@ -1,9 +1,9 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
-  import { tick, onMount } from 'svelte';
-  import { SvelIcon, CircleClose, View, Hide } from '@svelement-ui/icon';
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher, onMount, tick } from 'svelte';
+  import { CircleClose, Hide, SvelIcon, View } from '@svelement-ui/icon';
+
   const dispatch = createEventDispatcher();
 
   /** @type {'text' | 'textarea' | 'password' | 'button' | 'checkbox' | 'file' | 'number' | 'radio'} */
@@ -47,7 +47,7 @@
   // /** @type {number} */
   // export let step = null;
   /** @type {'none' | 'both' | 'horizontal' | 'vertical'} */
-  export let resize = 'none';
+  export let resize;
   // /** @type {boolean} */
   // export let autofocus = false;
   // /** @type {string} */
@@ -112,6 +112,7 @@
   // todo
   $: showPwdVisible =
     showPassword && !readonly && !!nativeInputValue && (!!nativeInputValue || isFocused);
+
   async function handlePasswordVisible() {
     passwordVisible = !passwordVisible;
     await tick();
@@ -146,6 +147,7 @@
   $: wrapperClass = a2s([`svel-input__wrapper`, ['is-focus', isFocused]]);
 
   let isComposing = false;
+
   async function handleInput(event) {
     let selectionInfo = recordCursor(_ref);
     let eventValue = event.target.value;
@@ -232,23 +234,28 @@
     hovering = true;
     dispatch('mouseenter', e);
   }
+
   function handleMouseLeave(e) {
     hovering = false;
     dispatch('mouseleave', e);
   }
+
   function handleKeydown(e) {
     dispatch('keydown', e);
   }
+
   function handleCompositionStart(e) {
     dispatch('compositionstart', e);
     isComposing = true;
   }
+
   function handleCompositionUpdate(e) {
     dispatch('compositionupdate', e);
     const text = e.target.value;
     const lastCharacter = text[text.length - 1] || '';
     isComposing = !isKorean(lastCharacter);
   }
+
   function handleCompositionEnd(e) {
     dispatch('compositionend', e);
     if (isComposing) {
@@ -256,6 +263,7 @@
       handleInput(e);
     }
   }
+
   const isKorean = (text) => /([\uAC00-\uD7AF\u3130-\u318F])+/gi.test(text);
   $: {
     value;
@@ -265,6 +273,7 @@
     type;
     textareaCalcStyle = resizeTextarea();
   }
+
   function resizeTextarea() {
     if (!textAreaRef) {
       return '';
@@ -289,7 +298,9 @@
 
     return a2st(style);
   }
+
   let hiddenTextarea = null;
+
   function calcTextareaHeight(targetElement, minRows = 1, maxRows) {
     if (!hiddenTextarea) {
       hiddenTextarea = document.createElement('textarea');
@@ -335,6 +346,7 @@
 
     return result;
   }
+
   const CONTEXT_STYLE = [
     'letter-spacing',
     'line-height',
@@ -361,6 +373,7 @@
   top:0 !important;
   right:0 !important;
 `;
+
   function calculateNodeStyling(targetElement) {
     const style = window.getComputedStyle(targetElement);
 
@@ -380,6 +393,7 @@
 
     return { contextStyle, paddingSize, borderSize, boxSizing };
   }
+
   function isNumber(val) {
     return typeof val === 'number';
   }
@@ -398,11 +412,14 @@
     isFocused = false;
     dispatch('blur', e);
   }
+
   let isFocused = false;
+
   function handleFocus(e) {
     isFocused = true;
     dispatch('focus', e);
   }
+
   function handleChange(e) {
     dispatch('change', e);
   }
