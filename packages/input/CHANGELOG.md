@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.8](https://github.com/koory1st/svelement-ui/compare/v0.17.7...v0.17.8) (2023-11-12)
+
+### Bug Fixes
+
+* **input:** default resize ([c72d740](https://github.com/koory1st/svelement-ui/commit/c72d7402c977c1cbfcffcf62c28d86ab7caa9b57))
+
 ## [0.17.7](https://github.com/koory1st/svelement-ui/compare/v0.17.6...v0.17.7) (2023-11-11)
 
 ### Bug Fixes
