@@ -30,13 +30,13 @@
   export let disabled = false;
   /** @type {'large' | 'default' | 'small'} */
   export let size = 'default';
-  /** @type {number} */
-  export let rows = 1;
+  /** @type {number|null} */
+  export let rows = null;
   /** @type {boolean | Object} */
   export let autosize = false;
   /** @type {string} */
   export let autocomplete = 'off';
-  /** @type {string} */
+  /** @type {string|null} */
   export let name = null;
   /** @type {boolean} */
   export let readonly = false;
@@ -275,6 +275,7 @@
   }
 
   function resizeTextarea() {
+    console.log('%c ---> autosize: ', 'color:#F0F;', autosize);
     if (!textAreaRef) {
       return '';
     }

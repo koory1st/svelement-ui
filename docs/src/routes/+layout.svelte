@@ -35,7 +35,7 @@
 
 <SvelContainer class="docs-container" direction="vertical">
   <SvelHeader class="flex border-b border-solid border-gray-200">
-    <SvelRow class="lg:w-6/12 mx-auto items-center">
+    <SvelRow class="xs:w-12/12 sm:w-8/12 md:w-8/12 lg:w-12/12 xl:w-12/12 mx-auto items-center">
       <SvelCol class="title" span={6}>
         <SvelLink href={PUBLIC_BASE_PATH} type="primary" underline={false}>
           <span class="text-2xl font-bold">SvelementUI</span>
@@ -70,7 +70,7 @@
   </SvelMain>
   <SvelFooter>
     <div class="border-t border-solid border-gray-200">
-      <div class="xs:w-12/12 sm:w-8/12 md:w-6/12 lg:w-6/12 xl:w-6/12 mx-auto">
+      <div class="xs:w-12/12 sm:w-8/12 md:w-8/12 lg:w-12/12 xl:w-12/12 mx-auto">
         SvelementUI footer
       </div>
     </div>

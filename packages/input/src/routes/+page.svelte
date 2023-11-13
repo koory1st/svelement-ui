@@ -1,30 +1,30 @@
 <script>
   import SvelInput from '$lib/index.js';
-  import { SvelIcon, Calendar, Search } from '@svelement-ui/icon';
 
   let input = '1';
+
   function test(e) {
     console.log('🚀 ~ file: +page.svelte:7 ~ test ~ e:', e);
   }
 </script>
 
 {input}
-<SvelInput bind:value={input} placeholder="Please input" on:input={test} clearable />
+<SvelInput bind:value={input} clearable on:input={test} placeholder="Please input" />
 <SvelInput
   bind:value={input}
-  placeholder="Please input"
-  on:input={test}
-  type="password"
   clearable
+  on:input={test}
+  placeholder="Please input"
   showPassword
+  type="password"
 />
 <SvelInput
+  autosize={{ minRows: 2, maxRows: 4 }}
   bind:value={input}
+  clearable
+  on:input={test}
   placeholder="Please input"
   type="textarea"
-  autosize
-  on:input={test}
-  clearable
 />
 <!--
 <SvelInput bind:value={input} placeholder="Please input" disabled />

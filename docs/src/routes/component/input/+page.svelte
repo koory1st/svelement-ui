@@ -10,6 +10,8 @@
   let inputF = '';
 
   let textarea = '';
+  let textarea1 = '';
+  let textarea2 = '';
 </script>
 
 <h1>{$langFn('cinput01010')}</h1>
@@ -153,8 +155,28 @@
 <script>
   let textarea = '';
 @@@/script>
-<SvelInput bind:value={input1} placeholder="Please input" rows={2} type="textarea" />
+<SvelInput bind:value={textarea} placeholder="Please input" rows={2} type="textarea" />
 `}
 >
-  <SvelInput bind:value={input1} placeholder="Please input" rows={2} type="textarea" />
+  <SvelInput bind:value={textarea} placeholder="Please input" rows={2} type="textarea" />
+</Example>
+
+<h2>{$langFn('cinput09010')}</h2>
+<p>{$langFn('cinput09020')}</p>
+
+<Example
+  code={`
+<script>
+  let textarea = '';
+@@@/script>
+`}
+>
+  <SvelInput autosize bind:value={textarea1} placeholder="Please input" type="textarea" />
+  <div style="margin: 20px 0" />
+  <SvelInput
+    autosize={{ minRows: 2, maxRows: 4 }}
+    bind:value={textarea2}
+    placeholder="Please input"
+    type="textarea"
+  />
 </Example>
