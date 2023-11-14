@@ -1,6 +1,7 @@
 /** @format */
 
 import { ArgumentError } from '@svelement-ui/util-errors';
+
 /**
  * array2string
  *
@@ -14,9 +15,7 @@ import { ArgumentError } from '@svelement-ui/util-errors';
  *
  * @param arrayInput
  */
-export default function array2string(
-  arrayInput: (string | string[] | [string, boolean])[],
-): string | null {
+export default function array2string(arrayInput) {
   if (!arrayInput || arrayInput.length === 0) {
     return null;
   }

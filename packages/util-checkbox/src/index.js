@@ -1,4 +1,5 @@
 import { SvelPropValidateError } from '@svelement-ui/util-errors';
+
 /**
  * getDisabled
  *
@@ -11,14 +12,7 @@ import { SvelPropValidateError } from '@svelement-ui/util-errors';
  * @param min
  * @param innerChecked
  */
-export function getDisabled(
-  disabledProp: boolean,
-  groupFlg: boolean,
-  group: Array<string | number | boolean>,
-  maxInput: string | number | null,
-  minInput: string | number | null,
-  innerChecked: boolean,
-): boolean {
+export function getDisabled(disabledProp, groupFlg, group, maxInput, minInput, innerChecked) {
   if (!groupFlg) {
     return disabledProp;
   }
@@ -36,11 +30,7 @@ export function getDisabled(
   return disabledProp;
 }
 
-export function getInnerCheckedValue(
-  isGroup: boolean,
-  checkedValue: string | number | boolean | null | undefined,
-  label: string | number | boolean | null | undefined,
-): boolean | string | number | null {
+export function getInnerCheckedValue(isGroup, checkedValue, label) {
   // not in group
   if (!isGroup) {
     if (checkedValue !== null && checkedValue !== undefined) {
@@ -60,11 +50,7 @@ export function getInnerCheckedValue(
   return null;
 }
 
-export function getValueByInnerChecked(
-  innerChecked: boolean,
-  innerCheckedValue: boolean | string | number | null,
-  uncheckedValue: string | number | boolean | null | undefined,
-): boolean | string | number {
+export function getValueByInnerChecked(innerChecked, innerCheckedValue, uncheckedValue) {
   if (innerChecked) {
     if (innerCheckedValue === null) {
       return true;
@@ -78,10 +64,7 @@ export function getValueByInnerChecked(
   }
 }
 
-export function validateCheckedValue(
-  checkedValue: string | number | boolean | null | undefined,
-  uncheckedValue: string | number | boolean | null | undefined,
-) {
+export function validateCheckedValue(checkedValue, uncheckedValue) {
   if (checkedValue === null) {
     return;
   }
@@ -100,12 +83,7 @@ export function validateCheckedValue(
   }
 }
 
-export function getGroupByInnerChecked(
-  isGroup: boolean,
-  innerChecked: boolean,
-  group: Array<string | number | boolean>,
-  innerCheckedValue: boolean | string | number | null,
-): Array<string | number | boolean> {
+export function getGroupByInnerChecked(isGroup, innerChecked, group, innerCheckedValue) {
   if (!isGroup) {
     return group;
   }
@@ -124,12 +102,7 @@ export function getGroupByInnerChecked(
   return Array.from(groupSet);
 }
 
-export function getInnerCheckedByValue(
-  isGroup: boolean,
-  value: boolean | string | number,
-  group: Array<string | number | boolean>,
-  innerCheckedValue: boolean | string | number | null,
-): boolean {
+export function getInnerCheckedByValue(isGroup, value, group, innerCheckedValue) {
   if (innerCheckedValue === null) {
     return Boolean(value);
   }
@@ -142,7 +115,7 @@ export function getInnerCheckedByValue(
   }
 }
 
-export function boolNull(value: boolean | null): boolean | null {
+export function boolNull(value) {
   if (value) {
     return true;
   }

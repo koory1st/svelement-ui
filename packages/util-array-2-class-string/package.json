@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "check": "tsc",
-    "build": "vite build && tsc",
+    "build": "vite build",
     "clean": "rimraf dist"
   },
   "devDependencies": {

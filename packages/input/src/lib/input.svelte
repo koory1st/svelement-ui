@@ -275,11 +275,10 @@
   }
 
   function resizeTextarea() {
-    console.log('%c ---> autosize: ', 'color:#F0F;', autosize);
     if (!textAreaRef) {
       return '';
     }
-    if (type !== 'textarea' || !textAreaRef.value) {
+    if (type !== 'textarea') {
       return '';
     }
 
