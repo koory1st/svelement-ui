@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.10](https://github.com/koory1st/svelement-ui/compare/v0.17.9...v0.17.10) (2023-11-15)
+
+### Bug Fixes
+
+* **input:** textarea style ([c9e4ebc](https://github.com/koory1st/svelement-ui/commit/c9e4ebc35fd4e589010091d3e409609bb9a4d5d7))
+* **ts:** rm ([fed2c54](https://github.com/koory1st/svelement-ui/commit/fed2c54cfd5d6f7953aeeff8e442e1ad6fe9bfe1))
+
 ## [0.17.9](https://github.com/koory1st/svelement-ui/compare/v0.17.8...v0.17.9) (2023-11-13)
 
 ### Bug Fixes

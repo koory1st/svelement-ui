@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.10](https://github.com/koory1st/svelement-ui/compare/v0.17.9...v0.17.10) (2023-11-15)
+
+### Bug Fixes
+
+* **input:** textarea style ([c9e4ebc](https://github.com/koory1st/svelement-ui/commit/c9e4ebc35fd4e589010091d3e409609bb9a4d5d7))
+
 # [0.17.0](https://github.com/koory1st/svelement-ui/compare/v0.16.1...v0.17.0) (2023-11-05)
 
 **Note:** Version bump only for package @svelement-ui/util-checkbox
