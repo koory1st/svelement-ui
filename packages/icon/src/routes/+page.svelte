@@ -1,5 +1,5 @@
-<script lang="ts">
-  import { SvelIcon, ConicalFlask } from '$lib/index.js';
+<script>
+  import { ConicalFlask, SvelIcon } from '$lib';
 </script>
 
 <SvelIcon>

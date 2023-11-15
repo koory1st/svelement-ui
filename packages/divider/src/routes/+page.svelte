@@ -1,5 +1,5 @@
-<script lang="ts">
-  import SvelDivider from '$lib/index.js';
+<script>
+  import SvelDivider from '$lib';
 </script>
 
 <div>
@@ -21,6 +21,6 @@
   <span>Rain</span>
   <SvelDivider direction="vertical" />
   <span>Home</span>
-  <SvelDivider direction="vertical" borderStyle="dashed" />
+  <SvelDivider borderStyle="dashed" direction="vertical" />
   <span>Grass</span>
 </div>

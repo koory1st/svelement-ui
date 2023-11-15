@@ -1,10 +1,11 @@
-<script lang="ts">
-  export let style: string | null = null;
+<script>
+  /** @type {string | null} */
+  export let style = null;
 </script>
 
-<svg {style} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<svg {style} viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
   <path
-    fill="currentColor"
     d="M832 320V192H704v320a192 192 0 1 1-384 0V192H192v128h128v64H192v128a320 320 0 0 0 640 0V384H704v-64h128zM640 512V128h256v384a384 384 0 1 1-768 0V128h256v384a128 128 0 1 0 256 0z"
+    fill="currentColor"
   />
 </svg>

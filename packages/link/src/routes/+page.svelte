@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import SvelLink from '$lib/index.js';
 </script>
 

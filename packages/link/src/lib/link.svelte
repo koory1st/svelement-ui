@@ -1,11 +1,14 @@
-<script lang="ts">
+<script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { createEventDispatcher } from 'svelte';
-  export let type: 'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info' = 'default';
+
+  /** @type {'default' | 'primary' | 'success' | 'warning' | 'danger' | 'info'} */
+  export let type = 'default';
   export let underline = true;
   export let disabled = false;
   export let href = '';
-  export let target: '_blank' | '_self' | '_parent' | '_top' | null = null;
+  /** @type {'_blank' | '_self' | '_parent' | '_top' | null} */
+  export let target = null;
 
   $: classString = a2s([
     'svel-link',
@@ -16,7 +19,8 @@
   ]);
 
   const dispatch = createEventDispatcher();
-  function handleClick(event: Event) {
+
+  function handleClick(event) {
     if (disabled || href) {
       return;
     }
@@ -24,7 +28,7 @@
   }
 </script>
 
-<a class={classString} href={disabled ? null : href ? href : null} {target} on:click={handleClick}>
+<a class={classString} href={disabled ? null : href ? href : null} on:click={handleClick} {target}>
   {#if $$slots.iconLeft}
     <slot name="iconLeft" />
   {/if}
