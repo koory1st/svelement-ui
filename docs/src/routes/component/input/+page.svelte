@@ -167,8 +167,17 @@
 <Example
   code={`
 <script>
-  let textarea = '';
+  let textarea1 = '';
+  let textarea2 = '';
 @@@/script>
+<SvelInput autosize bind:value={textarea1} placeholder="Please input" type="textarea" />
+<div style="margin: 20px 0" />
+<SvelInput
+  autosize={{ minRows: 2, maxRows: 4 }}
+  bind:value={textarea2}
+  placeholder="Please input"
+  type="textarea"
+/>
 `}
 >
   <SvelInput autosize bind:value={textarea1} placeholder="Please input" type="textarea" />
@@ -179,4 +188,29 @@
     placeholder="Please input"
     type="textarea"
   />
+</Example>
+
+<h2>{$langFn('cinput10010')}</h2>
+<p>{$langFn('cinput10020')}</p>
+<p>{$langFn('cinput10030')}</p>
+
+<Example
+  code={`
+<script>
+  let textarea1 = '';
+  let textarea2 = '';
+@@@/script>
+
+`}
+>
+  <div>
+    <SvelInput bind:value={input1} placeholder="Please input">
+      <svelte:fragment slot="prepend">Http://</svelte:fragment>
+    </SvelInput>
+  </div>
+  <div>
+    <SvelInput bind:value={input1} placeholder="Please input">
+      <svelte:fragment slot="append">.com</svelte:fragment>
+    </SvelInput>
+  </div>
 </Example>
