@@ -1,7 +1,7 @@
 <script>
   import Example from '$lib/example.svelte';
   import { getContext } from 'svelte';
-  import { SvelCol, SvelInput, SvelRow } from '@svelement-ui/all';
+  import { SvelButton, SvelCol, SvelInput, SvelRow } from '@svelement-ui/all';
   import { Calendar, Search, SvelIcon } from '@svelement-ui/icon';
 
   let langFn = getContext('langFn');
@@ -208,9 +208,19 @@
       <svelte:fragment slot="prepend">Http://</svelte:fragment>
     </SvelInput>
   </div>
-  <div>
+  <div class="mt-4">
     <SvelInput bind:value={input1} placeholder="Please input">
       <svelte:fragment slot="append">.com</svelte:fragment>
+    </SvelInput>
+  </div>
+  <div class="mt-4">
+    <!--    todo: add select-->
+    <SvelInput bind:value={input1} placeholder="Please input">
+      <SvelButton slot="append">
+        <SvelIcon>
+          <Search />
+        </SvelIcon>
+      </SvelButton>
     </SvelInput>
   </div>
 </Example>
