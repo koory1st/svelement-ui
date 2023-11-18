@@ -196,11 +196,41 @@
 
 <Example
   code={`
-<script>
-  let textarea1 = '';
-  let textarea2 = '';
-@@@/script>
-
+<div>
+  <SvelInput bind:value={input1} placeholder="Please input">
+    <svelte:fragment slot="prepend">Http://</svelte:fragment>
+  </SvelInput>
+</div>
+<div class="mt-4">
+  <SvelInput bind:value={input1} placeholder="Please input">
+    <svelte:fragment slot="append">.com</svelte:fragment>
+  </SvelInput>
+</div>
+<div class="mt-4">
+  <!--    todo: add select-->
+  <SvelInput bind:value={input1} class="input-with-select" placeholder="Please input">
+    <SvelButton slot="append">
+      <SvelIcon>
+        <Search />
+      </SvelIcon>
+    </SvelButton>
+  </SvelInput>
+</div>
+<div class="mt-4">
+  <SvelInput bind:value={input1} class="input-with-select" placeholder="Please input">
+    <SvelButton slot="prepend">
+      <SvelIcon>
+        <Search />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton slot="append">
+      <!--        todo: add select-->
+      <SvelIcon>
+        <Search />
+      </SvelIcon>
+    </SvelButton>
+  </SvelInput>
+</div>
 `}
 >
   <div>
@@ -215,7 +245,7 @@
   </div>
   <div class="mt-4">
     <!--    todo: add select-->
-    <SvelInput bind:value={input1} placeholder="Please input">
+    <SvelInput bind:value={input1} class="input-with-select" placeholder="Please input">
       <SvelButton slot="append">
         <SvelIcon>
           <Search />
@@ -223,4 +253,130 @@
       </SvelButton>
     </SvelInput>
   </div>
+  <div class="mt-4">
+    <SvelInput bind:value={input1} class="input-with-select" placeholder="Please input">
+      <SvelButton slot="prepend">
+        <SvelIcon>
+          <Search />
+        </SvelIcon>
+      </SvelButton>
+      <SvelButton slot="append">
+        <!--        todo: add select-->
+        <SvelIcon>
+          <Search />
+        </SvelIcon>
+      </SvelButton>
+    </SvelInput>
+  </div>
 </Example>
+
+<h2>{$langFn('cinput11010')}</h2>
+<p>{$langFn('cinput11020')}</p>
+
+<Example
+  code={`
+<div class="demo-input-size">
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="large" />
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" />
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="small" />
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="large">
+    <SvelIcon slot="suffix">
+      <Search />
+    </SvelIcon>
+  </SvelInput>
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input">
+    <SvelIcon slot="suffix">
+      <Search />
+    </SvelIcon>
+  </SvelInput>
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="small">
+    <SvelIcon slot="suffix">
+      <Search />
+    </SvelIcon>
+  </SvelInput>
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="large">
+    <SvelIcon slot="prefix">
+      <Search />
+    </SvelIcon>
+  </SvelInput>
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input">
+    <SvelIcon slot="prefix">
+      <Search />
+    </SvelIcon>
+  </SvelInput>
+  <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="small">
+    <SvelIcon slot="prefix">
+      <Search />
+    </SvelIcon>
+  </SvelInput>
+</div>
+`}
+>
+  <div class="demo-input-size">
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="large" />
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" />
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="small" />
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="large">
+      <SvelIcon slot="suffix">
+        <Search />
+      </SvelIcon>
+    </SvelInput>
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input">
+      <SvelIcon slot="suffix">
+        <Search />
+      </SvelIcon>
+    </SvelInput>
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="small">
+      <SvelIcon slot="suffix">
+        <Search />
+      </SvelIcon>
+    </SvelInput>
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="large">
+      <SvelIcon slot="prefix">
+        <Search />
+      </SvelIcon>
+    </SvelInput>
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input">
+      <SvelIcon slot="prefix">
+        <Search />
+      </SvelIcon>
+    </SvelInput>
+    <SvelInput bind:value={input1} class="w-50 m-2" placeholder="Please input" size="small">
+      <SvelIcon slot="prefix">
+        <Search />
+      </SvelIcon>
+    </SvelInput>
+  </div>
+</Example>
+
+<h2>{$langFn('cinput12010')}</h2>
+<p>{$langFn('cinput12020')}</p>
+<Example
+  code={`
+<SvelInput bind:value={input1} maxlength="10" placeholder="Please input" showWordLimit />
+<div style="margin: 20px 0" />
+<SvelInput
+  bind:value={textarea}
+  maxlength="30"
+  placeholder="Please input"
+  showWordLimit
+  type="textarea"
+/>
+`}
+>
+  <SvelInput bind:value={input1} maxlength="10" placeholder="Please input" showWordLimit />
+  <div style="margin: 20px 0" />
+  <SvelInput
+    bind:value={textarea}
+    maxlength="30"
+    placeholder="Please input"
+    showWordLimit
+    type="textarea"
+  />
+</Example>
+
+<style>
+  :global(.input-with-select .svel-input-group__prepend) {
+    background-color: var(--svel-fill-color-blank);
+  }
+</style>

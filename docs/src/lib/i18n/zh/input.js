@@ -23,4 +23,9 @@ export default {
   cinput10010: '复合型输入框',
   cinput10020: '可以在输入框中前置或后置一个元素，通常是标签或按钮。',
   cinput10030: '可通过 slot 来指定在 Input 中分发的前置或者后置的内容。',
+  cinput11010: '尺寸',
+  cinput11020: '使用 size 属性改变输入框大小。 除了默认大小外，还有另外两个选项： large, small。',
+  cinput12010: '输入长度限制',
+  cinput12020:
+    '使用 maxlength 和 minlength 属性, 来控制输入内容的最大字数和最小字数。 "字符数"使用JavaScript字符串长度来衡量。 为文本或文本输入类型设置 maxlength prop可以限制输入值的长度。 允许你通过设置 showWordLimit 到 true 来显示剩余字数。',
 };
