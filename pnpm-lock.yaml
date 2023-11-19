@@ -254,6 +254,24 @@ importers:
         specifier: workspace:^
         version: link:../util-array-2-style-string
 
+  packages/input-number:
+    devDependencies:
+      '@svelement-ui/icon':
+        specifier: workspace:^
+        version: link:../icon
+      '@svelement-ui/input':
+        specifier: workspace:^
+        version: link:../input
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+      '@svelement-ui/util-array-2-style-string':
+        specifier: workspace:^
+        version: link:../util-array-2-style-string
+
   packages/layout:
     devDependencies:
       '@svelement-ui/theme-chalk':
