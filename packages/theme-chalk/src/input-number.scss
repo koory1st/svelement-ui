@@ -68,15 +68,13 @@
 
   @include e(increase) {
     right: 1px;
-    border-radius: 0 getCssVar('border-radius-base')
-      getCssVar('border-radius-base') 0;
+    border-radius: 0 getCssVar('border-radius-base') getCssVar('border-radius-base') 0;
     border-left: getCssVar('border');
   }
 
   @include e(decrease) {
     left: 1px;
-    border-radius: getCssVar('border-radius-base') 0 0
-      getCssVar('border-radius-base');
+    border-radius: getCssVar('border-radius-base') 0 0 getCssVar('border-radius-base');
     border-right: getCssVar('border');
   }
 
