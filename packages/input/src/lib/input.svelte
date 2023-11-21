@@ -443,11 +443,11 @@
           </span>
         </span>
       {/if}
-      {#if type === 'text' || (showPassword && passwordVisible)}
+      {#if type !== 'password' || (showPassword && passwordVisible)}
         <input
           class="svel-input__inner"
           bind:this={inputRef}
-          type="text"
+          {type}
           {autocomplete}
           {readonly}
           {parser}
