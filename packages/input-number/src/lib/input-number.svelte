@@ -5,15 +5,42 @@
   import { SvelIcon, ArrowDown, Minus, ArrowUp, Plus } from '@svelement-ui/icon';
   import SvelInput from '@svelement-ui/input';
 
-  let controls = true;
+  export let controls = true;
   /** @type {'' | 'right'} */
-  let controlsPosition = '';
+  export let controlsPosition = '';
+  /** @type {string} */
+  export let placeholder = '';
+  /** @type {number | ''} */
+  export let value = '';
+  /** @type {number | null} */
+  export let precision = null;
 
   $: classString = a2s(['svel-input-number', $$props.class]);
   $: decreaseClass = a2s(['svel-input-number__decrease']);
   $: increaseClass = a2s(['svel-input-number__increase']);
 
   $: controlsAtRight = controls && controlsPosition === 'right';
+
+  let inputRef;
+  $: dataCurrentValue = value;
+  $: dataUserInput = null;
+
+  function getDisplayValue(dataCurrentValue, dataUserInput) {
+    if (dataUserInput !== null) {
+      return dataUserInput;
+    }
+    let currentValue = dataCurrentValue;
+    if (currentValue === undefined || currentValue === null) {
+      return '';
+    }
+    // todo:
+    if (Object.prototype.toString.call(currentValue).toLowerCase() === '') {
+      currentValue = currentValue.toFixed(precision);
+    }
+    return currentValue;
+  }
+
+  $: displayValue = getDisplayValue(dataCurrentValue, dataUserInput);
 </script>
 
 <div class={classString}>
@@ -35,5 +62,5 @@
       </SvelIcon>
     </span>
   {/if}
-  <SvelInput />
+  <SvelInput bind:this={inputRef} bind:value={displayValue} {placeholder} type="number" />
 </div>
