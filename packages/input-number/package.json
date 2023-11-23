@@ -41,7 +41,8 @@
     "@svelement-ui/input": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
-    "@svelement-ui/util-array-2-style-string": "workspace:^"
+    "@svelement-ui/util-array-2-style-string": "workspace:^",
+    "@svelement-ui/utils": "workspace:^"
   },
   "repository": {
     "type": "git",

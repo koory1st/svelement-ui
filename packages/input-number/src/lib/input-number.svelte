@@ -2,6 +2,7 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
   import { createEventDispatcher, onMount, tick } from 'svelte';
+  import { isNull, isNumber, isUndefined } from '@svelement-ui/utils';
   import { SvelIcon, ArrowDown, Minus, ArrowUp, Plus } from '@svelement-ui/icon';
   import SvelInput from '@svelement-ui/input';
 
@@ -30,12 +31,14 @@
       return dataUserInput;
     }
     let currentValue = dataCurrentValue;
-    if (currentValue === undefined || currentValue === null) {
+    if (isNull(currentValue)) {
       return '';
     }
-    // todo:
-    if (Object.prototype.toString.call(currentValue).toLowerCase() === '') {
-      currentValue = currentValue.toFixed(precision);
+    if (isNumber(currentValue)) {
+      if (Number.isNaN(currentValue)) return '';
+      if (!isUndefined(precision)) {
+        currentValue = currentValue.toFixed(precision);
+      }
     }
     return currentValue;
   }
