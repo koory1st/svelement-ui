@@ -15,6 +15,10 @@
   export let value = '';
   /** @type {number | null} */
   export let precision = null;
+  export let max = Infinity;
+  export let min = -Infinity;
+
+  const dispatch = createEventDispatcher();
 
   $: classString = a2s(['svel-input-number', $$props.class]);
   $: decreaseClass = a2s(['svel-input-number__decrease']);
@@ -23,8 +27,9 @@
   $: controlsAtRight = controls && controlsPosition === 'right';
 
   let inputRef;
+  let dataCurrentValue = value;
   $: dataCurrentValue = value;
-  $: dataUserInput = null;
+  let dataUserInput = null;
 
   function getDisplayValue(dataCurrentValue, dataUserInput) {
     if (dataUserInput !== null) {
@@ -44,6 +49,42 @@
   }
 
   $: displayValue = getDisplayValue(dataCurrentValue, dataUserInput);
+
+  function setCurrentValue(v, emitChange) {
+    const oldVal = dataCurrentValue;
+    const newVal = verifyValue(v);
+    if (!emitChange && !isNull(newVal)) {
+      value = newVal;
+      return;
+    }
+    if (oldVal === newVal) return;
+    dataUserInput = null;
+    if (!isNull(newVal)) {
+      value = newVal;
+    }
+    dispatch('change', { newVal, oldVal });
+
+    // todo: validateEvent
+
+    dataCurrentValue = newVal;
+  }
+
+  function verifyValue(v, update) {
+    if (max < min) {
+      throw new Error('[InputNumber] min should not be greater than max.');
+    }
+    let newVal = Number(value);
+    if (isNull(value) || Number.isNaN(newVal)) {
+      return null;
+    }
+  }
+
+  function handleInput(v) {
+    dataUserInput = v;
+    const newVal = value === '' ? null : Number(value);
+    dispatch('input', newVal);
+    setCurrentValue(newVal, false);
+  }
 </script>
 
 <div class={classString}>
@@ -65,5 +106,11 @@
       </SvelIcon>
     </span>
   {/if}
-  <SvelInput bind:this={inputRef} bind:value={displayValue} {placeholder} type="number" />
+  <SvelInput
+    bind:this={inputRef}
+    bind:value={displayValue}
+    on:input={handleInput}
+    {placeholder}
+    type="number"
+  />
 </div>
