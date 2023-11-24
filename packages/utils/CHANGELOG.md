@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.3](https://github.com/koory1st/svelement-ui/compare/v0.18.2...v0.18.3) (2023-11-24)
+
+### Bug Fixes
+
+* **input-number:** add logic ([dff5017](https://github.com/koory1st/svelement-ui/commit/dff501759e8c4ef52eedc6756af9e143dcd91f61))
+* **utils:** add ([f513358](https://github.com/koory1st/svelement-ui/commit/f513358a974bda764b1614e30eabbf55e19cfce2))
+
 # [0.18.0](https://github.com/koory1st/svelement-ui/compare/v0.17.10...v0.18.0) (2023-11-20)
 
 **Note:** Version bump only for package @svelement-ui/util-errors
