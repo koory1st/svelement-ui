@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.4](https://github.com/koory1st/svelement-ui/compare/v0.18.3...v0.18.4) (2023-11-25)
+
+### Bug Fixes
+
+* **input:** add props for number ([c668b7a](https://github.com/koory1st/svelement-ui/commit/c668b7adf57c6ff0e65bffc693a4dbaea57c0f6f))
+
 ## [0.18.1](https://github.com/koory1st/svelement-ui/compare/v0.18.0...v0.18.1) (2023-11-21)
 
 ### Bug Fixes
