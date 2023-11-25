@@ -40,12 +40,12 @@
   export let name = null;
   /** @type {boolean} */
   export let readonly = false;
-  // /** @type {number} */
-  // export let max = null;
-  // /** @type {number} */
-  // export let min = null;
-  // /** @type {number} */
-  // export let step = null;
+  /** @type {number} */
+  export let max = null;
+  /** @type {number} */
+  export let min = null;
+  /** @type {number} */
+  export let step = null;
   /** @type {'none' | 'both' | 'horizontal' | 'vertical'} */
   export let resize;
   // /** @type {boolean} */
@@ -448,6 +448,9 @@
           class="svel-input__inner"
           bind:this={inputRef}
           {type}
+          step={type === 'number' ? step : null}
+          max={type === 'number' ? max : null}
+          min={type === 'number' ? min : null}
           {autocomplete}
           {readonly}
           {parser}
