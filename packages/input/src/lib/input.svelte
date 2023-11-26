@@ -460,11 +460,12 @@
           disabled={inputDisabled}
           {maxlength}
           {name}
+          on:wheel|preventDefault
           on:input={handleInput}
           on:blur={handleBlur}
           on:focus={handleFocus}
           on:change={handleChange}
-          on:keydown={handleKeydown}
+          on:keydown|preventDefault={handleKeydown}
           on:compositionstart={handleCompositionStart}
           on:compositionupdate={handleCompositionUpdate}
           on:compositionend={handleCompositionEnd}
@@ -486,7 +487,7 @@
           on:blur={handleBlur}
           on:focus={handleFocus}
           on:change={handleChange}
-          on:keydown={handleKeydown}
+          on:keydown|preventDefault={handleKeydown}
           on:compositionstart={handleCompositionStart}
           on:compositionupdate={handleCompositionUpdate}
           on:compositionend={handleCompositionEnd}
