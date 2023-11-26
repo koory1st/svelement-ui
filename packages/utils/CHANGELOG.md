@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.4](https://github.com/koory1st/svelement-ui/compare/v0.18.3...v0.18.4) (2023-11-25)
+
+### Bug Fixes
+
+* **utils:** add isString ([95ea890](https://github.com/koory1st/svelement-ui/commit/95ea8909e1938fe3c9998f1ddb9e2c1772c8ff74))
+
 ## [0.18.3](https://github.com/koory1st/svelement-ui/compare/v0.18.2...v0.18.3) (2023-11-24)
 
 ### Bug Fixes
