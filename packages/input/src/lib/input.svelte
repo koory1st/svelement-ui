@@ -71,7 +71,7 @@
     _ref =
       type === 'textarea'
         ? textAreaRef
-        : type === 'text' || passwordVisible
+        : type !== 'textarea' || passwordVisible
         ? inputRef
         : passwordRef;
   }
@@ -79,7 +79,10 @@
   let hovering = false;
 
   let nativeInputValue = '';
-  $: nativeInputValue = value === null || value === undefined ? '' : String(value);
+  $: {
+    nativeInputValue = value === null || value === undefined ? '' : String(value);
+    console.log('%c ---> nativeInputValue: ', 'color:#F0F;', nativeInputValue);
+  }
   $: setNativeInputValue(nativeInputValue);
   $: type &&
     (async () => {
@@ -241,6 +244,9 @@
   }
 
   function handleKeydown(e) {
+    if (type === 'number' && !e.ctrlKey && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+      e.preventDefault();
+    }
     dispatch('keydown', e);
   }
 
@@ -465,7 +471,7 @@
           on:blur={handleBlur}
           on:focus={handleFocus}
           on:change={handleChange}
-          on:keydown|preventDefault={handleKeydown}
+          on:keydown={handleKeydown}
           on:compositionstart={handleCompositionStart}
           on:compositionupdate={handleCompositionUpdate}
           on:compositionend={handleCompositionEnd}
@@ -487,7 +493,7 @@
           on:blur={handleBlur}
           on:focus={handleFocus}
           on:change={handleChange}
-          on:keydown|preventDefault={handleKeydown}
+          on:keydown={handleKeydown}
           on:compositionstart={handleCompositionStart}
           on:compositionupdate={handleCompositionUpdate}
           on:compositionend={handleCompositionEnd}
