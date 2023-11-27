@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.5](https://github.com/koory1st/svelement-ui/compare/v0.18.4...v0.18.5) (2023-11-26)
+
+### Bug Fixes
+
+* **input:** add prevent to keydown ([f42b7eb](https://github.com/koory1st/svelement-ui/commit/f42b7eb992ba2162aee1ee600b7623b98f44500e))
+
 ## [0.18.4](https://github.com/koory1st/svelement-ui/compare/v0.18.3...v0.18.4) (2023-11-25)
 
 ### Bug Fixes
