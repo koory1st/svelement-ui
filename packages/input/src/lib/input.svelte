@@ -429,6 +429,12 @@
   function handleChange(e) {
     dispatch('change', e);
   }
+
+  function handleWheel(e) {
+    if (type === 'number') {
+      e.preventDefault();
+    }
+  }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -466,7 +472,7 @@
           disabled={inputDisabled}
           {maxlength}
           {name}
-          on:wheel|preventDefault
+          on:wheel={handleWheel}
           on:input={handleInput}
           on:blur={handleBlur}
           on:focus={handleFocus}
