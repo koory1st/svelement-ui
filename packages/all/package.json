@@ -18,7 +18,8 @@
     "link",
     "radio",
     "scrollbar",
-    "input"
+    "input",
+    "input-number"
   ],
   "exports": {
     ".": {
