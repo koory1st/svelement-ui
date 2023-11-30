@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.9](https://github.com/koory1st/svelement-ui/compare/v0.18.8...v0.18.9) (2023-11-30)
+
+### Bug Fixes
+
+* **input-number:** add controlsPosition ([3ea7ac6](https://github.com/koory1st/svelement-ui/commit/3ea7ac6f4421bdb6d8a75895da764a8ee001d490))
+
 ## [0.18.8](https://github.com/koory1st/svelement-ui/compare/v0.18.7...v0.18.8) (2023-11-29)
 
 ### Bug Fixes
