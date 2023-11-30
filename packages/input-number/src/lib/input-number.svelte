@@ -21,17 +21,24 @@
   export let valueOnClear = null;
   /** @type {number | null} */
   export let step = 1;
-  /** @type {number} */
   export let readonly = false;
   export let disabled = false;
+  /** @type {'large' | 'default' | 'small'} */
+  export let size = 'default';
 
   const dispatch = createEventDispatcher();
 
-  $: classString = a2s(['svel-input-number', $$props.class]);
+  $: classString = a2s([
+    'svel-input-number',
+    [`svel-input-number--${size}`, size !== 'default'],
+    [`is-controls-${controlsPosition}`, Boolean(controlsPosition)],
+    $$props.class,
+  ]);
   $: decreaseClass = a2s(['svel-input-number__decrease']);
   $: increaseClass = a2s(['svel-input-number__increase']);
 
   $: controlsAtRight = controls && controlsPosition === 'right';
+  $: inputNumberSize = size;
 
   let inputRef;
   let dataCurrentValue = value;
@@ -122,13 +129,8 @@
       increase();
       return;
     }
-    if (key === 'ArrowUp') {
-      increase();
-      return;
-    }
     if (key === 'ArrowDown') {
-      // d();
-      return;
+      decrease();
     }
   }
 
@@ -151,6 +153,14 @@
     if (readonly || inputNumberDisabled || maxDisabled) return;
     const value = Number(displayValue) || 0;
     const newVal = ensurePrecision(value);
+    setCurrentValue(newVal, true);
+    dispatch('input', dataCurrentValue);
+  }
+
+  function decrease() {
+    if (readonly || inputNumberDisabled || minDisabled) return;
+    const value = Number(displayValue) || 0;
+    const newVal = ensurePrecision(value, -1);
     setCurrentValue(newVal, true);
     dispatch('input', dataCurrentValue);
   }
@@ -194,16 +204,28 @@
   function handleIncreaseKeyDown(e) {
     console.log('%c ---> e: ', 'color:#F0F;', e);
   }
+
+  function handleDecreaseKeyDown(e) {
+    console.log('%c ---> e: ', 'color:#F0F;', e);
+  }
 </script>
 
 <div class={classString}>
   {#if controls}
-    <span aria-label="decrease number" class={decreaseClass} role="button">
+    <span
+      aria-label="decrease number"
+      class={decreaseClass}
+      role="button"
+      tabindex="0"
+      on:click={decrease}
+      on:keydown={handleDecreaseKeyDown}
+    >
       <SvelIcon>
         {#if controlsAtRight}
           <ArrowDown />
+        {:else}
+          <Minus />
         {/if}
-        <Minus />
       </SvelIcon>
     </span>
     <span
@@ -217,8 +239,9 @@
       <SvelIcon>
         {#if controlsAtRight}
           <ArrowUp />
+        {:else}
+          <Plus />
         {/if}
-        <Plus />
       </SvelIcon>
     </span>
   {/if}
@@ -233,6 +256,7 @@
     on:keydown={handleKeyDown}
     {placeholder}
     {readonly}
+    size={inputNumberSize}
     {step}
     type="number"
   />
