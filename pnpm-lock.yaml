@@ -134,6 +134,9 @@ importers:
       '@svelement-ui/input':
         specifier: workspace:^
         version: link:../input
+      '@svelement-ui/input-number':
+        specifier: workspace:^
+        version: link:../input-number
       '@svelement-ui/layout':
         specifier: workspace:^
         version: link:../layout

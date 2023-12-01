@@ -16,6 +16,7 @@ import { SvelCheckbox, SvelCheckboxButton, SvelCheckboxGroup } from '@svelement-
 import SvelScrollbar from '@svelement-ui/scrollbar';
 import { SvelRadio, SvelRadioButton, SvelRadioGroup } from '@svelement-ui/radio';
 import SvelInput from '@svelement-ui/input';
+import SvelInputNumber from '@svelement-ui/input-number';
 
 export {
   SvelAside,
@@ -38,4 +39,5 @@ export {
   SvelRadioButton,
   SvelRadioGroup,
   SvelInput,
+  SvelInputNumber,
 };

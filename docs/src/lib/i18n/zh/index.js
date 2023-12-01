@@ -8,6 +8,7 @@ import scrollbar from '$lib/i18n/zh/scrollbar.js';
 import checkbox from '$lib/i18n/zh/checkbox.js';
 import divider from '$lib/i18n/zh/divider.js';
 import input from '$lib/i18n/zh/input.js';
+import inputNumber from '$lib/i18n/zh/input_number.js';
 import radio from '$lib/i18n/zh/radio.js';
 
 export const langDict = {
@@ -22,6 +23,7 @@ export const langDict = {
   ...radio,
   ...divider,
   ...input,
+  ...inputNumber,
 };
 
 function getText(key) {
