@@ -64,7 +64,6 @@
   let displayValue;
   $: {
     displayValue = getDisplayValue(dataCurrentValue, dataUserInput);
-    console.log('%c ---> displayValue: ', 'color:#F0F;', displayValue);
   }
 
   function setCurrentValue(v, emitChange) {
