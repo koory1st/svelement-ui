@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.12](https://github.com/koory1st/svelement-ui/compare/v0.18.11...v0.18.12) (2023-12-02)
+
+### Bug Fixes
+
+* **input-nunmber:** add stepStriclty ([ae67bf5](https://github.com/koory1st/svelement-ui/commit/ae67bf5bf1af70d678505e6156e02596b27ea8aa))
+
 ## [0.18.11](https://github.com/koory1st/svelement-ui/compare/v0.18.10...v0.18.11) (2023-12-02)
 
 ### Bug Fixes
