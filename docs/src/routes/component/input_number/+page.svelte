@@ -6,8 +6,38 @@
 
   let langFn = getContext('langFn');
 
-  let input1 = '';
-  let inputF = '';
+  let num = 1;
+  let num2 = 1;
+
+  function handleChange(e) {
+    console.log('%c ---> e: ', 'color:#F0F;', e);
+  }
 </script>
 
 <h1>{$langFn('cinputNum01010')}</h1>
+<p>{$langFn('cinputNum01020')}</p>
+
+<h2>{$langFn('cinputNum02010')}</h2>
+<p>{$langFn('cinputNum02020')}</p>
+<Example
+  code={`
+<script>
+let num = 1;
+@@@/script>
+<SvelInputNumber bind:value={num} max="10" min="1" on:change={handleChange} />
+`}
+>
+  <SvelInputNumber bind:value={num} max="10" min="1" on:change={handleChange} />
+</Example>
+
+<h2>{$langFn('cinputNum03010')}</h2>
+<p>{$langFn('cinputNum03020')}</p>
+<Example
+  code={`
+<SvelInputNumber bind:value={num} disabled />
+<SvelInputNumber bind:value={num} max="5" min="2" />
+`}
+>
+  <SvelInputNumber bind:value={num2} disabled />
+  <SvelInputNumber bind:value={num2} max="5" min="2" />
+</Example>
