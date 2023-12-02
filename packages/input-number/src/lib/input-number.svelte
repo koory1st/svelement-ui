@@ -32,6 +32,7 @@
     'svel-input-number',
     [`svel-input-number--${size}`, size !== 'default'],
     [`is-controls-${controlsPosition}`, Boolean(controlsPosition)],
+    ['is-disabled', disabled],
     $$props.class,
   ]);
   $: decreaseClass = a2s(['svel-input-number__decrease']);
@@ -42,6 +43,7 @@
 
   let inputRef;
   let dataCurrentValue = value;
+  $: dataCurrentValue = value;
   let dataUserInput = null;
 
   function getDisplayValue(dataCurrentValue, dataUserInput) {
@@ -149,7 +151,7 @@
   $: maxDisabled = isNumber(value) && value >= max;
 
   function increase() {
-    if (readonly || inputNumberDisabled || maxDisabled) return;
+    if (disabled || readonly || inputNumberDisabled || maxDisabled) return;
     const value = Number(displayValue) || 0;
     const newVal = ensurePrecision(value);
     setCurrentValue(newVal, true);
@@ -157,7 +159,7 @@
   }
 
   function decrease() {
-    if (readonly || inputNumberDisabled || minDisabled) return;
+    if (disabled || readonly || inputNumberDisabled || minDisabled) return;
     const value = Number(displayValue) || 0;
     const newVal = ensurePrecision(value, -1);
     setCurrentValue(newVal, true);
