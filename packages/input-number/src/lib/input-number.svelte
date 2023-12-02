@@ -25,6 +25,7 @@
   export let disabled = false;
   /** @type {'large' | 'default' | 'small'} */
   export let size = 'default';
+  export let stepStrictly = false;
 
   const dispatch = createEventDispatcher();
 
@@ -100,6 +101,10 @@
         return null;
       }
       newVal = isString(valueOnClear) ? { min, max }[valueOnClear] : valueOnClear;
+    }
+
+    if (stepStrictly) {
+      newVal = toPrecision(Math.round(newVal / step) * step, precision);
     }
     // todo:
 
