@@ -81,7 +81,6 @@
   let nativeInputValue = '';
   $: {
     nativeInputValue = value === null || value === undefined ? '' : String(value);
-    console.log('%c ---> nativeInputValue: ', 'color:#F0F;', nativeInputValue);
   }
   $: setNativeInputValue(nativeInputValue);
   $: type &&
