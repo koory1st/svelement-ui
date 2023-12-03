@@ -8,6 +8,7 @@
 
   let num = 1;
   let num2 = 1;
+  let num3 = 5;
 
   function handleChange(e) {
     console.log('%c ---> e: ', 'color:#F0F;', e);
@@ -40,4 +41,24 @@ let num = 1;
 >
   <SvelInputNumber bind:value={num2} disabled />
   <SvelInputNumber bind:value={num2} max="5" min="2" />
+</Example>
+
+<h2>{$langFn('cinputNum04010')}</h2>
+<p>{$langFn('cinputNum04020')}</p>
+<Example
+  code={`
+<SvelInputNumber bind:value={num3} step={2} />
+`}
+>
+  <SvelInputNumber bind:value={num3} step={2} />
+</Example>
+
+<h2>{$langFn('cinputNum05010')}</h2>
+<p>{$langFn('cinputNum05020')}</p>
+<Example
+  code={`
+<SvelInputNumber bind:value={num3} step={2} />
+`}
+>
+  <SvelInputNumber bind:value={num3} step={2} stepStrictly />
 </Example>
