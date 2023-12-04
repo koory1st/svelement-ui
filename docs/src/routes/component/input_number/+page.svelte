@@ -73,3 +73,31 @@ let num = 1;
 >
   <SvelInputNumber bind:value={num4} precision={2} step={0.1} />
 </Example>
+
+<h2>{$langFn('cinputNum07010')}</h2>
+<p>{$langFn('cinputNum07020')}</p>
+<Example
+  code={`
+<SvelInputNumber bind:value={num4} size="large" />
+<SvelInputNumber bind:value={num4} />
+<SvelInputNumber bind:value={num4} size="small" />
+`}
+>
+  <SvelInputNumber bind:value={num4} size="large" />
+  <SvelInputNumber bind:value={num4} />
+  <SvelInputNumber bind:value={num4} size="small" />
+</Example>
+
+<h2>{$langFn('cinputNum08010')}</h2>
+<p>{$langFn('cinputNum08020')}</p>
+<Example
+  code={`
+<SvelInputNumber bind:value={num4} size="large"  controlsPosition="right"/>
+<SvelInputNumber bind:value={num4}  controlsPosition="right"/>
+<SvelInputNumber bind:value={num4} size="small" controlsPosition="right"/>
+`}
+>
+  <SvelInputNumber bind:value={num4} controlsPosition="right" size="large" />
+  <SvelInputNumber bind:value={num4} controlsPosition="right" />
+  <SvelInputNumber bind:value={num4} controlsPosition="right" size="small" />
+</Example>

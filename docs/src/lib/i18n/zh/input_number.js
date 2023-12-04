@@ -14,4 +14,8 @@ export default {
     'stepStrictly属性接受一个Boolean。 如果这个属性被设置为 true，则只能输入步进的倍数。',
   cinputNum06010: '精度',
   cinputNum06020: '设置 precision 属性可以控制数值精度，接收一个 Number。',
+  cinputNum07010: '不同的输入框尺寸',
+  cinputNum07020: '使用 size 属性额外配置尺寸，可选的尺寸大小为：large 或 small',
+  cinputNum08010: '按钮位置',
+  cinputNum08020: '设置 controls-position 属性可以控制按钮位置。',
 };
