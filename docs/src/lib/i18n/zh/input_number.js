@@ -12,4 +12,6 @@ export default {
   cinputNum05010: '严格步进',
   cinputNum05020:
     'stepStrictly属性接受一个Boolean。 如果这个属性被设置为 true，则只能输入步进的倍数。',
+  cinputNum06010: '精度',
+  cinputNum06020: '设置 precision 属性可以控制数值精度，接收一个 Number。',
 };
