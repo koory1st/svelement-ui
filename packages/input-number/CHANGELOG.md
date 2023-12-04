@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.14](https://github.com/koory1st/svelement-ui/compare/v0.18.13...v0.18.14) (2023-12-04)
+
+**Note:** Version bump only for package @svelement-ui/input-number
+
 ## [0.18.13](https://github.com/koory1st/svelement-ui/compare/v0.18.12...v0.18.13) (2023-12-03)
 
 **Note:** Version bump only for package @svelement-ui/input-number
