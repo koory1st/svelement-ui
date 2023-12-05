@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.15](https://github.com/koory1st/svelement-ui/compare/v0.18.14...v0.18.15) (2023-12-05)
+
+### Bug Fixes
+
+* **docs:** input-number ([6e78248](https://github.com/koory1st/svelement-ui/commit/6e78248e1aff2917a9ca1eb7e58aa26d100bc4de))
+* **input:** expose blur and focus ([5a94678](https://github.com/koory1st/svelement-ui/commit/5a94678512f5bbedd4943a111979aae6d6fed868))
+
 ## [0.18.14](https://github.com/koory1st/svelement-ui/compare/v0.18.13...v0.18.14) (2023-12-04)
 
 ### Bug Fixes
