@@ -61,6 +61,21 @@
   /** @type {string | Object} */
   export let inputStyle = {};
 
+  // eslint-disable-next-line svelte/valid-compile
+  export async function focus() {
+    await tick();
+    if (_ref) {
+      _ref.focus();
+    }
+  }
+
+  export async function blur() {
+    await tick();
+    if (_ref) {
+      _ref.blur();
+    }
+  }
+
   let wrapRef;
   let inputRef;
   let passwordRef;
@@ -126,13 +141,6 @@
   let textareaStyle;
   $: {
     textareaStyle = a2st([inputStyle, textareaCalcStyle, ['resize', resize]]);
-  }
-
-  async function focus() {
-    await tick();
-    if (_ref) {
-      _ref.focus();
-    }
   }
 
   $: containerClass = a2s([
