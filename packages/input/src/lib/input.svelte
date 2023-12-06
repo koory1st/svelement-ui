@@ -76,6 +76,14 @@
     }
   }
 
+  export function clear() {
+    nativeInputValue = '';
+    value = '';
+    dispatch('change', '');
+    dispatch('clear');
+    dispatch('input', '');
+  }
+
   let wrapRef;
   let inputRef;
   let passwordRef;
@@ -231,14 +239,6 @@
     await tick();
     textareaCalcStyle = resizeTextarea();
   });
-
-  function handleClear() {
-    nativeInputValue = '';
-    value = '';
-    dispatch('change', '');
-    dispatch('clear', '');
-    dispatch('input', '');
-  }
 
   function handleMouseEnter(e) {
     hovering = true;
@@ -517,7 +517,7 @@
           <span class="svel-input__suffix-inner">
             <slot name="suffix" />
             {#if showClear}
-              <SvelIcon class="svel-input__clear" on:click={handleClear}>
+              <SvelIcon class="svel-input__clear" on:click={clear}>
                 <CircleClose />
               </SvelIcon>
             {/if}

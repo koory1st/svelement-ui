@@ -7,9 +7,17 @@
 
   let focus;
   let blur;
+  let clear;
 </script>
 
-<SvelInput autosize bind:value={textarea1} placeholder="Please input" type="textarea" />
+<SvelInput
+  autosize
+  bind:clear
+  bind:value={textarea1}
+  clearable
+  placeholder="Please input"
+  type="text"
+/>
 <div style="margin: 20px 0" />
 <SvelInput
   autosize={{ minRows: 2, maxRows: 4 }}
@@ -19,5 +27,6 @@
   placeholder="Please input"
   type="textarea"
 />
-<button on:click={focus}>test</button>
-<button on:click={blur}>test</button>
+<button on:click={focus}>focus</button>
+<button on:click={blur}>blur</button>
+<button on:click={clear}>clear</button>
