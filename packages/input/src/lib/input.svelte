@@ -84,6 +84,10 @@
     dispatch('input', '');
   }
 
+  export let ref;
+
+  export let input;
+
   let wrapRef;
   let inputRef;
   let passwordRef;
@@ -97,6 +101,14 @@
         : type !== 'textarea' || passwordVisible
         ? inputRef
         : passwordRef;
+  }
+  $: ref = _ref;
+  $: if (type !== 'textarea') {
+    if (type === 'password' && !passwordVisible) {
+      input = passwordRef;
+    } else {
+      input = inputRef;
+    }
   }
 
   let hovering = false;
@@ -466,7 +478,7 @@
         <input
           class="svel-input__inner"
           bind:this={inputRef}
-          {type}
+          type={type === 'password' ? 'text' : 'input'}
           step={type === 'number' ? step : null}
           max={type === 'number' ? max : null}
           min={type === 'number' ? min : null}
