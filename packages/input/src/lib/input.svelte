@@ -88,6 +88,31 @@
 
   export let input;
 
+  export function resizeTextarea() {
+    if (!textAreaRef) {
+      return '';
+    }
+    if (type !== 'textarea') {
+      return '';
+    }
+
+    if (!autosize) {
+      return '';
+    }
+
+    let minRows = null;
+    let maxRows = null;
+    if (Object.prototype.toString.call(autosize).toLowerCase() === '[object object]') {
+      minRows = autosize.minRows;
+      maxRows = autosize.maxRows;
+    }
+    const style = calcTextareaHeight(textAreaRef, minRows, maxRows);
+
+    style.push(['overflow-y', 'hidden']);
+
+    return a2st(style);
+  }
+
   let wrapRef;
   let inputRef;
   let passwordRef;
@@ -297,31 +322,6 @@
   $: {
     type;
     textareaCalcStyle = resizeTextarea();
-  }
-
-  function resizeTextarea() {
-    if (!textAreaRef) {
-      return '';
-    }
-    if (type !== 'textarea') {
-      return '';
-    }
-
-    if (!autosize) {
-      return '';
-    }
-
-    let minRows = null;
-    let maxRows = null;
-    if (Object.prototype.toString.call(autosize).toLowerCase() === '[object object]') {
-      minRows = autosize.minRows;
-      maxRows = autosize.maxRows;
-    }
-    const style = calcTextareaHeight(textAreaRef, minRows, maxRows);
-
-    style.push(['overflow-y', 'hidden']);
-
-    return a2st(style);
   }
 
   let hiddenTextarea = null;

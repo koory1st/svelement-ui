@@ -20,6 +20,12 @@
   function showInput() {
     console.log(input);
   }
+
+  let resizeTextarea;
+
+  function invokeResize() {
+    resizeTextarea();
+  }
 </script>
 
 <SvelInput
@@ -38,6 +44,7 @@
   autosize={{ minRows: 2, maxRows: 4 }}
   bind:blur
   bind:focus
+  bind:resizeTextarea
   bind:value={textarea2}
   placeholder="Please input"
   type="textarea"
@@ -47,3 +54,4 @@
 <button on:click={focus}>focus</button>
 <button on:click={blur}>blur</button>
 <button on:click={clear}>clear</button>
+<button on:click={invokeResize}>invokeText</button>
