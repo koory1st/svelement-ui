@@ -113,20 +113,26 @@
     return a2st(style);
   }
 
+  export function select() {
+    _ref.select();
+  }
+
   let wrapRef;
   let inputRef;
   let passwordRef;
   let textAreaRef;
   let _ref;
   let passwordVisible = false;
-  $: {
-    _ref =
-      type === 'textarea'
-        ? textAreaRef
-        : type !== 'textarea' || passwordVisible
-        ? inputRef
-        : passwordRef;
+  $: if (type === 'textarea') {
+    _ref = textAreaRef;
+  } else {
+    if (type === 'password' && !passwordVisible) {
+      _ref = passwordRef;
+    } else {
+      _ref = inputRef;
+    }
   }
+
   $: ref = _ref;
   $: if (type !== 'textarea') {
     if (type === 'password' && !passwordVisible) {

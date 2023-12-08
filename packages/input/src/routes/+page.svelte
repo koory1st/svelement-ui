@@ -26,6 +26,12 @@
   function invokeResize() {
     resizeTextarea();
   }
+
+  let select;
+
+  function invokeSelect() {
+    select();
+  }
 </script>
 
 <SvelInput
@@ -33,6 +39,7 @@
   bind:clear
   bind:input
   bind:ref
+  bind:select
   bind:value={textarea1}
   clearable
   placeholder="Please input"
@@ -55,3 +62,4 @@
 <button on:click={blur}>blur</button>
 <button on:click={clear}>clear</button>
 <button on:click={invokeResize}>invokeText</button>
+<button on:click={invokeSelect}>invokeSelect</button>
