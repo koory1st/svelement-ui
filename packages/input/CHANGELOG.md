@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.18](https://github.com/koory1st/svelement-ui/compare/v0.18.17...v0.18.18) (2023-12-08)
+
+### Bug Fixes
+
+* **input:** expose resize ([e6a57f2](https://github.com/koory1st/svelement-ui/commit/e6a57f2109ba46065b3e03b99fb7eef3543e815b))
+* **input:** expose select ([d2f14cd](https://github.com/koory1st/svelement-ui/commit/d2f14cdc383563e463b3606feff4011e6ca037f1))
+
 ## [0.18.17](https://github.com/koory1st/svelement-ui/compare/v0.18.16...v0.18.17) (2023-12-07)
 
 ### Bug Fixes
