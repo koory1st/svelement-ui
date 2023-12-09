@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.19](https://github.com/koory1st/svelement-ui/compare/v0.18.18...v0.18.19) (2023-12-09)
+
+### Bug Fixes
+
+* **input:** expose textareaStyle ([8404030](https://github.com/koory1st/svelement-ui/commit/8404030a9e657170619d5aca0ce743ba712d953a))
+
 ## [0.18.18](https://github.com/koory1st/svelement-ui/compare/v0.18.17...v0.18.18) (2023-12-08)
 
 ### Bug Fixes
