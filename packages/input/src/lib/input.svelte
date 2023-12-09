@@ -1,6 +1,7 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
+  import { string as toStyleObject } from 'to-style';
   import { createEventDispatcher, onMount, tick } from 'svelte';
   import { CircleClose, Hide, SvelIcon, View } from '@svelement-ui/icon';
 
@@ -60,6 +61,7 @@
   // export let validateEvent = true;
   /** @type {string | Object} */
   export let inputStyle = {};
+  export let textareaStyle;
 
   // eslint-disable-next-line svelte/valid-compile
   export async function focus() {
@@ -108,9 +110,9 @@
     }
     const style = calcTextareaHeight(textAreaRef, minRows, maxRows);
 
-    style.push(['overflow-y', 'hidden']);
+    style['overflow-y'] = 'hidden';
 
-    return a2st(style);
+    return style;
   }
 
   export function select() {
@@ -188,10 +190,11 @@
     await focus();
   }
 
-  let textareaCalcStyle = '';
-  let textareaStyle;
+  let textareaCalcStyle = {};
+  let textareaStyleStr;
   $: {
-    textareaStyle = a2st([inputStyle, textareaCalcStyle, ['resize', resize]]);
+    textareaStyle = { ...inputStyle, ...textareaCalcStyle, resize };
+    textareaStyleStr = toStyleObject(textareaStyle);
   }
 
   $: containerClass = a2s([
@@ -345,7 +348,7 @@
     hiddenTextarea.value = targetElement.value || targetElement.placeholder || '';
 
     let height = hiddenTextarea.scrollHeight;
-    const result = [];
+    const ret = {};
 
     if (boxSizing === 'border-box') {
       height = height + borderSize;
@@ -362,7 +365,7 @@
         minHeight = minHeight + paddingSize + borderSize;
       }
       height = Math.max(minHeight, height);
-      result.push(['min-height', `${minHeight}px`]);
+      ret['min-height'] = `${minHeight}px`;
     }
     if (isNumber(maxRows)) {
       let maxHeight = singleRowHeight * maxRows;
@@ -371,11 +374,11 @@
       }
       height = Math.min(maxHeight, height);
     }
-    result.push(['height', `${height}px`]);
+    ret['height'] = `${height}px`;
     hiddenTextarea.parentNode?.removeChild(hiddenTextarea);
     hiddenTextarea = undefined;
 
-    return result;
+    return ret;
   }
 
   const CONTEXT_STYLE = [
@@ -581,7 +584,7 @@
       aria-label={label}
       {placeholder}
       {rows}
-      style={textareaStyle}
+      style={textareaStyleStr}
       {maxlength}
       {name}
       on:input={handleInput}

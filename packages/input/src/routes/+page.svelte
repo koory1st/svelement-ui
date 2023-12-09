@@ -32,6 +32,12 @@
   function invokeSelect() {
     select();
   }
+
+  let textareaStyle;
+
+  function showTextareaStyle() {
+    console.log(textareaStyle);
+  }
 </script>
 
 <SvelInput
@@ -52,8 +58,10 @@
   bind:blur
   bind:focus
   bind:resizeTextarea
+  bind:textareaStyle
   bind:value={textarea2}
   placeholder="Please input"
+  resize="both"
   type="textarea"
 />
 <button on:click={showRef}>log ref</button>
@@ -63,3 +71,4 @@
 <button on:click={clear}>clear</button>
 <button on:click={invokeResize}>invokeText</button>
 <button on:click={invokeSelect}>invokeSelect</button>
+<button on:click={showTextareaStyle}>showTextareaStyle</button>
