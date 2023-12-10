@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.20](https://github.com/koory1st/svelement-ui/compare/v0.18.19...v0.18.20) (2023-12-10)
+
+### Bug Fixes
+
+* **input-number:** add event ([d1be793](https://github.com/koory1st/svelement-ui/commit/d1be79353f16b07e2d3e2b0e7175972a4376910a))
+* **input-number:** expose focus and blur ([bd9321f](https://github.com/koory1st/svelement-ui/commit/bd9321fc5cbd534683409d3a45d839ea64c4d236))
+
 ## [0.18.19](https://github.com/koory1st/svelement-ui/compare/v0.18.18...v0.18.19) (2023-12-09)
 
 **Note:** Version bump only for package @svelement-ui/input-number
