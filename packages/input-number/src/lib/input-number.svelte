@@ -26,6 +26,8 @@
   /** @type {'large' | 'default' | 'small'} */
   export let size = 'default';
   export let stepStrictly = false;
+  export let blur;
+  export let focus;
 
   const dispatch = createEventDispatcher();
 
@@ -260,6 +262,8 @@
     </span>
   {/if}
   <SvelInput
+    bind:blur
+    bind:focus
     bind:this={inputRef}
     bind:value={displayValue}
     {disabled}
