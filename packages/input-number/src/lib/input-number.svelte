@@ -214,6 +214,14 @@
   function handleDecreaseKeyDown(e) {
     console.log('%c ---> e: ', 'color:#F0F;', e);
   }
+
+  function handleBlur(e) {
+    dispatch('blur', e);
+  }
+
+  function handleFocus(e) {
+    dispatch('focus', e);
+  }
 </script>
 
 <div class={classString}>
@@ -257,7 +265,9 @@
     {disabled}
     {max}
     {min}
+    on:blur={handleBlur}
     on:change={handleInputChange}
+    on:focus={handleFocus}
     on:input={handleInput}
     on:keydown={handleKeyDown}
     {placeholder}
