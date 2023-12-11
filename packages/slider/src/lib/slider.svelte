@@ -1,11 +1,16 @@
 <script>
+  import SvelInputNumber from '@svelement-ui/input-number';
+  import Button from '$lib/button.svelte';
+
+  let slider;
+
+  let firstValue;
 </script>
 
 <div class="svel-slider">
-  <div class="svel-slider__runway">
+  <div bind:this={slider} class="svel-slider__runway">
     <div class="svel-slider__bar" />
-    <div class="svel-slider__button-wrapper">
-      <div class="svel-slider__button" />
-    </div>
+    <Button />
   </div>
+  <SvelInputNumber bind:value={firstValue} />
 </div>
