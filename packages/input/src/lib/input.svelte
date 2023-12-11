@@ -1,6 +1,5 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
-  import a2st from '@svelement-ui/util-array-2-style-string';
   import { string as toStyleObject } from 'to-style';
   import { createEventDispatcher, onMount, tick } from 'svelte';
   import { CircleClose, Hide, SvelIcon, View } from '@svelement-ui/icon';
