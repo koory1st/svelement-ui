@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.21](https://github.com/koory1st/svelement-ui/compare/v0.18.20...v0.18.21) (2023-12-11)
+
+### Bug Fixes
+
+* **input-number:** add test case ([fffe114](https://github.com/koory1st/svelement-ui/commit/fffe114df1bcfe8116d3d1b441d3016bfa95db4b))
+* **slider:** add style ([bc989d9](https://github.com/koory1st/svelement-ui/commit/bc989d97ae4fd0ac0b8d30a4650e1ad02b1db6b8))
+
 ## [0.18.20](https://github.com/koory1st/svelement-ui/compare/v0.18.19...v0.18.20) (2023-12-10)
 
 ### Bug Fixes
