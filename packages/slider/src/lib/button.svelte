@@ -2,11 +2,11 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { string as toStyleObject } from 'to-style';
 
-  export let value = null;
+  export let value = 0;
   /** @type {number | null} */
   export let precision = null;
-  export let max = Infinity;
-  export let min = -Infinity;
+  export let max = 100;
+  export let min = 0;
   /** @type {number | null} */
   export let step = 1;
   export let vertical = false;
@@ -18,8 +18,15 @@
     ['hover', hovering],
     ['dragging', dragging],
   ]);
-  $: wrapperStyle = {};
-  $: wrapperStyleStr = toStyleObject(wrapperStyle);
+  let wrapperStyle;
+  let wrapperStyleStr;
+  $: if (vertical) {
+    wrapperStyle = { bottom: currentPosition };
+    wrapperStyleStr = toStyleObject(wrapperStyle);
+  } else {
+    wrapperStyle = { left: currentPosition };
+    wrapperStyleStr = toStyleObject(wrapperStyle);
+  }
   $: buttonClass = a2s([`svel-slider__button`, ['hover', hovering], ['dragging', dragging]]);
 
   $: disabled = false;
@@ -27,11 +34,11 @@
   $: startY = 0;
   $: startX = 0;
   $: startPosition = 0;
-  $: currentPosition = 0;
+  $: currentPosition = `${((value - min) / (max - min)) * 100}%`;
   $: newPosition = 0;
   $: currentY = 0;
   $: currentX = 0;
-  $: sliderSize = 1;
+  $: sliderSize = 1096;
   $: oldValue = 0;
 
   function handleMouseEnter() {
@@ -77,12 +84,14 @@
       // resetSize();
       let diff;
       const { clientX, clientY } = getClientXY(event);
+      console.log('clientX', clientX);
       if (vertical) {
         currentY = clientY;
         diff = ((startY - currentY) / sliderSize) * 100;
       } else {
         currentX = clientX;
         diff = ((currentX - startX) / sliderSize) * 100;
+        console.log('diff', diff);
       }
       newPosition = startPosition + diff;
       setPosition(newPosition);
