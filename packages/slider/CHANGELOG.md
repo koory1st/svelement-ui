@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.23](https://github.com/koory1st/svelement-ui/compare/v0.18.22...v0.18.23) (2023-12-14)
+
+### Bug Fixes
+
+* **slider:** update ([98e54e0](https://github.com/koory1st/svelement-ui/commit/98e54e0091d86d17f52b1dbeeba71dd6a6611a59))
+
 ## [0.18.22](https://github.com/koory1st/svelement-ui/compare/v0.18.21...v0.18.22) (2023-12-13)
 
 ### Bug Fixes
