@@ -13,8 +13,8 @@
   $: sliderSize = 1;
 
   function resetSize() {
-    if (slider.value) {
-      sliderSize = slider.value[`client${vertical ? 'Height' : 'Width'}`];
+    if (slider) {
+      sliderSize = slider[`client${vertical ? 'Height' : 'Width'}`];
     }
   }
 </script>
@@ -22,7 +22,7 @@
 <div class="svel-slider">
   <div bind:this={slider} class="svel-slider__runway">
     <div class="svel-slider__bar" />
-    <Button bind:this={firstButton} bind:value={firstValue} {vertical} />
+    <Button bind:this={firstButton} bind:value={firstValue} {resetSize} {sliderSize} {vertical} />
   </div>
   <SvelInputNumber bind:value={firstValue} />
 </div>

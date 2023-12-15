@@ -10,6 +10,10 @@
   /** @type {number | null} */
   export let step = 1;
   export let vertical = false;
+
+  export let resetSize;
+  export let sliderSize = 1;
+
   let button;
   $: hovering = false;
   $: dragging = false;
@@ -38,7 +42,6 @@
   $: newPosition = 0;
   $: currentY = 0;
   $: currentX = 0;
-  $: sliderSize = 1096;
   $: oldValue = 0;
 
   function handleMouseEnter() {
@@ -81,17 +84,15 @@
     if (dragging) {
       isClick = false;
       // displayTooltip();
-      // resetSize();
+      resetSize();
       let diff;
       const { clientX, clientY } = getClientXY(event);
-      console.log('clientX', clientX);
       if (vertical) {
         currentY = clientY;
         diff = ((startY - currentY) / sliderSize) * 100;
       } else {
         currentX = clientX;
         diff = ((currentX - startX) / sliderSize) * 100;
-        console.log('diff', diff);
       }
       newPosition = startPosition + diff;
       setPosition(newPosition);
