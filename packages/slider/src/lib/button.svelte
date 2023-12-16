@@ -13,6 +13,8 @@
 
   export let resetSize;
   export let sliderSize = 1;
+  export let disabled = false;
+  export let updateValue;
 
   let button;
   $: hovering = false;
@@ -33,7 +35,6 @@
   }
   $: buttonClass = a2s([`svel-slider__button`, ['hover', hovering], ['dragging', dragging]]);
 
-  $: disabled = false;
   $: isClick = false;
   $: startY = 0;
   $: startX = 0;
@@ -129,6 +130,7 @@
 
     if (v !== value) {
       value = v;
+      updateValue(v);
     }
 
     if (!dragging && value !== oldValue) {
