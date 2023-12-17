@@ -57,7 +57,7 @@
     }
   }
 
-  function onButtonDown(event) {
+  export function onButtonDown(event) {
     if (disabled) return;
     onDragStart(event);
     window.addEventListener('mousemove', onDragging);
@@ -116,7 +116,7 @@
     };
   }
 
-  async function setPosition(newPosition) {
+  export async function setPosition(newPosition) {
     if (newPosition === null || Number.isNaN(+newPosition)) return;
     if (newPosition < 0) {
       newPosition = 0;
