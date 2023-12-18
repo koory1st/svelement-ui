@@ -15,6 +15,7 @@
   export let sliderSize = 1;
   export let disabled = false;
   export let updateValue;
+  export let oldValue;
 
   let button;
   $: hovering = false;
@@ -43,7 +44,6 @@
   $: newPosition = 0;
   $: currentY = 0;
   $: currentX = 0;
-  $: oldValue = 0;
 
   function handleMouseEnter() {
     hovering = true;
@@ -59,6 +59,7 @@
 
   export function onButtonDown(event) {
     if (disabled) return;
+    event.preventDefault();
     onDragStart(event);
     window.addEventListener('mousemove', onDragging);
     window.addEventListener('touchmove', onDragging);
@@ -82,22 +83,24 @@
   }
 
   function onDragging(event) {
-    if (dragging) {
-      isClick = false;
-      // displayTooltip();
-      resetSize();
-      let diff;
-      const { clientX, clientY } = getClientXY(event);
-      if (vertical) {
-        currentY = clientY;
-        diff = ((startY - currentY) / sliderSize) * 100;
-      } else {
-        currentX = clientX;
-        diff = ((currentX - startX) / sliderSize) * 100;
-      }
-      newPosition = startPosition + diff;
-      setPosition(newPosition);
+    if (!dragging) {
+      return;
     }
+
+    isClick = false;
+    // displayTooltip();
+    resetSize();
+    let diff;
+    const { clientX, clientY } = getClientXY(event);
+    if (vertical) {
+      currentY = clientY;
+      diff = ((startY - currentY) / sliderSize) * 100;
+    } else {
+      currentX = clientX;
+      diff = ((currentX - startX) / sliderSize) * 100;
+    }
+    newPosition = startPosition + diff;
+    setPosition(newPosition);
   }
 
   function getClientXY(event) {
@@ -165,18 +168,16 @@
 </script>
 
 <div
-  aria-valuenow="0"
   bind:this={button}
   class={wrapperClass}
   on:blur={handleMouseLeave}
   on:focus={handleMouseEnter}
-  on:mousedown|preventDefault={onButtonDown}
+  on:mousedown={onButtonDown}
   on:mouseenter={handleMouseEnter}
   on:mouseleave={handleMouseLeave}
-  on:touchstart|preventDefault={onButtonDown}
-  role="slider"
+  on:touchstart={onButtonDown}
   style={wrapperStyleStr}
-  tabindex="0"
+  tabindex={disabled ? -1 : 0}
 >
   <div class={buttonClass} />
 </div>

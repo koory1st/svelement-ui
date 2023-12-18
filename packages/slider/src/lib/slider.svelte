@@ -2,7 +2,7 @@
   import SvelInputNumber from '@svelement-ui/input-number';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import Button from '$lib/button.svelte';
-  import { createEventDispatcher, tick } from 'svelte';
+  import { createEventDispatcher, onMount, tick } from 'svelte';
 
   const dispatch = createEventDispatcher();
 
@@ -17,6 +17,31 @@
   export let showInput = false;
   let slider;
   let firstButton;
+
+  onMount(async () => {
+    if (range) {
+      if (Array.isArray(value)) {
+        firstValue = Math.max(min, value[0]);
+        secondValue = Math.min(max, value[1]);
+      } else {
+        firstValue = min;
+        secondValue = max;
+      }
+      oldValue = [firstValue, secondValue];
+    } else {
+      if (typeof value !== 'number' || Number.isNaN(value)) {
+        firstValue = min;
+      } else {
+        firstValue = Math.min(max, Math.max(min, value));
+      }
+      oldValue = firstValue;
+    }
+
+    window.addEventListener('resize', resetSize);
+
+    await tick();
+    resetSize();
+  });
 
   $: sliderDisabled = disabled;
   $: sliderWrapperClass = a2s([
@@ -35,7 +60,7 @@
   $: range = false;
 
   $: firstValue = 0;
-  $: secondValue = max;
+  $: secondValue = 0;
   $: oldValue = 0;
   $: dragging = false;
   $: sliderSize = 1;
@@ -62,9 +87,9 @@
   let secondButtonDown;
 
   async function onSliderDown(e) {
-    const buttonRef = handleSliderPointerEvent(e);
+    const buttonDown = handleSliderPointerEvent(e);
     await tick();
-    firstButtonDown(e);
+    buttonDown(e);
   }
 
   function handleSliderPointerEvent(e) {
@@ -90,13 +115,13 @@
   function setPosition(percent) {
     const targetValue = min + (percent * (max - min)) / 100;
     if (range) {
-      firstButtonSetPosition();
+      firstButtonSetPosition(percent);
       return firstButtonDown;
     }
 
     if (Math.abs(minValue - targetValue) < Math.abs(maxValue - targetValue)) {
       if (firstValue < secondValue) {
-        firstButtonSetPosition();
+        firstButtonSetPosition(percent);
         return firstButtonDown;
       }
       secondButtonSetPosition();
@@ -104,22 +129,28 @@
     }
 
     if (firstValue > secondValue) {
-      firstButtonSetPosition();
+      firstButtonSetPosition(percent);
       return firstButtonDown;
     }
-    secondButtonSetPosition();
+    secondButtonSetPosition(percent);
     return secondButtonDown;
   }
 </script>
 
 <div class={sliderWrapperClass} role={range ? 'group' : undefined}>
-  <div bind:this={slider} class={sliderRunwayClass} on:mousedown={onSliderDown}>
+  <div
+    bind:this={slider}
+    class={sliderRunwayClass}
+    on:mousedown={onSliderDown}
+    on:touchstart={onSliderDown}
+  >
     <div class="svel-slider__bar" />
     <Button
       aria-disabled={sliderDisabled}
       aria-orientation={vertical ? 'vertical' : 'horizontal'}
       aria-valuemin={min}
       aria-valuenow={firstValue}
+      bind:oldValue
       bind:onButtonDown={firstButtonDown}
       bind:setPosition={firstButtonSetPosition}
       bind:this={firstButton}
@@ -131,7 +162,7 @@
       {vertical}
     />
   </div>
-  {#if showInput}
+  {#if showInput && !range}
     <SvelInputNumber bind:value={firstValue} {min} {max} {step} disabled={sliderDisabled} />
   {/if}
 </div>
