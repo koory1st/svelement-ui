@@ -15,6 +15,7 @@
   /** @type {'large' | 'default' | 'small'} */
   export let size = 'default';
   export let showInput = false;
+  export let showStops = false;
   let slider;
   let firstButton;
 
@@ -135,6 +136,38 @@
     secondButtonSetPosition(percent);
     return secondButtonDown;
   }
+
+  $: stops = getStops(showStops, min, max, step, minValue, maxValue);
+
+  function getStops(showStops, min, max, step, minValue, maxValue) {
+    if (!showStops || min > max) return [];
+    if (step === 0) {
+      console.log('ElSlider', 'step should not be 0.');
+      return [];
+    }
+
+    const stopCount = (max - min) / step;
+    const stepWidth = (100 * step) / (max - min);
+    const result = Array.from({ length: stopCount - 1 }).map((_, index) => (index + 1) * stepWidth);
+
+    if (range) {
+      return result.filter((step) => {
+        return (
+          step < (100 * (minValue - min)) / (max - min) ||
+          step > (100 * (maxValue - min)) / (max - min)
+        );
+      });
+    }
+
+    return result.filter((step) => step > (100 * (firstValue - min)) / (max - min));
+  }
+
+  function getStopStyle(position) {
+    if (vertical) {
+      return `bottom:${position}%;`;
+    }
+    return `left:${position}%;`;
+  }
 </script>
 
 <div class={sliderWrapperClass} role={range ? 'group' : undefined}>
@@ -158,9 +191,17 @@
       disabled={sliderDisabled}
       {resetSize}
       {sliderSize}
+      {step}
       updateValue={setFirstValue}
       {vertical}
     />
+    {#if showStops}
+      <div>
+        {#each stops as item}
+          <div class="svel-slider__stop" style={getStopStyle(item)} />
+        {/each}
+      </div>
+    {/if}
   </div>
   {#if showInput && !range}
     <SvelInputNumber bind:value={firstValue} {min} {max} {step} disabled={sliderDisabled} />

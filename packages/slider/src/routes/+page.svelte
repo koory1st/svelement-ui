@@ -3,8 +3,10 @@
 
   let value1 = 1;
   let value2 = 10;
+  let min = 1;
 </script>
 
+<input bind:value={min} type="text" />
 <div>{value1}</div>
-<SvelSlider bind:value={value1} />
-<SvelSlider bind:value={value2} disabled={true} />
+<SvelSlider bind:value={value1} showStops step={10} />
+<SvelSlider bind:value={value2} disabled />
