@@ -94,7 +94,7 @@
   }
 
   function handleSliderPointerEvent(e) {
-    if (sliderDisabled.value || dragging) return;
+    if (sliderDisabled || dragging) return;
     resetSize();
     let newPercent = 0;
     if (vertical) {
@@ -168,6 +168,14 @@
     }
     return `left:${position}%;`;
   }
+
+  $: barSize = range
+    ? `${(100 * (maxValue.value - minValue.value)) / (max - min)}%`
+    : `${(100 * (firstValue - min)) / (max - min)}%`;
+  $: barStart = range ? `${(100 * (minValue.value - min)) / (max - min)}%` : '0%';
+  $: barStyle = vertical
+    ? `height:${barSize};bottom:${barStart}`
+    : `width:${barSize};left:${barStart}`;
 </script>
 
 <div class={sliderWrapperClass} role={range ? 'group' : undefined}>
@@ -177,7 +185,7 @@
     on:mousedown={onSliderDown}
     on:touchstart={onSliderDown}
   >
-    <div class="svel-slider__bar" />
+    <div class="svel-slider__bar" style={barStyle} />
     <Button
       aria-disabled={sliderDisabled}
       aria-orientation={vertical ? 'vertical' : 'horizontal'}
