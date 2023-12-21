@@ -17,6 +17,7 @@ import SvelScrollbar from '@svelement-ui/scrollbar';
 import { SvelRadio, SvelRadioButton, SvelRadioGroup } from '@svelement-ui/radio';
 import SvelInput from '@svelement-ui/input';
 import SvelInputNumber from '@svelement-ui/input-number';
+import SvelSlider from '@svelement-ui/slider';
 
 export {
   SvelAside,
@@ -40,4 +41,5 @@ export {
   SvelRadioGroup,
   SvelInput,
   SvelInputNumber,
+  SvelSlider,
 };

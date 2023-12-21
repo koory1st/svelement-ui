@@ -149,6 +149,9 @@ importers:
       '@svelement-ui/scrollbar':
         specifier: workspace:^
         version: link:../scrollbar
+      '@svelement-ui/slider':
+        specifier: workspace:^
+        version: link:../slider
       '@svelement-ui/theme-chalk':
         specifier: workspace:^
         version: link:../theme-chalk
