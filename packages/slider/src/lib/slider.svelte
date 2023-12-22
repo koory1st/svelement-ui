@@ -16,6 +16,7 @@
   export let size = 'default';
   export let showInput = false;
   export let showStops = false;
+  export let range = false;
   let slider;
   let firstButton;
 
@@ -58,15 +59,21 @@
     ['is-disabled', sliderDisabled],
     [`show-input`, showInput],
   ]);
-  $: range = false;
 
   $: firstValue = 0;
   $: secondValue = 0;
   $: oldValue = 0;
   $: dragging = false;
   $: sliderSize = 1;
-  $: minValue = Math.min(firstValue, secondValue);
-  $: maxValue = Math.max(firstValue, secondValue);
+
+  let minValue;
+  let maxValue;
+  $: changeMinMaxValue(firstValue, secondValue);
+
+  function changeMinMaxValue(firstValue, secondValue) {
+    minValue = Math.min(firstValue, secondValue);
+    maxValue = Math.max(firstValue, secondValue);
+  }
 
   function resetSize() {
     if (slider) {
@@ -76,7 +83,16 @@
 
   function setFirstValue(v) {
     firstValue = v;
+    changeMinMaxValue(firstValue, secondValue);
     changeValue(range ? [minValue, maxValue] : firstValue);
+  }
+
+  function setSecondValue(v) {
+    secondValue = v;
+    changeMinMaxValue(firstValue, secondValue);
+    if (range) {
+      changeValue([minValue, maxValue]);
+    }
   }
 
   function changeValue(v) {
@@ -115,7 +131,7 @@
 
   function setPosition(percent) {
     const targetValue = min + (percent * (max - min)) / 100;
-    if (range) {
+    if (!range) {
       firstButtonSetPosition(percent);
       return firstButtonDown;
     }
@@ -170,9 +186,9 @@
   }
 
   $: barSize = range
-    ? `${(100 * (maxValue.value - minValue.value)) / (max - min)}%`
+    ? `${(100 * (maxValue - minValue)) / (max - min)}%`
     : `${(100 * (firstValue - min)) / (max - min)}%`;
-  $: barStart = range ? `${(100 * (minValue.value - min)) / (max - min)}%` : '0%';
+  $: barStart = range ? `${(100 * (minValue - min)) / (max - min)}%` : '0%';
   $: barStyle = vertical
     ? `height:${barSize};bottom:${barStart}`
     : `width:${barSize};left:${barStart}`;
@@ -189,6 +205,7 @@
     <Button
       aria-disabled={sliderDisabled}
       aria-orientation={vertical ? 'vertical' : 'horizontal'}
+      aria-valuemax={range ? secondValue : max}
       aria-valuemin={min}
       aria-valuenow={firstValue}
       bind:oldValue
@@ -203,6 +220,25 @@
       updateValue={setFirstValue}
       {vertical}
     />
+    {#if range}
+      <Button
+        aria-disabled={sliderDisabled}
+        aria-orientation={vertical ? 'vertical' : 'horizontal'}
+        aria-valuemin={firstValue}
+        aria-valuenow={secondValue}
+        aria-valuemax={max}
+        bind:oldValue
+        bind:onButtonDown={secondButtonDown}
+        bind:setPosition={secondButtonSetPosition}
+        bind:value={secondValue}
+        disabled={sliderDisabled}
+        {resetSize}
+        {sliderSize}
+        {step}
+        updateValue={setSecondValue}
+        {vertical}
+      />
+    {/if}
     {#if showStops}
       <div>
         {#each stops as item}

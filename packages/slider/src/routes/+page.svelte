@@ -8,5 +8,5 @@
 
 <input bind:value={min} type="text" />
 <div>{value1}</div>
-<SvelSlider bind:value={value1} showStops step={10} />
+<SvelSlider bind:value={value1} range showStops step={10} />
 <SvelSlider bind:value={value2} disabled />
