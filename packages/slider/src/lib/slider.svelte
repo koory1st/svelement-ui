@@ -195,6 +195,7 @@
 </script>
 
 <div class={sliderWrapperClass} role={range ? 'group' : undefined}>
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     bind:this={slider}
     class={sliderRunwayClass}
