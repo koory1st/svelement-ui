@@ -17,6 +17,8 @@
   export let showInput = false;
   export let showStops = false;
   export let range = false;
+  /** @type {string} */
+  export let height;
   let slider;
   let firstButton;
 
@@ -192,6 +194,8 @@
   $: barStyle = vertical
     ? `height:${barSize};bottom:${barStart}`
     : `width:${barSize};left:${barStart}`;
+
+  $: runwayStyle = vertical ? `height:${height}` : null;
 </script>
 
 <div class={sliderWrapperClass} role={range ? 'group' : undefined}>
@@ -201,6 +205,7 @@
     class={sliderRunwayClass}
     on:mousedown={onSliderDown}
     on:touchstart={onSliderDown}
+    style={runwayStyle}
   >
     <div class="svel-slider__bar" style={barStyle} />
     <Button
