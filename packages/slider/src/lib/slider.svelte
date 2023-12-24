@@ -2,6 +2,7 @@
   import SvelInputNumber from '@svelement-ui/input-number';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import Button from '$lib/button.svelte';
+  import { string as toStyleObject } from 'to-style';
   import { createEventDispatcher, onMount, tick } from 'svelte';
 
   const dispatch = createEventDispatcher();
@@ -19,6 +20,8 @@
   export let range = false;
   /** @type {string} */
   export let height;
+  /** @type {object} */
+  export let marks;
   let slider;
   let firstButton;
 
@@ -196,6 +199,42 @@
     : `width:${barSize};left:${barStart}`;
 
   $: runwayStyle = vertical ? `height:${height}` : null;
+
+  $: markList = getMarkList(marks, min, max);
+
+  function getMarkList(marks, min, max) {
+    if (!marks) {
+      return [];
+    }
+
+    const marksKeys = Object.keys(marks);
+    return marksKeys
+      .map(Number.parseFloat)
+      .sort((a, b) => a - b)
+      .filter((point) => point <= max && point >= min)
+      .map((point) => ({
+        point,
+        position: ((point - min) * 100) / (max - min),
+        mark: marks[point],
+      }));
+  }
+
+  function getMarkStyle(item) {
+    let style = getStopStyle(item.position);
+
+    if (typeof item.mark === 'object') {
+      return toStyleObject(item.mark.style) + ';' + style;
+    }
+
+    return style;
+  }
+
+  function getMarkText(item) {
+    if (typeof item.mark === 'object') {
+      return item.mark.label;
+    }
+    return item.mark;
+  }
 </script>
 
 <div class={sliderWrapperClass} role={range ? 'group' : undefined}>
@@ -249,6 +288,21 @@
       <div>
         {#each stops as item}
           <div class="svel-slider__stop" style={getStopStyle(item)} />
+        {/each}
+      </div>
+    {/if}
+    {#if markList.length > 0}
+      <div>
+        {#each markList as item}
+          <div
+            class="svel-slider__stop svel-slider__marks-stop"
+            style={getStopStyle(item.position)}
+          />
+        {/each}
+      </div>
+      <div class="svel-slider__marks">
+        {#each markList as item}
+          <div class="svel-slider__marks-text" style={getMarkStyle(item)}>{getMarkText(item)}</div>
         {/each}
       </div>
     {/if}
