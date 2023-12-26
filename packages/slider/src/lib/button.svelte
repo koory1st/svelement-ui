@@ -47,12 +47,14 @@
 
   function handleMouseEnter() {
     hovering = true;
+    showTooltip = true;
     // displayTooltip()
   }
 
   function handleMouseLeave() {
     hovering = false;
     if (!dragging) {
+      showTooltip = false;
       // hideTooltip()
     }
   }
@@ -88,6 +90,7 @@
     }
 
     isClick = false;
+    showTooltip = true;
     // displayTooltip();
     resetSize();
     let diff;
@@ -140,7 +143,8 @@
       oldValue = value;
     }
 
-    // await nextTick();
+    await tick();
+    await getInstance().update();
     // dragging && displayTooltip();
     // tooltip.value!.updatePopper();
   }
@@ -152,6 +156,7 @@
     setTimeout(() => {
       dragging = false;
       if (!hovering) {
+        showTooltip = false;
         // hideTooltip();
       }
       if (!isClick) {
@@ -165,6 +170,19 @@
     window.removeEventListener('touchend', onDragEnd);
     window.removeEventListener('contextmenu', onDragEnd);
   }
+
+  import { createPopperActions } from 'svelte-popperjs';
+  import { tick } from 'svelte';
+
+  const [popperRef, popperContent, getInstance] = createPopperActions({
+    placement: 'top',
+    strategy: 'fixed',
+  });
+  const extraOpts = {
+    modifiers: [{ name: 'offset', options: { offset: [0, 8] } }],
+  };
+
+  let showTooltip = false;
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -181,5 +199,11 @@
   style={wrapperStyleStr}
   tabindex={disabled ? -1 : 0}
 >
-  <div class={buttonClass} />
+  <div class={buttonClass} use:popperRef />
 </div>
+{#if showTooltip}
+  <div id="tooltip" use:popperContent={extraOpts}>
+    {value}
+    <div id="arrow" data-popper-arrow />
+  </div>
+{/if}
