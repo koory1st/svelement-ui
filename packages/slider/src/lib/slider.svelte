@@ -22,6 +22,7 @@
   export let height;
   /** @type {object} */
   export let marks;
+  export let showTooltip = true;
   let slider;
   let firstButton;
 
@@ -260,6 +261,7 @@
       bind:value={firstValue}
       disabled={sliderDisabled}
       {resetSize}
+      {showTooltip}
       {sliderSize}
       {step}
       updateValue={setFirstValue}
@@ -282,6 +284,7 @@
         {step}
         updateValue={setSecondValue}
         {vertical}
+        {showTooltip}
       />
     {/if}
     {#if showStops}

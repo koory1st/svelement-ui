@@ -16,6 +16,7 @@
   export let disabled = false;
   export let updateValue;
   export let oldValue;
+  export let showTooltip = true;
 
   let button;
   $: hovering = false;
@@ -181,8 +182,6 @@
   const extraOpts = {
     modifiers: [{ name: 'offset', options: { offset: [0, 8] } }],
   };
-
-  let showTooltip = false;
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
