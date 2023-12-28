@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/koory1st/svelement-ui/compare/v0.18.26...v0.19.0) (2023-12-28)
+
+### Features
+
+* **popper:** add ([29855b2](https://github.com/koory1st/svelement-ui/commit/29855b20d35b158980a0e9a88075cb3b7f6d4dc6))
+
 ## [0.18.26](https://github.com/koory1st/svelement-ui/compare/v0.18.25...v0.18.26) (2023-12-27)
 
 ### Bug Fixes
