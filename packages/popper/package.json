@@ -49,5 +49,8 @@
   "author": {
     "name": "koory1st",
     "email": "32436334@qq.com"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8"
   }
 }
