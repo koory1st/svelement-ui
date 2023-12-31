@@ -37,12 +37,6 @@ export function popover(node, { component, ...props }) {
             offset: [0, 8],
           },
         },
-        // {
-        //   name: 'arrow',
-        //   options: {
-        //     element: arrow,
-        //   },
-        // },
       ],
     });
 

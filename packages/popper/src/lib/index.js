@@ -1,6 +1,7 @@
 import '@svelement-ui/theme-chalk/src/base.scss';
-import '@svelement-ui/theme-chalk/src/scrollbar.scss';
+import '@svelement-ui/theme-chalk/src/popper.scss';
 
-import SvelPopper from './popper.svelte';
+import { popover } from '$lib/action.js';
+import SvelPopper from '$lib/popper.svelte';
 
-export default SvelPopper;
+export { SvelPopper, popover };

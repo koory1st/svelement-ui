@@ -1,6 +1,5 @@
 <script>
-  import Modal from '$lib/modal.svelte';
-  import { popover } from '$lib/action.js';
+  import { popover, SvelPopper } from '$lib/index.js';
 </script>
 
-<button use:popover={{ component: Modal }}>Pop it</button>
+<button use:popover={{ component: SvelPopper }}>Pop it</button>
