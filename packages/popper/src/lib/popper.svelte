@@ -1,9 +1,4 @@
-<div class="svel-popper-container" id="modal">
-  <div class="svel-popper is-dark">
-    <div data-popper-arrow />
-    <span>0</span>
-  </div>
+<div class="svel-popper is-dark" id="modal">
+  <span>0</span>
+  <div class="svel-popper__arrow" data-popper-arrow id="arrow" />
 </div>
-
-<style>
-</style>

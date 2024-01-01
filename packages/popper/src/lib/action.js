@@ -21,15 +21,19 @@ export function popover(node, { component, ...props }) {
     }
   };
 
+  const container = document.createElement('div');
+  container.classList.add('svel-popper-container');
+  document.body.appendChild(container);
   const show = () => {
     componentInstance = new component({
-      target: document.body,
+      target: container,
       props,
     });
     isActive = true;
     renderedComponent = document.querySelector(`#${id}`);
 
     popperInstance = createPopper(button, renderedComponent, {
+      placement: 'top',
       modifiers: [
         {
           name: 'offset',
@@ -37,12 +41,6 @@ export function popover(node, { component, ...props }) {
             offset: [0, 8],
           },
         },
-        // {
-        //   name: 'arrow',
-        //   options: {
-        //     element: arrow,
-        //   },
-        // },
       ],
     });
 
