@@ -1,19 +1,12 @@
 import { createPopper } from '@popperjs/core';
+import SveltePopper from '$lib/popper.svelte';
 
-export function popover(node, { component, ...props }) {
-  const button = node;
+export function popover(node, { component, showEvent, hideEvent, ...props }) {
   let popperInstance,
     componentInstance,
     renderedComponent,
     isActive = false;
   const id = 'modal';
-
-  const toggle = (e) => {
-    e.stopPropagation();
-    isActive ? hide() : show();
-  };
-
-  button.addEventListener('click', toggle);
 
   const detectClickOutside = (event) => {
     if (renderedComponent && !renderedComponent.contains(event.target) && isActive) {
@@ -25,14 +18,17 @@ export function popover(node, { component, ...props }) {
   container.classList.add('svel-popper-container');
   document.body.appendChild(container);
   const show = () => {
-    componentInstance = new component({
+    if (isActive) {
+      return;
+    }
+    componentInstance = new SveltePopper({
       target: container,
       props,
     });
     isActive = true;
     renderedComponent = document.querySelector(`#${id}`);
 
-    popperInstance = createPopper(button, renderedComponent, {
+    popperInstance = createPopper(node, renderedComponent, {
       placement: 'top',
       modifiers: [
         {
@@ -58,9 +54,13 @@ export function popover(node, { component, ...props }) {
     document.removeEventListener('click', detectClickOutside);
   };
 
+  node.addEventListener(showEvent, show);
+  node.addEventListener(hideEvent, hide);
+
   return {
     destroy() {
-      button.removeEventListener('click', toggle);
+      node.removeEventListener('showEvent', show);
+      node.removeEventListener('hideEvent', hide);
       document.removeEventListener('click', detectClickOutside);
     },
   };
