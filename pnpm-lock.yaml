@@ -350,6 +350,9 @@ importers:
       '@svelement-ui/input-number':
         specifier: workspace:^
         version: link:../input-number
+      '@svelement-ui/popper':
+        specifier: workspace:^
+        version: link:../popper
       '@svelement-ui/theme-chalk':
         specifier: workspace:^
         version: link:../theme-chalk

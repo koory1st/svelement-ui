@@ -1,6 +1,7 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { string as toStyleObject } from 'to-style';
+  import { popover } from '@svelement-ui/popper';
 
   export let value = 0;
   /** @type {number | null} */
@@ -144,8 +145,8 @@
       oldValue = value;
     }
 
-    await tick();
-    await getInstance().update();
+    // await tick();
+    // await getInstance().update();
     // dragging && displayTooltip();
     // tooltip.value!.updatePopper();
   }
@@ -171,17 +172,6 @@
     window.removeEventListener('touchend', onDragEnd);
     window.removeEventListener('contextmenu', onDragEnd);
   }
-
-  import { createPopperActions } from 'svelte-popperjs';
-  import { tick } from 'svelte';
-
-  const [popperRef, popperContent, getInstance] = createPopperActions({
-    placement: 'top',
-    strategy: 'fixed',
-  });
-  const extraOpts = {
-    modifiers: [{ name: 'offset', options: { offset: [0, 8] } }],
-  };
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -198,11 +188,8 @@
   style={wrapperStyleStr}
   tabindex={disabled ? -1 : 0}
 >
-  <div class={buttonClass} use:popperRef />
+  <div
+    class={buttonClass}
+    use:popover={{ showEvent: 'mouseover', hideEvent: 'mouseleave', content: '123' }}
+  />
 </div>
-{#if showTooltip}
-  <div id="tooltip" use:popperContent={extraOpts}>
-    {value}
-    <div id="arrow" data-popper-arrow />
-  </div>
-{/if}

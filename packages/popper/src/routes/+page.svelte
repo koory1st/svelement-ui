@@ -1,10 +1,12 @@
 <script>
-  import { popover, SvelPopper } from '$lib/index.js';
+  import { createPopper } from '$lib/index.js';
+
+  let popover1 = createPopper({ showEvent: 'mouseover', hideEvent: 'mouseleave', content: '123' });
 </script>
 
 <button
   class="button"
-  use:popover={{ showEvent: 'mouseover', hideEvent: 'mouseleave', content: '123' }}
+  use:popover1={{ showEvent: 'mouseover', hideEvent: 'mouseleave', content: '123', props: {} }}
 >
   Pop it
 </button>

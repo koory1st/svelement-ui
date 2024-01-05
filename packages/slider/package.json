@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@svelement-ui/input-number": "workspace:^",
+    "@svelement-ui/popper": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
     "@svelement-ui/util-array-2-style-string": "workspace:^",
