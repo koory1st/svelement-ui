@@ -1,14 +1,11 @@
 <script>
-  import { createPopper } from '$lib/index.js';
   import { onMount } from 'svelte';
-  import SvelPopper from '$lib/popper.svelte';
+  import { SvelPopper } from '$lib/index.js';
 
-  let popperThing;
+  let popperRef;
   let button;
-  console.log('page22', popperThing);
 
   $: content = 1;
-  let popover = createPopper(popperThing);
   // popover(button, {});
   // let popover1 = createPopper({
   //   showEvent: 'mouseover',
@@ -16,11 +13,12 @@
   //   content: content,
   // });
   onMount(() => {
-    console.log('page', popperThing);
+    console.log('page', popperRef);
+    popperRef(button);
   });
 
   function handleClick() {
-    console.log(popperThing);
+    console.log(popperRef);
     content += 1;
   }
 </script>
@@ -32,8 +30,8 @@
 <!--  Pop it-->
 <!--</button>-->
 
-<button bind:this={button} on:click={handleClick} use:popover={{}}>aaa</button>
-<SvelPopper bind:popperThing {content} />
+<button bind:this={button} on:click={handleClick}>aaa</button>
+<SvelPopper bind:popperRef {content} />
 
 <style>
   .button {

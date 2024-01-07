@@ -1,17 +1,23 @@
 <script>
-  import { onMount } from 'svelte';
+  import { createPopperActions } from 'svelte-popperjs';
 
-  export let content = '';
-  export let classId;
-  export let popperThing;
+  export let popperRef;
 
-  onMount(() => {
-    console.log('popper', popperThing);
+  let showTooltip = false;
+  const extraOpts = {
+    modifiers: [{ name: 'offset', options: { offset: [0, 8] } }],
+  };
+  const [popperRef1, popperContent] = createPopperActions({
+    placement: 'bottom',
+    strategy: 'fixed',
   });
+
+  popperRef = popperRef1;
+  export let content = '';
 </script>
 
 <div class="svel-popper-container">
-  <div bind:this={popperThing} class="svel-popper is-dark {classId}">
+  <div class="svel-popper is-dark" use:popperContent={extraOpts}>
     <span>{content}</span>
     <div class="svel-popper__arrow" data-popper-arrow />
   </div>
