@@ -1,19 +1,10 @@
 import { createPopper as innerCreatePopper } from '@popperjs/core';
 import SveltePopper from '$lib/popper.svelte';
 
-export function createPopper() {
+export function createPopper(renderedComponent) {
   return function popover(node, { ...props }) {
-    const container = document.createElement('div');
-    container.classList.add('svel-popper-container');
-    document.body.appendChild(container);
-
-    let generate_class = 'abce';
-    props['classId'] = generate_class;
-    let popper = new SveltePopper({
-      target: container,
-      props,
-    });
-    let renderedComponent = document.querySelector(`.${generate_class}`);
+    console.log('node', node);
+    console.log('renderedComponent', renderedComponent);
     return innerCreatePopper(node, renderedComponent, {
       placement: 'top',
       modifiers: [
