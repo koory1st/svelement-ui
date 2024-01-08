@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { SvelPopper } from '$lib/index.js';
+  import SvelPopper from '$lib/index.js';
 
   let popperRef;
   let button;
@@ -13,14 +13,15 @@
   //   content: content,
   // });
   onMount(() => {
-    console.log('page', popperRef);
     popperRef(button);
   });
 
   function handleClick() {
-    console.log(popperRef);
     content += 1;
   }
+
+  let hideTooltip;
+  let showTooltip;
 </script>
 
 <!--<button-->
@@ -30,8 +31,15 @@
 <!--  Pop it-->
 <!--</button>-->
 
-<button bind:this={button} on:click={handleClick}>aaa</button>
-<SvelPopper bind:popperRef {content} />
+<button
+  bind:this={button}
+  on:click={handleClick}
+  on:mouseenter={() => (showTooltip = true)}
+  on:mouseleave={() => (showTooltip = false)}
+>
+  aaa
+</button>
+<SvelPopper bind:popperRef bind:showTooltip {content} />
 
 <style>
   .button {

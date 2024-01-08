@@ -1,7 +1,8 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { string as toStyleObject } from 'to-style';
-  import { popover } from '@svelement-ui/popper';
+  import SvelPopper from '@svelement-ui/popper';
+  import { onMount } from 'svelte';
 
   export let value = 0;
   /** @type {number | null} */
@@ -49,14 +50,14 @@
 
   function handleMouseEnter() {
     hovering = true;
-    showTooltip = true;
+    tooltipShowTooltip = true;
     // displayTooltip()
   }
 
   function handleMouseLeave() {
     hovering = false;
     if (!dragging) {
-      showTooltip = false;
+      // tooltipShowTooltip = false;
       // hideTooltip()
     }
   }
@@ -172,6 +173,12 @@
     window.removeEventListener('touchend', onDragEnd);
     window.removeEventListener('contextmenu', onDragEnd);
   }
+
+  let popperRef;
+  let tooltipShowTooltip;
+  onMount(() => {
+    popperRef(button);
+  });
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -188,8 +195,6 @@
   style={wrapperStyleStr}
   tabindex={disabled ? -1 : 0}
 >
-  <div
-    class={buttonClass}
-    use:popover={{ showEvent: 'mouseover', hideEvent: 'mouseleave', content: '123' }}
-  />
+  <div class={buttonClass} />
+  <SvelPopper bind:popperRef bind:showTooltip={tooltipShowTooltip} {value} />
 </div>
