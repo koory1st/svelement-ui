@@ -31,12 +31,7 @@
 <!--  Pop it-->
 <!--</button>-->
 
-<button
-  bind:this={button}
-  on:click={handleClick}
-  on:mouseenter={() => (showTooltip = true)}
-  on:mouseleave={() => (showTooltip = false)}
->
+<button bind:this={button} on:click={handleClick} on:mouseenter={() => (showTooltip = true)}>
   aaa
 </button>
 <SvelPopper bind:popperRef bind:showTooltip {content} />

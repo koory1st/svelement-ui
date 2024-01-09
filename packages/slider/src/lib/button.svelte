@@ -2,7 +2,7 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { string as toStyleObject } from 'to-style';
   import SvelPopper from '@svelement-ui/popper';
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
 
   export let value = 0;
   /** @type {number | null} */
@@ -146,8 +146,8 @@
       oldValue = value;
     }
 
-    // await tick();
-    // await getInstance().update();
+    await tick();
+    await updatePopper();
     // dragging && displayTooltip();
     // tooltip.value!.updatePopper();
   }
@@ -179,6 +179,8 @@
   onMount(() => {
     popperRef(button);
   });
+
+  let updatePopper;
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -196,5 +198,10 @@
   tabindex={disabled ? -1 : 0}
 >
   <div class={buttonClass} />
-  <SvelPopper bind:popperRef bind:showTooltip={tooltipShowTooltip} {value} />
+  <SvelPopper
+    bind:popperRef
+    bind:showTooltip={tooltipShowTooltip}
+    bind:updatePopper
+    content={value}
+  />
 </div>
