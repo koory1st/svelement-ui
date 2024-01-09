@@ -35,11 +35,3 @@
   aaa
 </button>
 <SvelPopper bind:popperRef bind:showTooltip {content} />
-
-<style>
-  .button {
-    position: absolute;
-    left: 100px;
-    top: 100px;
-  }
-</style>
