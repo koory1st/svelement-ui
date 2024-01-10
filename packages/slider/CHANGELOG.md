@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.1](https://github.com/koory1st/svelement-ui/compare/v0.19.0...v0.19.1) (2024-01-10)
+
+### Bug Fixes
+
+* **popper:** change function ([bff6fe0](https://github.com/koory1st/svelement-ui/commit/bff6fe0de0dc9df8392a6227775c4fa9fd6af373))
+* **popper:** update demo ([40d5f26](https://github.com/koory1st/svelement-ui/commit/40d5f263336d86c7b5f16233bea94b7ea5ec7b5b))
+* **slider:** add popper ([d6e0d16](https://github.com/koory1st/svelement-ui/commit/d6e0d160b72f124d795323f5d399a0e7b5f8ca89))
+
 # [0.19.0](https://github.com/koory1st/svelement-ui/compare/v0.18.26...v0.19.0) (2023-12-28)
 
 **Note:** Version bump only for package @svelement-ui/slider

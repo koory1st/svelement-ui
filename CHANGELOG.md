@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.1](https://github.com/koory1st/svelement-ui/compare/v0.19.0...v0.19.1) (2024-01-10)
+
+### Bug Fixes
+
+* **popper:** add ([771e50a](https://github.com/koory1st/svelement-ui/commit/771e50a03e44140bed89d28032533be2a1b2749d))
+* **popper:** add container ([8eaf33c](https://github.com/koory1st/svelement-ui/commit/8eaf33c9b78bba85483b0e22e62bc0dfd293b414))
+* **popper:** add popperjs ([cb5b349](https://github.com/koory1st/svelement-ui/commit/cb5b349b37632e120c13e608b28003ebc95f3c16))
+* **popper:** change function ([bff6fe0](https://github.com/koory1st/svelement-ui/commit/bff6fe0de0dc9df8392a6227775c4fa9fd6af373))
+* **popper:** demo ([21258d4](https://github.com/koory1st/svelement-ui/commit/21258d4f4b5d3aeb8bbd64ca17be2cc0291c6ae0))
+* **popper:** demo ([69af257](https://github.com/koory1st/svelement-ui/commit/69af2576a96e1141af17f4baafe0a954026d33ac))
+* **popper:** demo ([8cf613c](https://github.com/koory1st/svelement-ui/commit/8cf613ce34bdeaf9908b85544d8ca42d9c9403e5))
+* **popper:** modal ([95e5353](https://github.com/koory1st/svelement-ui/commit/95e53535e2af99dfa12678760b4c5b2f827fb9b9))
+* **popper:** update ([08bbccc](https://github.com/koory1st/svelement-ui/commit/08bbccc428dce9be3b57195f7cb9d2df6649c0b8))
+* **popper:** update demo ([40d5f26](https://github.com/koory1st/svelement-ui/commit/40d5f263336d86c7b5f16233bea94b7ea5ec7b5b))
+* **slider:** add popper ([d6e0d16](https://github.com/koory1st/svelement-ui/commit/d6e0d160b72f124d795323f5d399a0e7b5f8ca89))
+
 # [0.19.0](https://github.com/koory1st/svelement-ui/compare/v0.18.26...v0.19.0) (2023-12-28)
 
 ### Features
