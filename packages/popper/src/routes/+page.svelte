@@ -15,8 +15,8 @@
   //   content: content,
   // });
   onMount(() => {
-    popperRef(button);
-    popperRef2(button2);
+    // popperRef(button);
+    // popperRef2(button2);
   });
 
   function handleClick() {
@@ -24,7 +24,7 @@
   }
 
   let hideTooltip;
-  let showTooltip;
+  let showTooltip = false;
   let showTooltip2;
 </script>
 
@@ -35,17 +35,16 @@
 <!--  Pop it-->
 <!--</button>-->
 
-<button bind:this={button} on:click={handleClick} on:mouseenter={() => (showTooltip = true)}>
-  aaa
-</button>
-<SvelPopper bind:popperRef bind:showTooltip effect="light"><span>{content}</span></SvelPopper>
+<SvelPopper bind:showTooltip {content} effect="light">
+  <button on:click={handleClick}>aaa</button>
+</SvelPopper>
 
-<button bind:this={button2} on:click={handleClick} on:mouseenter={() => (showTooltip2 = true)}>
-  bbb
-</button>
-<SvelPopper
-  bind:popperRef={popperRef2}
-  bind:showTooltip={showTooltip2}
-  content="123"
-  placement="right"
-/>
+<!--<button bind:this={button2} on:click={handleClick} on:mouseenter={() => (showTooltip2 = true)}>-->
+<!--  bbb-->
+<!--</button>-->
+<!--<SvelPopper-->
+<!--  bind:popperRef={popperRef2}-->
+<!--  bind:showTooltip={showTooltip2}-->
+<!--  content="123"-->
+<!--  placement="right"-->
+<!--/>-->
