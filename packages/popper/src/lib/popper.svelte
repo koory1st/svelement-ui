@@ -22,7 +22,15 @@
   export let placement = 'bottom';
 
   export let popperOptions = {
-    modifiers: [{ name: 'offset', options: { offset: [0, 8] } }],
+    modifiers: [
+      {
+        name: 'offset',
+        options: {
+          offset:
+            !placement.includes('top') && !placement.includes('bottom') ? [offset, 0] : [0, offset],
+        },
+      },
+    ],
   };
 
   export let showTooltip = false;
