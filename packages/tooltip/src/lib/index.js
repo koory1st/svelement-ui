@@ -1,7 +1,7 @@
 import '@svelement-ui/theme-chalk/src/base.scss';
 import '@svelement-ui/theme-chalk/src/tooltip.scss';
 
-import { popover } from '$lib/action.js';
-import SvelTooltip from '$lib/tooltip.svelte';
+import SvelPopper from '@svelement-ui/popper';
 
-export { SvelTooltip, popover };
+let SvelTooltip = SvelPopper;
+export default SvelTooltip;

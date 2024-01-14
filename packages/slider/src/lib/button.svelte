@@ -1,7 +1,7 @@
 <script>
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { string as toStyleObject } from 'to-style';
-  import SvelPopper from '@svelement-ui/popper';
+  import SvelTooltip from '@svelement-ui/tooltip';
   import { onMount, tick } from 'svelte';
 
   export let value = 0;
@@ -174,34 +174,26 @@
     window.removeEventListener('contextmenu', onDragEnd);
   }
 
-  let popperRef;
   let tooltipShowTooltip;
-  onMount(() => {
-    popperRef(button);
-  });
 
   let updatePopper;
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div
-  bind:this={button}
-  class={wrapperClass}
-  on:blur={handleMouseLeave}
-  on:focus={handleMouseEnter}
-  on:mousedown={onButtonDown}
-  on:mouseenter={handleMouseEnter}
-  on:mouseleave={handleMouseLeave}
-  on:touchstart={onButtonDown}
-  style={wrapperStyleStr}
-  tabindex={disabled ? -1 : 0}
->
-  <div class={buttonClass} />
-  <SvelPopper
-    bind:popperRef
-    bind:showTooltip={tooltipShowTooltip}
-    bind:updatePopper
-    content={value}
-  />
-</div>
+<SvelTooltip bind:updatePopper content={value}>
+  <div
+    bind:this={button}
+    class={wrapperClass}
+    on:blur={handleMouseLeave}
+    on:focus={handleMouseEnter}
+    on:mousedown={onButtonDown}
+    on:mouseenter={handleMouseEnter}
+    on:mouseleave={handleMouseLeave}
+    on:touchstart={onButtonDown}
+    style={wrapperStyleStr}
+    tabindex={disabled ? -1 : 0}
+  >
+    <div class={buttonClass} />
+  </div>
+</SvelTooltip>

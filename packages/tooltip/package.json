@@ -38,8 +38,7 @@
     "@svelement-ui/popper": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
-    "@svelement-ui/util-array-2-style-string": "workspace:^",
-    "svelte-popperjs": "^1.3.2"
+    "@svelement-ui/util-array-2-style-string": "workspace:^"
   },
   "repository": {
     "type": "git",

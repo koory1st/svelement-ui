@@ -1,5 +1,8 @@
 <script>
-  import { SvelTooltip, popover } from '$lib/index.js';
+  import SvelTooltip from '$lib/index.js';
 </script>
 
-<button use:popover={{ component: SvelTooltip }}>Pop it</button>
+<SvelTooltip>
+  <button>Pop it</button>
+  <span slot="content">111</span>
+</SvelTooltip>

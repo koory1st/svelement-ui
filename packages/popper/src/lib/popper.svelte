@@ -79,8 +79,10 @@
   }
 
   function doHide() {
-    contentEl.removeEventListener('mouseover', show);
-    contentEl.removeEventListener('mouseleave', hide);
+    if (contentEl) {
+      contentEl.removeEventListener('mouseover', show);
+      contentEl.removeEventListener('mouseleave', hide);
+    }
     showTooltip = false;
   }
 
