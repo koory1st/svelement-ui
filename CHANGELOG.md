@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.5](https://github.com/koory1st/svelement-ui/compare/v0.19.4...v0.19.5) (2024-01-14)
+
+### Bug Fixes
+
+* **popper:** change tooltip's popper ([c1a171b](https://github.com/koory1st/svelement-ui/commit/c1a171bec8ee8fa1eed27be52d66b0dd814525f1))
+
 ## [0.19.4](https://github.com/koory1st/svelement-ui/compare/v0.19.3...v0.19.4) (2024-01-13)
 
 ### Bug Fixes
