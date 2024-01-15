@@ -3,7 +3,7 @@
   import a2st from '@svelement-ui/util-array-2-style-string';
 
   /** @type {'horizontal' | 'vertical'} */
-  export let direction;
+  export let direction = 'horizontal';
   /** @type {'none' | 'solid' | 'hidden' | 'dashed' | string} */
   export let borderStyle = 'solid';
   /** @type {'left' | 'right' | 'center'} */
