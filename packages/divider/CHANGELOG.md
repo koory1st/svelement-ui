@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.6](https://github.com/koory1st/svelement-ui/compare/v0.19.5...v0.19.6) (2024-01-15)
+
+### Bug Fixes
+
+* **divider:** add default direction ([982d087](https://github.com/koory1st/svelement-ui/commit/982d0873a142369f3aa439043042f562365b6fce))
+
 ## [0.19.1](https://github.com/koory1st/svelement-ui/compare/v0.19.0...v0.19.1) (2024-01-10)
 
 **Note:** Version bump only for package @svelement-ui/divider
