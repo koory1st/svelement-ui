@@ -14,9 +14,3 @@ A `Svelte` component library based on `Element Plus`.
 pnpm -r build
 ```
 
-# Roadmap
-
-- [x] site
-- [x] button
-- [] scrollbar
-- [] prismjs-theme
