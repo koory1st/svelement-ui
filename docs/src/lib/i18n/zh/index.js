@@ -10,6 +10,7 @@ import divider from '$lib/i18n/zh/divider.js';
 import input from '$lib/i18n/zh/input.js';
 import inputNumber from '$lib/i18n/zh/input_number.js';
 import radio from '$lib/i18n/zh/radio.js';
+import tooltip from '$lib/i18n/zh/tooltip.js';
 
 export const langDict = {
   ...util,
@@ -24,6 +25,7 @@ export const langDict = {
   ...divider,
   ...input,
   ...inputNumber,
+  ...tooltip,
 };
 
 function getText(key) {

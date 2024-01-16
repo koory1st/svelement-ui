@@ -11,7 +11,7 @@ export const component_group_list = [
     ],
   },
   {
-    name: 'cutil02020',
+    name: 'cutil01020',
     component_list: [
       { key: 'input', name: 'cinput01010' },
       { key: 'input_number', name: 'cinputNum01010' },
@@ -20,7 +20,11 @@ export const component_group_list = [
     ],
   },
   {
-    name: 'cutil03020',
+    name: 'cutil01050',
+    component_list: [{ key: 'tooltip', name: 'ctooltip01010' }],
+  },
+  {
+    name: 'cutil01060',
     component_list: [{ key: 'divider', name: 'odiv01010' }],
   },
 ];

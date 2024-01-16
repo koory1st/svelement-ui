@@ -1,6 +1,6 @@
 <script>
   import Container from '$lib/container.svelte';
-  import { createPopperActions } from 'svelte-popperjs';
+  import { createPopperActions } from '$lib/popper.js';
   import { getContext, tick } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { onMount } from 'svelte';
