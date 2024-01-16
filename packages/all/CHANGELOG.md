@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.7](https://github.com/koory1st/svelement-ui/compare/v0.19.6...v0.19.7) (2024-01-16)
+
+### Bug Fixes
+
+* **popper:** move popperjs in ([c655f7c](https://github.com/koory1st/svelement-ui/commit/c655f7cd294e9a9dfd1d16c88cafe8141adad79b))
+
 ## [0.19.6](https://github.com/koory1st/svelement-ui/compare/v0.19.5...v0.19.6) (2024-01-15)
 
 **Note:** Version bump only for package @svelement-ui/all
