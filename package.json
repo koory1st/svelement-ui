@@ -25,7 +25,7 @@
     "fix": "concurrently \"prettier --plugin-search-dir . --write .\" \"eslint --fix .\"",
     "lint": "concurrently \"prettier -c --plugin-search-dir . .\" \"eslint .\"",
     "check": "pnpm -r --filter=\"./packages/**\" run check && pnpm lint",
-    "lerna-version": "lerna version -y --conventional-commits",
+    "lerna-version": "lerna version -y --conventional-commits --create-release github --generate-release-notes",
     "prepare": "husky install"
   },
   "devDependencies": {
