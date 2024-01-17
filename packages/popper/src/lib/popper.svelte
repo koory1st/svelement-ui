@@ -5,6 +5,7 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
+  import Portal from '$lib/portal.svelte';
 
   export let popperRef;
 
@@ -15,6 +16,8 @@
   export let showArrow = true;
   export let offset = 12;
   export let enterable = true;
+  export let teleported = false;
+  export let appendTo = null;
 
   export async function updatePopper() {
     await getInstance().update();
@@ -49,7 +52,7 @@
   let contentEl;
   let hideTimeout;
   onMount(() => {
-    defaultTargetEl = target || outer.children[0];
+    defaultTargetEl = target || outer.firstChild;
     popperRef1(defaultTargetEl);
     let triggerEvent;
     let unTriggerEvent;
@@ -103,22 +106,44 @@
 <div bind:this={outer}>
   <slot />
 </div>
-<Container>
-  {#if showTooltip}
-    <div
-      class={classString}
-      use:popperContent={{ ...popperOptions }}
-      bind:this={contentEl}
-      transition:fade={{ delay: 0, duration: 100 }}
-    >
-      {#if $$slots.content}
-        <slot name="content" />
-      {:else}
-        <span>{content}</span>
-      {/if}
-      {#if showArrow}
-        <div class="svel-popper__arrow" data-popper-arrow />
-      {/if}
-    </div>
-  {/if}
-</Container>
+{#if teleported}
+  <Portal target={appendTo}>
+    {#if showTooltip}
+      <div
+        class={classString}
+        use:popperContent={{ ...popperOptions }}
+        bind:this={contentEl}
+        transition:fade={{ delay: 0, duration: 100 }}
+      >
+        {#if $$slots.content}
+          <slot name="content" />
+        {:else}
+          <span>{content}</span>
+        {/if}
+        {#if showArrow}
+          <div class="svel-popper__arrow" data-popper-arrow />
+        {/if}
+      </div>
+    {/if}
+  </Portal>
+{:else}
+  <Container>
+    {#if showTooltip}
+      <div
+        class={classString}
+        use:popperContent={{ ...popperOptions }}
+        bind:this={contentEl}
+        transition:fade={{ delay: 0, duration: 100 }}
+      >
+        {#if $$slots.content}
+          <slot name="content" />
+        {:else}
+          <span>{content}</span>
+        {/if}
+        {#if showArrow}
+          <div class="svel-popper__arrow" data-popper-arrow />
+        {/if}
+      </div>
+    {/if}
+  </Container>
+{/if}

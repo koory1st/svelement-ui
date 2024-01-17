@@ -35,10 +35,11 @@
 <!--  Pop it-->
 <!--</button>-->
 
-<SvelPopper bind:showTooltip {content} effect="light">
+<SvelPopper appendTo=".test" bind:showTooltip {content} effect="light" teleported>
   <button on:click={handleClick}>aaa</button>
 </SvelPopper>
 
+<div class="test" />
 <!--<button bind:this={button2} on:click={handleClick} on:mouseenter={() => (showTooltip2 = true)}>-->
 <!--  bbb-->
 <!--</button>-->
