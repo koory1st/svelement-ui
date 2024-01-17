@@ -4,6 +4,7 @@
   import { getContext, tick } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
 
   export let popperRef;
 
@@ -104,7 +105,12 @@
 </div>
 <Container>
   {#if showTooltip}
-    <div class={classString} use:popperContent={{ ...popperOptions }} bind:this={contentEl}>
+    <div
+      class={classString}
+      use:popperContent={{ ...popperOptions }}
+      bind:this={contentEl}
+      transition:fade={{ delay: 0, duration: 100 }}
+    >
       {#if $$slots.content}
         <slot name="content" />
       {:else}
