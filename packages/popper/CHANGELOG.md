@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.8](https://github.com/koory1st/svelement-ui/compare/v0.19.7...v0.19.8) (2024-01-18)
+
+### Bug Fixes
+
+* **popper:** add portal ([beefa47](https://github.com/koory1st/svelement-ui/commit/beefa470419de45d943442803752d840de606556))
+* **popper:** add transition ([b450e1b](https://github.com/koory1st/svelement-ui/commit/b450e1b5b43e46711af13de560f4bccca739105a))
+
 ## [0.19.7](https://github.com/koory1st/svelement-ui/compare/v0.19.6...v0.19.7) (2024-01-16)
 
 ### Bug Fixes
