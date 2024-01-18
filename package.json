@@ -28,8 +28,6 @@
     "lerna-version": "lerna version -y --conventional-commits --create-release github --generate-release-notes",
     "lerna-diff": "lerna diff",
     "lerna-changed": "lerna changed",
-    "test": "node ./build/check.js",
-    "test-check": "lerna exec -- check",
     "prepare": "husky install"
   },
   "devDependencies": {
