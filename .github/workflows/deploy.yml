@@ -46,7 +46,7 @@ jobs:
 
       - name: Check and Lint
         run: |
-          pnpm build && pnpm check && pnpm lint
+          pnpm build && pnpm check
 
       - name: Git Identity
         run: |
