@@ -31,7 +31,9 @@
         name: 'offset',
         options: {
           offset:
-            !placement.includes('top') && !placement.includes('bottom') ? [offset, 0] : [0, offset],
+            !placement.includes('top') && !placement.includes('bottom')
+              ? [-5, offset]
+              : [0, offset],
         },
       },
     ],

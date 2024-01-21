@@ -35,11 +35,19 @@
 <!--  Pop it-->
 <!--</button>-->
 
-<SvelPopper appendTo=".test" bind:showTooltip {content} effect="light" teleported>
-  <button on:click={handleClick}>aaa</button>
+<SvelPopper
+  appendTo=".test"
+  bind:showTooltip
+  content="Right Top prompts info"
+  effect="light"
+  placement="right-start"
+  teleported
+>
+  <button class="button" on:click={handleClick}>aaa</button>
 </SvelPopper>
 
 <div class="test" />
+
 <!--<button bind:this={button2} on:click={handleClick} on:mouseenter={() => (showTooltip2 = true)}>-->
 <!--  bbb-->
 <!--</button>-->
@@ -49,3 +57,8 @@
 <!--  content="123"-->
 <!--  placement="right"-->
 <!--/>-->
+<style>
+  .button {
+    margin: 100px;
+  }
+</style>
