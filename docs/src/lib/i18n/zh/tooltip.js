@@ -12,4 +12,7 @@ export default {
   ctooltip04010: '更多内容的文字提示',
   ctooltip04020: '展示多行文本或者是设置文本内容的格式',
   ctooltip04030: '用具名 slot content，替代tooltip中的content属性。',
+  ctooltip05010: '高级扩展',
+  ctooltip05020:
+    '如果需要关闭 tooltip 功能，disabled 属性可以满足这个需求， 你只需要将其设置为 true。',
 };

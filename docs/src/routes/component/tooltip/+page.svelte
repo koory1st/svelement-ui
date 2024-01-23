@@ -4,6 +4,8 @@
   import { getContext } from 'svelte';
 
   let langFn = getContext('langFn');
+
+  let disabled = false;
 </script>
 
 <h1>{$langFn('ctooltip01010')}</h1>
@@ -297,6 +299,14 @@
 
 <Example
   code={`
+<SvelTooltip placement="top">
+  <svelte:fragment slot="content">
+    multiple lines
+    <br />
+    second line
+  </svelte:fragment>
+  <SvelButton>Top center</SvelButton>
+</SvelTooltip>
 `}
 >
   <SvelTooltip placement="top">
@@ -306,6 +316,25 @@
       second line
     </svelte:fragment>
     <SvelButton>Top center</SvelButton>
+  </SvelTooltip>
+</Example>
+
+<h2>{$langFn('ctooltip05010')}</h2>
+<p>{$langFn('ctooltip05020')}</p>
+<Example
+  code={`
+
+`}
+>
+  <SvelTooltip
+    content="click to close tooltip function"
+    {disabled}
+    effect="light"
+    placement="bottom"
+  >
+    <SvelButton on:click={() => (disabled = !disabled)}>
+      click to {disabled ? 'active' : 'close'} tooltip function
+    </SvelButton>
   </SvelTooltip>
 </Example>
 

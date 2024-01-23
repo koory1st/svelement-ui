@@ -18,6 +18,7 @@
   export let enterable = true;
   export let teleported = false;
   export let appendTo = null;
+  export let disabled = false;
 
   export async function updatePopper() {
     await getInstance().update();
@@ -45,6 +46,8 @@
   $: if (!effect) {
     effect = dark ? 'dark' : 'light';
   }
+
+  $: showFlg = !disabled && showTooltip;
 
   $: classString = a2s(['svel-popper', `is-${effect}`, $$props.class]);
   let defaultTargetEl;
@@ -107,7 +110,7 @@
 </div>
 {#if teleported}
   <Portal target={appendTo}>
-    {#if showTooltip}
+    {#if showFlg}
       <div
         class={classString}
         use:popperContent={{ ...popperOptions }}
@@ -127,7 +130,7 @@
   </Portal>
 {:else}
   <Container>
-    {#if showTooltip}
+    {#if showFlg}
       <div
         class={classString}
         use:popperContent={{ ...popperOptions }}
