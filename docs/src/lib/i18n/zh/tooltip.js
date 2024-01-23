@@ -9,4 +9,7 @@ export default {
   ctooltip03010: '主题',
   ctooltip03020: 'Tooltip 组件内置了两个主题：dark和light。',
   ctooltip03030: '通过设置 effect 来修改主题，默认值为 dark.',
+  ctooltip04010: '更多内容的文字提示',
+  ctooltip04020: '展示多行文本或者是设置文本内容的格式',
+  ctooltip04030: '用具名 slot content，替代tooltip中的content属性。',
 };

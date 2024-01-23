@@ -291,6 +291,24 @@
   </div>
 </Example>
 
+<h2>{$langFn('ctooltip04010')}</h2>
+<p>{$langFn('ctooltip04020')}</p>
+<p>{$langFn('ctooltip04030')}</p>
+
+<Example
+  code={`
+`}
+>
+  <SvelTooltip placement="top">
+    <svelte:fragment slot="content">
+      multiple lines
+      <br />
+      second line
+    </svelte:fragment>
+    <SvelButton>Top center</SvelButton>
+  </SvelTooltip>
+</Example>
+
 <style>
   .tooltip-base-box {
     width: 600px;
