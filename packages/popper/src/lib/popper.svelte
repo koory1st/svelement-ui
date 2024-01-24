@@ -19,6 +19,7 @@
   export let teleported = false;
   export let appendTo = null;
   export let disabled = false;
+  export let visible = false;
 
   export async function updatePopper() {
     await getInstance().update();
@@ -47,7 +48,7 @@
     effect = dark ? 'dark' : 'light';
   }
 
-  $: showFlg = !disabled && showTooltip;
+  $: showFlg = !disabled && (visible || showTooltip);
 
   $: classString = a2s(['svel-popper', `is-${effect}`, $$props.class]);
   let defaultTargetEl;

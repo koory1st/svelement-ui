@@ -6,6 +6,7 @@
   let langFn = getContext('langFn');
 
   let disabled = false;
+  let visible = false;
 </script>
 
 <h1>{$langFn('ctooltip01010')}</h1>
@@ -367,6 +368,21 @@
     <span slot="content">
       The content can be <strong>HTML</strong>
     </span>
+  </SvelTooltip>
+</Example>
+
+<h2>{$langFn('ctooltip07010')}</h2>
+<p>{$langFn('ctooltip07020')}</p>
+<Example
+  code={`
+
+`}
+>
+  <SvelTooltip {visible}>
+    <SvelButton on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
+      Hover me
+    </SvelButton>
+    <span slot="content">Content</span>
   </SvelTooltip>
 </Example>
 

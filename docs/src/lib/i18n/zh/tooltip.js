@@ -17,4 +17,6 @@ export default {
     '如果需要关闭 tooltip 功能，disabled 属性可以满足这个需求， 你只需要将其设置为 true。',
   ctooltip06010: '显示 HTML 内容',
   ctooltip06020: '内容属性可以设置为 HTML 字符串。',
+  ctooltip07010: '受控模式',
+  ctooltip07020: 'Tooltip 可以通过父组件使用 visible 来控制它的显示与关闭。',
 };
