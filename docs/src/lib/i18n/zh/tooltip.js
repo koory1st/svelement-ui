@@ -15,4 +15,6 @@ export default {
   ctooltip05010: '高级扩展',
   ctooltip05020:
     '如果需要关闭 tooltip 功能，disabled 属性可以满足这个需求， 你只需要将其设置为 true。',
+  ctooltip06010: '显示 HTML 内容',
+  ctooltip06020: '内容属性可以设置为 HTML 字符串。',
 };

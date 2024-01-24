@@ -323,7 +323,19 @@
 <p>{$langFn('ctooltip05020')}</p>
 <Example
   code={`
-
+<script>
+  let disabled = false;
+@@@/script>
+<SvelTooltip
+  content="click to close tooltip function"
+  {disabled}
+  effect="light"
+  placement="bottom"
+>
+  <SvelButton on:click={() => (disabled = !disabled)}>
+    click to {disabled ? 'active' : 'close'} tooltip function
+  </SvelButton>
+</SvelTooltip>
 `}
 >
   <SvelTooltip
@@ -335,6 +347,26 @@
     <SvelButton on:click={() => (disabled = !disabled)}>
       click to {disabled ? 'active' : 'close'} tooltip function
     </SvelButton>
+  </SvelTooltip>
+</Example>
+
+<h2>{$langFn('ctooltip06010')}</h2>
+<p>{$langFn('ctooltip06020')}</p>
+<Example
+  code={`
+<SvelTooltip>
+  <SvelButton>hover me</SvelButton>
+  <span slot="content">
+    The content can be <strong>HTML</strong>
+  </span>
+</SvelTooltip>
+`}
+>
+  <SvelTooltip>
+    <SvelButton>hover me</SvelButton>
+    <span slot="content">
+      The content can be <strong>HTML</strong>
+    </span>
   </SvelTooltip>
 </Example>
 
