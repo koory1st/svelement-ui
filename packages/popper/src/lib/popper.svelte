@@ -19,10 +19,14 @@
   export let teleported = false;
   export let appendTo = null;
   export let disabled = false;
-  export let visible = false;
+  export let visible = null;
 
   export async function updatePopper() {
-    await getInstance().update();
+    const instance = await getInstance();
+    if (!instance) {
+      return;
+    }
+    instance.update();
   }
 
   export let placement = 'bottom';
@@ -63,8 +67,10 @@
       triggerEvent = 'mouseover';
       unTriggerEvent = 'mouseleave';
     }
-    defaultTargetEl.addEventListener(triggerEvent, show);
-    defaultTargetEl.addEventListener(unTriggerEvent, hide);
+    if (visible === null) {
+      defaultTargetEl.addEventListener(triggerEvent, show);
+      defaultTargetEl.addEventListener(unTriggerEvent, hide);
+    }
   });
   const [popperRef1, popperContent, getInstance] = createPopperActions({
     placement: placement,

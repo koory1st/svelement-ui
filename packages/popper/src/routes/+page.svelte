@@ -25,7 +25,7 @@
 
   let hideTooltip;
   let showTooltip = false;
-  let showTooltip2;
+  let visible;
 </script>
 
 <!--<button-->
@@ -47,6 +47,11 @@
 </SvelPopper>
 
 <div class="test" />
+
+<SvelPopper {visible}>
+  <button on:mouseenter={() => (visible = true)}>Hover me</button>
+  <span slot="content">Content</span>
+</SvelPopper>
 
 <!--<button bind:this={button2} on:click={handleClick} on:mouseenter={() => (showTooltip2 = true)}>-->
 <!--  bbb-->
