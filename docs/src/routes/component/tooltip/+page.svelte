@@ -379,9 +379,9 @@
 `}
 >
   <SvelTooltip {visible}>
-    <SvelButton on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
-      Hover me
-    </SvelButton>
+    <button on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
+      hover me
+    </button>
     <span slot="content">Content</span>
   </SvelTooltip>
 </Example>
