@@ -375,7 +375,12 @@
 <p>{$langFn('ctooltip07020')}</p>
 <Example
   code={`
-
+<SvelTooltip {visible}>
+  <button on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
+    hover me
+  </button>
+  <span slot="content">Content</span>
+</SvelTooltip>
 `}
 >
   <SvelTooltip {visible}>

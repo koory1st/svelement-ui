@@ -17,6 +17,7 @@ export const component_group_list = [
       { key: 'input_number', name: 'cinputNum01010' },
       { key: 'checkbox', name: 'ccheckbox01010' },
       { key: 'radio', name: 'cradio01010' },
+      { key: 'slider', name: 'cslider01010' },
     ],
   },
   {
