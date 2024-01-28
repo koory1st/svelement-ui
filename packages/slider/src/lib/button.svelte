@@ -2,7 +2,7 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { string as toStyleObject } from 'to-style';
   import SvelTooltip from '@svelement-ui/tooltip';
-  import { onMount, tick } from 'svelte';
+  import { tick } from 'svelte';
 
   export let value = 0;
   /** @type {number | null} */
@@ -19,6 +19,8 @@
   export let updateValue;
   export let oldValue;
   export let showTooltip = true;
+  export let formatTooltip = null;
+  $: tooltipValue = formatTooltip ? formatTooltip(value) : value;
 
   let button;
   $: hovering = false;
@@ -181,7 +183,7 @@
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<SvelTooltip bind:updatePopper content={value} placement="top" visible={tooltipVisible}>
+<SvelTooltip bind:updatePopper content={tooltipValue} placement="top" visible={tooltipVisible}>
   <div
     bind:this={button}
     class={wrapperClass}

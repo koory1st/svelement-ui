@@ -25,6 +25,7 @@
   export let showTooltip = true;
   let slider;
   let firstButton;
+  export let formatTooltip = null;
 
   onMount(async () => {
     if (range) {
@@ -260,6 +261,7 @@
       bind:this={firstButton}
       bind:value={firstValue}
       disabled={sliderDisabled}
+      {formatTooltip}
       {resetSize}
       {showTooltip}
       {sliderSize}
@@ -285,6 +287,7 @@
         updateValue={setSecondValue}
         {vertical}
         {showTooltip}
+        {formatTooltip}
       />
     {/if}
     {#if showStops}
