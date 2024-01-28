@@ -17,12 +17,42 @@
 
 <h1>{$langFn('cslider01010')}</h1>
 <p>{$langFn('cslider01020')}</p>
+
 <h2>{$langFn('cslider02010')}</h2>
 <p>{$langFn('cslider02020')}</p>
 <p>{$langFn('cslider02030')}</p>
 <Example
   code={`
-
+<script>
+  let value1 = 0;
+  let value2 = 0;
+  let value3 = 0;
+  let value4 = 0;
+  let value5 = 0;
+  const formatTooltip = (val) => {
+    return val / 100;
+  };
+@@@/script>
+<div class="slider-demo-block">
+  <span class="demonstration">Default value</span>
+  <SvelSlider bind:value={value1} />
+</div>
+<div class="slider-demo-block">
+  <span class="demonstration">Customized initial value</span>
+  <SvelSlider bind:value={value2} />
+</div>
+<div class="slider-demo-block">
+  <span class="demonstration">Hide Tooltip</span>
+  <SvelSlider bind:value={value3} showTooltip={false} />
+</div>
+<div class="slider-demo-block">
+  <span class="demonstration">Format Tooltip</span>
+  <SvelSlider bind:value={value4} {formatTooltip} />
+</div>
+<div class="slider-demo-block">
+  <span class="demonstration">Disabled</span>
+  <SvelSlider bind:value={value5} disabled />
+</div>
 `}
 >
   <div class="slider-demo-block">
@@ -39,11 +69,36 @@
   </div>
   <div class="slider-demo-block">
     <span class="demonstration">Format Tooltip</span>
-    <SvelSlider bind:value={value5} disabled />
+    <SvelSlider bind:value={value4} {formatTooltip} />
   </div>
   <div class="slider-demo-block">
     <span class="demonstration">Disabled</span>
-    <SvelSlider bind:value={value4} {formatTooltip} />
+    <SvelSlider bind:value={value5} disabled />
+  </div>
+</Example>
+
+<h2>{$langFn('cslider03010')}</h2>
+<p>{$langFn('cslider03020')}</p>
+<p>{$langFn('cslider03030')}</p>
+<Example
+  code={`
+<div class="slider-demo-block">
+  <span class="demonstration">Breakpoints not displayed</span>
+  <SvelSlider step="10" v-model="value1" />
+</div>
+<div class="slider-demo-block">
+  <span class="demonstration">Breakpoints not displayed</span>
+  <SvelSlider showStops step="10" v-model="value1" />
+</div>
+`}
+>
+  <div class="slider-demo-block">
+    <span class="demonstration">Breakpoints not displayed</span>
+    <SvelSlider step="10" v-model="value1" />
+  </div>
+  <div class="slider-demo-block">
+    <span class="demonstration">Breakpoints not displayed</span>
+    <SvelSlider showStops step="10" v-model="value1" />
   </div>
 </Example>
 
@@ -51,6 +106,7 @@
   .slider-demo-block {
     display: flex;
     align-items: center;
+    min-width: 600px;
   }
 
   :global(.slider-demo-block .svel-slider) {
