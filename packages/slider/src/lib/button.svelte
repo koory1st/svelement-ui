@@ -50,14 +50,14 @@
 
   function handleMouseEnter() {
     hovering = true;
-    tooltipVisable = true && showTooltip;
+    tooltipVisible = true && showTooltip;
     // displayTooltip()
   }
 
   function handleMouseLeave() {
     hovering = false;
     if (!dragging) {
-      tooltipVisable = false;
+      tooltipVisible = false;
       // hideTooltip()
     }
   }
@@ -93,7 +93,7 @@
     }
 
     isClick = false;
-    tooltipVisable = true && showTooltip;
+    tooltipVisible = true && showTooltip;
     // displayTooltip();
     resetSize();
     let diff;
@@ -159,7 +159,7 @@
     setTimeout(() => {
       dragging = false;
       if (!hovering) {
-        tooltipVisable = false;
+        tooltipVisible = false;
         // hideTooltip();
       }
       if (!isClick) {
@@ -174,14 +174,14 @@
     window.removeEventListener('contextmenu', onDragEnd);
   }
 
-  let tooltipVisable;
+  let tooltipVisible = false;
 
   let updatePopper;
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<SvelTooltip bind:updatePopper content={value} visible={tooltipVisable} placement="top">
+<SvelTooltip bind:updatePopper content={value} placement="top" visible={tooltipVisible}>
   <div
     bind:this={button}
     class={wrapperClass}
