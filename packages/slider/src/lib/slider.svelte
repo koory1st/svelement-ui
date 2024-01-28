@@ -26,6 +26,8 @@
   let slider;
   let firstButton;
   export let formatTooltip = null;
+  /** @type {'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left' | 'left-start' | 'left-end' | 'right' | 'right-start' | 'right-end'} */
+  export let placement = 'top';
 
   onMount(async () => {
     if (range) {
@@ -262,6 +264,7 @@
       bind:value={firstValue}
       disabled={sliderDisabled}
       {formatTooltip}
+      {placement}
       {resetSize}
       {showTooltip}
       {sliderSize}
@@ -288,6 +291,7 @@
         {vertical}
         {showTooltip}
         {formatTooltip}
+        {placement}
       />
     {/if}
     {#if showStops}

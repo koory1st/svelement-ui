@@ -21,6 +21,8 @@
   export let showTooltip = true;
   export let formatTooltip = null;
   $: tooltipValue = formatTooltip ? formatTooltip(value) : value;
+  /** @type {'top' | 'top-start' | 'top-end' | 'bottom' | 'bottom-start' | 'bottom-end' | 'left' | 'left-start' | 'left-end' | 'right' | 'right-start' | 'right-end'} */
+  export let placement = 'top';
 
   let button;
   $: hovering = false;
@@ -183,7 +185,7 @@
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<SvelTooltip bind:updatePopper content={tooltipValue} placement="top" visible={tooltipVisible}>
+<SvelTooltip bind:updatePopper content={tooltipValue} {placement} visible={tooltipVisible}>
   <div
     bind:this={button}
     class={wrapperClass}
