@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.14](https://github.com/koory1st/svelement-ui/compare/v0.19.13...v0.19.14) (2024-01-28)
+
+### Bug Fixes
+
+* **slider:** tooltip show ([136c213](https://github.com/koory1st/svelement-ui/commit/136c213dd2e2f4e171c9bb372aa181fa3f9058a5))
+* **tooltip:** add formatTooltip ([9285e8a](https://github.com/koory1st/svelement-ui/commit/9285e8acd34a3672ff0481c2c0b54445a23c9b89))
+
 ## [0.19.13](https://github.com/koory1st/svelement-ui/compare/v0.19.12...v0.19.13) (2024-01-25)
 
 ### Bug Fixes
