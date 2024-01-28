@@ -8,6 +8,11 @@
   let value1 = 0;
   let value2 = 0;
   let value3 = 0;
+  let value4 = 0;
+  let value5 = 0;
+  const formatTooltip = (val) => {
+    return val / 100;
+  };
 </script>
 
 <h1>{$langFn('cslider01010')}</h1>
@@ -31,6 +36,14 @@
   <div class="slider-demo-block">
     <span class="demonstration">Hide Tooltip</span>
     <SvelSlider bind:value={value3} showTooltip={false} />
+  </div>
+  <div class="slider-demo-block">
+    <span class="demonstration">Format Tooltip</span>
+    <SvelSlider bind:value={value5} disabled />
+  </div>
+  <div class="slider-demo-block">
+    <span class="demonstration">Disabled</span>
+    <SvelSlider bind:value={value4} {formatTooltip} />
   </div>
 </Example>
 
