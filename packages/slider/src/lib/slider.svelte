@@ -264,6 +264,7 @@
       bind:value={firstValue}
       disabled={sliderDisabled}
       {formatTooltip}
+      {max}
       {placement}
       {resetSize}
       {showTooltip}
@@ -286,6 +287,7 @@
         disabled={sliderDisabled}
         {resetSize}
         {sliderSize}
+        {max}
         {step}
         updateValue={setSecondValue}
         {vertical}
@@ -318,6 +320,14 @@
     {/if}
   </div>
   {#if showInput && !range}
-    <SvelInputNumber bind:value={firstValue} {min} {max} {step} disabled={sliderDisabled} />
+    <SvelInputNumber
+      bind:value={firstValue}
+      {min}
+      {max}
+      {step}
+      disabled={sliderDisabled}
+      {size}
+      class="svel-slider__input"
+    />
   {/if}
 </div>
