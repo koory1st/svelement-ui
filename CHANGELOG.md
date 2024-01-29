@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.16](https://github.com/koory1st/svelement-ui/compare/v0.19.15...v0.19.16) (2024-01-29)
+
+### Bug Fixes
+
+* **slider:** add max ([edffded](https://github.com/koory1st/svelement-ui/commit/edffdedc4ad278fffa76c0ab5caf8bada646dde2))
+
 ## [0.19.15](https://github.com/koory1st/svelement-ui/compare/v0.19.14...v0.19.15) (2024-01-28)
 
 ### Bug Fixes
