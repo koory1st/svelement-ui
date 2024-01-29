@@ -13,6 +13,17 @@
   const formatTooltip = (val) => {
     return val / 100;
   };
+  let value2_1 = 0;
+  let value2_2 = 0;
+  let value3_1 = 0;
+  let value4_1 = 0;
+  let value4_2 = 0;
+  let value4_3 = 0;
+  let value5_1 = 0;
+  let value5_2 = 0;
+  let value5_3 = 0;
+  let value5_4 = 0;
+  let value6_1 = [4, 8];
 </script>
 
 <h1>{$langFn('cslider01010')}</h1>
@@ -84,22 +95,77 @@
   code={`
 <div class="slider-demo-block">
   <span class="demonstration">Breakpoints not displayed</span>
-  <SvelSlider step="10" v-model="value1" />
+  <SvelSlider step="10" bind:value={value2_1} />
 </div>
 <div class="slider-demo-block">
-  <span class="demonstration">Breakpoints not displayed</span>
-  <SvelSlider showStops step="10" v-model="value1" />
+  <span class="demonstration">Breakpoints displayed</span>
+  <SvelSlider showStops step="10" bind:value={value2_2} />
 </div>
 `}
 >
   <div class="slider-demo-block">
     <span class="demonstration">Breakpoints not displayed</span>
-    <SvelSlider step="10" v-model="value1" />
+    <SvelSlider bind:value={value2_1} step="10" />
   </div>
   <div class="slider-demo-block">
-    <span class="demonstration">Breakpoints not displayed</span>
-    <SvelSlider showStops step="10" v-model="value1" />
+    <span class="demonstration">Breakpoints displayed</span>
+    <SvelSlider bind:value={value2_2} showStops step="10" />
   </div>
+</Example>
+
+<h2>{$langFn('cslider04010')}</h2>
+<p>{$langFn('cslider04020')}</p>
+<p>{$langFn('cslider04030')}</p>
+<Example
+  code={`
+<SvelSlider bind:value={value3_1} showInput />
+`}
+>
+  <SvelSlider bind:value={value3_1} showInput />
+</Example>
+
+<h2>{$langFn('cslider05010')}</h2>
+<Example
+  code={`
+<SvelSlider bind:value={value4_1} showInput size="large" />
+<SvelSlider bind:value={value4_2} showInput />
+<SvelSlider bind:value={value4_3} showInput size="small" />
+`}
+>
+  <SvelSlider bind:value={value4_1} showInput size="large" />
+  <SvelSlider bind:value={value4_2} showInput />
+  <SvelSlider bind:value={value4_3} showInput size="small" />
+</Example>
+
+<h2>{$langFn('cslider06010')}</h2>
+<p>{$langFn('cslider06020')}</p>
+<Example
+  code={`
+<SvelSlider bind:value={value5_1} />
+<SvelSlider bind:value={value5_2} placement="bottom" />
+<SvelSlider bind:value={value5_3} placement="right" />
+<SvelSlider bind:value={value5_4} placement="left" />
+`}
+>
+  <SvelSlider bind:value={value5_1} />
+  <SvelSlider bind:value={value5_2} placement="bottom" />
+  <SvelSlider bind:value={value5_3} placement="right" />
+  <SvelSlider bind:value={value5_4} placement="left" />
+</Example>
+
+<h2>{$langFn('cslider07010')}</h2>
+<p>{$langFn('cslider07020')}</p>
+<p>{$langFn('cslider07030')}</p>
+<Example
+  code={`
+<SvelSlider bind:value={value5_1} />
+<SvelSlider bind:value={value5_2} placement="bottom" />
+<SvelSlider bind:value={value5_3} placement="right" />
+<SvelSlider bind:value={value5_4} placement="left" />
+`}
+>
+  {value6_1}
+  <SvelSlider bind:value={value6_1} max="10" range showStops />
 </Example>
 
 <style>

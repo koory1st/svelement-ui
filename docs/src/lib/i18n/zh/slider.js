@@ -7,4 +7,14 @@ export default {
   cslider03010: '离散值',
   cslider03020: '选项可以是离散的',
   cslider03030: '改变step的值可以改变步长， 通过设置 showStops 属性可以显示间断点',
+  cslider04010: '带有输入框的滑块',
+  cslider04020: '通过输入框输入来改变当前的值。',
+  cslider04030: '设置 showInput 属性会在右侧显示一个输入框',
+  cslider05010: '不同尺寸',
+  cslider06010: '位置',
+  cslider06020: '设置 showInput 属性会在右侧显示一个输入框',
+  cslider07010: '范围选择',
+  cslider07020: '你还可以选择一个范围值',
+  cslider07030:
+    '配置 range 属性以激活范围选择模式，该属性的绑定值是一个数组，由最小边界值和最大边界值组成。',
 };
