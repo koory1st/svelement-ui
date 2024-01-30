@@ -12,7 +12,7 @@ export default {
   cslider04030: '设置 showInput 属性会在右侧显示一个输入框',
   cslider05010: '不同尺寸',
   cslider06010: '位置',
-  cslider06020: '设置 showInput 属性会在右侧显示一个输入框',
+  cslider06020: '您可以自定义 Tooltip 提示的位置。',
   cslider07010: '范围选择',
   cslider07020: '你还可以选择一个范围值',
   cslider07030:
