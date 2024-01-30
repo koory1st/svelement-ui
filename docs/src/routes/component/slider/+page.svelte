@@ -25,6 +25,19 @@
   let value5_4 = 0;
   let value6_1 = [4, 8];
   let value7_1 = 0;
+  let value8_1 = [30, 60];
+
+  const marks = {
+    0: '0°C',
+    8: '8°C',
+    37: '37°C',
+    50: {
+      style: {
+        color: '#1989FA',
+      },
+      label: '50%',
+    },
+  };
 </script>
 
 <h1>{$langFn('cslider01010')}</h1>
@@ -170,11 +183,39 @@
 <p>{$langFn('cslider08020')}</p>
 <Example
   code={`
-<SvelSlider bind:value={value6_1} max="10" range showStops />
+<SvelSlider bind:value={value7_1} height="200px" vertical />
 `}
 >
   <SvelSlider bind:value={value7_1} height="200px" vertical />
   {value7_1}
+</Example>
+
+<h2>{$langFn('cslider09010')}</h2>
+<p>{$langFn('cslider09020')}</p>
+<Example
+  code={`
+<script>
+let value8_1 = [30, 60];
+
+const marks = {
+  0: '0°C',
+  8: '8°C',
+  37: '37°C',
+  50: {
+    style: {
+      color: '#1989FA',
+    },
+    label: '50%',
+  },
+};
+@@@/script>
+
+{value8_1}
+<SvelSlider bind:value={value8_1} {marks} range />
+`}
+>
+  {value8_1}
+  <SvelSlider bind:value={value8_1} {marks} range />
 </Example>
 
 <style>

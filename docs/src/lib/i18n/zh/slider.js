@@ -19,4 +19,6 @@ export default {
     '配置 range 属性以激活范围选择模式，该属性的绑定值是一个数组，由最小边界值和最大边界值组成。',
   cslider08010: '垂直模式',
   cslider08020: '配置 vertical 属性为 true 启用垂直模式。 在垂直模式下，必须设置 height 属性。',
+  cslider09010: '显示标记',
+  cslider09020: '设置 marks 属性可以在滑块上显示标记。',
 };
