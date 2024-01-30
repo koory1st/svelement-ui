@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.17](https://github.com/koory1st/svelement-ui/compare/v0.19.16...v0.19.17) (2024-01-30)
+
+### Bug Fixes
+
+* **slider:** add inputSize ([88f61f6](https://github.com/koory1st/svelement-ui/commit/88f61f6766927c89de14986d5e640f1e2314cf0e))
+* **slider:** add min ([7169e1a](https://github.com/koory1st/svelement-ui/commit/7169e1a91708bdfa523c71f56643270bb3e623dd))
+
 ## [0.19.16](https://github.com/koory1st/svelement-ui/compare/v0.19.15...v0.19.16) (2024-01-29)
 
 ### Bug Fixes
