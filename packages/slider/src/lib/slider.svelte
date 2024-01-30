@@ -13,8 +13,10 @@
   export let step = 1;
   export let min = 0;
   export let max = 100;
-  /** @type {'large' | 'default' | 'small'} */
-  export let size = 'default';
+  /** @type {'' | 'large' | 'default' | 'small'} */
+  export let size = '';
+  /** @type {'' | 'large' | 'default' | 'small'} */
+  export let inputSize = 'default';
   export let showInput = false;
   export let showStops = false;
   export let range = false;
@@ -61,7 +63,7 @@
     ['is-disabled', sliderDisabled],
     ['is-vertical', vertical],
     $$props.class,
-    [`svel-slider--${size}`, size !== 'default'],
+    [`svel-slider--${size || 'default'}`, size !== 'default'],
     [`svel-slider--with-input`, showInput],
   ]);
   $: sliderRunwayClass = a2s([
@@ -329,7 +331,7 @@
       {max}
       {step}
       disabled={sliderDisabled}
-      {size}
+      size={size ? size : inputSize}
       class="svel-slider__input"
     />
   {/if}

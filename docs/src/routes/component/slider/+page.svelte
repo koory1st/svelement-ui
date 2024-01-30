@@ -149,6 +149,9 @@
   <SvelSlider bind:value={value4_1} showInput size="large" />
   <SvelSlider bind:value={value4_2} showInput />
   <SvelSlider bind:value={value4_3} showInput size="small" />
+  <SvelSlider bind:value={value4_1} inputSize="large" showInput />
+  <SvelSlider bind:value={value4_2} showInput />
+  <SvelSlider bind:value={value4_3} inputSize="small" showInput />
 </Example>
 
 <h2>{$langFn('cslider06010')}</h2>
