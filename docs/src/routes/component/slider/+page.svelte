@@ -86,7 +86,7 @@
   </div>
   <div class="slider-demo-block">
     <span class="demonstration">Customized initial value</span>
-    <SvelSlider bind:value={value2} />
+    <SvelSlider bind:value={value2} max={80} min={5} />
   </div>
   <div class="slider-demo-block">
     <span class="demonstration">Hide Tooltip</span>

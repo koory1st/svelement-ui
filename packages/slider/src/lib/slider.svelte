@@ -46,6 +46,7 @@
         firstValue = Math.min(max, Math.max(min, value));
       }
       oldValue = firstValue;
+      secondValue = max;
     }
 
     window.addEventListener('resize', resetSize);
@@ -265,6 +266,7 @@
       disabled={sliderDisabled}
       {formatTooltip}
       {max}
+      {min}
       {placement}
       {resetSize}
       {showTooltip}
@@ -288,6 +290,7 @@
         {resetSize}
         {sliderSize}
         {max}
+        {min}
         {step}
         updateValue={setSecondValue}
         {vertical}
