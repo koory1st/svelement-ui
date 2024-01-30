@@ -24,6 +24,7 @@
   let value5_3 = 0;
   let value5_4 = 0;
   let value6_1 = [4, 8];
+  let value7_1 = 0;
 </script>
 
 <h1>{$langFn('cslider01010')}</h1>
@@ -158,14 +159,22 @@
 <p>{$langFn('cslider07030')}</p>
 <Example
   code={`
-<SvelSlider bind:value={value5_1} />
-<SvelSlider bind:value={value5_2} placement="bottom" />
-<SvelSlider bind:value={value5_3} placement="right" />
-<SvelSlider bind:value={value5_4} placement="left" />
+<SvelSlider bind:value={value6_1} max="10" range showStops />
 `}
 >
   {value6_1}
   <SvelSlider bind:value={value6_1} max="10" range showStops />
+</Example>
+
+<h2>{$langFn('cslider08010')}</h2>
+<p>{$langFn('cslider08020')}</p>
+<Example
+  code={`
+<SvelSlider bind:value={value6_1} max="10" range showStops />
+`}
+>
+  <SvelSlider bind:value={value7_1} height="200px" vertical />
+  {value7_1}
 </Example>
 
 <style>
