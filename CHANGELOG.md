@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.19](https://github.com/koory1st/svelement-ui/compare/v0.19.18...v0.19.19) (2024-01-31)
+
+### Bug Fixes
+
+* **popper:** add autoClose popperClass ([f6daf0d](https://github.com/koory1st/svelement-ui/commit/f6daf0deb0491787f64aa10ae1133b6f9b49ca5b))
+
 ## [0.19.18](https://github.com/koory1st/svelement-ui/compare/v0.19.17...v0.19.18) (2024-01-31)
 
 ### Bug Fixes
