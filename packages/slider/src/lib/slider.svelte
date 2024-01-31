@@ -18,6 +18,7 @@
   /** @type {'' | 'large' | 'default' | 'small'} */
   export let inputSize = 'default';
   export let showInput = false;
+  export let showInputControls = true;
   export let showStops = false;
   export let range = false;
   /** @type {string} */
@@ -327,6 +328,7 @@
   {#if showInput && !range}
     <SvelInputNumber
       bind:value={firstValue}
+      controls={showInputControls}
       {min}
       {max}
       {step}
