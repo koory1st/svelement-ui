@@ -17,9 +17,11 @@
   export let offset = 12;
   export let enterable = true;
   export let teleported = false;
+  export let autoClose = 0;
   export let appendTo = null;
   export let disabled = false;
   export let visible = null;
+  export let popperClass = '';
 
   export async function updatePopper() {
     const instance = await getInstance();
@@ -54,7 +56,7 @@
 
   $: showFlg = !disabled && (visible || showTooltip);
 
-  $: classString = a2s(['svel-popper', `is-${effect}`, $$props.class]);
+  $: classString = a2s(['svel-popper', `is-${effect}`, popperClass, $$props.class]);
   let defaultTargetEl;
   let contentEl;
   let hideTimeout;
@@ -83,6 +85,10 @@
 
   async function doShow() {
     showTooltip = true;
+
+    if (autoClose > 0) {
+      setTimeout(hide, autoClose);
+    }
 
     await tick();
     if (enterable) {

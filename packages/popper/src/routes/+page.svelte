@@ -42,6 +42,7 @@
   effect="light"
   placement="right-start"
   teleported
+  visible={true}
 >
   <button class="button" on:click={handleClick}>aaa</button>
 </SvelPopper>
