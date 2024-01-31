@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.18](https://github.com/koory1st/svelement-ui/compare/v0.19.17...v0.19.18) (2024-01-31)
+
+### Bug Fixes
+
+* **slider:** add showInputControls ([133825e](https://github.com/koory1st/svelement-ui/commit/133825efc2d1549e1d1f52bc7aa49df323a60bd9))
+
 ## [0.19.17](https://github.com/koory1st/svelement-ui/compare/v0.19.16...v0.19.17) (2024-01-30)
 
 ### Bug Fixes
