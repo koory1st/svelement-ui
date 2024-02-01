@@ -81,7 +81,7 @@
 <!--  placement="right"-->
 <!--/>-->
 <style>
-  .button {
-    margin: 100px;
-  }
+  /*.button {*/
+  /*  margin: 100px;*/
+  /*}*/
 </style>
