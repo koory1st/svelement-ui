@@ -6,6 +6,23 @@
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import Portal from '$lib/portal.svelte';
+  import { writable } from 'svelte/store';
+
+  let x = 0;
+  let y = 0;
+  const mousemove = (ev) => {
+    x = ev.clientX;
+    y = ev.clientY;
+  };
+
+  $: getBoundingClientRect = () => ({
+    width: 0,
+    height: 0,
+    top: y,
+    bottom: y,
+    left: x,
+    right: x,
+  });
 
   export let popperRef;
 
@@ -22,6 +39,8 @@
   export let disabled = false;
   export let visible = null;
   export let popperClass = '';
+  export let virtualTriggering = false;
+  export let virtualRef = null;
 
   export async function updatePopper() {
     const instance = await getInstance();
@@ -62,14 +81,16 @@
   let hideTimeout;
   onMount(() => {
     defaultTargetEl = target || outer.firstChild;
-    popperRef1(defaultTargetEl);
+    if (!virtualTriggering || !virtualRef) {
+      popperRef1(defaultTargetEl);
+    }
     let triggerEvent;
     let unTriggerEvent;
     if (trigger === 'hover') {
       triggerEvent = 'mouseover';
       unTriggerEvent = 'mouseleave';
     }
-    if (visible === null) {
+    if (visible === null && !virtualTriggering) {
       defaultTargetEl.addEventListener(triggerEvent, show);
       defaultTargetEl.addEventListener(unTriggerEvent, hide);
     }
@@ -78,6 +99,18 @@
     placement: placement,
     strategy: 'fixed',
   });
+
+  let virtualElement = null;
+  if (virtualTriggering && virtualRef) {
+    virtualElement = writable({ getBoundingClientRect: virtualRef });
+  }
+  $: if (virtualTriggering && virtualRef) {
+    $virtualElement = { getBoundingClientRect: virtualRef };
+  }
+
+  if (virtualTriggering && virtualRef) {
+    popperRef1(virtualElement);
+  }
 
   popperRef = popperRef1;
   export let content = '';

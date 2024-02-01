@@ -26,6 +26,22 @@
   let hideTooltip;
   let showTooltip = false;
   let visible;
+
+  let x = 0;
+  let y = 0;
+  const mousemove = (ev) => {
+    x = ev.clientX;
+    y = ev.clientY;
+  };
+
+  $: getBoundingClientRect = () => ({
+    width: 0,
+    height: 0,
+    top: y,
+    bottom: y,
+    left: x,
+    right: x,
+  });
 </script>
 
 <!--<button-->
@@ -35,21 +51,22 @@
 <!--  Pop it-->
 <!--</button>-->
 
-<SvelPopper
-  appendTo=".test"
-  bind:showTooltip
-  content="Right Top prompts info"
-  effect="light"
-  placement="right-start"
-  teleported
-  visible={true}
->
-  <button class="button" on:click={handleClick}>aaa</button>
-</SvelPopper>
+<!--<SvelPopper-->
+<!--  appendTo=".test"-->
+<!--  bind:showTooltip-->
+<!--  content="Right Top prompts info"-->
+<!--  effect="light"-->
+<!--  placement="right-start"-->
+<!--  teleported-->
+<!--  visible={true}-->
+<!--&gt;-->
+<!--  <button class="button" on:click={handleClick}>aaa</button>-->
+<!--</SvelPopper>-->
 
+<svelte:window on:mousemove={mousemove} />
 <div class="test" />
 
-<SvelPopper {visible}>
+<SvelPopper virtualRef={getBoundingClientRect} virtualTriggering {visible}>
   <button on:mouseenter={() => (visible = true)}>Hover me</button>
   <span slot="content">Content</span>
 </SvelPopper>
