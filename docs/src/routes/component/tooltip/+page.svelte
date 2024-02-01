@@ -7,6 +7,29 @@
 
   let disabled = false;
   let visible = false;
+
+  let visible2 = false;
+
+  let x = 0;
+  let y = 0;
+  const mousemove = (ev) => {
+    x = ev.clientX;
+    y = ev.clientY;
+  };
+  const windowClick = () => {
+    if (visible2) {
+      visible2 = false;
+    }
+  };
+
+  $: getBoundingClientRect = () => ({
+    width: 0,
+    height: 0,
+    top: y,
+    bottom: y,
+    left: x,
+    right: x,
+  });
 </script>
 
 <h1>{$langFn('ctooltip01010')}</h1>
@@ -388,6 +411,19 @@
       hover me
     </button>
     <span slot="content">Content</span>
+  </SvelTooltip>
+</Example>
+
+<h2>{$langFn('ctooltip08010')}</h2>
+<p>{$langFn('ctooltip08020')}</p>
+<svelte:window on:click={windowClick} on:mousemove={mousemove} />
+<Example
+  code={`
+`}
+>
+  <SvelTooltip virtualRef={getBoundingClientRect} virtualTriggering visible={visible2}>
+    <button on:click|stopPropagation={() => (visible2 = true)}>test</button>
+    <span slot="content">Bottom center</span>
   </SvelTooltip>
 </Example>
 

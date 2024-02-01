@@ -19,4 +19,7 @@ export default {
   ctooltip06020: '内容属性可以设置为 HTML 字符串。',
   ctooltip07010: '受控模式',
   ctooltip07020: 'Tooltip 可以通过父组件使用 visible 来控制它的显示与关闭。',
+  ctooltip08010: '虚拟触发',
+  ctooltip08020:
+    '有时候我们想把 tooltip 的触发元素放在别的地方，而不需要写在一起，这时候就可以使用虚拟触发。',
 };
