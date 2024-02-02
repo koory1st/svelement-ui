@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.21](https://github.com/koory1st/svelement-ui/compare/v0.19.20...v0.19.21) (2024-02-02)
+
+### Bug Fixes
+
+* **button:** add mouse event ([464446c](https://github.com/koory1st/svelement-ui/commit/464446c18e30e5585c9744d558f3763ab181aea0))
+
 ## [0.19.20](https://github.com/koory1st/svelement-ui/compare/v0.19.19...v0.19.20) (2024-02-01)
 
 ### Bug Fixes
