@@ -3,6 +3,7 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   import { getButtonStyle } from './button-custom.js';
+
   /** @type {'primary'|'success'|'info'|'warning'|'danger'|'default'} */
   export let type = null;
   /** @type {string} */
@@ -53,11 +54,29 @@
   }
 </script>
 
-<button class={classString} {style} type={nativeType} disabled={disabled || loading} on:click>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+<button
+  class={classString}
+  disabled={disabled || loading}
+  on:click|stopPropagation
+  on:mousedown
+  on:mouseenter
+  on:mouseleave
+  on:mousemove
+  on:mouseout
+  on:mouseover
+  on:mouseup
+  {style}
+  type={nativeType}
+>
   {#if $$slots.loadingIcon}
     <slot name="loadingIcon" />
   {/if}
-  {#if loading && !$$slots.loadingIcon}<SvelIcon class="is-loading"><Loading /></SvelIcon>{/if}
+  {#if loading && !$$slots.loadingIcon}
+    <SvelIcon class="is-loading">
+      <Loading />
+    </SvelIcon>
+  {/if}
   {#if $$slots.icon && !loading && !$$slots.loadingIcon}
     <slot name="icon" />
   {/if}

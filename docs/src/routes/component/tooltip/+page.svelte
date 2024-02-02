@@ -399,17 +399,17 @@
 <Example
   code={`
 <SvelTooltip {visible}>
-  <button on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
+  <SvelButton on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
     hover me
-  </button>
+  </SvelButton>
   <span slot="content">Content</span>
 </SvelTooltip>
 `}
 >
   <SvelTooltip {visible}>
-    <button on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
+    <SvelButton on:mouseenter={() => (visible = true)} on:mouseleave={() => (visible = false)}>
       hover me
-    </button>
+    </SvelButton>
     <span slot="content">Content</span>
   </SvelTooltip>
 </Example>
@@ -419,10 +419,37 @@
 <svelte:window on:click={windowClick} on:mousemove={mousemove} />
 <Example
   code={`
+<script>
+  let x = 0;
+  let y = 0;
+  const mousemove = (ev) => {
+    x = ev.clientX;
+    y = ev.clientY;
+  };
+  const windowClick = () => {
+    if (visible2) {
+      visible2 = false;
+    }
+  };
+
+  $: getBoundingClientRect = () => ({
+    width: 0,
+    height: 0,
+    top: y,
+    bottom: y,
+    left: x,
+    right: x,
+  });
+@@@/script>
+<svelte:window on:click={windowClick} on:mousemove={mousemove} />
+<SvelTooltip virtualRef={getBoundingClientRect} virtualTriggering visible={visible2}>
+  <SvelButton on:click={() => (visible2 = true)}>test</SvelButton>
+  <span slot="content">Bottom center</span>
+</SvelTooltip>
 `}
 >
   <SvelTooltip virtualRef={getBoundingClientRect} virtualTriggering visible={visible2}>
-    <button on:click|stopPropagation={() => (visible2 = true)}>test</button>
+    <SvelButton on:click={() => (visible2 = true)}>test</SvelButton>
     <span slot="content">Bottom center</span>
   </SvelTooltip>
 </Example>
