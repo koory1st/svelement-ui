@@ -77,7 +77,12 @@
 <button on:mouseenter={() => (visible = true)} on:mouseover={(e) => (button = e.currentTarget)}>
   Hover me
 </button>
-<SvelPopper virtualRef={getBoundingClientRect} virtualTriggering {visible}>
+<SvelPopper
+  popperClass="singleton-tooltip"
+  virtualRef={getBoundingClientRect}
+  virtualTriggering
+  {visible}
+>
   <span slot="content">Content</span>
 </SvelPopper>
 
@@ -94,4 +99,7 @@
   /*.button {*/
   /*  margin: 100px;*/
   /*}*/
+  :global(.singleton-tooltip) {
+    transition: transform 0.3s var(--svel-transition-function-fast-bezier);
+  }
 </style>
