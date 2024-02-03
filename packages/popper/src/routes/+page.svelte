@@ -71,9 +71,11 @@
 <svelte:window on:mousemove={mousemove} />
 <div class="test" />
 
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button on:mouseenter={() => (visible = true)} on:mouseover={(e) => (button = e.currentTarget)}>
   Hover me
 </button>
+<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <button on:mouseenter={() => (visible = true)} on:mouseover={(e) => (button = e.currentTarget)}>
   Hover me
 </button>
