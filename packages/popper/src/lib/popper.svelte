@@ -81,7 +81,7 @@
   let hideTimeout;
   onMount(() => {
     defaultTargetEl = target || outer.firstChild;
-    if (!virtualTriggering || !virtualRef) {
+    if (!virtualTriggering) {
       popperRef1(defaultTargetEl);
     }
     let triggerEvent;
@@ -101,11 +101,28 @@
   });
 
   let virtualElement = null;
+  let container;
   if (virtualTriggering && virtualRef) {
-    virtualElement = writable({ getBoundingClientRect: virtualRef });
+    if (typeof virtualRef === 'function') {
+      virtualElement = writable({ getBoundingClientRect: virtualRef });
+    } else {
+      console.log('333', virtualRef);
+      virtualElement = writable({
+        getBoundingClientRect: () => virtualRef.getBoundingClientRect(),
+      });
+    }
   }
   $: if (virtualTriggering && virtualRef) {
-    $virtualElement = { getBoundingClientRect: virtualRef };
+    console.log('bbb', virtualRef);
+    if (typeof virtualRef === 'function') {
+      virtualElement = writable({ getBoundingClientRect: virtualRef });
+    } else {
+      console.log('222', virtualRef.getBoundingClientRect());
+      virtualElement = writable({
+        getBoundingClientRect: () => virtualRef.getBoundingClientRect(),
+      });
+    }
+    updatePopper();
   }
 
   if (virtualTriggering && virtualRef) {
@@ -175,7 +192,7 @@
     {/if}
   </Portal>
 {:else}
-  <Container>
+  <Container bind:this={container}>
     {#if showFlg}
       <div
         class={classString}

@@ -34,14 +34,19 @@
     y = ev.clientY;
   };
 
-  $: getBoundingClientRect = () => ({
-    width: 0,
-    height: 0,
-    top: y,
-    bottom: y,
-    left: x,
-    right: x,
-  });
+  $: getBoundingClientRect = () => {
+    if (button) {
+      return button.getBoundingClientRect();
+    }
+    return {
+      width: 0,
+      height: 0,
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+    };
+  };
 </script>
 
 <!--<button-->
@@ -66,8 +71,13 @@
 <svelte:window on:mousemove={mousemove} />
 <div class="test" />
 
+<button on:mouseenter={() => (visible = true)} on:mouseover={(e) => (button = e.currentTarget)}>
+  Hover me
+</button>
+<button on:mouseenter={() => (visible = true)} on:mouseover={(e) => (button = e.currentTarget)}>
+  Hover me
+</button>
 <SvelPopper virtualRef={getBoundingClientRect} virtualTriggering {visible}>
-  <button on:mouseenter={() => (visible = true)}>Hover me</button>
   <span slot="content">Content</span>
 </SvelPopper>
 
