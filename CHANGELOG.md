@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.23](https://github.com/koory1st/svelement-ui/compare/v0.19.22...v0.19.23) (2024-02-04)
+
+### Bug Fixes
+
+* **popper:** add null check ([856763a](https://github.com/koory1st/svelement-ui/commit/856763a370c266364fd16260d1dcbf86d786ffee))
+* **popper:** change singleton ([5c51ec9](https://github.com/koory1st/svelement-ui/commit/5c51ec96f27c74ee82b3ba3f13a6e244e104e34e))
+
 ## [0.19.22](https://github.com/koory1st/svelement-ui/compare/v0.19.21...v0.19.22) (2024-02-03)
 
 ### Bug Fixes
