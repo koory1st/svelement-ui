@@ -33,20 +33,6 @@
     x = ev.clientX;
     y = ev.clientY;
   };
-
-  $: getBoundingClientRect = () => {
-    if (button) {
-      return button.getBoundingClientRect();
-    }
-    return {
-      width: 0,
-      height: 0,
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-    };
-  };
 </script>
 
 <!--<button-->
@@ -79,12 +65,7 @@
 <button on:mouseenter={() => (visible = true)} on:mouseover={(e) => (button = e.currentTarget)}>
   Hover me
 </button>
-<SvelPopper
-  popperClass="singleton-tooltip"
-  virtualRef={getBoundingClientRect}
-  virtualTriggering
-  {visible}
->
+<SvelPopper popperClass="singleton-tooltip" virtualRef={button} virtualTriggering {visible}>
   <span slot="content">Content</span>
 </SvelPopper>
 

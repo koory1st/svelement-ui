@@ -75,7 +75,10 @@
 
   $: showFlg = !disabled && (visible || showTooltip);
 
-  $: classString = a2s(['svel-popper', `is-${effect}`, popperClass, $$props.class]);
+  $: innerPopperClass = null;
+  $: runPopperRefFlg = initVirtualElement(virtualTriggering, virtualRef);
+
+  $: classString = a2s(['svel-popper', `is-${effect}`, innerPopperClass, $$props.class]);
   let defaultTargetEl;
   let contentEl;
   let hideTimeout;
@@ -101,31 +104,32 @@
   });
 
   let virtualElement = null;
-  let container;
-  if (virtualTriggering && virtualRef) {
-    if (typeof virtualRef === 'function') {
-      virtualElement = writable({ getBoundingClientRect: virtualRef });
-    } else {
-      console.log('333', virtualRef);
-      virtualElement = writable({
-        getBoundingClientRect: () => virtualRef.getBoundingClientRect(),
-      });
+  let isFirstTimeShow = true;
+  initVirtualElement(virtualTriggering, virtualRef);
+
+  function initVirtualElement(virtualTriggering, virtualRef) {
+    if (!virtualTriggering || !virtualRef) {
+      return;
     }
-  }
-  $: if (virtualTriggering && virtualRef) {
-    console.log('bbb', virtualRef);
-    if (typeof virtualRef === 'function') {
+    if (virtualRef.constructor.__proto__.prototype.constructor.name) {
+      virtualElement = virtualRef;
+    } else if (typeof virtualRef === 'function') {
       virtualElement = writable({ getBoundingClientRect: virtualRef });
+    } else if (typeof virtualRef === 'object') {
+      virtualElement = writable({ getBoundingClientRect: () => virtualRef });
     } else {
-      console.log('222', virtualRef.getBoundingClientRect());
-      virtualElement = writable({
-        getBoundingClientRect: () => virtualRef.getBoundingClientRect(),
-      });
+      return;
     }
-    updatePopper();
+
+    if (isFirstTimeShow) {
+      isFirstTimeShow = false;
+    } else {
+      innerPopperClass = popperClass;
+    }
+    return true;
   }
 
-  if (virtualTriggering && virtualRef) {
+  $: if (runPopperRefFlg && classString) {
     popperRef1(virtualElement);
   }
 
@@ -192,7 +196,7 @@
     {/if}
   </Portal>
 {:else}
-  <Container bind:this={container}>
+  <Container>
     {#if showFlg}
       <div
         class={classString}
