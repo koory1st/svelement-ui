@@ -111,7 +111,10 @@
     if (!virtualTriggering || !virtualRef) {
       return;
     }
-    if (virtualRef.constructor.__proto__.prototype.constructor.name) {
+    if (
+      virtualRef.constructor.__proto__.prototype &&
+      virtualRef.constructor.__proto__.prototype.constructor.name
+    ) {
       virtualElement = virtualRef;
     } else if (typeof virtualRef === 'function') {
       virtualElement = writable({ getBoundingClientRect: virtualRef });
