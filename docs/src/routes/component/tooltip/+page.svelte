@@ -30,6 +30,9 @@
     left: x,
     right: x,
   });
+
+  let visible3 = false;
+  let button;
 </script>
 
 <h1>{$langFn('ctooltip01010')}</h1>
@@ -454,6 +457,75 @@
   </SvelTooltip>
 </Example>
 
+<h2>{$langFn('ctooltip09010')}</h2>
+<p>{$langFn('ctooltip09020')}</p>
+<Example
+  code={`
+<script>
+  let visible3 = false;
+  let button;
+@@@/script>
+<SvelButton
+  on:click={() => (visible3 = !visible3)}
+  on:mouseover={(e) => (button = e.currentTarget)}
+>
+  Click to open tooltip
+</SvelButton>
+<SvelButton
+  on:click={() => (visible3 = !visible3)}
+  on:mouseover={(e) => (button = e.currentTarget)}
+>
+  Click to open tooltip
+</SvelButton>
+<SvelButton
+  on:click={() => (visible3 = !visible3)}
+  on:mouseover={(e) => (button = e.currentTarget)}
+>
+  Click to open tooltip
+</SvelButton>
+<SvelTooltip
+  popperClass="singleton-tooltip"
+  virtualRef={button}
+  virtualTriggering
+  visible={visible3}
+>
+  <span slot="content">Click to open tooltip</span>
+</SvelTooltip>
+<style>
+  :global(.singleton-tooltip) {
+    transition: transform 0.3s var(--svel-transition-function-fast-bezier);
+  }
+</style>
+`}
+>
+  <SvelButton
+    on:click={() => (visible3 = !visible3)}
+    on:mouseover={(e) => (button = e.currentTarget)}
+  >
+    Click to open tooltip
+  </SvelButton>
+  <SvelButton
+    on:click={() => (visible3 = !visible3)}
+    on:mouseover={(e) => (button = e.currentTarget)}
+  >
+    Click to open tooltip
+  </SvelButton>
+  <SvelButton
+    on:click={() => (visible3 = !visible3)}
+    on:mouseover={(e) => (button = e.currentTarget)}
+  >
+    Click to open tooltip
+  </SvelButton>
+  <SvelTooltip
+    popperClass="singleton-tooltip"
+    virtualRef={button}
+    virtualTriggering
+    visible={visible3}
+  >
+    <span slot="content">Click to open tooltip</span>
+  </SvelTooltip>
+</Example>
+
 <style>
   .tooltip-base-box {
     width: 600px;
@@ -483,5 +555,9 @@
   :global(.svel-popper.is-customized .svel-popper__arrow::before) {
     background: linear-gradient(45deg, #b2e68d, #bce689);
     right: 0;
+  }
+
+  :global(.singleton-tooltip) {
+    transition: transform 0.3s var(--svel-transition-function-fast-bezier);
   }
 </style>
