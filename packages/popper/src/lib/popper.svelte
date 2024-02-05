@@ -127,7 +127,9 @@
     if (isFirstTimeShow) {
       isFirstTimeShow = false;
     } else {
-      innerPopperClass = popperClass;
+      if (showFlg) {
+        innerPopperClass = popperClass;
+      }
     }
     return true;
   }
