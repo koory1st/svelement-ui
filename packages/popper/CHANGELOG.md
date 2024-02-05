@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.24](https://github.com/koory1st/svelement-ui/compare/v0.19.23...v0.19.24) (2024-02-05)
+
+### Bug Fixes
+
+* **popper:** fix popperClass timing ([91fac39](https://github.com/koory1st/svelement-ui/commit/91fac39088e212660ea6a410513be71a3528c494))
+
 ## [0.19.23](https://github.com/koory1st/svelement-ui/compare/v0.19.22...v0.19.23) (2024-02-04)
 
 ### Bug Fixes
