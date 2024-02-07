@@ -1,10 +1,51 @@
 <script>
+  import Container from '$lib/container.svelte';
   import { createPopper as popperJsCreatePopper } from '@popperjs/core';
 
-  import { onDestroy } from 'svelte';
+  import { fade } from 'svelte/transition';
+  import { onDestroy, tick } from 'svelte';
+  import a2s from '@svelement-ui/util-array-2-class-string';
 
+  export let trigger = 'hover';
+  export let showAfter = 0;
+  export let hideAfter = 200;
+  export let showArrow = true;
+  export let offset = 12;
+  export let enterable = true;
+  export let teleported = false;
+  export let autoClose = 0;
+  export let appendTo = null;
+  export let disabled = false;
+  export let visible = null;
+  export let popperClass = '';
   export let virtualTriggering = false;
   export let virtualRef = null;
+  export let effect = 'dark';
+  export let content = '';
+
+  export async function updatePopper() {
+    popperInstance.update();
+  }
+
+  export let placement = 'bottom';
+
+  let arrow;
+  export let popperOptions = {
+    modifiers: [
+      {
+        name: 'offset',
+        options: {
+          offset: [0, offset],
+        },
+      },
+      {
+        name: 'arrow',
+        options: {
+          element: arrow,
+        },
+      },
+    ],
+  };
 
   onDestroy(() => {
     destroyInstance();
@@ -15,16 +56,34 @@
   let popperEl;
   let popperInstance;
 
-  let popperVisible = false;
-
   let createdFlg = false;
+
+  let contentEl;
+  let showFlg = false;
+
+  function showByFlg(disabled, visible) {
+    console.log(visible);
+    if (disabled || !visible) {
+      hide();
+      return;
+    }
+    if (showFlg) {
+      return;
+    }
+    show();
+    // showFlg = true;
+  }
+
+  $: showByFlg(disabled, visible);
 
   let virtualElement = {
     getBoundingClientRect: null,
   };
 
-  let option = {
-    placement: 'right-start',
+  $: option = {
+    placement: placement,
+    strategy: 'fixed',
+    ...popperOptions,
   };
 
   function createPopper(outer, popperEl, virtualTriggering, virtualRef) {
@@ -43,14 +102,12 @@
 
     console.log('all ok');
     if (!popperInstance) {
-      console.log('create', targetE, popperEl, option);
+      console.log(option);
       popperInstance = popperJsCreatePopper(targetE, popperEl, option);
       createdFlg = true;
     } else {
-      console.log('update', targetE, popperEl, option);
       popperInstance.update();
     }
-    popperVisible = true;
   }
 
   function getTarget(outer, popperEl, virtualTriggering, virtualRef) {
@@ -81,13 +138,65 @@
   }
 
   $: createPopper(outer, popperEl, virtualTriggering, virtualRef);
+
+  let hideTimeout;
+
+  function show() {
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+    }
+    setTimeout(doShow, showAfter);
+  }
+
+  function hide() {
+    hideTimeout = setTimeout(doHide, hideAfter);
+  }
+
+  async function doShow() {
+    showFlg = true;
+
+    if (autoClose > 0) {
+      setTimeout(hide, autoClose);
+    }
+
+    await tick();
+    await updatePopper();
+    if (enterable && visible == null) {
+      contentEl.addEventListener('mouseover', show);
+      contentEl.addEventListener('mouseleave', hide);
+    }
+  }
+
+  function doHide() {
+    if (contentEl) {
+      contentEl.removeEventListener('mouseover', show);
+      contentEl.removeEventListener('mouseleave', hide);
+    }
+    showFlg = false;
+  }
+
+  $: innerPopperClass = null;
+  $: classString = a2s(['svel-popper', `is-${effect}`, innerPopperClass, $$props.class]);
 </script>
 
+<!--{JSON.stringify(option)}-->
 <div bind:this={outer}>
   <slot />
 </div>
-<div bind:this={popperEl}>
-  {#if popperVisible}
-    aaaaa
-  {/if}
+<div class="svel-popper-container">
+  <div bind:this={popperEl}>
+    {#if showFlg}
+      <div bind:this={contentEl} class={classString} transition:fade={{ delay: 0, duration: 100 }}>
+        {#if $$slots.content}
+          <slot name="content" />
+        {:else}
+          <span>{content}</span>
+        {/if}
+        {#if showArrow}
+          <div bind:this={arrow} class="svel-popper__arrow" data-popper-arrow />
+        {/if}
+      </div>
+    {/if}
+  </div>
 </div>
+<Container />
