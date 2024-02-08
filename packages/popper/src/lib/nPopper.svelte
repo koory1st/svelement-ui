@@ -104,9 +104,13 @@
     if (!popperInstance) {
       console.log(option);
       popperInstance = popperJsCreatePopper(targetE, popperEl, option);
+      console.log('targetE', targetE);
       createdFlg = true;
     } else {
+      console.log('update');
+      console.log('targetE', targetE);
       popperInstance.update();
+      console.log('popperInstance', popperInstance);
     }
   }
 
@@ -179,24 +183,20 @@
   $: classString = a2s(['svel-popper', `is-${effect}`, innerPopperClass, $$props.class]);
 </script>
 
-<!--{JSON.stringify(option)}-->
 <div bind:this={outer}>
   <slot />
 </div>
-<div class="svel-popper-container">
-  <div bind:this={popperEl}>
-    {#if showFlg}
-      <div bind:this={contentEl} class={classString} transition:fade={{ delay: 0, duration: 100 }}>
-        {#if $$slots.content}
-          <slot name="content" />
-        {:else}
-          <span>{content}</span>
-        {/if}
-        {#if showArrow}
-          <div bind:this={arrow} class="svel-popper__arrow" data-popper-arrow />
-        {/if}
-      </div>
-    {/if}
-  </div>
-</div>
-<Container />
+<Container>
+  {#if showFlg}
+    <div bind:this={popperEl} class={classString} transition:fade={{ delay: 0, duration: 100 }}>
+      {#if $$slots.content}
+        <slot name="content" />
+      {:else}
+        <span>{content}</span>
+      {/if}
+      {#if showArrow}
+        <div bind:this={arrow} class="svel-popper__arrow" data-popper-arrow />
+      {/if}
+    </div>
+  {/if}
+</Container>
