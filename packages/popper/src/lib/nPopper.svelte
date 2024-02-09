@@ -47,6 +47,10 @@
     ],
   };
 
+  $: if (!effect) {
+    effect = dark ? 'dark' : 'light';
+  }
+
   onDestroy(() => {
     destroyInstance();
   });
@@ -109,8 +113,8 @@
     } else {
       console.log('update');
       console.log('targetE', targetE);
+      innerPopperClass = popperClass;
       popperInstance.update();
-      console.log('popperInstance', popperInstance);
     }
   }
 
