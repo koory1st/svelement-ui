@@ -3,7 +3,7 @@
   import { createPopper as popperJsCreatePopper } from '@popperjs/core';
 
   import { fade } from 'svelte/transition';
-  import { onDestroy, tick } from 'svelte';
+  import { onMount, onDestroy, tick } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
 
   export let trigger = 'hover';
@@ -50,7 +50,6 @@
   $: if (!effect) {
     effect = dark ? 'dark' : 'light';
   }
-
   onDestroy(() => {
     destroyInstance();
   });
@@ -64,6 +63,10 @@
 
   let contentEl;
   let showFlg = false;
+
+  $: if (target) {
+    console.log('1', popperEl);
+  }
 
   function showByFlg(disabled, visible) {
     console.log(visible);
@@ -91,15 +94,15 @@
   };
 
   function createPopper(outer, popperEl, virtualTriggering, virtualRef) {
-    if (!popperEl) {
-      console.log('popperEl empty');
+    let targetE = getTarget(outer, popperEl, virtualTriggering, virtualRef);
+    if (!targetE) {
+      console.log('targetE empty');
       destroyInstance();
       return;
     }
 
-    let targetE = getTarget(outer, popperEl, virtualTriggering, virtualRef);
-    if (!targetE) {
-      console.log('targetE empty');
+    if (!popperEl) {
+      console.log('popperEl empty');
       destroyInstance();
       return;
     }
@@ -119,15 +122,17 @@
   }
 
   function getTarget(outer, popperEl, virtualTriggering, virtualRef) {
-    if (virtualTriggering && virtualRef) {
-      virtualElement.getBoundingClientRect = () => virtualRef.getBoundingClientRect();
-      return virtualElement;
-    }
-
     if (!outer) {
       console.log('outer empty');
       return null;
     }
+
+    if (virtualTriggering && virtualRef) {
+      virtualElement.getBoundingClientRect = () => virtualRef.getBoundingClientRect();
+      virtualElement.contextElement = outer.parentNode;
+      return virtualElement;
+    }
+
     target = outer.firstChild;
     if (!target) {
       console.log('target empty');
@@ -187,12 +192,13 @@
   $: classString = a2s(['svel-popper', `is-${effect}`, innerPopperClass, $$props.class]);
 </script>
 
+{showFlg}
 <div bind:this={outer}>
   <slot />
 </div>
 <Container>
   {#if showFlg}
-    <div bind:this={popperEl} class={classString} transition:fade={{ delay: 0, duration: 100 }}>
+    <div bind:this={popperEl} class={classString}>
       {#if $$slots.content}
         <slot name="content" />
       {:else}
