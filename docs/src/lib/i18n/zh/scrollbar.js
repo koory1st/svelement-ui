@@ -7,4 +7,6 @@ export default {
   cscrollbar03011: '当元素宽度大于滚动条宽度时，会显示横向滚动条。',
   cscrollbar04010: '最大高度',
   cscrollbar04020: '当元素高度超过最大高度，才会显示滚动条。',
+  cscrollbar05010: '手动滚动',
+  cscrollbar05020: '通过使用 setScrollTop 与 setScrollLeft 方法，可以手动控制滚动条滚动。',
 };

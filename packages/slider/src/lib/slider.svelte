@@ -94,6 +94,8 @@
     }
   }
 
+  $: setFirstValue(value);
+
   function setFirstValue(v) {
     firstValue = v;
     changeMinMaxValue(firstValue, secondValue);

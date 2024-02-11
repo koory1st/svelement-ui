@@ -5,9 +5,13 @@
   for (let i = 0; i < 10; i++) {
     list.push(i);
   }
+
+  function scroll(f) {
+    console.log(f);
+  }
 </script>
 
-<SvelScrollbar maxHeight={400} always>
+<SvelScrollbar always maxHeight={400} on:scroll={scroll}>
   {#each list as item}
     <p class="scrollbar-demo-item">{item}</p>
   {/each}
@@ -27,6 +31,7 @@
   .scrollbar-flex-content {
     display: flex;
   }
+
   .scrollbar-demo-item {
     display: flex;
     align-items: center;
@@ -38,10 +43,12 @@
     background: var(--svel-color-primary-light-9);
     color: var(--svel-color-primary);
   }
+
   .outer {
     max-width: 1500px;
     min-width: 500px;
   }
+
   .scrollbar-demo-item2 {
     flex-shrink: 0;
     display: flex;

@@ -2,8 +2,10 @@
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
   import Bar from '$lib/bar.svelte';
-  import { setContext, onMount, tick, afterUpdate } from 'svelte';
+  import { setContext, onMount, tick, afterUpdate, createEventDispatcher } from 'svelte';
   import { GAP } from './util';
+
+  const dispatch = createEventDispatcher();
 
   /** @type {string | number} */
   export let height;
@@ -96,6 +98,7 @@
     barX.handleMouseLeaveScrollbar();
     barY.handleMouseLeaveScrollbar();
   }
+
   setContext('setWrapSize', (scroll, size) => {
     wrapRef[scroll] = size;
   });
@@ -106,27 +109,32 @@
 
     moveY = ((wrapRef.scrollTop * 100) / offsetHeight) * ratioY;
     moveX = ((wrapRef.scrollLeft * 100) / offsetWidth) * ratioX;
+
+    dispatch('scroll', {
+      scrollTop: wrapRef.scrollTop,
+      scrollLeft: wrapRef.scrollLeft,
+    });
   }
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-  class={scrollbarClass}
   bind:this={scrollbarRef}
-  on:mousemove={handleMouseMove}
+  class={scrollbarClass}
   on:mouseleave={handleMouseLeave}
+  on:mousemove={handleMouseMove}
 >
   <div
+    bind:this={wrapRef}
     class={wrapClass}
+    on:scroll={handleScroll}
     style={wrapStyle}
     style:height
-    bind:this={wrapRef}
-    on:scroll={handleScroll}
   >
-    <div class={resizeClass} style={viewStyle} bind:this={resizeRef}>
+    <div bind:this={resizeRef} class={resizeClass} style={viewStyle}>
       <slot />
     </div>
   </div>
-  <Bar move={moveX} ratio={ratioX} size={sizeWidth} {always} {wrapRef} bind:this={barX} />
-  <Bar move={moveY} ratio={ratioY} size={sizeHeight} {always} {wrapRef} vertical bind:this={barY} />
+  <Bar {always} bind:this={barX} move={moveX} ratio={ratioX} size={sizeWidth} {wrapRef} />
+  <Bar {always} bind:this={barY} move={moveY} ratio={ratioY} size={sizeHeight} vertical {wrapRef} />
 </div>

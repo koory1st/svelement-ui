@@ -1,7 +1,7 @@
 <script>
-  import { SvelButton, SvelScrollbar } from '@svelement-ui/all';
+  import { SvelButton, SvelScrollbar, SvelSlider } from '@svelement-ui/all';
   import Example from '$lib/example.svelte';
-  import { getContext } from 'svelte';
+  import { getContext, onMount } from 'svelte';
 
   let langFn = getContext('langFn');
 
@@ -27,6 +27,18 @@
       list3 = list3;
     }
   };
+
+  let list4 = [];
+  for (let i = 0; i < 20; i++) {
+    list4.push(i);
+  }
+  let value = 0;
+  let innerRef;
+  $: max = innerRef ? innerRef.clientHeight - 380 : 0;
+
+  function scroll({ detail }) {
+    value = detail.scrollTop;
+  }
 </script>
 
 <h1>{$langFn('cscrollbar01010')}</h1>
@@ -126,6 +138,24 @@
   </SvelScrollbar>
 </Example>
 
+<h2>{$langFn('cscrollbar05010')}</h2>
+<p>{$langFn('cscrollbar05020')}</p>
+
+<Example
+  code={`
+`}
+>
+  <SvelScrollbar always height="400px" on:scroll={scroll}>
+    <div bind:this={innerRef}>
+      {#each list4 as item}
+        <p class="scrollbar-demo-item">{item}</p>
+      {/each}
+    </div>
+  </SvelScrollbar>
+
+  <SvelSlider bind:value {max} />
+</Example>
+
 <style>
   .scrollbar-demo-item {
     display: flex;
@@ -142,6 +172,7 @@
   .scrollbar-flex-content {
     display: flex;
   }
+
   .scrollbar-demo-item2 {
     flex-shrink: 0;
     display: flex;

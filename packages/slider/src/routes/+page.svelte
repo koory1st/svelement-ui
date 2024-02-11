@@ -20,8 +20,7 @@
   };
 </script>
 
-<input bind:value={min} type="text" />
+<input bind:value={value2} type="text" />
 <div>{value1}</div>
 <SvelSlider bind:value={value1} {formatTooltip} range showStops step={10} />
 <SvelSlider bind:value={value2} height="200px" vertical />
-<SvelSlider bind:value={value2} {marks} range />
