@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.26](https://github.com/koory1st/svelement-ui/compare/v0.19.25...v0.19.26) (2024-02-11)
+
+### Bug Fixes
+
+* **scrollbar:** add scroll dispatch ([8102810](https://github.com/koory1st/svelement-ui/commit/81028100f2a7212eaf0c18e464a1f22d2356b6cf))
+
 ## [0.19.1](https://github.com/koory1st/svelement-ui/compare/v0.19.0...v0.19.1) (2024-01-10)
 
 **Note:** Version bump only for package @svelement-ui/scrollbar

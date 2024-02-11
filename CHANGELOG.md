@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.26](https://github.com/koory1st/svelement-ui/compare/v0.19.25...v0.19.26) (2024-02-11)
+
+### Bug Fixes
+
+* **popper:** add new ([0fa7e7a](https://github.com/koory1st/svelement-ui/commit/0fa7e7a87fba0c4b954388d1d2bb1794f03c7653))
+* **popper:** add new test ([8568dfa](https://github.com/koory1st/svelement-ui/commit/8568dfa9dc6aca8efcf8950e494ca4d41c440e9d))
+* **popper:** add new test ([67f89ad](https://github.com/koory1st/svelement-ui/commit/67f89ad0744781eaa03649f073a47b9ed9155572))
+* **popper:** add nPopper test ([c5287b7](https://github.com/koory1st/svelement-ui/commit/c5287b74eb6d370ddbf2f371c1055c32760a790d))
+* **scrollbar:** add scroll dispatch ([8102810](https://github.com/koory1st/svelement-ui/commit/81028100f2a7212eaf0c18e464a1f22d2356b6cf))
+
 ## [0.19.25](https://github.com/koory1st/svelement-ui/compare/v0.19.24...v0.19.25) (2024-02-06)
 
 ### Bug Fixes
