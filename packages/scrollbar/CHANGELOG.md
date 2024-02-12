@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.27](https://github.com/koory1st/svelement-ui/compare/v0.19.26...v0.19.27) (2024-02-12)
+
+### Bug Fixes
+
+* **scroll:** add setScrollTop and setScrollLeft ([b093a31](https://github.com/koory1st/svelement-ui/commit/b093a31dda15333c339df45ff0cffc6daf09b29e))
+
 ## [0.19.26](https://github.com/koory1st/svelement-ui/compare/v0.19.25...v0.19.26) (2024-02-11)
 
 ### Bug Fixes
