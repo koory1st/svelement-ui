@@ -39,6 +39,8 @@
   function scroll({ detail }) {
     value = detail.scrollTop;
   }
+
+  let setScrollTop;
 </script>
 
 <h1>{$langFn('cscrollbar01010')}</h1>
@@ -143,9 +145,39 @@
 
 <Example
   code={`
+<script>
+let list4 = [];
+for (let i = 0; i < 20; i++) {
+  list4.push(i);
+}
+let value = 0;
+let innerRef;
+$: max = innerRef ? innerRef.clientHeight - 380 : 0;
+
+function scroll({ detail }) {
+  value = detail.scrollTop;
+}
+
+let setScrollTop;
+@@@/script>
+<SvelScrollbar always bind:setScrollTop height="400px" on:scroll={scroll}>
+  <div bind:this={innerRef}>
+    {#each list4 as item}
+      <p class="scrollbar-demo-item">{item}</p>
+    {/each}
+  </div>
+</SvelScrollbar>
+
+<SvelSlider
+  bind:value
+  {max}
+  on:input={() => {
+    setScrollTop(value);
+  }}
+/>
 `}
 >
-  <SvelScrollbar always height="400px" on:scroll={scroll}>
+  <SvelScrollbar always bind:setScrollTop height="400px" on:scroll={scroll}>
     <div bind:this={innerRef}>
       {#each list4 as item}
         <p class="scrollbar-demo-item">{item}</p>
@@ -153,7 +185,13 @@
     </div>
   </SvelScrollbar>
 
-  <SvelSlider bind:value {max} />
+  <SvelSlider
+    bind:value
+    {max}
+    on:input={() => {
+      setScrollTop(value);
+    }}
+  />
 </Example>
 
 <style>

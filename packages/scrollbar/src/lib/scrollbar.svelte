@@ -23,6 +23,15 @@
   export let noresize = false;
   export let always = false;
   export let minSize = 20;
+
+  export function setScrollTop(v) {
+    wrapRef.scrollTop = v;
+  }
+
+  export function setScrollLeft(v) {
+    wrapRef.scrollLeft = v;
+  }
+
   $: scrollbarClass = a2s(['svel-scrollbar', $$props.class]);
 
   $: wrapClass = a2s(['svel-scrollbar__wrap', ['svel-scrollbar__wrap--hidden-default', !native]]);
