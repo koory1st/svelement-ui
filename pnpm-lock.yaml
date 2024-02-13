@@ -375,6 +375,15 @@ importers:
         specifier: ^1.3.3
         version: 1.3.3
 
+  packages/space:
+    devDependencies:
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+
   packages/theme-chalk: {}
 
   packages/tooltip:
