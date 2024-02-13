@@ -171,6 +171,21 @@ importers:
         specifier: workspace:^
         version: link:../util-array-2-class-string
 
+  packages/autocomplete:
+    devDependencies:
+      '@svelement-ui/input':
+        specifier: workspace:^
+        version: link:../input
+      '@svelement-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@svelement-ui/tooltip':
+        specifier: workspace:^
+        version: link:../tooltip
+      '@svelement-ui/util-array-2-class-string':
+        specifier: workspace:^
+        version: link:../util-array-2-class-string
+
   packages/button:
     devDependencies:
       '@ctrl/tinycolor':

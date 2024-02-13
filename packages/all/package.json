@@ -19,7 +19,11 @@
     "radio",
     "scrollbar",
     "input",
-    "input-number"
+    "input-number",
+    "scroll",
+    "slider",
+    "space",
+    "autocomplete"
   ],
   "exports": {
     ".": {

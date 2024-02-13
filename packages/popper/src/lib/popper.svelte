@@ -92,6 +92,9 @@
     if (trigger === 'hover') {
       triggerEvent = 'mouseover';
       unTriggerEvent = 'mouseleave';
+    } else if (trigger === 'click') {
+      triggerEvent = 'click';
+      unTriggerEvent = 'blur';
     }
     if (visible === null && !virtualTriggering) {
       defaultTargetEl.addEventListener(triggerEvent, show);
