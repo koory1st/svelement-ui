@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.28](https://github.com/koory1st/svelement-ui/compare/v0.19.27...v0.19.28) (2024-02-14)
+
+### Bug Fixes
+
+* **autocomplete:** add ([74146b7](https://github.com/koory1st/svelement-ui/commit/74146b7eab3c0be9289da43903cca1124c0723e9))
+* **autocomplete:** add show tooltip event ([84a1015](https://github.com/koory1st/svelement-ui/commit/84a1015e31baa0e0ebfe7be21e68707f48cc3c24))
+* **space:** add ([cd0d4ee](https://github.com/koory1st/svelement-ui/commit/cd0d4ee622a3fe663e27dd289663f437ee673c8e))
+
 ## [0.19.27](https://github.com/koory1st/svelement-ui/compare/v0.19.26...v0.19.27) (2024-02-12)
 
 ### Bug Fixes
