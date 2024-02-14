@@ -7,7 +7,6 @@
 
 <div class="aaa">
   <div class="bbb" />
-  <!-- svelte-ignore a11y-mouse-events-have-key-events -->
   <!--  <button-->
   <!--    bind:this={ref}-->
   <!--    on:click={() => (visible = !visible)}-->
