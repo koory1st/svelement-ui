@@ -1,5 +1,5 @@
 <script>
-  import SvelSpace from '$lib/index.js';
+  import SvelAutoComplete from '$lib/index.js';
 </script>
 
-<SvelSpace>aaaa</SvelSpace>
+<SvelAutoComplete>aaaa</SvelAutoComplete>
