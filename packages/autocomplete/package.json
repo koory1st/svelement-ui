@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/autocomplete",
-  "version": "0.19.28",
+  "version": "0.19.29",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",
