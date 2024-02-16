@@ -401,6 +401,9 @@ importers:
 
   packages/switch:
     devDependencies:
+      '@svelement-ui/icon':
+        specifier: workspace:^
+        version: link:../icon
       '@svelement-ui/theme-chalk':
         specifier: workspace:^
         version: link:../theme-chalk

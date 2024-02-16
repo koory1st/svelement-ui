@@ -1,5 +1,5 @@
 <script>
-  import SvelAutoComplete from '$lib/index.js';
+  import SvelSwitch from '$lib/index.js';
 </script>
 
-<SvelAutoComplete>aaaa</SvelAutoComplete>
+<SvelSwitch />

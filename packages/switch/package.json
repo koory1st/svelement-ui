@@ -1,6 +1,15 @@
 {
   "name": "@svelement-ui/switch",
   "version": "0.19.29",
+  "keywords": [
+    "svelte",
+    "element-ui",
+    "svelement",
+    "svelement-ui",
+    "element",
+    "ui",
+    "switch"
+  ],
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && svelte-kit sync && svelte-package && publint",
@@ -20,6 +29,7 @@
   ],
   "type": "module",
   "devDependencies": {
+    "@svelement-ui/icon": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^"
   },
