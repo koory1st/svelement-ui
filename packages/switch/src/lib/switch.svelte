@@ -1,7 +1,9 @@
 <script>
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   import a2s from '@svelement-ui/util-array-2-class-string';
-  import { getContext } from 'svelte';
+  import { getContext, createEventDispatcher, tick } from 'svelte';
+
+  const dispatch = createEventDispatcher();
 
   export let value = false;
   export let activeText = '';
@@ -34,6 +36,7 @@
     $$props.class,
   ]);
   $: switchDisabled = loading;
+  $: style = $$props.style;
 
   function switchValue(e) {
     e.preventDefault();
@@ -47,16 +50,24 @@
     }
   }
 
+  let input;
+
   function handleChange() {
     const val = checked ? inactiveValue : activeValue;
     value = val;
+    dispatch('change', val);
+    dispatch('input', val);
+    tick().then(() => {
+      input.checked = checked;
+    });
   }
 </script>
 
-<div class={switchKls} on:click={switchValue}>
+<div class={switchKls} on:click={switchValue} {style}>
   <input
     aria-checked={checked}
     aria-disabled={switchDisabled}
+    bind:this={input}
     class="svel-switch__input"
     disabled={switchDisabled}
     false-value={inactiveValue}
