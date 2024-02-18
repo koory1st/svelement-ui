@@ -32,7 +32,7 @@
     'svel-switch',
     ['is-checked', checked],
     ['is-disable', disabled],
-    [`svel-button--${size}`, Boolean(size)],
+    [`svel-switch--${size}`, Boolean(size)],
     $$props.class,
   ]);
   $: switchDisabled = loading;
