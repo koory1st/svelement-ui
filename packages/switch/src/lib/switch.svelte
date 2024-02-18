@@ -1,6 +1,7 @@
 <script>
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   import a2s from '@svelement-ui/util-array-2-class-string';
+  import a2st from '@svelement-ui/util-array-2-style-string';
   import { getContext, createEventDispatcher, tick } from 'svelte';
 
   const dispatch = createEventDispatcher();
@@ -37,6 +38,16 @@
   ]);
   $: switchDisabled = loading;
   $: style = $$props.style;
+  $: labelLeftKls = a2s([
+    'svel-switch__label',
+    'svel-switch__label--left',
+    ['is-active', !checked],
+  ]);
+  $: labelRightKls = a2s([
+    'svel-switch__label',
+    'svel-switch__label--right',
+    ['is-active', checked],
+  ]);
 
   function switchValue(e) {
     e.preventDefault();
@@ -78,11 +89,13 @@
     type="checkbox"
   />
   {#if !inlinePrompt && (inactiveIcon || inactiveText)}
-    <span>
-      {#if inactiveText}
+    <span class={labelLeftKls}>
+      {#if inactiveIcon}
         <SvelIcon />
       {/if}
-      <span />
+      {#if !inactiveIcon && inactiveText}
+        <span aria-hidden="checked">{inactiveText}</span>
+      {/if}
     </span>
   {/if}
   <span class="svel-switch__core">
@@ -104,7 +117,7 @@
     </div>
   </span>
   {#if !inlinePrompt && (activeIcon || activeText)}
-    <span>
+    <span class={labelRightKls}>
       {#if activeIcon}
         <SvelIcon />
       {/if}

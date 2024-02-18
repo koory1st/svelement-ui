@@ -31,7 +31,8 @@
   "devDependencies": {
     "@svelement-ui/icon": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
-    "@svelement-ui/util-array-2-class-string": "workspace:^"
+    "@svelement-ui/util-array-2-class-string": "workspace:^",
+    "@svelement-ui/util-array-2-style-string": "workspace:^"
   },
   "bundledDependencies": [
     "@svelement-ui/util-array-2-class-string"

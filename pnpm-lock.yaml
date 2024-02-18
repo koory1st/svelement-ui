@@ -410,6 +410,9 @@ importers:
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../util-array-2-class-string
+      '@svelement-ui/util-array-2-style-string':
+        specifier: workspace:^
+        version: link:../util-array-2-style-string
 
   packages/theme-chalk: {}
 

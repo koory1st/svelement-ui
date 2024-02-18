@@ -15,4 +15,4 @@
 <SvelSwitch size="small" />
 
 <div />
-<!--<SvelSwitch activeText="Pay by month" inActiveText="Pay by year" />-->
+<SvelSwitch activeText="Pay by month" inactiveText="Pay by year" />
