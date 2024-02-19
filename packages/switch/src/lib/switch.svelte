@@ -2,7 +2,7 @@
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
-  import { getContext, createEventDispatcher, tick } from 'svelte';
+  import { getContext, createEventDispatcher, tick, onMount } from 'svelte';
 
   const dispatch = createEventDispatcher();
 
@@ -24,7 +24,6 @@
   /** @type {String, Number} */
   export let tabindex;
   export let beforeChange = null;
-
   $: size = size || getContext('svel-size');
   $: isControlled = value !== false;
   $: actualValue = value;
@@ -61,6 +60,12 @@
     }
   }
 
+  if (actualValue !== activeValue && actualValue !== inactiveValue) {
+    value = inactiveValue;
+    dispatch('change', value);
+    dispatch('input', value);
+  }
+
   let input;
 
   function handleChange() {
@@ -71,6 +76,10 @@
     tick().then(() => {
       input.checked = checked;
     });
+  }
+
+  function handleInputKeydown({ key }) {
+    console.log(key);
   }
 </script>
 
@@ -83,6 +92,8 @@
     disabled={switchDisabled}
     false-value={inactiveValue}
     {name}
+    on:change={handleChange}
+    on:keydown={handleInputKeydown}
     role="switch"
     {tabindex}
     true-value={activeValue}

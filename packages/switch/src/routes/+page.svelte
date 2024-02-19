@@ -2,6 +2,7 @@
   import SvelSwitch from '$lib/index.js';
 
   let value;
+  let value2;
 </script>
 
 {value}
@@ -16,3 +17,8 @@
 
 <div />
 <SvelSwitch activeText="Pay by month" inactiveText="Pay by year" />
+
+<div />
+
+<SvelSwitch activeValue="100" bind:value={value2} inactiveValue="0" />
+{value2}
