@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.34](https://github.com/koory1st/svelement-ui/compare/v0.19.33...v0.19.34) (2024-02-19)
+
+### Bug Fixes
+
+* **switch:** add activeValue and inactiveValue ([80b996b](https://github.com/koory1st/svelement-ui/commit/80b996b2a50e9ea58496a56c32abe3b448dd045c))
+
 ## [0.19.32](https://github.com/koory1st/svelement-ui/compare/v0.19.31...v0.19.32) (2024-02-18)
 
 ### Bug Fixes
