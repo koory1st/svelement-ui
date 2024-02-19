@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.33](https://github.com/koory1st/svelement-ui/compare/v0.19.32...v0.19.33) (2024-02-19)
+
+### Bug Fixes
+
+* **slider:** range error ([5d00f50](https://github.com/koory1st/svelement-ui/commit/5d00f5012ce9bc9361eb75dd6c17795442c114c7))
+
 ## [0.19.32](https://github.com/koory1st/svelement-ui/compare/v0.19.31...v0.19.32) (2024-02-18)
 
 ### Bug Fixes
