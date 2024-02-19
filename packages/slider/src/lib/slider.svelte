@@ -97,13 +97,21 @@
   $: setFirstValue(value);
 
   function setFirstValue(v) {
-    firstValue = v;
+    if (!Array.isArray(v)) {
+      firstValue = v;
+    } else {
+      firstValue = v.length === 0 ? 0 : v[0];
+    }
     changeMinMaxValue(firstValue, secondValue);
     changeValue(range ? [minValue, maxValue] : firstValue);
   }
 
   function setSecondValue(v) {
-    secondValue = v;
+    if (!Array.isArray(v)) {
+      secondValue = v;
+    } else {
+      secondValue = v.length > 1 ? v[1] : 0;
+    }
     changeMinMaxValue(firstValue, secondValue);
     if (range) {
       changeValue([minValue, maxValue]);

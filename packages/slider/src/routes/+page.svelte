@@ -4,6 +4,7 @@
   let value1 = 1;
   let value2 = 10;
   let min = 1;
+  let value6_1 = [0, 0];
   let marks = {
     0: '0°C',
     8: '8°C',
