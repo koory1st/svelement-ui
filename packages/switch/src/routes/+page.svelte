@@ -15,10 +15,9 @@
 <SvelSwitch size="large" />
 <SvelSwitch size="small" />
 
+<SvelSwitch activeValue="100" bind:value={value2} inactiveValue="0" />
 <div />
 <SvelSwitch activeText="Pay by month" inactiveText="Pay by year" />
+<SvelSwitch activeText="Y" inactiveText="N" inlinePrompt />
 
 <div />
-
-<SvelSwitch activeValue="100" bind:value={value2} inactiveValue="0" />
-{value2}

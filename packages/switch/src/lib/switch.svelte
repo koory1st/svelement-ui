@@ -110,11 +110,15 @@
     </span>
   {/if}
   <span class="svel-switch__core">
-    <div class="svel-switch__inner">
-      {#if inactiveText || activeIcon}
-        <SvelIcon />
-      {/if}
-    </div>
+    {#if inlinePrompt}
+      <div class="svel-switch__inner">
+        {#if activeIcon || inactiveIcon}
+          <SvelIcon />
+        {:else if activeText || inactiveText}
+          <span class="is-text" aria-hidden="!checked">{checked ? activeText : inactiveText}</span>
+        {/if}
+      </div>
+    {/if}
     <div class="svel-switch__action">
       {#if loading}
         <SvelIcon>
