@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.35](https://github.com/koory1st/svelement-ui/compare/v0.19.34...v0.19.35) (2024-02-20)
+
+### Bug Fixes
+
+* **switch:** add inlinePrompt ([98c91f2](https://github.com/koory1st/svelement-ui/commit/98c91f292499c9460bf18f27ff2b974a9df32888))
+
 ## [0.19.34](https://github.com/koory1st/svelement-ui/compare/v0.19.33...v0.19.34) (2024-02-19)
 
 ### Bug Fixes
