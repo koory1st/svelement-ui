@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.36](https://github.com/koory1st/svelement-ui/compare/v0.19.35...v0.19.36) (2024-02-21)
+
+### Bug Fixes
+
+* **switch:** add inline ([a760427](https://github.com/koory1st/svelement-ui/commit/a7604277d99889c807aeac44f1a876ddfbc87e5c))
+
 ## [0.19.35](https://github.com/koory1st/svelement-ui/compare/v0.19.34...v0.19.35) (2024-02-20)
 
 ### Bug Fixes
