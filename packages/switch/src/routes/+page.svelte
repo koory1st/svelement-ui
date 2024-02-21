@@ -19,5 +19,9 @@
 <div />
 <SvelSwitch activeText="Pay by month" inactiveText="Pay by year" />
 <SvelSwitch activeText="Y" inactiveText="N" inlinePrompt />
+<div />
+<SvelSwitch activeText="超出省略" inactiveText="超出省略" inlinePrompt width="60" />
+<div />
+<SvelSwitch activeText="完整展示多个内容" inactiveText="多个内容" inlinePrompt />
 
 <div />

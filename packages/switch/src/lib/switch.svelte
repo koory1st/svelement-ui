@@ -24,6 +24,7 @@
   /** @type {String, Number} */
   export let tabindex;
   export let beforeChange = null;
+  export let width = null;
   $: size = size || getContext('svel-size');
   $: isControlled = value !== false;
   $: actualValue = value;
@@ -81,6 +82,8 @@
   function handleInputKeydown({ key }) {
     console.log(key);
   }
+
+  $: coreStyle = a2st([[`width`, width ? `${width}px` : null]]);
 </script>
 
 <div class={switchKls} on:click={switchValue} {style}>
@@ -109,13 +112,13 @@
       {/if}
     </span>
   {/if}
-  <span class="svel-switch__core">
+  <span class="svel-switch__core" style={coreStyle}>
     {#if inlinePrompt}
       <div class="svel-switch__inner">
         {#if activeIcon || inactiveIcon}
           <SvelIcon />
         {:else if activeText || inactiveText}
-          <span class="is-text" aria-hidden="!checked">{checked ? activeText : inactiveText}</span>
+          <span class="is-text" aria-hidden={!checked}>{checked ? activeText : inactiveText}</span>
         {/if}
       </div>
     {/if}
