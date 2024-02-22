@@ -9,7 +9,6 @@
   export let value = false;
   export let activeText = '';
   export let inactiveText = '';
-  export let activeIcon = null;
   export let activeActionIcon = null;
   export let inactiveIcon = null;
   export let inactiveActionIcon = null;
@@ -29,14 +28,14 @@
   $: isControlled = value !== false;
   $: actualValue = value;
   $: checked = actualValue === activeValue;
+  $: switchDisabled = loading;
   $: switchKls = a2s([
     'svel-switch',
     ['is-checked', checked],
-    ['is-disable', disabled],
+    ['is-disable', disabled || loading],
     [`svel-switch--${size}`, Boolean(size)],
     $$props.class,
   ]);
-  $: switchDisabled = loading;
   $: style = $$props.style;
   $: labelLeftKls = a2s([
     'svel-switch__label',
@@ -102,10 +101,12 @@
     true-value={activeValue}
     type="checkbox"
   />
-  {#if !inlinePrompt && (inactiveIcon || inactiveText)}
+  {#if !inlinePrompt && ($$slots.inactiveIcon || inactiveText)}
     <span class={labelLeftKls}>
-      {#if inactiveIcon}
-        <SvelIcon />
+      {#if $$slots.inactiveIcon}
+        <SvelIcon>
+          <slot name="inactiveIcon" />
+        </SvelIcon>
       {/if}
       {#if !inactiveIcon && inactiveText}
         <span aria-hidden="checked">{inactiveText}</span>
@@ -115,8 +116,14 @@
   <span class="svel-switch__core" style={coreStyle}>
     {#if inlinePrompt}
       <div class="svel-switch__inner">
-        {#if activeIcon || inactiveIcon}
-          <SvelIcon />
+        {#if $$slots.activeIcon || $$slots.inactiveIcon}
+          <SvelIcon class="is-icon">
+            {#if checked}
+              <slot name="activeIcon" />
+            {:else}
+              <slot name="inactiveIcon" />
+            {/if}
+          </SvelIcon>
         {:else if activeText || inactiveText}
           <span class="is-text" aria-hidden={!checked}>{checked ? activeText : inactiveText}</span>
         {/if}
@@ -134,10 +141,12 @@
       {/if}
     </div>
   </span>
-  {#if !inlinePrompt && (activeIcon || activeText)}
+  {#if !inlinePrompt && ($$slots.activeIcon || activeText)}
     <span class={labelRightKls}>
-      {#if activeIcon}
-        <SvelIcon />
+      {#if $$slots.activeIcon}
+        <SvelIcon>
+          <slot name="activeIcon" />
+        </SvelIcon>
       {/if}
       <span aria-hidden={!checked}>
         {activeText}

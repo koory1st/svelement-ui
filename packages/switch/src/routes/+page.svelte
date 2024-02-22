@@ -1,5 +1,6 @@
 <script>
   import SvelSwitch from '$lib/index.js';
+  import { Check, Close } from '@svelement-ui/icon';
 
   let value;
   let value2;
@@ -25,3 +26,15 @@
 <SvelSwitch activeText="完整展示多个内容" inactiveText="多个内容" inlinePrompt />
 
 <div />
+<SvelSwitch bind:value>
+  <Check slot="activeIcon" />
+  <Close slot="inactiveIcon" />
+</SvelSwitch>
+
+<SvelSwitch bind:value inlinePrompt>
+  <Check slot="activeIcon" />
+  <Close slot="inactiveIcon" />
+</SvelSwitch>
+
+<div />
+<SvelSwitch bind:value disabled />
