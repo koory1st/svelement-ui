@@ -32,7 +32,7 @@
   $: switchKls = a2s([
     'svel-switch',
     ['is-checked', checked],
-    ['is-disable', disabled || loading],
+    ['is-disabled', disabled || loading],
     [`svel-switch--${size}`, Boolean(size)],
     $$props.class,
   ]);
