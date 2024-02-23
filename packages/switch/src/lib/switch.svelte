@@ -60,8 +60,14 @@
     }
   }
 
-  if (actualValue !== activeValue && actualValue !== inactiveValue) {
+  if (
+    (value === undefined || value === null) &&
+    actualValue !== activeValue &&
+    actualValue !== inactiveValue
+  ) {
+    console.log('11', value);
     value = inactiveValue;
+    console.log('222', value);
     dispatch('change', value);
     dispatch('input', value);
   }
@@ -69,8 +75,10 @@
   let input;
 
   function handleChange() {
+    console.log('333', value);
     const val = checked ? inactiveValue : activeValue;
     value = val;
+    console.log('444', value);
     dispatch('change', val);
     dispatch('input', val);
     tick().then(() => {
@@ -131,7 +139,7 @@
     {/if}
     <div class="svel-switch__action">
       {#if loading}
-        <SvelIcon>
+        <SvelIcon class="is-loading">
           <Loading />
         </SvelIcon>
       {:else if activeActionIcon && checked}
