@@ -4,9 +4,31 @@
 
   let value;
   let value2;
+
+  let loading1;
+  let loading2;
+
+  const beforeChange1 = () => {
+    loading1 = true;
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        loading1 = false;
+        return resolve(true);
+      }, 1000);
+    });
+  };
+
+  const beforeChange2 = () => {
+    loading2 = true;
+    return new Promise((_, reject) => {
+      setTimeout(() => {
+        loading2 = false;
+        return reject(new Error('Error'));
+      }, 1000);
+    });
+  };
 </script>
 
-{value}
 <!--<SvelSwitch bind:value />-->
 
 <!--<SvelSwitch style="&#45;&#45;svel-switch-on-color: #13ce66; &#45;&#45;svel-switch-off-color: #ff4949" />-->
@@ -39,6 +61,9 @@
 <!--<div />-->
 <!--<SvelSwitch bind:value disabled />-->
 
-<div />
-<SvelSwitch loading value={true} />
-<SvelSwitch loading value={false} />
+<!--<div />-->
+<!--<SvelSwitch loading value={true} />-->
+<!--<SvelSwitch loading value={false} />-->
+
+<SvelSwitch beforeChange={beforeChange1} bind:value loading={loading1} />
+<SvelSwitch beforeChange={beforeChange2} bind:value={value2} loading={loading2} />

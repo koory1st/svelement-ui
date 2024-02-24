@@ -58,6 +58,21 @@
       handleChange();
       return;
     }
+    const shouldChange = beforeChange();
+    if (shouldChange.toString() !== '[object Promise]') {
+      handleChange();
+      return;
+    }
+
+    shouldChange
+      .then((result) => {
+        if (result) {
+          handleChange();
+        }
+      })
+      .catch((e) => {
+        console.warn('switch', `some error occurred: ${e}`);
+      });
   }
 
   if (
@@ -65,9 +80,7 @@
     actualValue !== activeValue &&
     actualValue !== inactiveValue
   ) {
-    console.log('11', value);
     value = inactiveValue;
-    console.log('222', value);
     dispatch('change', value);
     dispatch('input', value);
   }
@@ -75,10 +88,8 @@
   let input;
 
   function handleChange() {
-    console.log('333', value);
     const val = checked ? inactiveValue : activeValue;
     value = val;
-    console.log('444', value);
     dispatch('change', val);
     dispatch('input', val);
     tick().then(() => {
