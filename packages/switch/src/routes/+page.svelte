@@ -1,6 +1,6 @@
 <script>
   import SvelSwitch from '$lib/index.js';
-  import { Check, Close } from '@svelement-ui/icon';
+  import { Check, Close, View, Hide } from '@svelement-ui/icon';
 
   let value;
   let value2;
@@ -65,5 +65,12 @@
 <!--<SvelSwitch loading value={true} />-->
 <!--<SvelSwitch loading value={false} />-->
 
-<SvelSwitch beforeChange={beforeChange1} bind:value loading={loading1} />
-<SvelSwitch beforeChange={beforeChange2} bind:value={value2} loading={loading2} />
+<!--<div />-->
+<!--<SvelSwitch beforeChange={beforeChange1} bind:value loading={loading1} />-->
+<!--<SvelSwitch beforeChange={beforeChange2} bind:value={value2} loading={loading2} />-->
+
+<div />
+<SvelSwitch bind:value>
+  <View slot="activeActionIcon" />
+  <Hide slot="inactiveActionIcon" />
+</SvelSwitch>

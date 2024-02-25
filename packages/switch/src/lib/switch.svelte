@@ -9,9 +9,7 @@
   export let value = false;
   export let activeText = '';
   export let inactiveText = '';
-  export let activeActionIcon = null;
   export let inactiveIcon = null;
-  export let inactiveActionIcon = null;
   export let disabled = false;
   export let loading = false;
   export let activeValue = true;
@@ -153,10 +151,14 @@
         <SvelIcon class="is-loading">
           <Loading />
         </SvelIcon>
-      {:else if activeActionIcon && checked}
-        <SvelIcon />
-      {:else if inactiveActionIcon && !checked}
-        <SvelIcon />
+      {:else if $$slots.activeActionIcon && checked}
+        <SvelIcon>
+          <slot name="activeActionIcon" />
+        </SvelIcon>
+      {:else if $$slots.inactiveActionIcon && !checked}
+        <SvelIcon>
+          <slot name="inactiveActionIcon" />
+        </SvelIcon>
       {/if}
     </div>
   </span>
