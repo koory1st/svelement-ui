@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.40](https://github.com/koory1st/svelement-ui/compare/v0.19.39...v0.19.40) (2024-02-25)
+
+### Bug Fixes
+
+* **switch:** activeActionIcon ([90eb5ac](https://github.com/koory1st/svelement-ui/commit/90eb5ac087e12dbb1e81f56c32da0ed716330777))
+* **switch:** custom Icon ([101b92c](https://github.com/koory1st/svelement-ui/commit/101b92ce3930634f851441dbbd0403aa1b0758ad))
+
 ## [0.19.39](https://github.com/koory1st/svelement-ui/compare/v0.19.38...v0.19.39) (2024-02-24)
 
 ### Bug Fixes
