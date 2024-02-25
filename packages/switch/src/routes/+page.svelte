@@ -74,3 +74,9 @@
   <View slot="activeActionIcon" />
   <Hide slot="inactiveActionIcon" />
 </SvelSwitch>
+
+<div />
+<SvelSwitch bind:value>
+  <span slot="activeActionIcon">T</span>
+  <span slot="inactiveActionIcon">F</span>
+</SvelSwitch>
