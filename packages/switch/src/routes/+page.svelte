@@ -29,59 +29,69 @@
   };
 
   let focus;
+
+  function change(e) {
+    console.log('change', e);
+  }
+
+  function input(e) {
+    console.log('input', e);
+  }
 </script>
 
-<!--<SvelSwitch bind:value />-->
+<SvelSwitch bind:value />
 
-<!--<SvelSwitch style="&#45;&#45;svel-switch-on-color: #13ce66; &#45;&#45;svel-switch-off-color: #ff4949" />-->
+<SvelSwitch style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949" />
 
-<!--<div />-->
+<div />
 
-<!--<SvelSwitch size="large" />-->
-<!--<SvelSwitch size="small" />-->
+<SvelSwitch size="large" />
+<SvelSwitch size="small" />
 
-<!--<SvelSwitch activeValue="100" bind:value={value2} inactiveValue="0" />-->
-<!--<div />-->
-<!--<SvelSwitch activeText="Pay by month" inactiveText="Pay by year" />-->
-<!--<SvelSwitch activeText="Y" inactiveText="N" inlinePrompt />-->
-<!--<div />-->
-<!--<SvelSwitch activeText="超出省略" inactiveText="超出省略" inlinePrompt width="60" />-->
-<!--<div />-->
-<!--<SvelSwitch activeText="完整展示多个内容" inactiveText="多个内容" inlinePrompt />-->
+<SvelSwitch activeValue="100" bind:value={value2} inactiveValue="0" />
+<div />
+<SvelSwitch activeText="Pay by month" inactiveText="Pay by year" />
+<SvelSwitch activeText="Y" inactiveText="N" inlinePrompt />
+<div />
+<SvelSwitch activeText="超出省略" inactiveText="超出省略" inlinePrompt width="60" />
+<div />
+<SvelSwitch activeText="完整展示多个内容" inactiveText="多个内容" inlinePrompt />
 
-<!--<div />-->
-<!--<SvelSwitch bind:value>-->
-<!--  <Check slot="activeIcon" />-->
-<!--  <Close slot="inactiveIcon" />-->
-<!--</SvelSwitch>-->
+<div />
+<SvelSwitch bind:value>
+  <Check slot="activeIcon" />
+  <Close slot="inactiveIcon" />
+</SvelSwitch>
 
-<!--<SvelSwitch bind:value inlinePrompt>-->
-<!--  <Check slot="activeIcon" />-->
-<!--  <Close slot="inactiveIcon" />-->
-<!--</SvelSwitch>-->
+<SvelSwitch bind:value inlinePrompt>
+  <Check slot="activeIcon" />
+  <Close slot="inactiveIcon" />
+</SvelSwitch>
 
-<!--<div />-->
-<!--<SvelSwitch bind:value disabled />-->
+<div />
+<SvelSwitch bind:value disabled />
 
-<!--<div />-->
-<!--<SvelSwitch loading value={true} />-->
-<!--<SvelSwitch loading value={false} />-->
+<div />
+<SvelSwitch loading value={true} />
+<SvelSwitch loading value={false} />
 
-<!--<div />-->
-<!--<SvelSwitch beforeChange={beforeChange1} bind:value loading={loading1} />-->
-<!--<SvelSwitch beforeChange={beforeChange2} bind:value={value2} loading={loading2} />-->
+<div />
+<SvelSwitch beforeChange={beforeChange1} bind:value loading={loading1} />
+<SvelSwitch beforeChange={beforeChange2} bind:value={value2} loading={loading2} />
 
-<!--<div />-->
-<!--<SvelSwitch bind:value>-->
-<!--  <View slot="activeActionIcon" />-->
-<!--  <Hide slot="inactiveActionIcon" />-->
-<!--</SvelSwitch>-->
+<div />
+<SvelSwitch bind:value>
+  <View slot="activeActionIcon" />
+  <Hide slot="inactiveActionIcon" />
+</SvelSwitch>
 
-<!--<div />-->
-<!--<SvelSwitch bind:value>-->
-<!--  <span slot="activeActionIcon">T</span>-->
-<!--  <span slot="inactiveActionIcon">F</span>-->
-<!--</SvelSwitch>-->
+<div />
+<SvelSwitch bind:value>
+  <span slot="activeActionIcon">T</span>
+  <span slot="inactiveActionIcon">F</span>
+</SvelSwitch>
 
-<!--<SvelSwitch bind:focus bind:value />-->
-<!--<button on:click={() => focus()}>focus</button>-->
+<SvelSwitch bind:focus bind:value />
+<button on:click={() => focus()}>focus</button>
+
+<SvelSwitch bind:focus on:change={change} on:input={input} />
