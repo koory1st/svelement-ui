@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.41](https://github.com/koory1st/svelement-ui/compare/v0.19.40...v0.19.41) (2024-02-26)
+
+### Bug Fixes
+
+* **switch:** add key enter ([0d22ad9](https://github.com/koory1st/svelement-ui/commit/0d22ad91c2affae8fd39a4344b8300ae5a7612e9))
+* **switch:** demo page ([67b173f](https://github.com/koory1st/svelement-ui/commit/67b173f4989a7d0bd5a51a10e9dd736123a6f36b))
+* **switch:** focus ([992d62c](https://github.com/koory1st/svelement-ui/commit/992d62cc5500ddabb02eab52d5ebc3a09f446e8d))
+* **switch:** id ([1a841bb](https://github.com/koory1st/svelement-ui/commit/1a841bb6dd68573a7e706dee3edd3d313efe7d39))
+
 ## [0.19.40](https://github.com/koory1st/svelement-ui/compare/v0.19.39...v0.19.40) (2024-02-25)
 
 ### Bug Fixes
