@@ -96,8 +96,11 @@
     });
   }
 
-  function handleInputKeydown({ key }) {
-    console.log(key);
+  function handleInputKeydown(e) {
+    if (e.key !== 'Enter') {
+      return;
+    }
+    switchValue(e);
   }
 
   $: coreStyle = a2st([[`width`, width ? `${width}px` : null]]);
