@@ -2,10 +2,11 @@
   import { SvelIcon, Loading } from '@svelement-ui/icon';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import a2st from '@svelement-ui/util-array-2-style-string';
-  import { getContext, createEventDispatcher, tick, onMount } from 'svelte';
+  import { getContext, createEventDispatcher, tick } from 'svelte';
 
   const dispatch = createEventDispatcher();
 
+  export let id;
   export let value = false;
   export let activeText = '';
   export let inactiveText = '';
@@ -110,6 +111,7 @@
     class="svel-switch__input"
     disabled={switchDisabled}
     false-value={inactiveValue}
+    {id}
     {name}
     on:change={handleChange}
     on:keydown={handleInputKeydown}
