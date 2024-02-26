@@ -27,6 +27,8 @@
       }, 1000);
     });
   };
+
+  let focus;
 </script>
 
 <!--<SvelSwitch bind:value />-->
@@ -69,14 +71,17 @@
 <!--<SvelSwitch beforeChange={beforeChange1} bind:value loading={loading1} />-->
 <!--<SvelSwitch beforeChange={beforeChange2} bind:value={value2} loading={loading2} />-->
 
-<div />
-<SvelSwitch bind:value>
-  <View slot="activeActionIcon" />
-  <Hide slot="inactiveActionIcon" />
-</SvelSwitch>
+<!--<div />-->
+<!--<SvelSwitch bind:value>-->
+<!--  <View slot="activeActionIcon" />-->
+<!--  <Hide slot="inactiveActionIcon" />-->
+<!--</SvelSwitch>-->
 
-<div />
-<SvelSwitch bind:value>
-  <span slot="activeActionIcon">T</span>
-  <span slot="inactiveActionIcon">F</span>
-</SvelSwitch>
+<!--<div />-->
+<!--<SvelSwitch bind:value>-->
+<!--  <span slot="activeActionIcon">T</span>-->
+<!--  <span slot="inactiveActionIcon">F</span>-->
+<!--</SvelSwitch>-->
+
+<!--<SvelSwitch bind:focus bind:value />-->
+<!--<button on:click={() => focus()}>focus</button>-->

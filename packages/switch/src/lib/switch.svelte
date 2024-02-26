@@ -23,6 +23,11 @@
   export let tabindex;
   export let beforeChange = null;
   export let width = null;
+
+  export function focus() {
+    input.focus();
+  }
+
   $: size = size || getContext('svel-size');
   $: isControlled = value !== false;
   $: actualValue = value;
