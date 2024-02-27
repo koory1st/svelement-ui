@@ -18,6 +18,7 @@ export const component_group_list = [
       { key: 'checkbox', name: 'ccheckbox01010' },
       { key: 'radio', name: 'cradio01010' },
       { key: 'slider', name: 'cslider01010' },
+      { key: 'switch', name: 'cswitch01010' },
     ],
   },
   {

@@ -161,6 +161,9 @@ importers:
       '@svelement-ui/slider':
         specifier: workspace:^
         version: link:../slider
+      '@svelement-ui/switch':
+        specifier: workspace:^
+        version: link:../switch
       '@svelement-ui/theme-chalk':
         specifier: workspace:^
         version: link:../theme-chalk

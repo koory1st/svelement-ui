@@ -12,6 +12,7 @@ import inputNumber from '$lib/i18n/zh/input_number.js';
 import radio from '$lib/i18n/zh/radio.js';
 import tooltip from '$lib/i18n/zh/tooltip.js';
 import slider from '$lib/i18n/zh/slider.js';
+import _switch from '$lib/i18n/zh/switch.js';
 
 export const langDict = {
   ...util,
@@ -28,6 +29,7 @@ export const langDict = {
   ...inputNumber,
   ...tooltip,
   ...slider,
+  ..._switch,
 };
 
 function getText(key) {

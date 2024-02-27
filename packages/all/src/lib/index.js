@@ -19,6 +19,7 @@ import SvelInput from '@svelement-ui/input';
 import SvelInputNumber from '@svelement-ui/input-number';
 import SvelSlider from '@svelement-ui/slider';
 import SvelTooltip from '@svelement-ui/tooltip';
+import SvelSwitch from '@svelement-ui/switch';
 
 export {
   SvelAside,
@@ -44,4 +45,5 @@ export {
   SvelInputNumber,
   SvelSlider,
   SvelTooltip,
+  SvelSwitch,
 };

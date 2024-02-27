@@ -23,7 +23,8 @@
     "scroll",
     "slider",
     "space",
-    "autocomplete"
+    "autocomplete",
+    "switch"
   ],
   "exports": {
     ".": {
@@ -49,6 +50,7 @@
     "@svelement-ui/radio": "workspace:^",
     "@svelement-ui/scrollbar": "workspace:^",
     "@svelement-ui/slider": "workspace:^",
+    "@svelement-ui/switch": "workspace:^",
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/tooltip": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^"
