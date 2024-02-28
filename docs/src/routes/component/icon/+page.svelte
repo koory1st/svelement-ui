@@ -313,16 +313,15 @@
 <h1>Icon 图标</h1>
 <p>Svelement-ui和Element Plus一样，提供了一套常用的图标集合。</p>
 <h2>使用图标</h2>
-<SvelCode language="bash" code="pnpm install -D @svelement-ui/icon" />
+<SvelCode code="pnpm install -D @svelement-ui/icon" language="bash" />
 
 <h2>基础用法</h2>
 <SvelCode
-  language="svelte"
   code={`<script lang="ts">
 import { SvelIcon, Edit } from '@svelement-ui/icon';
 let baseSize = 50;
 let baseColor = 'green';
-!@/script>
+@@@/script>
 <div>
   <!-- 使用 el-icon 为 SVG 图标提供属性 -->
   <SvelIcon size={baseSize} color={baseColor}>
@@ -331,10 +330,11 @@ let baseColor = 'green';
   <!-- 或者独立使用它，不从父级获取属性 -->
   <Edit />
 </div>`}
+  language="svelte"
 />
 <div>
   <SvelRow>
-    <SvelIcon size={baseSize} color={baseColor}>
+    <SvelIcon color={baseColor} size={baseSize}>
       <Edit />
     </SvelIcon>
   </SvelRow>
@@ -347,7 +347,6 @@ let baseColor = 'green';
 <h2>结合 SvelIcon 使用</h2>
 <p>SvelIcon 为 raw SVG 图标提供额外的属性, 提供的详细属性请继续阅读。</p>
 <SvelCode
-  language="svelte"
   code={`<SvelIcon size={20}>
   <Edit />
 </SvelIcon>
@@ -362,6 +361,7 @@ let baseColor = 'green';
     <Search />
   </SvelIcon>
 </SvelButton>`}
+  language="svelte"
 />
 <p>
   通过添加额外的类名 is-loading，你的图标就可以在 2 秒内旋转 360度，当然你也可以自己改写想要的动画。
@@ -374,7 +374,7 @@ let baseColor = 'green';
     </SvelIcon>
   </SvelCol>
   <SvelCol span={4}>
-    <SvelIcon color="#409EFC" class="no-inherit">
+    <SvelIcon class="no-inherit" color="#409EFC">
       <Share />
     </SvelIcon>
   </SvelCol>
@@ -400,7 +400,6 @@ let baseColor = 'green';
 <h2>直接使用 SVG 图标</h2>
 
 <SvelCode
-  language="svelte"
   code={`<div style="font-size: 20px">
   <!-- 由于SVG图标默认不携带任何属性 -->
   <!-- 你需要直接提供它们 -->
@@ -409,6 +408,7 @@ let baseColor = 'green';
   <Delete style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
   <Search style="display:inline; width: 1em; height: 1em; margin-right: 8px" />
 </div>`}
+  language="svelte"
 />
 <div style="font-size: 20px">
   <!-- 由于SVG图标默认不携带任何属性 -->
@@ -422,335 +422,927 @@ let baseColor = 'green';
 <h2>图标集合</h2>
 <h3>System</h3>
 <ul class="demo-icon-list">
-  <IconName name="Plus"><Plus /></IconName>
-  <IconName name="Minus"><Minus /></IconName>
-  <IconName name="CirclePlus"><CirclePlus /></IconName>
-  <IconName name="Search"><Search /></IconName>
-  <IconName name="Female"><Female /></IconName>
-  <IconName name="Male"><Male /></IconName>
-  <IconName name="Aim"><Aim /></IconName>
-  <IconName name="House"><House /></IconName>
-  <IconName name="FullScreen"><FullScreen /></IconName>
-  <IconName name="Loading"><Loading /></IconName>
-  <IconName name="Link"><Link /></IconName>
-  <IconName name="Service"><Service /></IconName>
-  <IconName name="Pointer"><Pointer /></IconName>
-  <IconName name="Star"><Star /></IconName>
-  <IconName name="Notification"><Notification /></IconName>
-  <IconName name="Connection"><Connection /></IconName>
-  <IconName name="ChatDotRound"><ChatDotRound /></IconName>
-  <IconName name="Setting"><Setting /></IconName>
-  <IconName name="Clock"><Clock /></IconName>
-  <IconName name="Position"><Position /></IconName>
-  <IconName name="Discount"><Discount /></IconName>
-  <IconName name="Odometer"><Odometer /></IconName>
-  <IconName name="ChatSquare"><ChatSquare /></IconName>
-  <IconName name="ChatRound"><ChatRound /></IconName>
-  <IconName name="ChatLineRound"><ChatLineRound /></IconName>
-  <IconName name="ChatLineSquare"><ChatLineSquare /></IconName>
-  <IconName name="ChatDotSquare"><ChatDotSquare /></IconName>
-  <IconName name="View"><View /></IconName>
-  <IconName name="Hide"><Hide /></IconName>
-  <IconName name="Unlock"><Unlock /></IconName>
-  <IconName name="Lock"><Lock /></IconName>
-  <IconName name="RefreshRight"><RefreshRight /></IconName>
-  <IconName name="RefreshLeft"><RefreshLeft /></IconName>
-  <IconName name="Refresh"><Refresh /></IconName>
-  <IconName name="Bell"><Bell /></IconName>
-  <IconName name="MuteNotification"><MuteNotification /></IconName>
-  <IconName name="User"><User /></IconName>
-  <IconName name="Check"><Check /></IconName>
-  <IconName name="CircleCheck"><CircleCheck /></IconName>
-  <IconName name="Warning"><Warning /></IconName>
-  <IconName name="CircleClose"><CircleClose /></IconName>
-  <IconName name="Close"><Close /></IconName>
-  <IconName name="PieChart"><PieChart /></IconName>
-  <IconName name="More"><More /></IconName>
-  <IconName name="Compass"><Compass /></IconName>
-  <IconName name="Filter"><Filter /></IconName>
-  <IconName name="Switch"><Switch /></IconName>
+  <IconName name="Plus">
+    <Plus />
+  </IconName>
+  <IconName name="Minus">
+    <Minus />
+  </IconName>
+  <IconName name="CirclePlus">
+    <CirclePlus />
+  </IconName>
+  <IconName name="Search">
+    <Search />
+  </IconName>
+  <IconName name="Female">
+    <Female />
+  </IconName>
+  <IconName name="Male">
+    <Male />
+  </IconName>
+  <IconName name="Aim">
+    <Aim />
+  </IconName>
+  <IconName name="House">
+    <House />
+  </IconName>
+  <IconName name="FullScreen">
+    <FullScreen />
+  </IconName>
+  <IconName name="Loading">
+    <Loading />
+  </IconName>
+  <IconName name="Link">
+    <Link />
+  </IconName>
+  <IconName name="Service">
+    <Service />
+  </IconName>
+  <IconName name="Pointer">
+    <Pointer />
+  </IconName>
+  <IconName name="Star">
+    <Star />
+  </IconName>
+  <IconName name="Notification">
+    <Notification />
+  </IconName>
+  <IconName name="Connection">
+    <Connection />
+  </IconName>
+  <IconName name="ChatDotRound">
+    <ChatDotRound />
+  </IconName>
+  <IconName name="Setting">
+    <Setting />
+  </IconName>
+  <IconName name="Clock">
+    <Clock />
+  </IconName>
+  <IconName name="Position">
+    <Position />
+  </IconName>
+  <IconName name="Discount">
+    <Discount />
+  </IconName>
+  <IconName name="Odometer">
+    <Odometer />
+  </IconName>
+  <IconName name="ChatSquare">
+    <ChatSquare />
+  </IconName>
+  <IconName name="ChatRound">
+    <ChatRound />
+  </IconName>
+  <IconName name="ChatLineRound">
+    <ChatLineRound />
+  </IconName>
+  <IconName name="ChatLineSquare">
+    <ChatLineSquare />
+  </IconName>
+  <IconName name="ChatDotSquare">
+    <ChatDotSquare />
+  </IconName>
+  <IconName name="View">
+    <View />
+  </IconName>
+  <IconName name="Hide">
+    <Hide />
+  </IconName>
+  <IconName name="Unlock">
+    <Unlock />
+  </IconName>
+  <IconName name="Lock">
+    <Lock />
+  </IconName>
+  <IconName name="RefreshRight">
+    <RefreshRight />
+  </IconName>
+  <IconName name="RefreshLeft">
+    <RefreshLeft />
+  </IconName>
+  <IconName name="Refresh">
+    <Refresh />
+  </IconName>
+  <IconName name="Bell">
+    <Bell />
+  </IconName>
+  <IconName name="MuteNotification">
+    <MuteNotification />
+  </IconName>
+  <IconName name="User">
+    <User />
+  </IconName>
+  <IconName name="Check">
+    <Check />
+  </IconName>
+  <IconName name="CircleCheck">
+    <CircleCheck />
+  </IconName>
+  <IconName name="Warning">
+    <Warning />
+  </IconName>
+  <IconName name="CircleClose">
+    <CircleClose />
+  </IconName>
+  <IconName name="Close">
+    <Close />
+  </IconName>
+  <IconName name="PieChart">
+    <PieChart />
+  </IconName>
+  <IconName name="More">
+    <More />
+  </IconName>
+  <IconName name="Compass">
+    <Compass />
+  </IconName>
+  <IconName name="Filter">
+    <Filter />
+  </IconName>
+  <IconName name="Switch">
+    <Switch />
+  </IconName>
   <IconName name="Select"><Select /></IconName>
-  <IconName name="SemiSelect"><SemiSelect /></IconName>
-  <IconName name="CloseBold"><CloseBold /></IconName>
-  <IconName name="EditPen"><EditPen /></IconName>
-  <IconName name="Edit"><Edit /></IconName>
-  <IconName name="Message"><Message /></IconName>
-  <IconName name="MessageBox"><MessageBox /></IconName>
-  <IconName name="TurnOff"><TurnOff /></IconName>
-  <IconName name="Finished"><Finished /></IconName>
-  <IconName name="Delete"><Delete /></IconName>
-  <IconName name="Crop"><Crop /></IconName>
-  <IconName name="SwitchButton"><SwitchButton /></IconName>
-  <IconName name="Operation"><Operation /></IconName>
-  <IconName name="Open"><Open /></IconName>
-  <IconName name="Remove"><Remove /></IconName>
-  <IconName name="ZoomOut"><ZoomOut /></IconName>
-  <IconName name="ZoomIn"><ZoomIn /></IconName>
-  <IconName name="InfoFilled"><InfoFilled /></IconName>
-  <IconName name="CircleCheckFilled"><CircleCheckFilled /></IconName>
-  <IconName name="SuccessFilled"><SuccessFilled /></IconName>
-  <IconName name="WarningFilled"><WarningFilled /></IconName>
-  <IconName name="CircleCloseFilled"><CircleCloseFilled /></IconName>
-  <IconName name="QuestionFilled"><QuestionFilled /></IconName>
-  <IconName name="WarnTriangleFilled"><WarnTriangleFilled /></IconName>
-  <IconName name="UserFilled"><UserFilled /></IconName>
-  <IconName name="MoreFilled"><MoreFilled /></IconName>
-  <IconName name="Tools"><Tools /></IconName>
-  <IconName name="HomeFilled"><HomeFilled /></IconName>
-  <IconName name="Menu"><Menu /></IconName>
-  <IconName name="UploadFilled"><UploadFilled /></IconName>
-  <IconName name="Avatar"><Avatar /></IconName>
-  <IconName name="HelpFilled"><HelpFilled /></IconName>
-  <IconName name="Share"><Share /></IconName>
-  <IconName name="StarFilled"><StarFilled /></IconName>
-  <IconName name="Comment"><Comment /></IconName>
-  <IconName name="Histogram"><Histogram /></IconName>
-  <IconName name="Grid"><Grid /></IconName>
-  <IconName name="Promotion"><Promotion /></IconName>
-  <IconName name="DeleteFilled"><DeleteFilled /></IconName>
-  <IconName name="RemoveFilled"><RemoveFilled /></IconName>
-  <IconName name="CirclePlusFilled"><CirclePlusFilled /></IconName>
+  <IconName name="SemiSelect">
+    <SemiSelect />
+  </IconName>
+  <IconName name="CloseBold">
+    <CloseBold />
+  </IconName>
+  <IconName name="EditPen">
+    <EditPen />
+  </IconName>
+  <IconName name="Edit">
+    <Edit />
+  </IconName>
+  <IconName name="Message">
+    <Message />
+  </IconName>
+  <IconName name="MessageBox">
+    <MessageBox />
+  </IconName>
+  <IconName name="TurnOff">
+    <TurnOff />
+  </IconName>
+  <IconName name="Finished">
+    <Finished />
+  </IconName>
+  <IconName name="Delete">
+    <Delete />
+  </IconName>
+  <IconName name="Crop">
+    <Crop />
+  </IconName>
+  <IconName name="SwitchButton">
+    <SwitchButton />
+  </IconName>
+  <IconName name="Operation">
+    <Operation />
+  </IconName>
+  <IconName name="Open">
+    <Open />
+  </IconName>
+  <IconName name="Remove">
+    <Remove />
+  </IconName>
+  <IconName name="ZoomOut">
+    <ZoomOut />
+  </IconName>
+  <IconName name="ZoomIn">
+    <ZoomIn />
+  </IconName>
+  <IconName name="InfoFilled">
+    <InfoFilled />
+  </IconName>
+  <IconName name="CircleCheckFilled">
+    <CircleCheckFilled />
+  </IconName>
+  <IconName name="SuccessFilled">
+    <SuccessFilled />
+  </IconName>
+  <IconName name="WarningFilled">
+    <WarningFilled />
+  </IconName>
+  <IconName name="CircleCloseFilled">
+    <CircleCloseFilled />
+  </IconName>
+  <IconName name="QuestionFilled">
+    <QuestionFilled />
+  </IconName>
+  <IconName name="WarnTriangleFilled">
+    <WarnTriangleFilled />
+  </IconName>
+  <IconName name="UserFilled">
+    <UserFilled />
+  </IconName>
+  <IconName name="MoreFilled">
+    <MoreFilled />
+  </IconName>
+  <IconName name="Tools">
+    <Tools />
+  </IconName>
+  <IconName name="HomeFilled">
+    <HomeFilled />
+  </IconName>
+  <IconName name="Menu">
+    <Menu />
+  </IconName>
+  <IconName name="UploadFilled">
+    <UploadFilled />
+  </IconName>
+  <IconName name="Avatar">
+    <Avatar />
+  </IconName>
+  <IconName name="HelpFilled">
+    <HelpFilled />
+  </IconName>
+  <IconName name="Share">
+    <Share />
+  </IconName>
+  <IconName name="StarFilled">
+    <StarFilled />
+  </IconName>
+  <IconName name="Comment">
+    <Comment />
+  </IconName>
+  <IconName name="Histogram">
+    <Histogram />
+  </IconName>
+  <IconName name="Grid">
+    <Grid />
+  </IconName>
+  <IconName name="Promotion">
+    <Promotion />
+  </IconName>
+  <IconName name="DeleteFilled">
+    <DeleteFilled />
+  </IconName>
+  <IconName name="RemoveFilled">
+    <RemoveFilled />
+  </IconName>
+  <IconName name="CirclePlusFilled">
+    <CirclePlusFilled />
+  </IconName>
 </ul>
 
 <h3>Arrow</h3>
 <ul class="demo-icon-list">
-  <IconName name="ArrowLeft"><ArrowLeft /></IconName>
-  <IconName name="ArrowUp"><ArrowUp /></IconName>
-  <IconName name="ArrowRight"><ArrowRight /></IconName>
-  <IconName name="ArrowDown"><ArrowDown /></IconName>
-  <IconName name="ArrowLeftBold"><ArrowLeftBold /></IconName>
-  <IconName name="ArrowUpBold"><ArrowUpBold /></IconName>
-  <IconName name="ArrowRightBold"><ArrowRightBold /></IconName>
-  <IconName name="ArrowDownBold"><ArrowDownBold /></IconName>
-  <IconName name="DArrowRight"><DArrowRight /></IconName>
-  <IconName name="DArrowLeft"><DArrowLeft /></IconName>
-  <IconName name="Download"><Download /></IconName>
-  <IconName name="Upload"><Upload /></IconName>
-  <IconName name="Top"><Top /></IconName>
-  <IconName name="Bottom"><Bottom /></IconName>
-  <IconName name="Back"><Back /></IconName>
-  <IconName name="Right"><Right /></IconName>
-  <IconName name="TopRight"><TopRight /></IconName>
-  <IconName name="TopLeft"><TopLeft /></IconName>
-  <IconName name="BottomRight"><BottomRight /></IconName>
-  <IconName name="BottomLeft"><BottomLeft /></IconName>
-  <IconName name="Sort"><Sort /></IconName>
-  <IconName name="SortUp"><SortUp /></IconName>
-  <IconName name="SortDown"><SortDown /></IconName>
-  <IconName name="Rank"><Rank /></IconName>
-  <IconName name="CaretLeft"><CaretLeft /></IconName>
-  <IconName name="CaretTop"><CaretTop /></IconName>
-  <IconName name="CaretRight"><CaretRight /></IconName>
-  <IconName name="CaretBottom"><CaretBottom /></IconName>
-  <IconName name="DCaret"><DCaret /></IconName>
-  <IconName name="Expand"><Expand /></IconName>
-  <IconName name="Fold"><Fold /></IconName>
-  <IconName name="ArrowLeftRight"><ArrowLeftRight /></IconName>
+  <IconName name="ArrowLeft">
+    <ArrowLeft />
+  </IconName>
+  <IconName name="ArrowUp">
+    <ArrowUp />
+  </IconName>
+  <IconName name="ArrowRight">
+    <ArrowRight />
+  </IconName>
+  <IconName name="ArrowDown">
+    <ArrowDown />
+  </IconName>
+  <IconName name="ArrowLeftBold">
+    <ArrowLeftBold />
+  </IconName>
+  <IconName name="ArrowUpBold">
+    <ArrowUpBold />
+  </IconName>
+  <IconName name="ArrowRightBold">
+    <ArrowRightBold />
+  </IconName>
+  <IconName name="ArrowDownBold">
+    <ArrowDownBold />
+  </IconName>
+  <IconName name="DArrowRight">
+    <DArrowRight />
+  </IconName>
+  <IconName name="DArrowLeft">
+    <DArrowLeft />
+  </IconName>
+  <IconName name="Download">
+    <Download />
+  </IconName>
+  <IconName name="Upload">
+    <Upload />
+  </IconName>
+  <IconName name="Top">
+    <Top />
+  </IconName>
+  <IconName name="Bottom">
+    <Bottom />
+  </IconName>
+  <IconName name="Back">
+    <Back />
+  </IconName>
+  <IconName name="Right">
+    <Right />
+  </IconName>
+  <IconName name="TopRight">
+    <TopRight />
+  </IconName>
+  <IconName name="TopLeft">
+    <TopLeft />
+  </IconName>
+  <IconName name="BottomRight">
+    <BottomRight />
+  </IconName>
+  <IconName name="BottomLeft">
+    <BottomLeft />
+  </IconName>
+  <IconName name="Sort">
+    <Sort />
+  </IconName>
+  <IconName name="SortUp">
+    <SortUp />
+  </IconName>
+  <IconName name="SortDown">
+    <SortDown />
+  </IconName>
+  <IconName name="Rank">
+    <Rank />
+  </IconName>
+  <IconName name="CaretLeft">
+    <CaretLeft />
+  </IconName>
+  <IconName name="CaretTop">
+    <CaretTop />
+  </IconName>
+  <IconName name="CaretRight">
+    <CaretRight />
+  </IconName>
+  <IconName name="CaretBottom">
+    <CaretBottom />
+  </IconName>
+  <IconName name="DCaret">
+    <DCaret />
+  </IconName>
+  <IconName name="Expand">
+    <Expand />
+  </IconName>
+  <IconName name="Fold">
+    <Fold />
+  </IconName>
+  <IconName name="ArrowLeftRight">
+    <ArrowLeftRight />
+  </IconName>
 </ul>
 
 <h3>Document</h3>
 <ul class="demo-icon-list">
-  <IconName name="DocumentAdd"><DocumentAdd /></IconName>
-  <IconName name="Document"><Document /></IconName>
-  <IconName name="Notebook"><Notebook /></IconName>
-  <IconName name="Tickets"><Tickets /></IconName>
-  <IconName name="Memo"><Memo /></IconName>
-  <IconName name="Collection"><Collection /></IconName>
-  <IconName name="Postcard"><Postcard /></IconName>
-  <IconName name="ScaleToOriginal"><ScaleToOriginal /></IconName>
-  <IconName name="SetUp"><SetUp /></IconName>
-  <IconName name="DocumentDelete"><DocumentDelete /></IconName>
-  <IconName name="DocumentChecked"><DocumentChecked /></IconName>
-  <IconName name="DataBoard"><DataBoard /></IconName>
-  <IconName name="DataAnalysis"><DataAnalysis /></IconName>
-  <IconName name="CopyDocument"><CopyDocument /></IconName>
-  <IconName name="FolderChecked"><FolderChecked /></IconName>
-  <IconName name="Files"><Files /></IconName>
-  <IconName name="Folder"><Folder /></IconName>
-  <IconName name="FolderDelete"><FolderDelete /></IconName>
-  <IconName name="FolderRemove"><FolderRemove /></IconName>
-  <IconName name="FolderOpened"><FolderOpened /></IconName>
-  <IconName name="DocumentCopy"><DocumentCopy /></IconName>
-  <IconName name="DocumentRemove"><DocumentRemove /></IconName>
-  <IconName name="FolderAdd"><FolderAdd /></IconName>
-  <IconName name="FirstAidKit"><FirstAidKit /></IconName>
-  <IconName name="Reading"><Reading /></IconName>
-  <IconName name="DataLine"><DataLine /></IconName>
-  <IconName name="Management"><Management /></IconName>
-  <IconName name="Checked"><Checked /></IconName>
-  <IconName name="Ticket"><Ticket /></IconName>
-  <IconName name="Failed"><Failed /></IconName>
-  <IconName name="TrendCharts"><TrendCharts /></IconName>
-  <IconName name="List"><List /></IconName>
-  <IconName name="CopyDocumentSquare"><CopyDocumentSquare /></IconName>
+  <IconName name="DocumentAdd">
+    <DocumentAdd />
+  </IconName>
+  <IconName name="Document">
+    <Document />
+  </IconName>
+  <IconName name="Notebook">
+    <Notebook />
+  </IconName>
+  <IconName name="Tickets">
+    <Tickets />
+  </IconName>
+  <IconName name="Memo">
+    <Memo />
+  </IconName>
+  <IconName name="Collection">
+    <Collection />
+  </IconName>
+  <IconName name="Postcard">
+    <Postcard />
+  </IconName>
+  <IconName name="ScaleToOriginal">
+    <ScaleToOriginal />
+  </IconName>
+  <IconName name="SetUp">
+    <SetUp />
+  </IconName>
+  <IconName name="DocumentDelete">
+    <DocumentDelete />
+  </IconName>
+  <IconName name="DocumentChecked">
+    <DocumentChecked />
+  </IconName>
+  <IconName name="DataBoard">
+    <DataBoard />
+  </IconName>
+  <IconName name="DataAnalysis">
+    <DataAnalysis />
+  </IconName>
+  <IconName name="CopyDocument">
+    <CopyDocument />
+  </IconName>
+  <IconName name="FolderChecked">
+    <FolderChecked />
+  </IconName>
+  <IconName name="Files">
+    <Files />
+  </IconName>
+  <IconName name="Folder">
+    <Folder />
+  </IconName>
+  <IconName name="FolderDelete">
+    <FolderDelete />
+  </IconName>
+  <IconName name="FolderRemove">
+    <FolderRemove />
+  </IconName>
+  <IconName name="FolderOpened">
+    <FolderOpened />
+  </IconName>
+  <IconName name="DocumentCopy">
+    <DocumentCopy />
+  </IconName>
+  <IconName name="DocumentRemove">
+    <DocumentRemove />
+  </IconName>
+  <IconName name="FolderAdd">
+    <FolderAdd />
+  </IconName>
+  <IconName name="FirstAidKit">
+    <FirstAidKit />
+  </IconName>
+  <IconName name="Reading">
+    <Reading />
+  </IconName>
+  <IconName name="DataLine">
+    <DataLine />
+  </IconName>
+  <IconName name="Management">
+    <Management />
+  </IconName>
+  <IconName name="Checked">
+    <Checked />
+  </IconName>
+  <IconName name="Ticket">
+    <Ticket />
+  </IconName>
+  <IconName name="Failed">
+    <Failed />
+  </IconName>
+  <IconName name="TrendCharts">
+    <TrendCharts />
+  </IconName>
+  <IconName name="List">
+    <List />
+  </IconName>
+  <IconName name="CopyDocumentSquare">
+    <CopyDocumentSquare />
+  </IconName>
 </ul>
 
 <h3>Media</h3>
 <ul class="demo-icon-list">
-  <IconName name="Microphone"><Microphone /></IconName>
-  <IconName name="Mute"><Mute /></IconName>
-  <IconName name="Mic"><Mic /></IconName>
-  <IconName name="VideoPause"><VideoPause /></IconName>
-  <IconName name="VideoCamera"><VideoCamera /></IconName>
-  <IconName name="VideoPlay"><VideoPlay /></IconName>
-  <IconName name="Headset"><Headset /></IconName>
-  <IconName name="Monitor"><Monitor /></IconName>
-  <IconName name="Film"><Film /></IconName>
-  <IconName name="Camera"><Camera /></IconName>
-  <IconName name="Picture"><Picture /></IconName>
-  <IconName name="PictureRounded"><PictureRounded /></IconName>
-  <IconName name="Iphone"><Iphone /></IconName>
-  <IconName name="Cellphone"><Cellphone /></IconName>
-  <IconName name="VideoCameraFilled"><VideoCameraFilled /></IconName>
-  <IconName name="PictureFilled"><PictureFilled /></IconName>
-  <IconName name="Platform"><Platform /></IconName>
-  <IconName name="CameraFilled"><CameraFilled /></IconName>
-  <IconName name="BellFilled"><BellFilled /></IconName>
+  <IconName name="Microphone">
+    <Microphone />
+  </IconName>
+  <IconName name="Mute">
+    <Mute />
+  </IconName>
+  <IconName name="Mic">
+    <Mic />
+  </IconName>
+  <IconName name="VideoPause">
+    <VideoPause />
+  </IconName>
+  <IconName name="VideoCamera">
+    <VideoCamera />
+  </IconName>
+  <IconName name="VideoPlay">
+    <VideoPlay />
+  </IconName>
+  <IconName name="Headset">
+    <Headset />
+  </IconName>
+  <IconName name="Monitor">
+    <Monitor />
+  </IconName>
+  <IconName name="Film">
+    <Film />
+  </IconName>
+  <IconName name="Camera">
+    <Camera />
+  </IconName>
+  <IconName name="Picture">
+    <Picture />
+  </IconName>
+  <IconName name="PictureRounded">
+    <PictureRounded />
+  </IconName>
+  <IconName name="Iphone">
+    <Iphone />
+  </IconName>
+  <IconName name="Cellphone">
+    <Cellphone />
+  </IconName>
+  <IconName name="VideoCameraFilled">
+    <VideoCameraFilled />
+  </IconName>
+  <IconName name="PictureFilled">
+    <PictureFilled />
+  </IconName>
+  <IconName name="Platform">
+    <Platform />
+  </IconName>
+  <IconName name="CameraFilled">
+    <CameraFilled />
+  </IconName>
+  <IconName name="BellFilled">
+    <BellFilled />
+  </IconName>
 </ul>
 
 <h3>Traffic</h3>
 <ul class="demo-icon-list">
-  <IconName name="Location"><Location /></IconName>
-  <IconName name="LocationInformation"><LocationInformation /></IconName>
-  <IconName name="DeleteLocation"><DeleteLocation /></IconName>
-  <IconName name="Coordinate"><Coordinate /></IconName>
-  <IconName name="Bicycle"><Bicycle /></IconName>
-  <IconName name="OfficeBuilding"><OfficeBuilding /></IconName>
-  <IconName name="School"><School /></IconName>
-  <IconName name="Guide"><Guide /></IconName>
-  <IconName name="AddLocation"><AddLocation /></IconName>
-  <IconName name="MapLocation"><MapLocation /></IconName>
-  <IconName name="Place"><Place /></IconName>
-  <IconName name="LocationFilled"><LocationFilled /></IconName>
-  <IconName name="Van"><Van /></IconName>
+  <IconName name="Location">
+    <Location />
+  </IconName>
+  <IconName name="LocationInformation">
+    <LocationInformation />
+  </IconName>
+  <IconName name="DeleteLocation">
+    <DeleteLocation />
+  </IconName>
+  <IconName name="Coordinate">
+    <Coordinate />
+  </IconName>
+  <IconName name="Bicycle">
+    <Bicycle />
+  </IconName>
+  <IconName name="OfficeBuilding">
+    <OfficeBuilding />
+  </IconName>
+  <IconName name="School">
+    <School />
+  </IconName>
+  <IconName name="Guide">
+    <Guide />
+  </IconName>
+  <IconName name="AddLocation">
+    <AddLocation />
+  </IconName>
+  <IconName name="MapLocation">
+    <MapLocation />
+  </IconName>
+  <IconName name="Place">
+    <Place />
+  </IconName>
+  <IconName name="LocationFilled">
+    <LocationFilled />
+  </IconName>
+  <IconName name="Van">
+    <Van />
+  </IconName>
 </ul>
 
 <h3>Food</h3>
 <ul class="demo-icon-list">
-  <IconName name="Watermelon"><Watermelon /></IconName>
-  <IconName name="Pear"><Pear /></IconName>
-  <IconName name="NoSmoking"><NoSmoking /></IconName>
-  <IconName name="Smoking"><Smoking /></IconName>
-  <IconName name="Mug"><Mug /></IconName>
-  <IconName name="GobletSquareFull"><GobletSquareFull /></IconName>
-  <IconName name="GobletFull"><GobletFull /></IconName>
-  <IconName name="KnifeFork"><KnifeFork /></IconName>
-  <IconName name="Sugar"><Sugar /></IconName>
-  <IconName name="Bowl"><Bowl /></IconName>
-  <IconName name="MilkTea"><MilkTea /></IconName>
-  <IconName name="Lollipop"><Lollipop /></IconName>
-  <IconName name="Coffee"><Coffee /></IconName>
-  <IconName name="Chicken"><Chicken /></IconName>
-  <IconName name="Dish"><Dish /></IconName>
-  <IconName name="IceTea"><IceTea /></IconName>
-  <IconName name="ColdDrink"><ColdDrink /></IconName>
-  <IconName name="CoffeeCup"><CoffeeCup /></IconName>
-  <IconName name="DishDot"><DishDot /></IconName>
-  <IconName name="IceDrink"><IceDrink /></IconName>
-  <IconName name="IceCream"><IceCream /></IconName>
-  <IconName name="Dessert"><Dessert /></IconName>
-  <IconName name="IceCreamSquare"><IceCreamSquare /></IconName>
-  <IconName name="ForkSpoon"><ForkSpoon /></IconName>
-  <IconName name="IceCreamRound"><IceCreamRound /></IconName>
-  <IconName name="Food"><Food /></IconName>
-  <IconName name="HotWater"><HotWater /></IconName>
-  <IconName name="Grape"><Grape /></IconName>
-  <IconName name="Fries"><Fries /></IconName>
-  <IconName name="Apple"><Apple /></IconName>
-  <IconName name="Burger"><Burger /></IconName>
-  <IconName name="Goblet"><Goblet /></IconName>
-  <IconName name="GobletSquare"><GobletSquare /></IconName>
-  <IconName name="Orange"><Orange /></IconName>
-  <IconName name="Cherry"><Cherry /></IconName>
+  <IconName name="Watermelon">
+    <Watermelon />
+  </IconName>
+  <IconName name="Pear">
+    <Pear />
+  </IconName>
+  <IconName name="NoSmoking">
+    <NoSmoking />
+  </IconName>
+  <IconName name="Smoking">
+    <Smoking />
+  </IconName>
+  <IconName name="Mug">
+    <Mug />
+  </IconName>
+  <IconName name="GobletSquareFull">
+    <GobletSquareFull />
+  </IconName>
+  <IconName name="GobletFull">
+    <GobletFull />
+  </IconName>
+  <IconName name="KnifeFork">
+    <KnifeFork />
+  </IconName>
+  <IconName name="Sugar">
+    <Sugar />
+  </IconName>
+  <IconName name="Bowl">
+    <Bowl />
+  </IconName>
+  <IconName name="MilkTea">
+    <MilkTea />
+  </IconName>
+  <IconName name="Lollipop">
+    <Lollipop />
+  </IconName>
+  <IconName name="Coffee">
+    <Coffee />
+  </IconName>
+  <IconName name="Chicken">
+    <Chicken />
+  </IconName>
+  <IconName name="Dish">
+    <Dish />
+  </IconName>
+  <IconName name="IceTea">
+    <IceTea />
+  </IconName>
+  <IconName name="ColdDrink">
+    <ColdDrink />
+  </IconName>
+  <IconName name="CoffeeCup">
+    <CoffeeCup />
+  </IconName>
+  <IconName name="DishDot">
+    <DishDot />
+  </IconName>
+  <IconName name="IceDrink">
+    <IceDrink />
+  </IconName>
+  <IconName name="IceCream">
+    <IceCream />
+  </IconName>
+  <IconName name="Dessert">
+    <Dessert />
+  </IconName>
+  <IconName name="IceCreamSquare">
+    <IceCreamSquare />
+  </IconName>
+  <IconName name="ForkSpoon">
+    <ForkSpoon />
+  </IconName>
+  <IconName name="IceCreamRound">
+    <IceCreamRound />
+  </IconName>
+  <IconName name="Food">
+    <Food />
+  </IconName>
+  <IconName name="HotWater">
+    <HotWater />
+  </IconName>
+  <IconName name="Grape">
+    <Grape />
+  </IconName>
+  <IconName name="Fries">
+    <Fries />
+  </IconName>
+  <IconName name="Apple">
+    <Apple />
+  </IconName>
+  <IconName name="Burger">
+    <Burger />
+  </IconName>
+  <IconName name="Goblet">
+    <Goblet />
+  </IconName>
+  <IconName name="GobletSquare">
+    <GobletSquare />
+  </IconName>
+  <IconName name="Orange">
+    <Orange />
+  </IconName>
+  <IconName name="Cherry">
+    <Cherry />
+  </IconName>
 </ul>
 
 <h3>Items</h3>
 <ul class="demo-icon-list">
-  <IconName name="Printer"><Printer /></IconName>
-  <IconName name="Calendar"><Calendar /></IconName>
-  <IconName name="CreditCard"><CreditCard /></IconName>
-  <IconName name="Box"><Box /></IconName>
-  <IconName name="Money"><Money /></IconName>
-  <IconName name="Refrigerator"><Refrigerator /></IconName>
-  <IconName name="Cpu"><Cpu /></IconName>
-  <IconName name="Football"><Football /></IconName>
-  <IconName name="Brush"><Brush /></IconName>
-  <IconName name="Suitcase"><Suitcase /></IconName>
-  <IconName name="SuitcaseLine"><SuitcaseLine /></IconName>
-  <IconName name="Umbrella"><Umbrella /></IconName>
-  <IconName name="AlarmClock"><AlarmClock /></IconName>
-  <IconName name="Medal"><Medal /></IconName>
-  <IconName name="GoldMedal"><GoldMedal /></IconName>
-  <IconName name="Present"><Present /></IconName>
-  <IconName name="Mouse"><Mouse /></IconName>
-  <IconName name="Watch"><Watch /></IconName>
-  <IconName name="QuartzWatch"><QuartzWatch /></IconName>
-  <IconName name="Magnet"><Magnet /></IconName>
-  <IconName name="Help"><Help /></IconName>
-  <IconName name="Soccer"><Soccer /></IconName>
-  <IconName name="ToiletPaper"><ToiletPaper /></IconName>
-  <IconName name="ReadingLamp"><ReadingLamp /></IconName>
-  <IconName name="Paperclip"><Paperclip /></IconName>
-  <IconName name="MagicStick"><MagicStick /></IconName>
-  <IconName name="Basketball"><Basketball /></IconName>
-  <IconName name="Baseball"><Baseball /></IconName>
-  <IconName name="Coin"><Coin /></IconName>
-  <IconName name="Goods"><Goods /></IconName>
-  <IconName name="Sell"><Sell /></IconName>
-  <IconName name="SoldOut"><SoldOut /></IconName>
-  <IconName name="Key"><Key /></IconName>
-  <IconName name="ShoppingCart"><ShoppingCart /></IconName>
-  <IconName name="ShoppingCartFull"><ShoppingCartFull /></IconName>
-  <IconName name="ShoppingTrolley"><ShoppingTrolley /></IconName>
-  <IconName name="Phone"><Phone /></IconName>
-  <IconName name="Scissor"><Scissor /></IconName>
-  <IconName name="Handbag"><Handbag /></IconName>
-  <IconName name="ShoppingBag"><ShoppingBag /></IconName>
-  <IconName name="Trophy"><Trophy /></IconName>
-  <IconName name="TrophyBase"><TrophyBase /></IconName>
-  <IconName name="Stopwatch"><Stopwatch /></IconName>
-  <IconName name="Timer"><Timer /></IconName>
-  <IconName name="CollectionTag"><CollectionTag /></IconName>
-  <IconName name="TakeawayBox"><TakeawayBox /></IconName>
-  <IconName name="PriceTag"><PriceTag /></IconName>
-  <IconName name="Wallet"><Wallet /></IconName>
-  <IconName name="Opportunity"><Opportunity /></IconName>
-  <IconName name="PhoneFilled"><PhoneFilled /></IconName>
-  <IconName name="WalletFilled"><WalletFilled /></IconName>
-  <IconName name="GoodsFilled"><GoodsFilled /></IconName>
-  <IconName name="Flag"><Flag /></IconName>
-  <IconName name="BrushFilled"><BrushFilled /></IconName>
-  <IconName name="Briefcase"><Briefcase /></IconName>
-  <IconName name="Stamp"><Stamp /></IconName>
-  <IconName name="ConicalFlask"><ConicalFlask /></IconName>
+  <IconName name="Printer">
+    <Printer />
+  </IconName>
+  <IconName name="Calendar">
+    <Calendar />
+  </IconName>
+  <IconName name="CreditCard">
+    <CreditCard />
+  </IconName>
+  <IconName name="Box">
+    <Box />
+  </IconName>
+  <IconName name="Money">
+    <Money />
+  </IconName>
+  <IconName name="Refrigerator">
+    <Refrigerator />
+  </IconName>
+  <IconName name="Cpu">
+    <Cpu />
+  </IconName>
+  <IconName name="Football">
+    <Football />
+  </IconName>
+  <IconName name="Brush">
+    <Brush />
+  </IconName>
+  <IconName name="Suitcase">
+    <Suitcase />
+  </IconName>
+  <IconName name="SuitcaseLine">
+    <SuitcaseLine />
+  </IconName>
+  <IconName name="Umbrella">
+    <Umbrella />
+  </IconName>
+  <IconName name="AlarmClock">
+    <AlarmClock />
+  </IconName>
+  <IconName name="Medal">
+    <Medal />
+  </IconName>
+  <IconName name="GoldMedal">
+    <GoldMedal />
+  </IconName>
+  <IconName name="Present">
+    <Present />
+  </IconName>
+  <IconName name="Mouse">
+    <Mouse />
+  </IconName>
+  <IconName name="Watch">
+    <Watch />
+  </IconName>
+  <IconName name="QuartzWatch">
+    <QuartzWatch />
+  </IconName>
+  <IconName name="Magnet">
+    <Magnet />
+  </IconName>
+  <IconName name="Help">
+    <Help />
+  </IconName>
+  <IconName name="Soccer">
+    <Soccer />
+  </IconName>
+  <IconName name="ToiletPaper">
+    <ToiletPaper />
+  </IconName>
+  <IconName name="ReadingLamp">
+    <ReadingLamp />
+  </IconName>
+  <IconName name="Paperclip">
+    <Paperclip />
+  </IconName>
+  <IconName name="MagicStick">
+    <MagicStick />
+  </IconName>
+  <IconName name="Basketball">
+    <Basketball />
+  </IconName>
+  <IconName name="Baseball">
+    <Baseball />
+  </IconName>
+  <IconName name="Coin">
+    <Coin />
+  </IconName>
+  <IconName name="Goods">
+    <Goods />
+  </IconName>
+  <IconName name="Sell">
+    <Sell />
+  </IconName>
+  <IconName name="SoldOut">
+    <SoldOut />
+  </IconName>
+  <IconName name="Key">
+    <Key />
+  </IconName>
+  <IconName name="ShoppingCart">
+    <ShoppingCart />
+  </IconName>
+  <IconName name="ShoppingCartFull">
+    <ShoppingCartFull />
+  </IconName>
+  <IconName name="ShoppingTrolley">
+    <ShoppingTrolley />
+  </IconName>
+  <IconName name="Phone">
+    <Phone />
+  </IconName>
+  <IconName name="Scissor">
+    <Scissor />
+  </IconName>
+  <IconName name="Handbag">
+    <Handbag />
+  </IconName>
+  <IconName name="ShoppingBag">
+    <ShoppingBag />
+  </IconName>
+  <IconName name="Trophy">
+    <Trophy />
+  </IconName>
+  <IconName name="TrophyBase">
+    <TrophyBase />
+  </IconName>
+  <IconName name="Stopwatch">
+    <Stopwatch />
+  </IconName>
+  <IconName name="Timer">
+    <Timer />
+  </IconName>
+  <IconName name="CollectionTag">
+    <CollectionTag />
+  </IconName>
+  <IconName name="TakeawayBox">
+    <TakeawayBox />
+  </IconName>
+  <IconName name="PriceTag">
+    <PriceTag />
+  </IconName>
+  <IconName name="Wallet">
+    <Wallet />
+  </IconName>
+  <IconName name="Opportunity">
+    <Opportunity />
+  </IconName>
+  <IconName name="PhoneFilled">
+    <PhoneFilled />
+  </IconName>
+  <IconName name="WalletFilled">
+    <WalletFilled />
+  </IconName>
+  <IconName name="GoodsFilled">
+    <GoodsFilled />
+  </IconName>
+  <IconName name="Flag">
+    <Flag />
+  </IconName>
+  <IconName name="BrushFilled">
+    <BrushFilled />
+  </IconName>
+  <IconName name="Briefcase">
+    <Briefcase />
+  </IconName>
+  <IconName name="Stamp">
+    <Stamp />
+  </IconName>
+  <IconName name="ConicalFlask">
+    <ConicalFlask />
+  </IconName>
 </ul>
 
 <h3>Weather</h3>
 <ul class="demo-icon-list">
-  <IconName name="Sunrise"><Sunrise /></IconName>
-  <IconName name="Sunny"><Sunny /></IconName>
-  <IconName name="Ship"><Ship /></IconName>
-  <IconName name="MostlyCloudy"><MostlyCloudy /></IconName>
-  <IconName name="PartlyCloudy"><PartlyCloudy /></IconName>
-  <IconName name="Sunset"><Sunset /></IconName>
-  <IconName name="Drizzling"><Drizzling /></IconName>
-  <IconName name="Pouring"><Pouring /></IconName>
-  <IconName name="Cloudy"><Cloudy /></IconName>
-  <IconName name="Moon"><Moon /></IconName>
-  <IconName name="MoonNight"><MoonNight /></IconName>
-  <IconName name="Lightning"><Lightning /></IconName>
+  <IconName name="Sunrise">
+    <Sunrise />
+  </IconName>
+  <IconName name="Sunny">
+    <Sunny />
+  </IconName>
+  <IconName name="Ship">
+    <Ship />
+  </IconName>
+  <IconName name="MostlyCloudy">
+    <MostlyCloudy />
+  </IconName>
+  <IconName name="PartlyCloudy">
+    <PartlyCloudy />
+  </IconName>
+  <IconName name="Sunset">
+    <Sunset />
+  </IconName>
+  <IconName name="Drizzling">
+    <Drizzling />
+  </IconName>
+  <IconName name="Pouring">
+    <Pouring />
+  </IconName>
+  <IconName name="Cloudy">
+    <Cloudy />
+  </IconName>
+  <IconName name="Moon">
+    <Moon />
+  </IconName>
+  <IconName name="MoonNight">
+    <MoonNight />
+  </IconName>
+  <IconName name="Lightning">
+    <Lightning />
+  </IconName>
 </ul>
 
 <h3>Other</h3>
 <ul class="demo-icon-list">
-  <IconName name="ChromeFilled"><ChromeFilled /></IconName>
-  <IconName name="Eleme"><Eleme /></IconName>
-  <IconName name="ElemeFilled"><ElemeFilled /></IconName>
-  <IconName name="ElementPlus"><ElementPlus /></IconName>
-  <IconName name="Shop"><Shop /></IconName>
-  <IconName name="SwitchFilled"><SwitchFilled /></IconName>
-  <IconName name="WindPower"><WindPower /></IconName>
-  <IconName name="Github"><Github /></IconName>
+  <IconName name="ChromeFilled">
+    <ChromeFilled />
+  </IconName>
+  <IconName name="Eleme">
+    <Eleme />
+  </IconName>
+  <IconName name="ElemeFilled">
+    <ElemeFilled />
+  </IconName>
+  <IconName name="ElementPlus">
+    <ElementPlus />
+  </IconName>
+  <IconName name="Shop">
+    <Shop />
+  </IconName>
+  <IconName name="SwitchFilled">
+    <SwitchFilled />
+  </IconName>
+  <IconName name="WindPower">
+    <WindPower />
+  </IconName>
+  <IconName name="Github">
+    <Github />
+  </IconName>
 </ul>
 
 <style lang="scss">

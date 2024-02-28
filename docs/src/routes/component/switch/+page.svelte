@@ -14,9 +14,19 @@
 
 <h2>{$langFn('cswitch02010')}</h2>
 <p>{$langFn('cswitch02020')}</p>
-<p>{$langFn('cswitch02030')}</p>
 <Example
   code={`
+<script>
+  import { SvelSwitch } from '@svelement-ui/all';
+  let value1 = true;
+  let value2 = true;
+@@@/>
+<SvelSwitch bind:value={value1} />
+<SvelSwitch
+  bind:value={value2}
+  class="ml-2"
+  style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949"
+/>
 `}
 >
   <SvelSwitch bind:value={value1} />

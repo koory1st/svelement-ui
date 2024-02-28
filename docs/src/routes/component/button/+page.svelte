@@ -36,7 +36,7 @@
 
 <Example
   code={`
-<script lang="ts">
+<script>
   import SvelButton from '@svelement-ui/button';
   import { SvelIcon, Search, Edit, Check, Message, Star, Delete } from '@svelement-ui/icon';
 @@@/>
@@ -102,12 +102,36 @@
   </SvelRow>
 
   <SvelRow class="mb-4">
-    <SvelButton circle><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
-    <SvelButton circle type="primary"><SvelIcon slot="icon"><Edit /></SvelIcon></SvelButton>
-    <SvelButton circle type="success"><SvelIcon slot="icon"><Check /></SvelIcon></SvelButton>
-    <SvelButton circle type="info"><SvelIcon slot="icon"><Message /></SvelIcon></SvelButton>
-    <SvelButton circle type="warning"><SvelIcon slot="icon"><Star /></SvelIcon></SvelButton>
-    <SvelButton circle type="danger"><SvelIcon slot="icon"><Delete /></SvelIcon></SvelButton>
+    <SvelButton circle>
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton circle type="primary">
+      <SvelIcon slot="icon">
+        <Edit />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton circle type="success">
+      <SvelIcon slot="icon">
+        <Check />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton circle type="info">
+      <SvelIcon slot="icon">
+        <Message />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton circle type="warning">
+      <SvelIcon slot="icon">
+        <Star />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton circle type="danger">
+      <SvelIcon slot="icon">
+        <Delete />
+      </SvelIcon>
+    </SvelButton>
   </SvelRow>
 </Example>
 
@@ -136,19 +160,19 @@
 >
   <SvelRow class="mb-4">
     <SvelButton disabled>Default</SvelButton>
-    <SvelButton type="primary" disabled>Primary</SvelButton>
-    <SvelButton type="success" disabled>Success</SvelButton>
-    <SvelButton type="info" disabled>Info</SvelButton>
-    <SvelButton type="warning" disabled>Warning</SvelButton>
-    <SvelButton type="danger" disabled>Danger</SvelButton>
+    <SvelButton disabled type="primary">Primary</SvelButton>
+    <SvelButton disabled type="success">Success</SvelButton>
+    <SvelButton disabled type="info">Info</SvelButton>
+    <SvelButton disabled type="warning">Warning</SvelButton>
+    <SvelButton disabled type="danger">Danger</SvelButton>
   </SvelRow>
   <SvelRow class="mb-4">
-    <SvelButton plain disabled>Default</SvelButton>
-    <SvelButton plain type="primary" disabled>Primary</SvelButton>
-    <SvelButton plain type="success" disabled>Success</SvelButton>
-    <SvelButton plain type="info" disabled>Info</SvelButton>
-    <SvelButton plain type="warning" disabled>Warning</SvelButton>
-    <SvelButton plain type="danger" disabled>Danger</SvelButton>
+    <SvelButton disabled plain>Default</SvelButton>
+    <SvelButton disabled plain type="primary">Primary</SvelButton>
+    <SvelButton disabled plain type="success">Success</SvelButton>
+    <SvelButton disabled plain type="info">Info</SvelButton>
+    <SvelButton disabled plain type="warning">Warning</SvelButton>
+    <SvelButton disabled plain type="danger">Danger</SvelButton>
   </SvelRow>
 </Example>
 
@@ -156,7 +180,7 @@
 <p>{$langFn('cbut03020')}</p>
 <Example
   code={`
-<script lang="ts">
+<script>
   import SvelButton from '@svelement-ui/button';
   import SvelRow from '@svelement-ui/row';
   import Example from '$lib/example.svelte';
@@ -222,7 +246,7 @@
 
 <Example
   code={`
-<script lang="ts">
+<script>
   import SvelButton from '@svelement-ui/button';
   import { SvelIcon, Search, Edit, Delete, Share } from '@svelement-ui/icon';
 @@@/>
@@ -237,12 +261,32 @@
 </div>`}
 >
   <div class="flex">
-    <SvelButton type="primary"><SvelIcon><Edit /></SvelIcon></SvelButton>
-    <SvelButton type="primary"><SvelIcon><Share /></SvelIcon></SvelButton>
-    <SvelButton type="primary"><SvelIcon><Delete /></SvelIcon></SvelButton>
-    <SvelButton type="primary"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
     <SvelButton type="primary">
-      Upload<SvelIcon class="svel-icon--right"><Search /></SvelIcon>
+      <SvelIcon>
+        <Edit />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton type="primary">
+      <SvelIcon>
+        <Share />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton type="primary">
+      <SvelIcon>
+        <Delete />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton type="primary">
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+      Search
+    </SvelButton>
+    <SvelButton type="primary">
+      Upload
+      <SvelIcon class="svel-icon--right">
+        <Search />
+      </SvelIcon>
     </SvelButton>
   </div>
 </Example>
@@ -289,7 +333,8 @@
     <SvelButton>
       <SvelIcon slot="icon">
         <ArrowLeft />
-      </SvelIcon>Previous Page
+      </SvelIcon>
+      Previous Page
     </SvelButton>
     <SvelButton>
       Next Page
@@ -299,7 +344,7 @@
     </SvelButton>
   </SvelButtonGroup>
 
-  <SvelButtonGroup type="success" size="small" class="ml-4">
+  <SvelButtonGroup class="ml-4" size="small" type="success">
     <SvelButton>
       <SvelIcon slot="icon">
         <Edit />
@@ -331,9 +376,9 @@
   </SvelIcon>
 </SvelButton>`}
 >
-  <SvelButton type="primary" loading>Loading</SvelButton>
+  <SvelButton loading type="primary">Loading</SvelButton>
   <SvelButton type="primary">
-    <SvelIcon slot="loadingIcon" class="is-loading">
+    <SvelIcon class="is-loading" slot="loadingIcon">
       <Edit />
     </SvelIcon>
     Loading
@@ -372,22 +417,64 @@
     <SvelButton size="large">Large</SvelButton>
     <SvelButton>Default</SvelButton>
     <SvelButton size="small">Small</SvelButton>
-    <SvelButton size="large"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
-    <SvelButton><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
-    <SvelButton size="small"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+    <SvelButton size="large">
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+      Search
+    </SvelButton>
+    <SvelButton>
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+      Search
+    </SvelButton>
+    <SvelButton size="small">
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+      Search
+    </SvelButton>
   </SvelRow>
   <SvelRow class="my-4">
     <SvelButton round size="large">Large</SvelButton>
     <SvelButton round>Default</SvelButton>
     <SvelButton round size="small">Small</SvelButton>
-    <SvelButton round size="large"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
-    <SvelButton round><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
-    <SvelButton round size="small"><SvelIcon slot="icon"><Search /></SvelIcon>Search</SvelButton>
+    <SvelButton round size="large">
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+      Search
+    </SvelButton>
+    <SvelButton round>
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+      Search
+    </SvelButton>
+    <SvelButton round size="small">
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+      Search
+    </SvelButton>
   </SvelRow>
   <SvelRow>
-    <SvelButton circle size="large"><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
-    <SvelButton circle><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
-    <SvelButton circle size="small"><SvelIcon slot="icon"><Search /></SvelIcon></SvelButton>
+    <SvelButton circle size="large">
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton circle>
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+    </SvelButton>
+    <SvelButton circle size="small">
+      <SvelIcon slot="icon">
+        <Search />
+      </SvelIcon>
+    </SvelButton>
   </SvelRow>
 </Example>
 
@@ -406,5 +493,5 @@
   <SvelButton color="#626aef" dark>Default</SvelButton>
   <SvelButton color="#626aef" dark plain>Default</SvelButton>
   <SvelButton color="#626aef" dark disabled>Default</SvelButton>
-  <SvelButton color="#626aef" dark plain disabled>Default</SvelButton>
+  <SvelButton color="#626aef" dark disabled plain>Default</SvelButton>
 </Example>
