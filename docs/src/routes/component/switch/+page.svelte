@@ -37,5 +37,29 @@
   />
 </Example>
 
+<h2>{$langFn('cswitch03010')}</h2>
+
+<Example
+  code={`
+<script>
+  import { SvelSwitch } from '@svelement-ui/all';
+  let value1 = true;
+  let value2 = true;
+@@@/>
+<SvelSwitch bind:value={value1} />
+<SvelSwitch
+  bind:value={value2}
+  class="ml-2"
+  style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949"
+/>
+`}
+>
+  <SvelSwitch activeText="Open" inactiveText="Close" size="large" />
+  <br />
+  <SvelSwitch activeText="Open" inactiveText="Close" />
+  <br />
+  <SvelSwitch activeText="Open" inactiveText="Close" size="small" />
+</Example>
+
 <style>
 </style>
