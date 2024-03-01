@@ -41,17 +41,11 @@
 
 <Example
   code={`
-<script>
-  import { SvelSwitch } from '@svelement-ui/all';
-  let value1 = true;
-  let value2 = true;
-@@@/>
-<SvelSwitch bind:value={value1} />
-<SvelSwitch
-  bind:value={value2}
-  class="ml-2"
-  style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949"
-/>
+<SvelSwitch activeText="Open" inactiveText="Close" size="large" />
+<br />
+<SvelSwitch activeText="Open" inactiveText="Close" />
+<br />
+<SvelSwitch activeText="Open" inactiveText="Close" size="small" />
 `}
 >
   <SvelSwitch activeText="Open" inactiveText="Close" size="large" />
@@ -59,6 +53,46 @@
   <SvelSwitch activeText="Open" inactiveText="Close" />
   <br />
   <SvelSwitch activeText="Open" inactiveText="Close" size="small" />
+</Example>
+
+<h2>{$langFn('cswitch04010')}</h2>
+<p>{$langFn('cswitch04020')}</p>
+<p>{$langFn('cswitch04030')}</p>
+
+<Example
+  code={`
+<SvelSwitch activeText="Open" inactiveText="Close" size="large" />
+<br />
+<SvelSwitch activeText="Open" inactiveText="Close" />
+<br />
+<SvelSwitch activeText="Open" inactiveText="Close" size="small" />
+`}
+>
+  <SvelSwitch activeText="Pay by month" class="mb-2" inactiveText="Pay by year" />
+  <br />
+  <SvelSwitch
+    activeText="Pay by month"
+    class="mb-2"
+    inactiveText="Pay by year"
+    style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949"
+  />
+  <br />
+  <SvelSwitch activeText="是" inactiveText="否" inlinePrompt />
+  <SvelSwitch
+    activeText="Y"
+    class="ml-2"
+    inactiveText="N"
+    inlinePrompt
+    style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949"
+  />
+  <SvelSwitch activeText="超出省略" class="ml-2" inactiveText="超出省略" inlinePrompt width="60" />
+  <SvelSwitch
+    activeText="完整展示多个内容"
+    class="ml-2"
+    inactiveText="多个内容"
+    inlinePrompt
+    style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949"
+  />
 </Example>
 
 <style>
