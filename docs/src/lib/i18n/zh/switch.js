@@ -9,4 +9,7 @@ export default {
   cswitch04020:
     '使用activeText属性与inactiveText属性来设置开关的文字描述。 使用 inlinePrompt 属性来控制文本是否显示在点内。',
   cswitch04030: '使用activeText属性与inactiveText属性来设置开关的文字描述。',
+  cswitch05010: '显示自定义图标',
+  cswitch05020:
+    '使用 activeIcon 和 inactiveIcon slot来添加图标。 使用 inlinePrompt 属性来控制图标显示在点内。',
 };

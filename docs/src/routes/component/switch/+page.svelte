@@ -1,5 +1,6 @@
 <script>
   import { SvelSwitch } from '@svelement-ui/all';
+  import { Check, Close } from '@svelement-ui/icon';
   import Example from '$lib/example.svelte';
   import { getContext } from 'svelte';
 
@@ -93,6 +94,37 @@
     inlinePrompt
     style="--svel-switch-on-color: #13ce66; --svel-switch-off-color: #ff4949"
   />
+</Example>
+
+<h2>{$langFn('cswitch05010')}</h2>
+<p>{$langFn('cswitch05020')}</p>
+<Example
+  code={`
+<script>
+  import { Check, Close } from '@svelement-ui/icon';
+@@@/>
+<SvelSwitch>
+  <Check slot="activeIcon" />
+  <Close slot="inactiveIcon" />
+</SvelSwitch>
+
+<br />
+<SvelSwitch inlinePrompt>
+  <Check slot="activeIcon" />
+  <Close slot="inactiveIcon" />
+</SvelSwitch>
+`}
+>
+  <SvelSwitch>
+    <Check slot="activeIcon" />
+    <Close slot="inactiveIcon" />
+  </SvelSwitch>
+
+  <br />
+  <SvelSwitch inlinePrompt>
+    <Check slot="activeIcon" />
+    <Close slot="inactiveIcon" />
+  </SvelSwitch>
 </Example>
 
 <style>
