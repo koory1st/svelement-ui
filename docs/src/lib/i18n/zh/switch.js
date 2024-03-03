@@ -12,4 +12,7 @@ export default {
   cswitch05010: '显示自定义图标',
   cswitch05020:
     '使用 activeIcon 和 inactiveIcon slot来添加图标。 使用 inlinePrompt 属性来控制图标显示在点内。',
+  cswitch06010: '扩展的 value 类型',
+  cswitch06020:
+    '你可以设置 activeValue 和 inactiveValue 属性， 它们接受 Boolean、String 或 Number 类型的值。',
 };

@@ -1,5 +1,5 @@
 <script>
-  import { SvelSwitch } from '@svelement-ui/all';
+  import { SvelSwitch, SvelTooltip } from '@svelement-ui/all';
   import { Check, Close } from '@svelement-ui/icon';
   import Example from '$lib/example.svelte';
   import { getContext } from 'svelte';
@@ -8,6 +8,8 @@
 
   let value1 = true;
   let value2 = true;
+
+  let value3 = '100';
 </script>
 
 <h1>{$langFn('cswitch01010')}</h1>
@@ -125,6 +127,18 @@
     <Check slot="activeIcon" />
     <Close slot="inactiveIcon" />
   </SvelSwitch>
+</Example>
+
+<h2>{$langFn('cswitch06010')}</h2>
+<p>{$langFn('cswitch06020')}</p>
+
+<Example
+  code={`
+`}
+>
+  <SvelTooltip content={value3}>
+    <SvelSwitch activeValue="100" bind:value={value3} inactiveValue="0" />
+  </SvelTooltip>
 </Example>
 
 <style>
