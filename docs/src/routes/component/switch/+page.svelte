@@ -134,6 +134,9 @@
 
 <Example
   code={`
+<SvelTooltip content={value3}>
+  <SvelSwitch activeValue="100" bind:value={value3} inactiveValue="0" />
+</SvelTooltip>
 `}
 >
   <SvelTooltip content={value3}>
