@@ -3,6 +3,7 @@
 
   let ref;
   let visible = false;
+  let content = '1';
 </script>
 
 <div class="aaa">
@@ -24,8 +25,8 @@
   <!--  </button>-->
   <!--  <N content="1111" virtualRef={ref} virtualTriggering {visible} />-->
 
-  <N content="11111" trigger="click">
-    <input />
+  <N {content}>
+    <button on:click={() => (content += '1')}>111</button>
   </N>
 </div>
 

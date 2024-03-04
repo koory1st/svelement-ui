@@ -143,6 +143,7 @@
 
   popperRef = popperRef1;
   export let content = '';
+  $: content && updatePopper();
   let outer;
 
   async function doShow() {
