@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.44](https://github.com/koory1st/svelement-ui/compare/v0.19.43...v0.19.44) (2024-03-05)
+
+### Bug Fixes
+
+* **switch:** disabled bug ([1e9f693](https://github.com/koory1st/svelement-ui/commit/1e9f693e76817401db8dfbdf3a9a2af91097dd61))
+
 ## [0.19.43](https://github.com/koory1st/svelement-ui/compare/v0.19.42...v0.19.43) (2024-03-04)
 
 ### Bug Fixes
