@@ -32,7 +32,7 @@
   $: isControlled = value !== false;
   $: actualValue = value;
   $: checked = actualValue === activeValue;
-  $: switchDisabled = loading;
+  $: switchDisabled = loading || disabled;
   $: switchKls = a2s([
     'svel-switch',
     ['is-checked', checked],

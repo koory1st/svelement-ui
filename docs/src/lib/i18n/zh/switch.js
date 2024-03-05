@@ -15,4 +15,6 @@ export default {
   cswitch06010: '扩展的 value 类型',
   cswitch06020:
     '你可以设置 activeValue 和 inactiveValue 属性， 它们接受 Boolean、String 或 Number 类型的值。',
+  cswitch07010: '禁用状态',
+  cswitch07020: '设置disabled属性，接受一个Boolean，设置true即可禁用。',
 };

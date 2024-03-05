@@ -10,6 +10,7 @@
   let value2 = true;
 
   let value3 = '100';
+  let value4 = true;
 </script>
 
 <h1>{$langFn('cswitch01010')}</h1>
@@ -142,6 +143,19 @@
   <SvelTooltip content={value3}>
     <SvelSwitch activeValue="100" bind:value={value3} inactiveValue="0" />
   </SvelTooltip>
+</Example>
+
+<h2>{$langFn('cswitch07010')}</h2>
+<p>{$langFn('cswitch07020')}</p>
+
+<Example
+  code={`
+<SvelSwitch bind:value={value4} disabled />
+<SvelSwitch class="ml-2" />
+`}
+>
+  <SvelSwitch bind:value={value4} disabled />
+  <SvelSwitch class="ml-2" />
 </Example>
 
 <style>
