@@ -11,6 +11,7 @@
 
   let value3 = '100';
   let value4 = true;
+  let value5 = true;
 </script>
 
 <h1>{$langFn('cswitch01010')}</h1>
@@ -156,6 +157,19 @@
 >
   <SvelSwitch bind:value={value4} disabled />
   <SvelSwitch class="ml-2" />
+</Example>
+
+<h2>{$langFn('cswitch08010')}</h2>
+<p>{$langFn('cswitch08020')}</p>
+
+<Example
+  code={`
+  <SvelSwitch bind:value={value5} loading />
+  <SvelSwitch class="ml-2" loading />
+`}
+>
+  <SvelSwitch bind:value={value5} loading />
+  <SvelSwitch class="ml-2" loading />
 </Example>
 
 <style>
