@@ -1,6 +1,6 @@
 <script>
   import { SvelSwitch, SvelTooltip } from '@svelement-ui/all';
-  import { Check, Close } from '@svelement-ui/icon';
+  import { Check, Close, Hide, View } from '@svelement-ui/icon';
   import Example from '$lib/example.svelte';
   import { getContext } from 'svelte';
 
@@ -201,12 +201,50 @@
 
 <Example
   code={`
-  <SvelSwitch bind:value={value5} loading />
-  <SvelSwitch class="ml-2" loading />
+<script>
+  let value6 = false;
+  let loading1;
+  const beforeChange1 = () => {
+    loading1 = true;
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        loading1 = false;
+        return resolve(true);
+      }, 1000);
+    });
+  };
+
+  let value7 = false;
+  let loading2;
+  const beforeChange2 = () => {
+    loading2 = true;
+    return new Promise((_, reject) => {
+      setTimeout(() => {
+        loading2 = false;
+        return reject(new Error('Error'));
+      }, 1000);
+    });
+  };
+@@@/>
+  <SvelSwitch beforeChange={beforeChange1} bind:value={value6} loading={loading1} />
+  <SvelSwitch beforeChange={beforeChange2} bind:value={value7} loading={loading2} />
 `}
 >
   <SvelSwitch beforeChange={beforeChange1} bind:value={value6} loading={loading1} />
   <SvelSwitch beforeChange={beforeChange2} bind:value={value7} loading={loading2} />
+</Example>
+
+<h2>{$langFn('cswitch10010')}</h2>
+<p>{$langFn('cswitch10020')}</p>
+
+<Example
+  code={`
+`}
+>
+  <SvelSwitch>
+    <View slot="activeActionIcon" />
+    <Hide slot="inactiveActionIcon" />
+  </SvelSwitch>
 </Example>
 
 <style>

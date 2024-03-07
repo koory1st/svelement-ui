@@ -21,4 +21,6 @@ export default {
   cswitch08020: '设置loading属性，接受一个Boolean，设置true即加载中状态。',
   cswitch09010: '阻止切换',
   cswitch09020: '设置beforeChange属性，若返回 false 或者返回 Promise 且被 reject，则停止切换。',
+  cswitch10010: '自定义动作图标',
+  cswitch10020: '使用 activeActionIcon 和 inactiveActionIcon slot来添加图标。',
 };
