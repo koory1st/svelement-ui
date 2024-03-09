@@ -165,10 +165,14 @@
         <SvelIcon>
           <slot name="activeActionIcon" />
         </SvelIcon>
+      {:else if $$slots.activeAction && checked}
+        <slot name="activeAction" />
       {:else if $$slots.inactiveActionIcon && !checked}
         <SvelIcon>
           <slot name="inactiveActionIcon" />
         </SvelIcon>
+      {:else if $$slots.inactiveAction && !checked}
+        <slot name="inactiveAction" />
       {/if}
     </div>
   </span>

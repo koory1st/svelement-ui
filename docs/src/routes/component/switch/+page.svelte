@@ -188,8 +188,8 @@
 
 <Example
   code={`
-  <SvelSwitch bind:value={value5} loading />
-  <SvelSwitch class="ml-2" loading />
+<SvelSwitch bind:value={value5} loading />
+<SvelSwitch class="ml-2" loading />
 `}
 >
   <SvelSwitch bind:value={value5} loading />
@@ -226,8 +226,8 @@
     });
   };
 @@@/>
-  <SvelSwitch beforeChange={beforeChange1} bind:value={value6} loading={loading1} />
-  <SvelSwitch beforeChange={beforeChange2} bind:value={value7} loading={loading2} />
+<SvelSwitch beforeChange={beforeChange1} bind:value={value6} loading={loading1} />
+<SvelSwitch beforeChange={beforeChange2} bind:value={value7} loading={loading2} />
 `}
 >
   <SvelSwitch beforeChange={beforeChange1} bind:value={value6} loading={loading1} />
@@ -239,11 +239,20 @@
 
 <Example
   code={`
+<SvelSwitch>
+  <View slot="activeActionIcon" />
+  <Hide slot="inactiveActionIcon" />
+</SvelSwitch>
 `}
 >
   <SvelSwitch>
     <View slot="activeActionIcon" />
     <Hide slot="inactiveActionIcon" />
+  </SvelSwitch>
+
+  <SvelSwitch>
+    <span slot="activeAction">T</span>
+    <span slot="inactiveAction">F</span>
   </SvelSwitch>
 </Example>
 

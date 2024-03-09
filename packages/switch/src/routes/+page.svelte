@@ -87,8 +87,8 @@
 
 <div />
 <SvelSwitch bind:value>
-  <span slot="activeActionIcon">T</span>
-  <span slot="inactiveActionIcon">F</span>
+  <span slot="activeAction">T</span>
+  <span slot="inactiveAction">F</span>
 </SvelSwitch>
 
 <SvelSwitch bind:focus bind:value />
