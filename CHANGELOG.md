@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.45](https://github.com/koory1st/svelement-ui/compare/v0.19.44...v0.19.45) (2024-03-09)
+
+### Bug Fixes
+
+* **switch:** activeAction ([b318429](https://github.com/koory1st/svelement-ui/commit/b3184291bf747e1fef8e39aa1003952bb8b4b7fc))
+
 ## [0.19.44](https://github.com/koory1st/svelement-ui/compare/v0.19.43...v0.19.44) (2024-03-05)
 
 ### Bug Fixes

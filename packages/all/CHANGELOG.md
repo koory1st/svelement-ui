@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.45](https://github.com/koory1st/svelement-ui/compare/v0.19.44...v0.19.45) (2024-03-09)
+
+**Note:** Version bump only for package @svelement-ui/all
+
 ## [0.19.44](https://github.com/koory1st/svelement-ui/compare/v0.19.43...v0.19.44) (2024-03-05)
 
 **Note:** Version bump only for package @svelement-ui/all
