@@ -10,8 +10,9 @@
     SvelLink,
     SvelMain,
     SvelRow,
+    SvelSwitch,
   } from '@svelement-ui/all';
-  import { Github, SvelIcon } from '@svelement-ui/icon';
+  import { Github, SvelIcon, Sunny, Moon } from '@svelement-ui/icon';
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
   import { default as zh } from '$lib/i18n/zh/index.js';
@@ -45,6 +46,10 @@
         <SvelLink href="{PUBLIC_BASE_PATH}component" type="primary" underline={false}>
           Component
         </SvelLink>
+        <SvelSwitch>
+          <Sunny slot="inactiveActionIcon" />
+          <Moon slot="activeActionIcon" />
+        </SvelSwitch>
         <SvelButton class="ml-2" on:click={handleLang} text type="primary">
           {langString}
         </SvelButton>
