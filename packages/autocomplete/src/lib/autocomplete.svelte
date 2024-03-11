@@ -4,10 +4,12 @@
   import SvelTooltip from '@svelement-ui/tooltip';
   import SvelScrollbar from '@svelement-ui/scrollbar';
   import { getContext } from 'svelte';
+  import { isArray } from '@svelement-ui/utils';
 
   export let value;
   export let fetchSuggestions;
   export let triggerOnFocus = true;
+  export let highlightFirstItem = false;
 
   let suggestions = [];
   let dropdownWidth = '';
@@ -16,7 +18,32 @@
   let loading = false;
   let activated = false;
   let tooltipVisible = false;
+  let highlightedIndex = -1;
   $: dark = dark || getContext('svel-dark');
+
+  const getData = async (queryString) => {
+    if (suggestionDisabled) return;
+
+    const cb = (suggestionList) => {
+      loading = false;
+      if (suggestionDisabled) return;
+
+      if (isArray(suggestionList)) {
+        suggestions = suggestionList;
+        highlightedIndex = highlightFirstItem ? 0 : -1;
+      } else {
+        throw Error('autocomplete suggestions must be an array');
+      }
+    };
+
+    loading.value = true;
+    if (isArray(fetchSuggestions)) {
+      cb(fetchSuggestions);
+    } else {
+      const result = await fetchSuggestions(queryString, cb);
+      if (isArray(result)) cb(result);
+    }
+  };
 
   function handleFocus() {
     tooltipVisible = true;

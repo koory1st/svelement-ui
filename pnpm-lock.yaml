@@ -191,6 +191,9 @@ importers:
       '@svelement-ui/util-array-2-class-string':
         specifier: workspace:^
         version: link:../util-array-2-class-string
+      '@svelement-ui/utils':
+        specifier: workspace:^
+        version: link:../utils
 
   packages/button:
     devDependencies:
