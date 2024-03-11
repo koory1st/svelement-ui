@@ -1,6 +1,6 @@
 {
   "name": "@svelement-ui/utils",
-  "version": "0.19.0",
+  "version": "0.19.47",
   "type": "module",
   "files": [
     "dist"
