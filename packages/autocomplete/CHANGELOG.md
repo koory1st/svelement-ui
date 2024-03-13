@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.48](https://github.com/koory1st/svelement-ui/compare/v0.19.47...v0.19.48) (2024-03-13)
+
+### Bug Fixes
+
+* **autocomplete:** add fetch ([33c047d](https://github.com/koory1st/svelement-ui/commit/33c047deced61cadfbd53595e4d55972af1ee3a3))
+
 ## [0.19.47](https://github.com/koory1st/svelement-ui/compare/v0.19.46...v0.19.47) (2024-03-11)
 
 ### Bug Fixes
