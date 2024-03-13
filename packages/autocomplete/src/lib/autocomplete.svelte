@@ -3,13 +3,29 @@
   import SvelInput from '@svelement-ui/input';
   import SvelTooltip from '@svelement-ui/tooltip';
   import SvelScrollbar from '@svelement-ui/scrollbar';
-  import { getContext } from 'svelte';
+  import { getContext, createEventDispatcher } from 'svelte';
   import { isArray } from '@svelement-ui/utils';
+  import { debounce as debouncing } from 'debouncing';
+
+  const dispatch = createEventDispatcher();
 
   export let value;
+  export let placeholder;
+  export let clearable = false;
+  export let disabled = false;
+  export let valueKey = 'value';
+  export let debounce = 300;
+  export let placement = 'bottom-start';
   export let fetchSuggestions;
   export let triggerOnFocus = true;
+  export let selectWhenUnmatched = false;
+  export let name;
+  export let label;
+  export let hideLoading = false;
+  export let popperClass;
+  export let teleported = false;
   export let highlightFirstItem = false;
+  export let fitInputWidth = false;
 
   let suggestions = [];
   let dropdownWidth = '';
@@ -36,13 +52,32 @@
       }
     };
 
-    loading.value = true;
+    loading = true;
     if (isArray(fetchSuggestions)) {
       cb(fetchSuggestions);
     } else {
       const result = await fetchSuggestions(queryString, cb);
       if (isArray(result)) cb(result);
     }
+  };
+  const debouncedGetData = debouncing(getData, debounce);
+
+  const handleInput = ({ detail: v }) => {
+    const valuePresented = !!v;
+
+    dispatch('input', v);
+    value = v;
+
+    suggestionDisabled = false;
+    activated ||= valuePresented;
+
+    if (!triggerOnFocus && !v) {
+      suggestionDisabled = true;
+      suggestions = [];
+      return;
+    }
+
+    debouncedGetData(v);
   };
 
   function handleFocus() {
@@ -54,6 +89,7 @@
   }
 </script>
 
+{suggestions}
 <SvelTooltip effect="light" visible={tooltipVisible}>
   <div
     aria-controls="svel-id-6711-108"
@@ -61,7 +97,7 @@
     aria-haspopup="listbox"
     role="combobox"
   >
-    <SvelInput bind:value on:blur={handleInputBlur} on:focus={handleFocus} />
+    <SvelInput bind:value on:blur={handleInputBlur} on:focus={handleFocus} on:input={handleInput} />
   </div>
   <div slot="content">
     <div role="region">

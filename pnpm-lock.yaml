@@ -194,6 +194,9 @@ importers:
       '@svelement-ui/utils':
         specifier: workspace:^
         version: link:../utils
+      debouncing:
+        specifier: ^22.7.25
+        version: 22.7.25
 
   packages/button:
     devDependencies:
@@ -2514,6 +2517,10 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.22.10
+    dev: true
+
+  /debouncing@22.7.25:
+    resolution: {integrity: sha512-8X8SS+PEkaBBi1tUVZVT4xFImHI9iQ7uSazoHMjoSJ603hY4ZrffwDg0MExbGnYH+7J3QY2ElnCCJEgaIBZ8bA==}
     dev: true
 
   /debug@4.3.4:

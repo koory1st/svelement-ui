@@ -1,12 +1,11 @@
 <script>
   import SvelAutoComplete from '$lib/index.js';
+  import { onMount } from 'svelte';
 
   let value = '';
-  const restaurants = [];
+  let restaurants = [];
   const querySearch = (queryString, cb) => {
-    const results = queryString
-      ? restaurants.value.filter(createFilter(queryString))
-      : restaurants.value;
+    const results = queryString ? restaurants.filter(createFilter(queryString)) : restaurants;
     // call callback function to return suggestions
     cb(results);
   };
@@ -26,6 +25,9 @@
       { value: 'babel', link: 'https://github.com/babel/babel' },
     ];
   };
+  onMount(() => {
+    restaurants = loadAll();
+  });
 </script>
 
 <SvelAutoComplete fetchSuggestions={querySearch} />

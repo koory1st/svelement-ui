@@ -25,7 +25,8 @@
     "@svelement-ui/theme-chalk": "workspace:^",
     "@svelement-ui/tooltip": "workspace:^",
     "@svelement-ui/util-array-2-class-string": "workspace:^",
-    "@svelement-ui/utils": "workspace:^"
+    "@svelement-ui/utils": "workspace:^",
+    "debouncing": "^22.7.25"
   },
   "bundledDependencies": [
     "@svelement-ui/util-array-2-class-string"
