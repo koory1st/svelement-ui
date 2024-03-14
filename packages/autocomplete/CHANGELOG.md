@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.49](https://github.com/koory1st/svelement-ui/compare/v0.19.48...v0.19.49) (2024-03-14)
+
+### Bug Fixes
+
+* **popper:** add beforeShow ([820ab51](https://github.com/koory1st/svelement-ui/commit/820ab51c657fb31b08268c3e57c80f8841fbbb81))
+
 ## [0.19.48](https://github.com/koory1st/svelement-ui/compare/v0.19.47...v0.19.48) (2024-03-13)
 
 ### Bug Fixes
