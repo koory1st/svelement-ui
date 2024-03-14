@@ -27,6 +27,7 @@
   export let highlightFirstItem = false;
   export let fitInputWidth = false;
 
+  let inputRef;
   let suggestions = [];
   let dropdownWidth = '';
   let ignoreFocusEvent = false;
@@ -36,7 +37,15 @@
   let tooltipVisible = false;
   let highlightedIndex = -1;
   $: dark = dark || getContext('svel-dark');
+  $: suggestionVisible = (suggestions.length > 0 || loading) && activated;
+  $: suggestionLoading = !hideLoading && loading;
 
+  const onSuggestionShow = () => {
+    console.log(12);
+    if (suggestionVisible) {
+      dropdownWidth = `${inputRef.offsetWidth}px`;
+    }
+  };
   const getData = async (queryString) => {
     if (suggestionDisabled) return;
 
@@ -95,9 +104,16 @@
     aria-controls="svel-id-6711-108"
     aria-expanded="false"
     aria-haspopup="listbox"
+    on:beforeShow={onSuggestionShow}
     role="combobox"
   >
-    <SvelInput bind:value on:blur={handleInputBlur} on:focus={handleFocus} on:input={handleInput} />
+    <SvelInput
+      bind:this={inputRef}
+      bind:value
+      on:blur={handleInputBlur}
+      on:focus={handleFocus}
+      on:input={handleInput}
+    />
   </div>
   <div slot="content">
     <div role="region">

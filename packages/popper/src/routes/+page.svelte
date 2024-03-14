@@ -4,6 +4,12 @@
   let ref;
   let visible = false;
   let content = '1';
+  let beforeShow = () => {
+    console.log('1111');
+  };
+  let beforeHide = () => {
+    console.log('2222');
+  };
 </script>
 
 <div class="aaa">
@@ -25,7 +31,7 @@
   <!--  </button>-->
   <!--  <N content="1111" virtualRef={ref} virtualTriggering {visible} />-->
 
-  <N {content}>
+  <N {content} on:beforeHide={beforeHide} on:beforeShow={beforeShow}>
     <button on:click={() => (content += '1')}>111</button>
   </N>
 </div>

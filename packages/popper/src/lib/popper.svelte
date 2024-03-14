@@ -1,12 +1,14 @@
 <script>
   import Container from '$lib/container.svelte';
   import { createPopperActions } from '$lib/popper.js';
-  import { getContext, tick } from 'svelte';
+  import { createEventDispatcher, getContext, tick } from 'svelte';
   import a2s from '@svelement-ui/util-array-2-class-string';
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import Portal from '$lib/portal.svelte';
   import { writable } from 'svelte/store';
+
+  const dispatch = createEventDispatcher();
 
   let x = 0;
   let y = 0;
@@ -147,6 +149,7 @@
   let outer;
 
   async function doShow() {
+    dispatch('beforeShow');
     showTooltip = true;
 
     if (autoClose > 0) {
@@ -161,6 +164,7 @@
   }
 
   function doHide() {
+    dispatch('beforeHide');
     if (contentEl) {
       contentEl.removeEventListener('mouseover', show);
       contentEl.removeEventListener('mouseleave', hide);
